@@ -1,0 +1,45 @@
+= Monorepo?
+
+This is an unversioned repo with folders to the different content that will be built with Antora.
+
+Each directory will have a antora.yml file with configuration, then the `start_path` in antora-playbook.yml will define which subfolder is picked up.
+
+
+== Developer
+```
+/developer                           <- developer home page
+/developer/get-started               <- structured content
+/developer/get-started/rdbms-vs-graph
+/developer/get-started/nosql-vs-graph
+/developer/get-started/nosql-vs-graph
+/developer/platform
+/developer/platform/neo4j-browser
+/developer/platform/neo4j-bloom
+/developer/platform/neo4j-desktop
+/developer/platform/graph-apps      <- (or neo4j-desktop/graph-apps)
+/developer/cypher
+/developer/cypher/filtering
+/developer/cypher/subqueries
+/developer/cypher/user-defined-functions
+/developer/modeling
+/developer/modeling/worked-example
+/developer/drivers/
+/developer/drivers/java
+/developer/drivers/javascript
+/developer/drivers/dotnet
+```
+
+== Labs
+```
+/labs                                <- Labs homepage with list of all projects
+/labs/apoc                           <- About page for APOC
+/labs/apoc/quick-start               <- Quick start "guide"
+/labs/apoc/docs                      <- Hard core Manuals/"reference"
+/labs/apoc/docs/3.5
+/labs/apoc/docs/4.0
+/labs/neosemantics                   <- About page for Neosemantics
+/labs/neosemantics/quick-start       <- Quick start "guide"
+/labs/neosemantics/docs              <- Hard core Manuals/"reference"
+/labs/neosemantics/docs/3.5
+/labs/neosemantics/docs/4.0
+```

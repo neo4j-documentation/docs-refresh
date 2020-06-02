@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Load XML :: Neo4j Labs Docs</title>
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article developer">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/labs/docs">
+        <svg width="97px" height="36px" viewBox="0 0 97 36" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" class="logo">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
+              <g>
+                <path
+                  d="M28.7331787,15.4086598 C28.7331787,23.4004124 22.3016241,29.8779381 14.3665893,29.8779381 C6.43155452,29.8779381 0,23.4004124 0,15.4086598 C0,7.41690722 6.43155452,0.939375765 14.3665893,0.939375765 C22.3016241,0.932371134 28.7331787,7.41690722 28.7331787,15.4086598"
+                  fill="#008CC1"></path>
+                <path
+                  d="M6.36890951,10.6626804 C6.36890951,11.3006186 5.85382831,11.8193814 5.22041763,11.8193814 C4.58700696,11.8193814 4.07192575,11.3006186 4.07192575,10.6626804 C4.07192575,10.0247423 4.58700696,9.50597938 5.22041763,9.50597938 C5.86078886,9.50597938 6.36890951,10.0247423 6.36890951,10.6626804"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M6.5638051,13.8383505 C6.5638051,14.4762887 6.0487239,14.9950515 5.41531323,14.9950515 C4.78190255,14.9950515 4.26682135,14.4762887 4.26682135,13.8383505 C4.26682135,13.2004124 4.78190255,12.6816495 5.41531323,12.6816495 C6.0487239,12.6816495 6.5638051,13.1934021 6.5638051,13.8383505"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M7.26682135,17.203299 C7.26682135,17.8412371 6.75174014,18.36 6.11832947,18.36 C5.48491879,18.36 4.96983759,17.8412371 4.96983759,17.203299 C4.96983759,16.5653608 5.48491879,16.0465979 6.11832947,16.0465979 C6.75174014,16.0395876 7.26682135,16.5583505 7.26682135,17.203299"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M8.83990719,20.217732 C8.83990719,20.8556701 8.32482599,21.374433 7.69141531,21.374433 C7.05800464,21.374433 6.54292343,20.8556701 6.54292343,20.217732 C6.54292343,19.5797938 7.05800464,19.0610309 7.69141531,19.0610309 C8.32482599,19.0540206 8.83990719,19.5727835 8.83990719,20.217732"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M21.1392111,24.4309278 C21.1392111,25.068866 20.6241299,25.5876289 19.9907193,25.5876289 C19.3573086,25.5876289 18.8422274,25.068866 18.8422274,24.4309278 C18.8422274,23.7929897 19.3573086,23.2742268 19.9907193,23.2742268 C20.6241299,23.2742268 21.1392111,23.7929897 21.1392111,24.4309278"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M23.2273782,21.942268 C23.2273782,22.5802062 22.712297,23.0989691 22.0788863,23.0989691 C21.4454756,23.0989691 20.9303944,22.5802062 20.9303944,21.942268 C20.9303944,21.3043299 21.4454756,20.785567 22.0788863,20.785567 C22.712297,20.785567 23.2273782,21.3043299 23.2273782,21.942268"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M17.1716937,4.34639175 C17.1716937,4.9843299 16.6566125,5.50309278 16.0232019,5.50309278 C15.3897912,5.50309278 14.87471,4.9843299 14.87471,4.34639175 C14.87471,3.70845361 15.3897912,3.18969072 16.0232019,3.18969072 C16.6566125,3.18969072 17.1716937,3.70845361 17.1716937,4.34639175"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M14.1508121,3.28082474 C14.1508121,3.91876289 13.6357309,4.43752577 13.0023202,4.43752577 C12.3689095,4.43752577 11.8538283,3.91876289 11.8538283,3.28082474 C11.8538283,2.6428866 12.3689095,2.12412371 13.0023202,2.12412371 C13.6357309,2.12412371 14.1508121,2.6428866 14.1508121,3.28082474"
+                  fill="#FFFFFF"></path>
+                <ellipse id="Oval" stroke="#FFFFFF" fill="#66B245" cx="22.2946636" cy="11.9595876" rx="7.65661253"
+                  ry="7.71134021"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" fill="#66B245" cx="11.8051044" cy="27.6837113" rx="6.26450116"
+                  ry="6.30927835"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" fill="#66B245" cx="6.64733179" cy="4.20618557" rx="4.17633411"
+                  ry="4.20618557"></ellipse>
+              </g>
+              <g id="neo4j" transform="translate(33.000000, 1.000000)" fill="#000000">
+                <path
+                  d="M0,4.87252125 L1.39130435,4.87252125 L1.39130435,7.6203966 C2.05913043,5.9490085 3.45043478,4.64589235 6.28869565,4.64589235 C9.51652174,4.64589235 11.6869565,6.85552408 11.6869565,10.3399433 L11.6869565,19.1501416 L10.2956522,19.1501416 L10.2956522,10.6232295 C10.2956522,7.76203966 8.57043478,5.97733711 5.9826087,5.97733711 C3.17217391,5.97733711 1.39130435,8.18696884 1.39130435,11.4730878 L1.39130435,19.1501416 L0,19.1501416 L0,4.87252125 Z">
+                </path>
+                <path
+                  d="M14.1634783,12.0396601 C14.1634783,7.59206799 17.1408696,4.5325779 21.0086957,4.5325779 C24.8208696,4.5325779 27.52,7.73371105 27.52,11.6430595 C27.52,11.6430595 27.52,12.0679887 27.4921739,12.3512748 L15.5269565,12.3512748 C15.6104348,15.7790368 17.8643478,18.2152975 21.0643478,18.2152975 C23.68,18.2152975 25.4886957,17.082153 26.3234783,16.0056657 L26.3234783,17.6770538 C25.0156522,18.8668555 23.4295652,19.5467422 21.0643478,19.5467422 C17.0295652,19.5467422 14.1634783,16.5439093 14.1634783,12.1246459 L14.1634783,12.0396601 Z M26.0452174,11.0764873 C26.0173913,8.15864023 23.7913043,5.86402266 21.0086957,5.86402266 C18.0869565,5.86402266 15.693913,8.15864023 15.5826087,11.0764873 L26.0452174,11.0764873 Z">
+                </path>
+                <path
+                  d="M37.0643478,4.50424929 C41.1826087,4.50424929 44.4382609,7.70538244 44.4382609,12.0113314 C44.4382609,16.3172805 41.1826087,19.5184136 37.0643478,19.5184136 C32.946087,19.5184136 29.6904348,16.3172805 29.6904348,12.0113314 C29.6904348,7.70538244 32.946087,4.50424929 37.0643478,4.50424929 Z M37.0643478,18.1869688 C40.4869565,18.1869688 43.0469565,15.5240793 43.0469565,12.0113314 C43.0469565,8.49858357 40.4869565,5.83569405 37.0643478,5.83569405 C33.6417391,5.83569405 31.0817391,8.49858357 31.0817391,12.0113314 C31.0817391,15.5240793 33.6417391,18.1869688 37.0643478,18.1869688 Z">
+                </path>
+                <polygon
+                  points="51.7843478 4.87252125 53.3426087 4.87252125 47.3878261 17.7903683 56.0417391 17.7903683 56.0417391 13.1161473 57.4886957 13.1161473 57.4886957 24.6175637 56.0417391 24.6175637 56.0417391 19.1501416 45.1895652 19.1501416">
+                </polygon>
+                <path
+                  d="M62.2469565,4.87252125 L63.6382609,4.87252125 L63.6382609,21.1331445 C63.6382609,24.3342776 61.8295652,24.9858357 60.0765217,24.9858357 C59.7426087,24.9858357 59.3808696,24.9575071 59.1582609,24.9008499 L59.1582609,23.5694051 C59.4921739,23.6260623 59.8817391,23.6543909 60.2156522,23.6543909 C61.6347826,23.6543909 62.2469565,22.9461756 62.2469565,21.1331445 L62.2469565,4.87252125 Z M61.9408696,1.04815864 C61.9408696,0.45325779 62.413913,0.0283286119 62.9426087,0.0283286119 C63.4713043,0.0283286119 63.9443478,0.45325779 63.9443478,1.04815864 C63.9443478,1.61473088 63.4713043,2.03966006 62.9426087,2.03966006 C62.413913,2.03966006 61.9408696,1.61473088 61.9408696,1.04815864 Z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <svg width="131px" height="34px" viewBox="0 0 131 34" version="1.1">
+          <path
+            d="M11.112,20.364 C13.996,20.364 16.124,18.768 16.712,17.06 L16.712,20 L18.112,20 L18.112,0.484 L16.712,0.484 L16.712,8.828 C16.124,7.12 13.996,5.524 11.112,5.524 C7.164,5.524 4,8.688 4,12.944 C4,17.2 7.136,20.364 11.112,20.364 Z M11.112,19.048 C7.864,19.048 5.4,16.416 5.4,12.944 C5.4,9.5 7.864,6.84 11.112,6.84 C14.388,6.84 16.88,9.388 16.88,12.944 C16.88,16.5 14.388,19.048 11.112,19.048 Z M26.876,20.336 C28.864,20.336 30.824,19.692 32.42,17.872 L31.496,16.976 C30.292,18.236 28.92,19.02 26.876,19.02 C23.656,19.02 21.388,16.668 21.304,13.28 L33.344,13.28 C33.372,13 33.372,12.58 33.372,12.58 C33.372,8.688 30.656,5.524 26.82,5.524 C22.928,5.524 19.932,8.576 19.932,12.972 L19.932,13.056 C19.932,17.368 22.844,20.336 26.876,20.336 Z M31.916,12.02 L21.36,12.02 C21.472,9.108 23.852,6.84 26.82,6.84 C29.648,6.84 31.888,9.136 31.916,12.02 Z M40.624,20.728 L47.204,5.888 L45.692,5.888 L40.624,17.452 L35.612,5.888 L34.1,5.888 L40.624,20.728 Z M54.904,20.336 C56.892,20.336 58.852,19.692 60.448,17.872 L59.524,16.976 C58.32,18.236 56.948,19.02 54.904,19.02 C51.684,19.02 49.416,16.668 49.332,13.28 L61.372,13.28 C61.4,13 61.4,12.58 61.4,12.58 C61.4,8.688 58.684,5.524 54.848,5.524 C50.956,5.524 47.96,8.576 47.96,12.972 L47.96,13.056 C47.96,17.368 50.872,20.336 54.904,20.336 Z M59.944,12.02 L49.388,12.02 C49.5,9.108 51.88,6.84 54.848,6.84 C57.676,6.84 59.916,9.136 59.944,12.02 Z M67.672,20.364 C68.092,20.364 68.484,20.308 68.848,20.224 L68.848,18.936 C68.484,19.02 68.092,19.048 67.672,19.048 C66.188,19.048 65.572,18.208 65.572,16.36 L65.572,0.484 L64.172,0.484 L64.172,16.444 C64.172,19.692 65.964,20.364 67.672,20.364 Z M77.22,20.364 C81.364,20.364 84.64,17.2 84.64,12.944 C84.64,8.688 81.364,5.524 77.22,5.524 C73.076,5.524 69.8,8.688 69.8,12.944 C69.8,17.2 73.076,20.364 77.22,20.364 Z M77.22,19.048 C73.776,19.048 71.2,16.416 71.2,12.944 C71.2,9.472 73.776,6.84 77.22,6.84 C80.664,6.84 83.24,9.472 83.24,12.944 C83.24,16.416 80.664,19.048 77.22,19.048 Z M88.812,25.404 L88.812,17.06 C89.4,18.768 91.528,20.364 94.412,20.364 C98.36,20.364 101.524,17.2 101.524,12.944 C101.524,8.688 98.388,5.524 94.412,5.524 C91.528,5.524 89.4,7.12 88.812,8.828 L88.812,5.888 L87.412,5.888 L87.412,25.404 L88.812,25.404 Z M94.412,19.048 C91.136,19.048 88.644,16.5 88.644,12.944 C88.644,9.388 91.136,6.84 94.412,6.84 C97.66,6.84 100.124,9.472 100.124,12.944 C100.124,16.388 97.66,19.048 94.412,19.048 Z M110.652,20.336 C112.64,20.336 114.6,19.692 116.196,17.872 L115.272,16.976 C114.068,18.236 112.696,19.02 110.652,19.02 C107.432,19.02 105.164,16.668 105.08,13.28 L117.12,13.28 C117.148,13 117.148,12.58 117.148,12.58 C117.148,8.688 114.432,5.524 110.596,5.524 C106.704,5.524 103.708,8.576 103.708,12.972 L103.708,13.056 C103.708,17.368 106.62,20.336 110.652,20.336 Z M115.692,12.02 L105.136,12.02 C105.248,9.108 107.628,6.84 110.596,6.84 C113.424,6.84 115.664,9.136 115.692,12.02 Z M121.292,20 L121.292,12.272 C121.292,9.472 122.776,7.092 125.856,7.092 C126.192,7.092 126.584,7.12 126.752,7.148 L126.752,5.692 C126.556,5.664 126.276,5.664 126.08,5.664 C123.308,5.664 121.88,7.008 121.292,8.716 L121.292,5.888 L119.892,5.888 L119.892,20 L121.292,20 Z"
+            id="developer"></path>
+        </svg>
+              </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+
+        <div class="navbar-item is-hoverable developer">
+          <a class="navbar-link" href="/developer">Developer Guides</a>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable docs">
+          <a class="navbar-link" href="/docs">Docs</a>
+          <div class="navbar-dropdown">
+            <div class="navbar-item project" href="">
+              <a class="project-name" href="">Operations Manual</a>
+
+              <ul class="project-links">
+                <li><a href="" class="project-link">Migration Guide</a></li>
+                <li><a href="" class="project-link">Status Codes</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project" href="">
+              <a class="project-name" href="">Cypher Manual</a>
+
+              <ul class="project-links">
+                <li><a href="" class="project-link">Cyper Refcard</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project" href="">
+              <a class="project-name" href="">Driver Manual</a>
+
+              <ul class="project-links">
+                <li><a href="" class="project-link">Java</a></li>
+                <li><a href="" class="project-link">JavaScript</a></li>
+                <li><a href="" class="project-link">.NET</a></li>
+                <li><a href="" class="project-link">Python</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable labs">
+          <a class="navbar-link" href="/labs">Labs</a>
+          <div class="navbar-dropdown">
+            <div class="navbar-item project">
+              <a class="project-name" href="/labs/apoc">APOC</a>
+              <p class="project-description">A library of procedures and functions for interacting with Neo4j</p>
+
+              <ul class="project-links">
+                <li><a href="/labs/apoc/current" class="project-link">Documentation</a></li>
+                <li><a href="/labs/apoc/" class="project-link">Developer Guide</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project">
+              <a class="project-name" href="/labs/streams">Neo4j Streams</a>
+              <p class="project-description">Integration for Neo4j &amp; Kafka</p>
+
+              <ul class="project-links">
+                <li><a href="/labs/streams/current" class="project-link">Documentation</a></li>
+                <li><a href="/labs/streams" class="project-link">Developer Guide</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project">
+              <a class="project-name" href="/labs/n10s">n10s</a>
+              <p class="project-description">An RDF Toolkit for Neo4j</p>
+
+              <ul class="project-links">
+                <li><a href="/labs/n10s/current" class="project-link">Documentation</a></li>
+                <li><a href="/labs/n10s" class="project-link">Developer Guide</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="apoc" data-version="3.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">APOC</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introduction.html#installation">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introduction.html#usage">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introduction.html#feedback">Feedback</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../help.html">Built in Help</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../help.html#procedure-function-signatures">Procedure &amp; Function Signatures</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Procedures &amp; Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../config.html">Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../import.html">Import</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="webapis.html">Loading Data from Web-APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="loadjson.html">Load JSON</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="loadcsv.html">Load CSV</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="importcsv.html">Import CSV</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="loadxls.html">Loading Excel (XLS)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="loadxml.html">Load XML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="loadhtml.html">Load HTML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graphml.html">Import GraphML</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">APOC</a></li>
+    <li><a href="../import.html">Import</a></li>
+    <li><a href="loadxml.html">Load XML</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.5</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.0/import/loadxml.html">4.0</a>
+    <a class="version is-current" href="loadxml.html">3.5</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/yuzutech/demo-antora/neo4j/apoc/edit/3.5/modules/ROOT/pages/import/loadxml.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Load XML</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+<div class="paragraph">
+<p>This section describes procedures that can be used to import data from XML files.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Many existing (enterprise) applications, endpoints and files use XML as data exchange format.</p>
+</div>
+<div class="paragraph">
+<p>We can process these files using <code>apoc.load.xml</code>.
+It takes a file or HTTP URL and parses the XML into a map data structure.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+in previous releases we&#8217;ve had <code>apoc.load.xmlSimple</code>. This is now deprecated and hsa been superseeded by <code>apoc.load.xml(url, [xPath], [config], true)</code>.Simple XML Format
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>See the following usage-examples for the procedures.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_file"><a class="anchor" href="#_example_file"></a>Example File</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>"How do you access XML doc attributes in children fields ?"</p>
+</div>
+<div class="paragraph">
+<p>(Thanks Nicolas Rouyer)</p>
+</div>
+<div class="paragraph">
+<p>For example, if my XML file is the example <a href="https://msdn.microsoft.com/en-us/library/ms762271%28v=vs.85%29.aspx">book.xml provided by Microsoft</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;catalog&gt;
+   &lt;book id="bk101"&gt;
+      &lt;author&gt;Gambardella, Matthew&lt;/author&gt;
+      &lt;title&gt;XML Developer's Guide&lt;/title&gt;
+      &lt;genre&gt;Computer&lt;/genre&gt;
+      &lt;price&gt;44.95&lt;/price&gt;
+      &lt;publish_date&gt;2000-10-01&lt;/publish_date&gt;
+      &lt;description&gt;An in-depth look at creating applications
+      with XML.&lt;/description&gt;
+   &lt;/book&gt;
+   &lt;book id="bk102"&gt;
+      &lt;author&gt;Ralls, Kim&lt;/author&gt;
+      &lt;title&gt;Midnight Rain&lt;/title&gt;
+      &lt;genre&gt;Fantasy&lt;/genre&gt;
+      &lt;price&gt;5.95&lt;/price&gt;
+      &lt;publish_date&gt;2000-12-16&lt;/publish_date&gt;
+      &lt;description&gt;A former architect battles corporate zombies,
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We have the file here, <a href="https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml">on GitHub</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simple_xml_format"><a class="anchor" href="#_simple_xml_format"></a>Simple XML Format</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In a simpler XML representation, each type of children gets it&#8217;s own entry within the parent map.
+The element-type as key is prefixed with "_" to prevent collisions with attributes.</p>
+</div>
+<div class="paragraph">
+<p>If there is a single element, then the entry will just have that element as value, not a collection.
+If there is more than one element there will be a list of values.</p>
+</div>
+<div class="paragraph">
+<p>Each child will still have its <code>_type</code> field to discern them.</p>
+</div>
+<div class="paragraph">
+<p>Here is the example file from above loaded with <code>apoc.load.xmlSimple</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">call apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml", '', {}, true)</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{_type: "catalog", _book: [
+  {_type: "book", id: "bk101",
+    _author: [{_type: "author", _text: "Gambardella, Matthew"},{_type: author, _text: "Arciniegas, Fabio"}],
+    _title: {_type: "title", _text: "XML Developer's Guide"},
+    _genre: {_type: "genre", _text: "Computer"},
+    _price: {_type: "price", _text: "44.95"},
+    _publish_date: {_type: "publish_date", _text: "2000-10-01"},
+    _description: {_type: description, _text: An in-depth look at creating applications ....</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_simple_xml_examples"><a class="anchor" href="#_simple_xml_examples"></a>Simple XML Examples</h3>
+<div class="listingblock">
+<div class="title">Example 1</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">WITH "https://maps.googleapis.com/maps/api/directions/xml?origin=Mertens%20en%20Torfsstraat%2046,%202018%20Antwerpen&amp;destination=Rubensstraat%2010,%202300%20Turnhout&amp;sensor=false&amp;mode=bicycling&amp;alternatives=false&amp;key=AIzaSyAPPIXGudOyHD_KAa2f_1l_QVNbsd_pMQs" AS url
+CALL apoc.load.xmlSimple(url)
+YIELD value
+RETURN value._route._leg._distance._value, keys(value), keys(value._route), keys(value._route._leg), keys(value._route._leg._distance._value)</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/apoc.load.xmlSimple.ex1.png" alt="apoc.load.xmlSimple.ex1">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 2</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">WITH "https://maps.googleapis.com/maps/api/directions/xml?origin=Mertens%20en%20Torfsstraat%2046,%202018%20Antwerpen&amp;destination=Rubensstraat%2010,%202300%20Turnhout&amp;sensor=false&amp;mode=bicycling&amp;alternatives=false&amp;key=AIzaSyAPPIXGudOyHD_KAa2f_1l_QVNbsd_pMQs" AS url
+CALL apoc.load.xmlSimple(url)
+YIELD value
+UNWIND keys(value) AS key
+RETURN key, apoc.meta.type(value[key]);</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/apoc.load.xmlSimple.ex2.png" alt="apoc.load.xmlSimple.ex2">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_http_headers"><a class="anchor" href="#_http_headers"></a>HTTP Headers</h3>
+<div class="paragraph">
+<p>You can provide a map of HTTP headers to the config property.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">WITH { `X-API-KEY`: 'abc123' } as headers,
+WITH "https://myapi.com/api/v1/" AS url
+CALL apoc.load.xml(url, '', { headers: headers })
+YIELD value
+UNWIND keys(value) AS key
+RETURN key, apoc.meta.type(value[key]);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xpath"><a class="anchor" href="#_xpath"></a>xPath</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s possible to define a xPath (optional) to selecting nodes from the XML document.</p>
+</div>
+<div class="sect2">
+<h3 id="_xpath_example"><a class="anchor" href="#_xpath_example"></a>xPath Example</h3>
+<div class="paragraph">
+<p>From the Microsoft&#8217;s book.xml file we can get only the books that have as <code>genre</code> Computer</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml", '/catalog/book[genre=\"Computer\"]')
+YIELD value as book
+WITH book.id as id, [attr IN book._children WHERE attr._type IN ['title','price'] | attr._text] as pairs
+RETURN id, pairs[0] as title, pairs[1] as price</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/apoc.load.xml.xpath.png" alt="apoc.load.xml.xpath">
+</div>
+</div>
+<div class="paragraph">
+<p>In this case we return only <code>id</code>, <code>title</code> and <code>prize</code> but we can return any other elements</p>
+</div>
+<div class="paragraph">
+<p>We can also return just a single specific element.
+For example the <code>author</code> of the book with <code>id = bg102</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">call apoc.load.xml('https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml', '/catalog/book[@id="bk102"]/author')
+YIELD value as result
+WITH result._text as author
+RETURN author</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/apoc.load.xml.xpath2.png" alt="apoc.load.xml.xpath2">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_load_xml_and_introspect"><a class="anchor" href="#_load_xml_and_introspect"></a>Load XML and Introspect</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s just load it and see what it looks like.
+It&#8217;s returned as value map with nested <code>_type</code> and <code>_children</code> fields, per group of elements.
+Attributes are turned into map-entries.
+And each element into their own little map with <code>_type</code>, attributes and <code>_children</code> if applicable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml")</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{_type: catalog, _children: [
+  {_type: book, id: bk101, _children: [
+    {_type: author, _text: Gambardella, Matthew},
+    {_type: title, _text: XML Developer's Guide},
+    {_type: genre, _text: Computer},
+    {_type: price, _text: 44.95},
+    {_type: publish_date, _text: 2000-10-01},
+    {_type: description, _text: An in-depth look at creating applications ....</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_each_book_how_do_i_access_book_id"><a class="anchor" href="#_for_each_book_how_do_i_access_book_id"></a>For each book, how do I access book id ?</h3>
+<div class="paragraph">
+<p>You can access attributes per element directly.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml")
+YIELD value as catalog
+UNWIND catalog._children as book
+RETURN book.id</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Results</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">book.id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk101</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk102</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_for_each_book_how_do_i_access_book_author_and_title"><a class="anchor" href="#_for_each_book_how_do_i_access_book_author_and_title"></a>For each book, how do I access book author and title ?</h3>
+<div class="sect3">
+<h4 id="_filter_into_collection"><a class="anchor" href="#_filter_into_collection"></a>Filter into collection</h4>
+<div class="paragraph">
+<p>You have to filter over the sub-elements  in the <code>_childrens</code> array in this case.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml")
+YIELD value as catalog
+UNWIND catalog._children as book
+RETURN book.id, [attr IN book._children WHERE attr._type IN ['author','title'] | [attr._type, attr._text]] as pairs</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Results</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">book.id</th>
+<th class="tableblock halign-left valign-top">pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[[author, Gambardella, Matthew], [title, XML Developer&#8217;s Guide]]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">book.id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[[author, Ralls, Kim], [title, Midnight Rain]]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_how_do_i_return_collection_elements"><a class="anchor" href="#_how_do_i_return_collection_elements"></a>How do I return collection elements?</h4>
+<div class="paragraph">
+<p>This is not too nice, we could also just have returned the values and then grabbed them out of the list, but that relies on element-order.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml")
+YIELD value as catalog
+UNWIND catalog._children as book
+WITH book.id as id, [attr IN book._children WHERE attr._type IN ['author','title'] | attr._text] as pairs
+RETURN id, pairs[0] as author, pairs[1] as title</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Results</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id</th>
+<th class="tableblock halign-left valign-top">author</th>
+<th class="tableblock halign-left valign-top">title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gambardella, Matthew</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Developer&#8217;s Guide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ralls, Kim</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Midnight Rain</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extracting_datastructures"><a class="anchor" href="#_extracting_datastructures"></a>Extracting Datastructures</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_turn_pairs_into_map"><a class="anchor" href="#_turn_pairs_into_map"></a>Turn Pairs into Map</h3>
+<div class="paragraph">
+<p>So better is to turn them into a map with <code>apoc.map.fromPairs</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">call apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml") yield value as catalog
+UNWIND catalog._children as book
+WITH book.id as id, [attr IN book._children WHERE attr._type IN ['author','title'] | [attr._type, attr._text]] as pairs
+CALL apoc.map.fromPairs(pairs) yield value
+RETURN id, value</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Results</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id</th>
+<th class="tableblock halign-left valign-top">value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{author: Gambardella, Matthew, title: XML Developer&#8217;s Guide}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{author: Ralls, Kim, title: Midnight Rain}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk103</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{author: Corets, Eva, title: Maeve Ascendant}</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_return_individual_columns"><a class="anchor" href="#_return_individual_columns"></a>Return individual Columns</h4>
+<div class="paragraph">
+<p>And now we can cleanly access the attributes from the map.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">call apoc.load.xml("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml") yield value as catalog
+UNWIND catalog._children as book
+WITH book.id as id, [attr IN book._children WHERE attr._type IN ['author','title'] | [attr._type, attr._text]] as pairs
+CALL apoc.map.fromPairs(pairs) yield value
+RETURN id, value.author, value.title</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Results</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">id</th>
+<th class="tableblock halign-left valign-top">value.author</th>
+<th class="tableblock halign-left valign-top">value.title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gambardella, Matthew</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Developer&#8217;s Guide</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ralls, Kim</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Midnight Rain</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bk103</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corets, Eva</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maeve Ascendant</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_xml_directly"><a class="anchor" href="#_import_xml_directly"></a>import xml directly</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In case you don&#8217;t want to transform your xml (like you do with <code>apoc.load.xml/apoc.load.xmlSimple</code> before you create nodes and relationships and you want to have a 1:1 mapping of xml into the graph you can use <code>apoc.xml.import</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_usage"><a class="anchor" href="#_usage"></a>usage</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.xml.import(&lt;url&gt;, &lt;config-map&gt;?) YIELD node</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The procedure will return a node representing the xml document containing nodes/rels underneath mapping to the xml structure. The following mapping rules are applied:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">xml</th>
+<th class="tableblock halign-left valign-top">label</th>
+<th class="tableblock halign-left valign-top">properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">document</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XmlDocument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_xmlVersion, _xmlEncoding</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">processing instruction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XmlProcessingInstruction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_piData, _piTarget</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element/Tag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XmlTag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property in the XmlTag node</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XmlWord</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for each word a separate node is created</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The nodes for the xml document are connected:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">relationship type</th>
+<th class="tableblock halign-left valign-top">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:IS_CHILD_OF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pointing to a nested xml element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:FIRST_CHILD_OF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pointing to the first child</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:NEXT_SIBLING</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pointing to the next xml element on the same nesting level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:NEXT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">produces a linear chain through the full document</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:NEXT_WORD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">only produced if config map has <code>createNextWordRelationships:true</code>. Connects words in xml to a text flow.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The following options are available for the <code>config</code> map:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">config option</th>
+<th class="tableblock halign-left valign-top">default value</th>
+<th class="tableblock halign-left valign-top">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">connectCharacters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if <code>true</code> the xml text elements are child nodes of their tags, interconnected by relationships of type <code>relType</code> (see below)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filterLeadingWhitespace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if <code>true</code> leading whitespace is skipped for each line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delimiter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\s</code> (regex whitespace)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if given, split text elements with the delimiter into separate nodes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XmlCharacter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label to use for text element representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">relType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">relationship type to be used for connecting the text elements into one linked list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">charactersForTag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">map of tagname &#8594; string. For the given tag names an additional text element is added containing the value as <code>text</code> property. Useful e.g. for <code>&lt;lb/&gt;</code> tags in TEI-XML to be represented as <code>&lt;lb&gt; &lt;/lb&gt;</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>example</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL
+apoc.xml.import("https://raw.githubusercontent.com/neo4j-contrib/neo4j-apoc-procedures/3.5/src/test/resources/xml/books.xml",{createNextWordRelationships:
+true})
+YIELD node
+RETURN node;
+
+CALL apoc.xml.import('https://seafile.rlp.net/f/6282a26504cc4f079ab9/?dl=1', {connectCharacters: true, charactersForTag:{lb:' '}, filterLeadingWhitespace: true}) yield node
+return node;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_helper_function_apoc_xml_parse"><a class="anchor" href="#_helper_function_apoc_xml_parse"></a>Helper Function <code>apoc.xml.parse</code></h3>
+<div class="paragraph">
+<p>In case you have in your dataset nodes with property values XML string you can parse them into Maps
+with the <code>apoc.xml.parse</code> function.</p>
+</div>
+<div class="paragraph">
+<p>Following an example of how to use it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>WITH '&lt;?xml version="1.0"?&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src="pix/logo-tl.gif"&gt;&lt;/img&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;' AS xmlString
+RETURN apoc.xml.parse(xmlString) AS value</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>We need a generic footer here...</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

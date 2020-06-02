@@ -1,0 +1,23 @@
+= Main Module
+:theme: labs
+
+The theme for this repo will be **{theme}**
+
+[WARNING]
+The only frustrating thing about this approach is that we will have to manually link to each set of docs.
+
+* xref:apoc:index.adoc[APOC]
+** xref:apoc:quick-start.adoc[Quick Start]
+** Docs
+*** link:./apoc/docs/4.0[4.0 Docs]
+*** link:./apoc/docs/3.5[3.5 Docs]
+***  link:./apoc/docs/current[`current` Docs]
+
+```
+* xref:apoc:index.adoc[APOC]
+** xref:apoc:quick-start.adoc[Quick Start]
+** Docs
+*** link:./apoc/docs/4.0[4.0 Docs]
+*** link:./apoc/docs/3.5[3.5 Docs]
+***  link:./apoc/docs/current[`current` Docs]
+```

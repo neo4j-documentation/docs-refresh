@@ -1,0 +1,18 @@
+site:
+  title: Neo4j Labs Docs
+  url: /labs/docs
+content:
+  sources:
+  - url: https://gitlab.com/yuzutech/demo-antora/neo4j/neosemantics.git
+    branches: ['4.0', '3.5']
+  - url: https://gitlab.com/yuzutech/demo-antora/neo4j/apoc.git
+    branches: ['4.0', '3.5']
+output:
+  dir: ./build/site/labs/
+ui:
+  bundle:
+    url: ui/build/ui-bundle.zip
+    snapshot: true
+asciidoc:
+  attributes:
+    theme: labs

@@ -1,0 +1,11 @@
+= Index
+
+* xref:get-started.adoc[Get Started]
+* xref:neosemantics:ROOT:index.adoc[Neosemantics]
+
+
+The theme for this repo will be **{theme}**
+
+== Something else
+
+Go to xref:neosemantics:ROOT:index.adoc[Neosemantics]

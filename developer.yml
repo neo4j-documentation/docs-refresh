@@ -1,0 +1,17 @@
+site:
+  title: Neo4j Developer Portal
+  url: /developer
+content:
+  sources:
+  - url: ./asciidoc
+    branches: master
+    start_path: developer
+ui:
+  bundle:
+    url: ui/build/ui-bundle.zip
+    snapshot: true
+urls:
+  html_extension_style: indexify
+asciidoc:
+  attributes:
+    theme: developer

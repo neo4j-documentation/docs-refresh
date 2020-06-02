@@ -1,0 +1,12 @@
+name: labs
+version: master
+title: Neo4j Labs
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc
+- modules/apoc/nav.adoc
+- modules/neosemantics/nav.adoc
+
+asciidoc:
+  attributes:
+    theme: labs
