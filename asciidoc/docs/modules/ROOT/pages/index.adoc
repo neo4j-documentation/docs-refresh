@@ -1,0 +1,3 @@
+= Docs Theme
+
+The theme for this repo will be **{page-theme}**
