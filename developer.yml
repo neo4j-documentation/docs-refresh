@@ -3,9 +3,9 @@ site:
   url: /developer
 content:
   sources:
-  - url: ./asciidoc
+  - url: ./
     branches: master
-    start_path: developer
+    start_path: asciidoc/developer
 ui:
   bundle:
     url: ui/build/ui-bundle.zip
@@ -14,4 +14,4 @@ urls:
   html_extension_style: indexify
 asciidoc:
   attributes:
-    theme: developer
+    page-theme: developer

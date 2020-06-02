@@ -15,4 +15,4 @@ ui:
     snapshot: true
 asciidoc:
   attributes:
-    theme: labs
+    page-theme: labs

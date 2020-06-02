@@ -1,7 +1,6 @@
 = Main Module
-:theme: labs
 
-The theme for this repo will be **{theme}**
+The theme for this repo will be **{page-theme}**
 
 [WARNING]
 The only frustrating thing about this approach is that we will have to manually link to each set of docs.

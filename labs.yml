@@ -3,9 +3,9 @@ site:
   url: /labs
 content:
   sources:
-  - url: ./asciidoc
+  - url: ./
     branches: master
-    start_path: labs
+    start_path: asciidoc/labs
 ui:
   bundle:
     url: ui/build/ui-bundle.zip
@@ -14,4 +14,4 @@ urls:
   html_extension_style: indexify
 asciidoc:
   attributes:
-    theme: labs
+    page-theme: labs
