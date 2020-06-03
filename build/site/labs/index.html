@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Main Module :: Neo4j Labs</title>
+    <title>Neo4j Labs :: Neo4j Labs</title>
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -125,7 +125,7 @@
               <p class="project-description">A library of procedures and functions for interacting with Neo4j</p>
 
               <ul class="project-links">
-                <li><a href="/labs/apoc/docs/4.0" class="project-link">Documentation</a></li>
+                <li><a href="/labs/apoc/4.0" class="project-link">Documentation</a></li>
                 <li><a href="/labs/apoc/" class="project-link">Developer Guide</a></li>
               </ul>
             </div>
@@ -134,7 +134,7 @@
               <p class="project-description">Integration for Neo4j &amp; Kafka</p>
 
               <ul class="project-links">
-                <li><a href="/labs/streams/docs/4.0" class="project-link">Documentation</a></li>
+                <li><a href="/labs/streams/4.0" class="project-link">Documentation</a></li>
                 <li><a href="/labs/streams" class="project-link">Developer Guide</a></li>
               </ul>
             </div>
@@ -143,7 +143,7 @@
               <p class="project-description">An RDF Toolkit for Neo4j</p>
 
               <ul class="project-links">
-                <li><a href="/labs/neosemantics/docs/4.0" class="project-link">Documentation</a></li>
+                <li><a href="/labs/neosemantics/4.0" class="project-link">Documentation</a></li>
                 <li><a href="/labs/neosemantics" class="project-link">Developer Guide</a></li>
               </ul>
             </div>
@@ -180,14 +180,42 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="apoc/">apoc Index</a>
+    <a class="nav-link" href="apoc/">APOC</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="apoc/">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="apoc/">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#xxx">Tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#xxx">Reference</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="neosemantics/">n10s Index</a>
+    <a class="nav-link" href="neosemantics/">Neosemantics</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="neosemantics/">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="neosemantics/">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#xxx">Tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#xxx">Reference</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -210,60 +238,91 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Main Module</h1>
+<h1 class="page">Neo4j Labs</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>The theme for this repo will be <strong>labs</strong></p>
+<p>Incubating the Next Generation of Graph Developer Tooling</p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-The only frustrating thing about this approach is that we will have to manually link to each set of docs.
-</td>
-</tr>
-</table>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_neo4j_labs"><a class="anchor" href="#_what_is_neo4j_labs"></a>What is Neo4j Labs?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Neo4j Labs is a collection of the latest innovations in graph technology</p>
+</div>
+<div class="paragraph">
+<p>These projects are designed and developed by the Neo4j team as a way to test functionality and extensions of our product offerings.
+A project typically either graduates to being maintained as a formal Neo4j project or is deprecated with source made available publicly.</p>
+</div>
+<div class="paragraph">
+<p>These Labs are supported via the online community.
+They are actively developed and maintained, but we don&#8217;t provide any SLAs or guarantees around backwards compatibility and deprecation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_projects"><a class="anchor" href="#_current_projects"></a>Current Projects</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_graphql_and_grandstack"><a class="anchor" href="#_graphql_and_grandstack"></a><a href="https://grandstack.io">GraphQL and GRANDstack</a></h3>
+<div class="paragraph">
+<p>GraphQL has become a comprehensive stack for API development and consolidation.
+Our GRANDstack and Neo4j-GraphQL-js offerings combine the most common tools and frameworks: GraphQL, React, Apollo and Neo4j Database.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_awesome_procedures_on_cypher_apoc"><a class="anchor" href="#_awesome_procedures_on_cypher_apoc"></a><a href="apoc/" class="page">Awesome Procedures on Cypher (APOC)</a></h3>
+<div class="paragraph">
+<p>As the most comprehensive developer toolkit for Neo4j, the <a href="apoc/" class="page">APOC library</a> provides a wide range of procedures and functions that make your life as a Neo4j user easier.
+APOC includes data integration, graph refactoring, data conversion, operational functionality and more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_neosemantics"><a class="anchor" href="#_neosemantics"></a><a href="neosemantics/" class="page">Neosemantics</a></h3>
+<div class="paragraph">
+<p><a href="neosemantics/" class="page">Neosemantics</a> integrates RDF and Linked Data with Neo4j.
+It allows to import a wide variety of RDF formats and to expose Neo4j property graphs as Linked Data.
+Ontology and Inference are also partially supported.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_halin_monitoring_app"><a class="anchor" href="#_halin_monitoring_app"></a>Halin Monitoring App</h3>
+<div class="paragraph">
+<p>The Halin Monitoring App allows you to monitor your Neo4j deployment and identify bottlenecks or incorrect configurations, with insights into currently running queries and workloads.
+The app also provides access to metrics and logs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kafka_integration"><a class="anchor" href="#_kafka_integration"></a>Kafka Integration</h3>
+<div class="paragraph">
+<p>Streaming event data is an integral part of most modern data architectures.
+With Neo4j Kafka Integration you can integrate Neo4j both as a sink or source into your setup.
+The integration is available as a Kafka Connect plugin and Neo4j Server extension..</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_etl_tool"><a class="anchor" href="#_etl_tool"></a>ETL Tool</h3>
+<div class="paragraph">
+<p>Having an easy way of loading data from relational databases into Neo4j is one of the first steps many users take.
+The Neo4j-ETL Tool makes this easy by inferring a graph model from the relational meta model that you can then adapt to fit your needs.
+Given that transformation, this tool also handles the actual import for you.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_active_projects"><a class="anchor" href="#_other_active_projects"></a>Other Active Projects</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="apoc/" class="page">APOC</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#apoc:quick-start.adoc" class="page unresolved">Quick Start</a></p>
+<p>Neovis.js, a graph visualization toolkit for the web</p>
 </li>
 <li>
-<p>Docs</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="./apoc/docs/4.0">4.0 Docs</a></p>
-</li>
-<li>
-<p><a href="./apoc/docs/3.5">3.5 Docs</a></p>
-</li>
-<li>
-<p><a href="./apoc/docs/current"><code>current</code> Docs</a></p>
+<p>The Neo4j-Spark-Connector, library to exchange graph data between Neo4j and Apache Spark</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
 </div>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code>* xref:apoc:index.adoc[APOC]
-** xref:apoc:quick-start.adoc[Quick Start]
-** Docs
-*** link:./apoc/docs/4.0[4.0 Docs]
-*** link:./apoc/docs/3.5[3.5 Docs]
-***  link:./apoc/docs/current[`current` Docs]</code></pre>
 </div>
 </div>
 </article>

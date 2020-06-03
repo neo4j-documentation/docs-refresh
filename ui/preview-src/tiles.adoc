@@ -1,7 +1,8 @@
-= Neo4j Docs
+= Tiles
 :page-layout: tiles
 :page-theme: docs
 :!toc:
+
 
 Welcome to the Neo4j Docs.
 Voluptate minim eu irure sit ullamco ipsum consequat proident.
