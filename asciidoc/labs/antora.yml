@@ -1,6 +1,6 @@
 name: labs
 version: master
-title: Neo4j Labs
+title: Neo4j Docs
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
