@@ -1,5 +1,8 @@
 = Neo4j Labs
-// :page-layout: tiles
+:page-layout: labs
+:page-theme: labs
+:page-herotitle: Neo4j Labs
+:page-herosubtitle: Incubating the Next Generation of Graph Developer Tooling
 
 Incubating the Next Generation of Graph Developer Tooling
 
