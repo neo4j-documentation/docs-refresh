@@ -4,9 +4,6 @@
 :page-herotitle: Neo4j Labs
 :page-herosubtitle: Incubating the Next Generation of Graph Developer Tooling
 
-Incubating the Next Generation of Graph Developer Tooling
-
-
 == What is Neo4j Labs?
 Neo4j Labs is a collection of the latest innovations in graph technology
 
@@ -16,6 +13,7 @@ A project typically either graduates to being maintained as a formal Neo4j proje
 These Labs are supported via the online community.
 They are actively developed and maintained, but we don't provide any SLAs or guarantees around backwards compatibility and deprecation.
 
+[.secondary]
 
 == Current Projects
 
@@ -24,7 +22,7 @@ They are actively developed and maintained, but we don't provide any SLAs or gua
 // To enable large scale graph analytics and to support machine learning pipelines, we developed the Neo4j Graph Algorithms library, which covers many widely used algorithms.
 // The library offers highly parallelized implementation that works well with large scale graphs.
 
-
+[#goals.incremental]
 === link:https://grandstack.io[GraphQL and GRANDstack]
 GraphQL has become a comprehensive stack for API development and consolidation.
 Our GRANDstack and Neo4j-GraphQL-js offerings combine the most common tools and frameworks: GraphQL, React, Apollo and Neo4j Database.
