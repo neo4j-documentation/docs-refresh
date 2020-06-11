@@ -1,0 +1,21 @@
+= How to Guide
+
+Take the reader through the steps required to solve a common problem
+
+oriented to: a goal
+must: show how to solve a specific action
+its form: a series of steps
+analogy: a recipe in a cookbook
+
+a clear defined end that addresses a specific question
+
+- series of steps
+- a focus on the goal
+- addressing a specific question
+  - how do i make a salad?  I have these ingredients what do I do with them?
+- no unnecessary explanation
+- a little flexibility
+  - ingredients might be different, openness to see how it could be transferred to another use case
+- practical usability
+- good naming
+  - how to import data..., how to subscribe to a stream etc

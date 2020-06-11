@@ -1,4 +1,4 @@
-** xref:index.adoc[Neosemantics]
+** xref:index.adoc[Neo4j ETL Tool]
 *** xref:index.adoc[Introduction]
 *** xref:installation.adoc[Installation]
 *** xref:tutorial.adoc[Getting Started]

@@ -1,6 +1,68 @@
-= Neosemantics
+= neosemantics (n10s) : Neo4j RDF & Semantics toolkit
+:imagesdir: https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads
+:slug: neosemantics-rdf
+:author: Jesús Barrasa
+:category: labs
+:tags: rdf, integrations, extensions, data-import, data-export, ontologies
+:neo4j-versions: 3.5, 4.0
 
-Some info on Neosemantics
+image::n10s-logo.png[float=right,width=500]
 
-* link:./4.0[4.0 Docs]
-* link:./3.5[3.5 Docs]
+neosemantics (n10s) is a plugin that enables the **use of RDF and its associated vocabularies like (OWL,RDFS,SKOS and others) in Neo4j**. https://www.w3.org/RDF/[RDF is a W3C standard model] for data interchange.
+
+You can use n10s to build integrations with RDF-generating / RDF-consuming components. You can also use it to validate your graph against constraints expressed in https://www.w3.org/TR/shacl/[SHACL] or to run basic inferencing.
+
+image::n10s-block-diagram.png[float=right,width=200]
+
+== Availability & Installation
+
+neosemantics runs as an extension to your Neo4j database. Downloading the appropriate release for your Neo4j database into the plugins folder adds n10s to any Neo4j installation.
+
+The n10s GraphApp will help you get started with neosemantics
+
+== Functionality Includes
+
+* Import/Export of RDF in multiple formats (Turtle, N-Triples, JSON-LD, RDF/XML, TriG and N-Quads)
+* Model mapping on import/export
+* Import and export of Ontologies/Taxonomies in different vocabularies (OWL,SKOS,RDFS)
+* Graph validation based on SHACL constraints
+* Basic inferencing
+
+== Relevant Links
+
+[cols="1,4"]
+|===
+| icon:comments[] Support | https://community.neo4j.com/c/integrations/linked-data-rdf-ontology[Neo4j Online Community]
+| icon:user[] Authors | https://twitter.com/BarrasaDV[Jesús Barrasa], https://twitter.com/adamcowley[Adam Cowley] (GraphApp)
+| icon:gift[] Releases | https://github.com/neo4j-labs/neosemantics/releases
+| icon:github[] Source | https://github.com/neo4j-labs/neosemantics
+| icon:book[] Docs | https://neo4j.com/docs/labs/nsmntx/current/
+| icon:gift[] GraphApp | Install from your Neo4j Desktop via https://install.graphapp.io
+// | icon:book[] Article |
+// | icon:play-circle[] Example |
+|===
+
+== Videos & Tutorials
+
+++++
+<iframe width="320" height="180" src="https://www.youtube.com/embed/LO-OvQaBq8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="320" height="180" src="https://www.youtube.com/embed/SvwIqzaoYMo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="320" height="180" src="https://www.youtube.com/embed/5wluUfomasg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="320" height="180" src="https://www.youtube.com/embed/OVweE--RJqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
+
+== Recent Articles
+
+* https://markhneedham.com/blog/2020/04/21/quick-graph-covid-19-taxonomy/[COVID-19 Taxonomy Graph]
+* https://jbarrasa.com/2019/12/05/quickgraph10-enrich-your-neo4j-knowledge-graph-by-querying-wikidata/[Enrich your Neo4j KG by querying Wikidata]
+* https://jbarrasa.com/2019/11/25/quickgraph9-the-fashion-knowledge-graph-inferencing-with-ontologies-in-neo4j/[Ontologies in Neo4j]
+
+Older articles:
+
+* https://jbarrasa.com/2016/06/07/importing-rdf-data-into-neo4j/[The model mapping principles behind neosemantics]
+* https://jbarrasa.com/2016/11/17/neo4j-is-your-rdf-store-part-1/[Import/Export RDF into/from Neo4j (I)]
+* https://jbarrasa.com/2016/12/16/neo4j-is-your-rdf-store-part-2/[Import/Export RDF into/from Neo4j (II)]
+* https://jbarrasa.com/2018/02/01/neo4j-is-your-rdf-store-part-3-thomson-reuters-openpermid/[Import/Export RDF into/from Neo4j (III)] using https://www.refinitiv.com/en/products/permid-data-management[Refinitiv's PermID] https://permid.org/[public dataset]
+* https://jbarrasa.com/2018/10/18/quickgraph7-creating-a-schema-org-linked-data-endpoint-on-neo4j-in/[Creating a schema.org endpoint on Neo4j]
+* https://jbarrasa.com/2016/09/09/quickgraph3-a-step-by-step-example-of-rdf-to-property-graph-transformation/[Step by step example of RDF to Property Graph transformation]
+

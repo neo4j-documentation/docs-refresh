@@ -1,7 +1,0 @@
-= APOC Docs
-
-The only frustrating thing about this approach is that we will have to manually link to each set of docs
-
-* link:../4.0[4.0 Docs]
-* link:../3.5[3.5 Docs]
-* link:../current[`current` Docs]
