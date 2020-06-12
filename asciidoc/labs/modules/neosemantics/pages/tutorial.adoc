@@ -1,6 +1,25 @@
 = Neosemantics Tutorial
+:page-pagination:
 
-- enable someone to learn
+[NOTE]
+We're assuming that you have read the xref:installation.adoc[Installation Guide].  If you haven't already done so, head back and xref:installation.adoc[read the Installation instructions] first.
+
+Now that you have installed
+
+== Config
+
+== Mapping
+
+== Previewing Data
+
+== Importing Data
+
+== Exporting Data
+
+
+
+[CAUTION]
+
 
 - learn by doing
 - getting started

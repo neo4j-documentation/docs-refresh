@@ -5,7 +5,12 @@ start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
 - modules/apoc/nav.adoc
+- modules/etl/nav.adoc
+- modules/grandstack/nav.adoc
+- modules/graph-algorithms/nav.adoc
+- modules/halin/nav.adoc
 - modules/neosemantics/nav.adoc
+- modules/streams/nav.adoc
 
 asciidoc:
   attributes:

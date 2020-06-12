@@ -3,4 +3,6 @@
 *** xref:installation.adoc[Installation]
 *** xref:tutorial.adoc[Getting Started]
 *** xref:how-to-guide.adoc[How To Guide]
-*** link:./docs/current[Documentation]
+*** xref:graph-app.adoc[Graph App]
+*** xref:acknowledgements.adoc[Acknowledgements]
+*** link:/labs/neosemantics/docs/current[Documentation]

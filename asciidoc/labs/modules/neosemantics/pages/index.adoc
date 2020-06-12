@@ -1,18 +1,20 @@
-= neosemantics (n10s) : Neo4j RDF & Semantics toolkit
+= neosemantics (n10s)
 :imagesdir: https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads
 :slug: neosemantics-rdf
 :author: Jesús Barrasa
 :category: labs
 :tags: rdf, integrations, extensions, data-import, data-export, ontologies
 :neo4j-versions: 3.5, 4.0
+:page-pagination:
 
-image::n10s-logo.png[float=right,width=500]
+==  Neo4j RDF & Semantics toolkit
+// image::n10s-logo.png[float=right,width=500]
 
 neosemantics (n10s) is a plugin that enables the **use of RDF and its associated vocabularies like (OWL,RDFS,SKOS and others) in Neo4j**. https://www.w3.org/RDF/[RDF is a W3C standard model] for data interchange.
 
 You can use n10s to build integrations with RDF-generating / RDF-consuming components. You can also use it to validate your graph against constraints expressed in https://www.w3.org/TR/shacl/[SHACL] or to run basic inferencing.
 
-image::n10s-block-diagram.png[float=right,width=200]
+// image::n10s-block-diagram.png[float=right,width=200]
 
 == Availability & Installation
 
