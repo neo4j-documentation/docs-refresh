@@ -1,10 +1,10 @@
 name: developer
 version: master
 title: Developer Guides
-start_page: ROOT:index.adoc
+start_page: ROOT:getting-started.adoc
 nav:
 - modules/ROOT/nav.adoc
-- modules/get-started/nav.adoc
+# - modules/get-started/nav.adoc
 pub:
 - url: foo
 

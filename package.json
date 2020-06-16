@@ -9,7 +9,8 @@
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:docs": "antora --fetch --stacktrace docs.yml",
-    "watch": "npm-watch build:labs"
+    "watch:developer": "npm-watch build:developer",
+    "watch": "npm-watch"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,12 @@
     "npm-watch": "^0.6.0"
   },
   "watch": {
+    "build:developer": {
+      "patterns": [
+        "asciidoc/developer"
+      ],
+      "extensions": "adoc"
+    },
     "build:labs": {
       "patterns": [
         "asciidoc/labs"

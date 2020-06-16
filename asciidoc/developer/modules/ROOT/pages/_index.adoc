@@ -1,0 +1,46 @@
+= Index
+:page-layout: labs
+:page-theme: developer
+:page-herotitle: (neo4j)-[:LOVES]->(developers)
+
+
+== The World's Leading Graph Database
+
+World's leading graph database, with native graph storage and processing.
+
+Property graph model and Cypher query language makes it easy to understand.
+
+**Fast. Natural. Fun.**
+
+
+==  Test-Drive Neo4j with Cypher
+
+=== Friends of Friends
+
+Find all of Joe's second-degree friends
+
+[source,cypher]
+MATCH
+  (person:Person)-[:KNOWS]-(friend:Person)-[:KNOWS]-
+  (foaf:Person)
+WHERE
+  person.name = "Joe"
+  AND NOT (person)-[:KNOWS]-(foaf)
+RETURN
+  foaf
+
+Joe knows Sally, and Sally knows Anna. Bob is excluded from the result because, in addition to being a 2nd-degree friend through Sally, he's also a first-degree friend.
+
+
+=== Common Friends
+Find friends in common between Joe and Sally
+
+[source,cypher]
+MATCH
+  (user:Person)-[:KNOWS]-(friend)-
+    [:KNOWS]-(foaf:Person)
+WHERE
+  user.name = "Joe" AND foaf.name = "Sally"
+RETURN
+  friend.name AS friend
+Joe and Sally both know Bob.
