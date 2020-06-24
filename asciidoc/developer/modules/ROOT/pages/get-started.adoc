@@ -1,38 +1,37 @@
 = Getting Started with Neo4j
-:slug: get-started
-:section: Getting Started
-:section-link: get-started
-:section-level: 1
-:sectanchors:
-:!toc:
-:toc-title: Contents
-:toclevels: 1
+:page-layout: labs
+:page-theme: developer
+
+
 
 
 ++++
 <object type="image/svg+xml" data="https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/get_started_neo4j.svg"></object>
 ++++
 
-[source,gram]
-(neo4j:Neo4j {name: "Neo4j"})
-(neo4j)-[:PROVIDES]->(:OpenSource {name: "Open Source"})
-(neo4j)-[:INCLUDES]->(browser:Product {name: "Neo4j Browser"})
-(browser)-[:HAS]->(:Feature {name: "Cypher"})
-(browser)-[:HAS]->(:Feature {name: "Dev Tools"})
-(browser)-[:HAS]->(:Feature {name: "Visualization"})
-(neo4j)-[:CONNECTS_WITH]->(drivers:Drivers {name: "Drivers"})
-(drivers)-[:SUPPORTS]->(:Language {name: "Java"})
-(drivers)-[:SUPPORTS]->(:Language {name: "Javascript"})
-(drivers)-[:SUPPORTS]->(:Language {name: ".NET"})
-(drivers)-[:SUPPORTS]->(:Language {name: "Python"})
-(drivers)-[:SUPPORTS]->(:Language {name: "Go"})
-(drivers)-[:SUPPORTS]->(:Language:Unofficial {name: "PHP"})
-(drivers)-[:SUPPORTS]->(:Language:Unofficial {name: "Ruby"})
-(drivers)-[:SUPPORTS]->(:Language:Unofficial {name: "...and more"})
-(neo4j)-[:PROVIDES]->(:OpenSource {name: "Open Source"})
-(neo4j)-[:INCLUDES]->(integrations:Integrations {name: "Integrations"})
-(integrations)-[:PLUGS_INTO]->(:Tools)
-(integrations)-[:PLUGS_INTO]->(:Frameworks)
+
+
+
+// [source,gram]
+// (neo4j:Neo4j {name: "Neo4j"})
+// (neo4j)-[:PROVIDES]->(:OpenSource {name: "Open Source"})
+// (neo4j)-[:INCLUDES]->(browser:Product {name: "Neo4j Browser"})
+// (browser)-[:HAS]->(:Feature {name: "Cypher"})
+// (browser)-[:HAS]->(:Feature {name: "Dev Tools"})
+// (browser)-[:HAS]->(:Feature {name: "Visualization"})
+// (neo4j)-[:CONNECTS_WITH]->(drivers:Drivers {name: "Drivers"})
+// (drivers)-[:SUPPORTS]->(:Language {name: "Java"})
+// (drivers)-[:SUPPORTS]->(:Language {name: "Javascript"})
+// (drivers)-[:SUPPORTS]->(:Language {name: ".NET"})
+// (drivers)-[:SUPPORTS]->(:Language {name: "Python"})
+// (drivers)-[:SUPPORTS]->(:Language {name: "Go"})
+// (drivers)-[:SUPPORTS]->(:Language:Unofficial {name: "PHP"})
+// (drivers)-[:SUPPORTS]->(:Language:Unofficial {name: "Ruby"})
+// (drivers)-[:SUPPORTS]->(:Language:Unofficial {name: "...and more"})
+// (neo4j)-[:PROVIDES]->(:OpenSource {name: "Open Source"})
+// (neo4j)-[:INCLUDES]->(integrations:Integrations {name: "Integrations"})
+// (integrations)-[:PLUGS_INTO]->(:Tools)
+// (integrations)-[:PLUGS_INTO]->(:Frameworks)
 
 
 [#starting-neo4j]

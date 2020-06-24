@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Import CSV :: Neo4j Labs Docs</title>
-    <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
   <body class="article labs">
@@ -150,7 +149,11 @@
           </div>
         </div>
         <div class="navbar-item">
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right">
+          <a class="navbar-link" href="/search" id="search_open">
+
+
+
+          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button" title="Search Website">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
               <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
                     <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
@@ -158,11 +161,60 @@
               </g>
             </g>
           </svg>
+          <span class="navbar-mobile">Search</span>
+          </a>
         </div>
       </div>
     </div>
   </nav>
-</header><div class="body">
+</header><div class="search" id="search">
+    <div class="search-container">
+        <form class="search-form">
+            <label for="search_input">Search Neo4j.com</label>
+
+            <input id="search_input" type="text" name="search"
+                placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
+            <div class="search-icon">
+                <svg width="14px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
+                    role="button" title="Search Website">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                            <circle id="Oval"
+                                transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                                cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                            <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="search-icon">
+                <svg width="14px" height="22px" viewBox="0 0 22 22" role="button" class="cancel" id="close_search">
+                    <line x1="19.5833333" y1="0.416666667" x2="0.416666667" y2="19.5833333"></line>
+                    <line x1="19.5833333" y1="19.5833333" x2="0.416666667" y2="0.416666667"></line>
+                </svg>
+            </div>
+        </form>
+        <div class="search-results"></div>
+
+        <div class="search-filters hidden">
+            <div class="search-filters-header">
+                <h2>Filter By Category</h2>
+                <div class="search-filters-icon">
+                    <svg width="14px" height="22px" viewBox="0 0 22 22" role="button" class="cancel" id="close_filters">
+                        <line x1="19.5833333" y1="0.416666667" x2="0.416666667" y2="19.5833333"></line>
+                        <line x1="19.5833333" y1="19.5833333" x2="0.416666667" y2="0.416666667"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="search-filters-content">
+            </div>
+        </div>
+
+    </div>
+</div><div class="body">
 <div class="nav-container" data-component="apoc" data-version="4.0">
   <aside class="nav">
     <div class="panels">
@@ -536,9 +588,31 @@ Jane</pre>
 </main>
 </div>
 <footer class="footer">
-  <p>We need a generic footer here...</p>
-</footer>
+  <div class="column">
+    <div class="logo-footer"></div>
+    <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
+      <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
+    <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks<br>
+      of Neo4j, Inc. All other marks are owned by their respective companies.</p>
+  </div>
+
+  <div class="column">
+    <a href="/contact-us?ref=footer">Contact Us →</a>
+    <p>US: 1-855-636-4532<br>
+      Sweden +46 171 480 113<br>
+      UK: +44 20 3868 3223<br>
+      France: +33 (0) 8 05 08 03 44<br>
+      <!--Germany: +49 (0)89 26204 6300</p>-->
+    </p>
+  </div>
+</footer><script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+<script src="https://d3js.org/d3-force.v2.min.js"></script>
+
 <script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/gram.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+<script async src="../../../_/js/vendor/search.js"></script>  </body>
 </html>
