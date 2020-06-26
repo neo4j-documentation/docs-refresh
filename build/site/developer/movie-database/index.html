@@ -754,8 +754,116 @@ Make sure to download the correct version of the dataset for your Neo4j installa
 </div>
 <div class="sect2">
 <h3 id="_example_queries"><a class="anchor" href="#_example_queries"></a>Example Queries</h3>
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/movie-database.adoc - include::movie-database-queries.txt[]</p>
+<div class="listingblock">
+<div class="title">Actors who played in some movie</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (m:Movie {title: 'Forrest Gump'})&lt;-[:ACTS_IN]-(a:Actor)
+RETURN a.name, a.birthplace</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Find the most prolific actors</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (a:Actor)-[:ACTS_IN]-&gt;(m:Movie)
+RETURN a, count(*)
+ORDER BY count(*) DESC LIMIT 10;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Find actors who have been in less than 3 movies</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (a:Actor)-[:ACTS_IN]-&gt;(m:Movie)
+WITH a, count(m) AS movie_count
+WHERE movie_count &lt; 3
+RETURN a, movie_count
+ORDER BY movie_count DESC LIMIT 5;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Find the actors with 20+ movies, and the movies in which they acted</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (a:Actor)-[:ACTS_IN]-&gt;(m:Movie)
+WITH a, collect(m.title) AS movies
+WHERE length(movies) &gt;= 20
+RETURN a, movies
+ORDER BY length(movies) DESC LIMIT 10;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Find prolific actors (10+) who have directed at least two films, count films acted in and list films directed</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (a:Actor)-[:ACTS_IN]-&gt;(m:Movie)
+WITH a, count(m) AS acted
+WHERE acted &gt;= 10
+WITH a, acted
+MATCH (a:Director)-[:DIRECTED]-&gt;(m:Movie)
+WITH a, acted, collect(m.title) AS directed
+WHERE length(directed) &gt;= 2
+RETURN a.name, acted, directed
+ORDER BY length(directed) DESC, acted DESC;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Rewritten to filter both :Actor and :Director labels up front</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (a:Actor:Director)-[:ACTS_IN]-&gt;(m:Movie)
+WITH a, count(1) AS acted
+WHERE acted &gt;= 10
+WITH a, acted
+MATCH (a:Actor:Director)-[:DIRECTED]-&gt;(m:Movie)
+WITH a, acted, collect(m.title) AS directed
+WHERE length(directed) &gt;= 2
+RETURN a.name, acted, directed
+ORDER BY length(directed) DESC, acted DESC;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Using the lowest cardinality label, :Director</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (a:Director)-[:ACTS_IN]-&gt;(m)
+WITH a, count(m) AS acted
+WHERE acted &gt;= 10
+WITH a, acted
+MATCH (a)-[:DIRECTED]-&gt;(m)
+WITH a, acted, collect(m.title) AS directed
+WHERE length(directed) &gt;= 2
+RETURN a.name, acted, directed
+ORDER BY length(directed) DESC, acted DESC;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">User-Ratings</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u:User {login: 'Michael'})-[r:RATED]-&gt;(m:Movie)
+WHERE r.stars &gt; 3
+RETURN m.title, r.stars, r.comment</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Recommendations including counts, grouping and sorting</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u:User {login: 'Michael'})-[:FRIEND]-()-[r:RATED]-&gt;(m:Movie)
+RETURN m.title, avg(r.stars), count(*)
+ORDER BY AVG(r.stars) DESC, count(*) DESC</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Ratings by like-minded people</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u:User)-[r:RATED]-&gt;(m:Movie)&lt;-[r2:RATED]-(likeminded),
+      (u)-[:FRIEND]-(friend)
+WHERE r.stars &gt; 3 AND r2.stars &gt;= 3
+RETURN likeminded, count(*)
+ORDER BY count(*) desc LIMIT 10;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Mutual Friend recommendations</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u:User {login: 'Michael'})-[:FRIEND]-(f:Person)-[r:RATED]-&gt;(m:Movie)
+WHERE r.stars &gt; 3
+RETURN f.name, m.title, r.stars, r.comment</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -769,7 +877,71 @@ Make sure to get an <a href="https://www.themoviedb.org/faq/api">API-Key</a> upf
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">Unresolved include directive in modules/ROOT/pages/movie-database.adoc - include::import-movies.rb[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">require 'rubygems'
+require 'rest-client'
+require 'json'
+
+URL = "http://api.themoviedb.org/3"
+# get the api key at https://www.themoviedb.org/faq/api and set it as environment variable
+KEY = ENV['THE_MOVIE_DB_KEY']
+
+
+puts setup
+puts "BEGIN"
+[19995 , 194, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 13, 20526, 11, 1893, 1892,
+ 1894, 168, 193, 200, 157, 152, 201, 154, 12155, 58, 285, 118, 22, 392, 5255, 568, 9800, 497, 101, 120, 121, 122].each do |id|
+ puts create_movie(movie(id))
+end
+puts "COMMIT"
+
+def get(type,id)
+  url = "#{URL}/#{type}/#{id}?api_key=#{KEY}&amp;append_to_response=casts"
+  res = RestClient.get url
+  File.open("json/#{id}.json", 'w') {|f| f.write(res.to_str) }
+  JSON.parse(res.to_str)
+end
+
+def person(id)
+  get("person",id)
+end
+
+def clean(name)
+  name.to_s.gsub(/['"]/,"")
+end
+def movie(id)
+  parse_movie(get("movie",id),id)
+end
+
+def parse_movie(res,id)
+#  puts res.inspect
+  movie = [:tagline,:released,:genres].reduce({:movie_id =&gt; id}) { |r, prop| r[prop] = res[prop.to_s] if res[prop.to_s] &amp;&amp; res[prop.to_s].length&gt;0; r }
+  movie[:title] = res["title"]
+  movie[:genres] = movie[:genres].collect { |g| g["name"] }
+  movie[:actors] = res["casts"]["cast"].collect { |g| { :id =&gt; g["id"], :name =&gt; clean(g["name"]) , :role =&gt; clean(g["character"]) }}
+  movie[:directors] = res["casts"]["crew"].find_all {|a| a["job"]=="Director" } .collect { |g| { :id =&gt; g["id"], :name =&gt; clean(g["name"]) }}
+  movie
+end
+
+def setup
+  ["CREATE INDEX ON :Movie(title)",
+  "CREATE INDEX ON :Movie(movie_id)",
+  "CREATE INDEX ON :Person(id)",
+  "CREATE INDEX ON :Person(name)",
+  "CREATE INDEX ON :Genre(genre)",""].join(";\n")
+end
+
+# node auto-index for movie_id, id, name, title, genre, type
+def create_movie(movie)
+  props=[:movie_id, :title,:tagline,:released].find_all{ |p| movie[p] }.collect { |p| "#{p}:'#{clean(movie[p])}'" }.join(', ')
+  actors = movie[:actors].collect { |a| "CREATE UNIQUE (movie)&lt;-[:ACTS_IN {role:'#{clean(a[:role])}'}]-(:Person:Actor {id:'#{a[:id]}', name: '#{a[:name]}'})-[:PERSON]-&gt;(people) "}.join(" \n") + "\n"
+  directors = movie[:directors].collect { |a| "CREATE UNIQUE (movie)&lt;-[:DIRECTED]-(:Person:Director {id:'#{a[:id]}', name:'#{a[:name]}'})-[:PERSON]-&gt;(people) "}.join(" \n") + "\n"
+  genres = movie[:genres].collect { |g| "CREATE UNIQUE (movie)-[:GENRE]-&gt;(:Genre {genre:'#{g}'})-[:GENRE]-&gt;(genres) "}.join(" \n") + "\n"
+  " MERGE (genres:Genres)
+    MERGE (movies:Movies)
+    MERGE (people:People)
+    CREATE (movie:Movie {#{props}})
+   " + genres + actors + directors + ";"
+end</code></pre>
 </div>
 </div>
 <div class="paragraph">

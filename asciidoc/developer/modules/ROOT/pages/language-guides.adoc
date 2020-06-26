@@ -63,7 +63,7 @@ Get started with your stack now, see the dedicated page for more detail.
 
 If you are new to development, we recommend the https://www.jetbrains.com/products.html[Jetbrains IDE^] for a good developer experience, which also comes with a link:/blog/jetbrains-ide-plugin-graph-database/[Neo4j Database plugin^].
 
-include::example-project/example-project.adoc[tags=intro-app-project,lines=21..35]
+include::example-project.adoc[tags=intro-app-project,lines=21..35]
 
 link:/developer/example-project/[Read More^]
 

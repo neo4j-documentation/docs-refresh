@@ -69,7 +69,7 @@ You can also point the neo4j-shell to the extracted directory to run Cypher quer
 
 === Example Queries
 
-include::movie-database-queries.txt[]
+include::example$movie-database-queries.txt[]
 
 === Import Instructions
 
@@ -80,7 +80,7 @@ Make sure to get an https://www.themoviedb.org/faq/api[API-Key] upfront.
 
 [source,ruby]
 ----
-include::import-movies.rb[]
+include::example$import-movies.rb[]
 ----
 
 It outputs the Cypher statements on stdout and can be piped to the neo4j-shell or a file, which then can be read by the neo4j-shell.

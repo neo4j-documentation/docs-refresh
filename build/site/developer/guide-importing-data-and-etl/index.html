@@ -795,7 +795,14 @@ We can assemble a short .sql script of these copy commands, as shown below.</p>
 <div class="listingblock">
 <div class="title">export_csv.sql</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/export_csv.sql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">COPY (SELECT * FROM customers) TO '/tmp/customers.csv' WITH CSV header;
+COPY (SELECT * FROM suppliers) TO '/tmp/suppliers.csv' WITH CSV header;
+COPY (SELECT * FROM products)  TO '/tmp/products.csv' WITH CSV header;
+COPY (SELECT * FROM employees) TO '/tmp/employees.csv' WITH CSV header;
+COPY (SELECT * FROM categories) TO '/tmp/categories.csv' WITH CSV header;
+
+COPY (SELECT * FROM orders
+      LEFT OUTER JOIN order_details ON order_details.OrderID = orders.OrderID) TO '/tmp/orders.csv' WITH CSV header;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -822,7 +829,30 @@ Since we are using Neo4j Desktop in this example, we will use the import folder 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/import_csv.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">// Create orders
+LOAD CSV WITH HEADERS FROM 'file:///orders.csv' AS row
+MERGE (order:Order {orderID: row.OrderID})
+  ON CREATE SET order.shipName = row.ShipName;
+
+// Create products
+LOAD CSV WITH HEADERS FROM 'file:///products.csv' AS row
+MERGE (product:Product {productID: row.ProductID})
+  ON CREATE SET product.productName = row.ProductName, product.unitPrice = toFloat(row.UnitPrice);
+
+// Create suppliers
+LOAD CSV WITH HEADERS FROM 'file:///suppliers.csv' AS row
+MERGE (supplier:Supplier {supplierID: row.SupplierID})
+  ON CREATE SET supplier.companyName = row.CompanyName;
+
+// Create employees
+LOAD CSV WITH HEADERS FROM 'file:///employees.csv' AS row
+MERGE (e:Employee {employeeID:row.EmployeeID})
+  ON CREATE SET e.firstName = row.FirstName, e.lastName = row.LastName, e.title = row.Title;
+
+// Create categories
+LOAD CSV WITH HEADERS FROM 'file:///categories.csv' AS row
+MERGE (c:Category {categoryID: row.CategoryID})
+  ON CREATE SET c.categoryName = row.CategoryName, c.description = row.Description;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -859,8 +889,12 @@ Finally, as the indexes are created after the nodes are inserted, their populati
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/import_csv.cypher[]
-Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/import_csv.cypher[]
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CREATE INDEX product_id FOR (p:Product) ON (p.productID);
+CREATE INDEX product_name FOR (p:Product) ON (p.productName);
+CREATE INDEX supplier_id FOR (s:Supplier) ON (s.supplierID);
+CREATE INDEX employee_id FOR (e:Employee) ON (e.employeeID);
+CREATE INDEX category_id FOR (c:Category) ON (c.categoryID);
+CREATE CONSTRAINT order_id ON (o:Order) ASSERT o.orderID IS UNIQUE;
 schema await</code></pre>
 </div>
 </div>
@@ -869,7 +903,18 @@ schema await</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/import_csv.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">// Create relationships between orders and products
+LOAD CSV WITH HEADERS FROM 'file:///orders.csv' AS row
+MATCH (order:Order {orderID: row.OrderID})
+MATCH (product:Product {productID: row.ProductID})
+MERGE (order)-[op:CONTAINS]-&gt;(product)
+  ON CREATE SET op.unitPrice = toFloat(row.UnitPrice), op.quantity = toFloat(row.Quantity);
+
+// Create relationships between orders and employees
+LOAD CSV WITH HEADERS FROM "file:///orders.csv" AS row
+MATCH (order:Order {orderID: row.OrderID})
+MATCH (employee:Employee {employeeID: row.EmployeeID})
+MERGE (employee)-[:SOLD]-&gt;(order);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -877,7 +922,17 @@ schema await</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/import_csv.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">// Create relationships between products and suppliers
+LOAD CSV WITH HEADERS FROM "file:///products.csv" AS row
+MATCH (product:Product {productID: row.ProductID})
+MATCH (supplier:Supplier {supplierID: row.SupplierID})
+MERGE (supplier)-[:SUPPLIES]-&gt;(product);
+
+// Create relationships between products and categories
+LOAD CSV WITH HEADERS FROM "file:///products.csv" AS row
+MATCH (product:Product {productID: row.ProductID})
+MATCH (category:Category {categoryID: row.CategoryID})
+MERGE (product)-[:PART_OF]-&gt;(category);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -885,7 +940,11 @@ schema await</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/guide-importing-data-and-etl.adoc - include::../../data/northwind/import_csv.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">// Create relationships between employees (reporting hierarchy)
+LOAD CSV WITH HEADERS FROM "file:///employees.csv" AS row
+MATCH (employee:Employee {employeeID: row.EmployeeID})
+MATCH (manager:Employee {employeeID: row.ReportsTo})
+MERGE (employee)-[:REPORTS_TO]-&gt;(manager);</code></pre>
 </div>
 </div>
 <div class="paragraph">

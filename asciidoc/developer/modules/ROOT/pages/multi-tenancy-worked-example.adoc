@@ -189,14 +189,14 @@ Let's switch to the `mall1` database and setup parameters that we'll use in our 
 [source,cypher, subs="attributes"]
 ----
 :use mall1;
-include::importTickets.cypher[tag=params]
+include::example$importTickets.cypher[tag=params]
 ----
 
 And now we'll create that indexes that we're going to need:
 
 [source,cypher]
 ----
-include::createConstraints.cypher[]
+include::example$createConstraints.cypher[]
 ----
 
 Now we're ready to process the JSON file.
@@ -204,7 +204,7 @@ We'll wrap our call to `apoc.load.json` inside a call to `apoc.periodic.iterate`
 
 [source,cypher]
 ----
-include::importTickets.cypher[tag=query]
+include::example$importTickets.cypher[tag=query]
 ----
 
 :mall: 2
@@ -215,21 +215,21 @@ We'll switch to that database and setup our parameters:
 [source,cypher, subs="attributes"]
 ----
 :use mall2;
-include::importTickets.cypher[tag=params]
+include::example$importTickets.cypher[tag=params]
 ----
 
 And now we'll create that indexes that we're going to need:
 
 [source,cypher]
 ----
-include::createConstraints.cypher[]
+include::example$createConstraints.cypher[]
 ----
 
 And now let's import the tickets sold in this store:
 
 [source,cypher]
 ----
-include::importTickets.cypher[tag=query]
+include::example$importTickets.cypher[tag=query]
 ----
 
 We can see a sample of the imported graph in the Neo4j Browser visualization below:

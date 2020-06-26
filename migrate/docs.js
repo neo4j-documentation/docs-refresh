@@ -17,11 +17,20 @@ const attributesPattern = /^:([a-z0-9-]+)(!)?:(.*)?\n/gmi
 const includePattern = /include::(.*)\/_includes/g
 const includeReplace = 'include::./_includes'
 
+const cypherPattern = /include::(.*).(cypher|rb|txt|sql)/gi
+const cypherReplace = 'include::example$$$1.$2'
+
 const ignoreFiles = ['README.adoc', 'guide_template.adoc', 'landing-page.adoc', '-driver.adoc']
 const ignoreFolders = ['_includes', 'landing-page']
 
 const replaceStrings = {
-    '../../language-guides/ruby/ruby.adoc' : './ruby.adoc',
+    '../../language-guides/ruby/ruby.adoc' : 'ruby.adoc',
+    'example$ruby.adoc' : 'ruby.adoc',
+    'example$../../data/northwind/': 'example$',
+    'example$./': 'example$',
+    'include::{northwind}/': 'include::',
+    'include::example${northwind}/': 'include::example$',
+    'example-project/example-project.adoc': 'example-project.adoc',
 }
 
 const renameAttributes = {
@@ -36,6 +45,7 @@ const renameAttributes = {
     'toc-title': null,
     'toclevels': null,
     'toc-placement': null,
+    northwind: null,
 
     // Rename
     // level: 'page-level',
@@ -45,7 +55,6 @@ const renameAttributes = {
 const copyAttributes = {
     level: 'page-level',
 }
-
 
 const read$ = glob$(inputPath)
     .pipe(
@@ -90,16 +99,19 @@ const read$ = glob$(inputPath)
                     content = content.replace(line, `${line}${copiedAttribute}`)
                 })
 
-            // String replacements
-            Object.entries(replaceStrings).map(([key, value]) => {
-                content = content.replace(key, value)
-            })
-
             // Correct includes
             content = content.replace(includePattern, includeReplace)
+            content = content.replace(cypherPattern, cypherReplace)
+
+            // String replacements
+            Object.entries(replaceStrings).map(([key, value]) => {
+                while ( content.includes(key) ) {
+                    content = content.replace(key, value)
+                }
+            })
 
             // Moved variables from versions.txt into antora.yml
-            content = content.replace(/include::(.*)?versions.txt/g, '')
+            content = content.replace(/include::(.*)?versions.txt\[\]/g, '')
 
             // Convert level
             content = content.replace(`[role=expertise]\n{level}`, '[role=expertise {level}]\n{level}')

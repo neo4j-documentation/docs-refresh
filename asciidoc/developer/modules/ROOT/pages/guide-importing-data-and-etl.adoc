@@ -1,7 +1,6 @@
 = Tutorial: Import Relational Data Into Neo4j
 :level: Beginner
 :page-level: Beginner
-:northwind: ../../data/northwind
 :author: Jennifer Reif
 :category: import-export
 :tags: data-import, graph-import, northwind-graph, relational-graph, load-csv
@@ -97,7 +96,7 @@ We can assemble a short .sql script of these copy commands, as shown below.
 .export_csv.sql
 [source, sql]
 ----
-include::{northwind}/export_csv.sql[]
+include::example$export_csv.sql[]
 ----
 
 Then, we can run that script against our northwind database with the command `psql -d northwind < export_csv.sql`, and it will create the individual CSV files listed in our script.
@@ -118,7 +117,7 @@ The entire Cypher script is link:{github}/data/northwind/import_csv.cypher[avail
 
 [source, cypher]
 ----
-include::{northwind}/import_csv.cypher[tags=nodes]
+include::example$import_csv.cypher[tags=nodes]
 ----
 
 You might notice that we have not imported all of the field columns in our CSV file.
@@ -143,8 +142,8 @@ Finally, as the indexes are created after the nodes are inserted, their populati
 
 [source, cypher]
 ----
-include::{northwind}/import_csv.cypher[tags=indexes]
-include::{northwind}/import_csv.cypher[tags=constraints]
+include::example$import_csv.cypher[tags=indexes]
+include::example$import_csv.cypher[tags=constraints]
 schema await
 ----
 
@@ -152,21 +151,21 @@ Initial nodes and indexes in place, we can now create the relationships for orde
 
 [source, cypher]
 ----
-include::{northwind}/import_csv.cypher[tags=rels_orders]
+include::example$import_csv.cypher[tags=rels_orders]
 ----
 
 Next, create relationships between products, suppliers, and categories:
 
 [source, cypher]
 ----
-include::{northwind}/import_csv.cypher[tags=rels_products]
+include::example$import_csv.cypher[tags=rels_products]
 ----
 
 Lastly, we will create the 'REPORTS_TO' relationship between employees to represent the reporting structure:
 
 [source, cypher]
 ----
-include::{northwind}/import_csv.cypher[tags=rels_employees]
+include::example$import_csv.cypher[tags=rels_employees]
 ----
 
 You can also run the whole script at once using `bin/neo4j-shell -path northwind.db -file import_csv.cypher`.

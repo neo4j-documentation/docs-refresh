@@ -751,8 +751,27 @@ You will find the implementations for all drivers as <a href="https://github.com
 <div class="sect1">
 <h2 id="ogm-faq"><a class="anchor" href="#ogm-faq"></a>FAQ</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/neo4j-ogm.adoc - include::https://raw.githubusercontent.com/neo4j/neo4j-ogm/master/neo4j-ogm-docs/src/main/asciidoc/appendix/faq.adoc[]</p>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="anchor" href="#faq"></a>Appendix A: Frequently Asked Questions (FAQ)</h2>
+<div class="sectionbody">
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em>What is the difference between Neo4j-OGM and Spring Data Neo4j (SDN)?</em></p>
+<p>Spring Data Neo4j (SDN) uses Neo4j-OGM under the covers.
+It&#8217;s like Spring Data JPA, where JPA/Hibernate is the underlay.
+Most of the power of SDN actually comes from Neo4j-OGM.</p>
+</li>
+<li>
+<p><em>How are labels generated when using inheritance?</em></p>
+<p>All concrete classes generate a label, abstract classes and interfaces not.
+If any kind of class or interface gets annotated with @NodeEntity or @NodeEntity(label="customLabel") it will generate a label.
+Any class annotated with @Transient will not generate a label.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -791,8 +810,229 @@ You will find the implementations for all drivers as <a href="https://github.com
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reference:getting-started"><a class="anchor" href="#reference:getting-started"></a>Getting Started</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="reference:getting-started:versions"><a class="anchor" href="#reference:getting-started:versions"></a>Versions</h3>
 <div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/neo4j-ogm.adoc - include::https://raw.githubusercontent.com/neo4j/neo4j-ogm/master/neo4j-ogm-docs/src/main/asciidoc/reference/getting-started.adoc[]</p>
+<p>Consult the version table to determine which version of Neo4j-OGM to use with a particular version of Neo4j and related technologies.</p>
+</div>
+<div class="sect3">
+<h4 id="_compatibility"><a class="anchor" href="#_compatibility"></a>Compatibility</h4>
+<table class="tableblock frame-topbot grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Neo4j-OGM Version</th>
+<th class="tableblock halign-left valign-top">Neo4j Version<sup>1</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.x, 3.3.x, 3.4.x, 3.5.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.x, 3.2.x, 3.3.x, 3.4.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.x<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.9, 3.2.12, 3.3.4, 3.4.4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1.x<sup>3</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.3.9, 3.0.11, 3.1.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.2<sup>3</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.3.8, 3.0.7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.1<sup>3</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.2.x, 2.3.x</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1</sup> <em>The latest supported bugfix versions.</em><br></p>
+</div>
+<div class="paragraph">
+<p><sup>2</sup> <em>These versions are no longer actively developed.</em><br></p>
+</div>
+<div class="paragraph">
+<p><sup>3</sup> <em>These versions are no longer actively developed or supported.</em><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_transitive_dependencies"><a class="anchor" href="#_transitive_dependencies"></a>Transitive dependencies</h4>
+<div class="paragraph">
+<p>The following table list transitive dependencies between specific versions of projects related to Neo4j-OGM.
+When reporting issues or asking for help on StackOverflow or neo4j-users slack channel always
+verify versions used (e.g through <code>mvn dependency:tree</code>) and report them as well.</p>
+</div>
+<table class="tableblock frame-topbot grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Spring Boot Version</th>
+<th class="tableblock halign-left valign-top">Spring Data Release Train</th>
+<th class="tableblock halign-left valign-top">Spring Data Neo4j Version</th>
+<th class="tableblock halign-left valign-top">Neo4j-OGM Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Moore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lovelace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0<sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kay</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ingalls</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hopper</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1</sup> <em>These versions are no longer actively developed.</em><br></p>
+</div>
+<div class="paragraph">
+<p><sup>2</sup> <em>These versions are no longer actively developed or supported.</em><br></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reference:getting-started:dependency-management"><a class="anchor" href="#reference:getting-started:dependency-management"></a>Dependency Management</h3>
+<div class="paragraph">
+<p>For building an application, your build automation tool needs to be configured to include the Neo4j-OGM dependencies.</p>
+</div>
+<div class="paragraph">
+<p>Neo4j-OGM dependencies consist of <code>neo4j-ogm-core</code>, together with the relevant dependency declarations on the driver you want to use.
+Neo4j-OGM provides support for connecting to Neo4j by configuring one of the following Drivers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>neo4j-ogm-bolt-driver</code> - Uses native Bolt protocol to communicate between Neo4j-OGM and a remote Neo4j instance.</p>
+</li>
+<li>
+<p><code>neo4j-ogm-bolt-native-types</code> - Support for all of Neo4j&#8217;s property types through the Bolt protocol.</p>
+</li>
+<li>
+<p><code>neo4j-ogm-http-driver</code> - Uses HTTP to communicate between Neo4j-OGM and a remote Neo4j instance.</p>
+</li>
+<li>
+<p><code>neo4j-ogm-embedded-driver</code> - Creates an in-memory Neo4j instance and uses it.</p>
+</li>
+<li>
+<p><code>neo4j-ogm-embedded-native-types</code> - Support for all of Neo4j&#8217;s property types in an embedded scenario.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Neo4j-OGM projects can be built using Maven, Gradle or any other build system that utilises Maven&#8217;s artifact repository structure.</p>
+</div>
+<div class="sect3">
+<h4 id="reference:getting-started:dependency-management:maven"><a class="anchor" href="#reference:getting-started:dependency-management:maven"></a>Maven</h4>
+<div class="paragraph">
+<p>In the <code>&lt;dependencies&gt;</code> section of your <code>pom.xml</code> add the following:</p>
+</div>
+<div class="listingblock">
+<div class="title">Maven dependencies</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.neo4j&lt;/groupId&gt;
+    &lt;artifactId&gt;neo4j-ogm-core&lt;/artifactId&gt;
+    &lt;version&gt;3.1.6&lt;/version&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;
+
+&lt;!-- Only add if you're using the Bolt driver --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.neo4j&lt;/groupId&gt;
+    &lt;artifactId&gt;neo4j-ogm-bolt-driver&lt;/artifactId&gt;
+    &lt;version&gt;3.1.6&lt;/version&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+
+&lt;!-- Only add if you're using the HTTP driver --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.neo4j&lt;/groupId&gt;
+    &lt;artifactId&gt;neo4j-ogm-http-driver&lt;/artifactId&gt;
+    &lt;version&gt;3.1.6&lt;/version&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+
+&lt;!-- Only add if you're using the Embedded driver --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.neo4j&lt;/groupId&gt;
+    &lt;artifactId&gt;neo4j-ogm-embedded-driver&lt;/artifactId&gt;
+    &lt;version&gt;3.1.6&lt;/version&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.neo4j&lt;/groupId&gt;
+    &lt;artifactId&gt;neo4j&lt;/artifactId&gt;
+    &lt;version&gt;{neo4j-version}&lt;/version&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please also have a look at <a href="#reference:native-property-types:supported-drivers">the native type system</a> to take advantage of Neo4j-OGM&#8217;s support for native temporal and spatial types
+and how to use the modules <code>neo4j-ogm-bolt-native-types</code> and <code>neo4j-ogm-embedded-native-types</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="reference:getting-started:dependency-management:gradle"><a class="anchor" href="#reference:getting-started:dependency-management:gradle"></a>Gradle</h4>
+<div class="paragraph">
+<p>Ensure the following dependencies are added to you <code>build.gradle</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Gradle dependencies</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
+    compile 'org.neo4j:neo4j-ogm-core:3.1.6'
+    runtime 'org.neo4j:neo4j-ogm-bolt-driver:3.1.6' // Only add if you're using the Bolt driver
+    runtime 'org.neo4j:neo4j-ogm-http-driver:3.1.6' // Only add if you're using the HTTP driver
+    runtime 'org.neo4j:neo4j-ogm-embedded-driver:3.1.6' //  Only add if you're using the Embedded driver
+    runtime 'org.neo4j:neo4j:{neo4j-version}' //  Only add if you're using the Embedded driver
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

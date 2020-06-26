@@ -952,7 +952,7 @@ We&#8217;ll filter the JSON file by the <code>mall</code> property so that we lo
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">:use mall1;
-Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.adoc - include::importTickets.cypher[]</code></pre>
+:param params => ({ url: "file:///DelightingCustomersBDclean.json", mall: 1});</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -960,7 +960,12 @@ Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.adoc - include::createConstraints.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CREATE INDEX on :Ticket(id);
+CREATE INDEX on :Client(id);
+CREATE INDEX on :Product(description);
+CREATE INDEX on :TicketItem(netAmount);
+CREATE INDEX on :TicketItem(units);
+CREATE INDEX on :TicketItem(product);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -969,7 +974,29 @@ We&#8217;ll wrap our call to <code>apoc.load.json</code> inside a call to <code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.adoc - include::importTickets.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.periodic.iterate(
+  "CALL apoc.load.json($url)
+   YIELD value
+   WHERE value.mall = $mall
+   RETURN value
+   LIMIT 20000",
+  "CREATE (t:Ticket {id: value._id, datetime: datetime(value.date)})
+   MERGE (c:Client {id: value.client})
+   CREATE (c)-[:PURCHASED]-&gt;(t)
+   WITH value, t
+   UNWIND value.items as item
+   CREATE (t)-[:HAS_TICKETITEM]-&gt;(ti:TicketItem {
+     product: item.desc,
+     netAmount: item.net_am,
+     units: item.n_unit
+   })
+   MERGE (p:Product {description: item.desc})
+   CREATE (ti)-[:FOR_PRODUCT]-&gt;(p)",
+  { batchSize: 10000,
+    iterateList: true,
+    parallel: false,
+    params: $params }
+);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -979,7 +1006,7 @@ We&#8217;ll switch to that database and setup our parameters:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">:use mall2;
-Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.adoc - include::importTickets.cypher[]</code></pre>
+:param params => ({ url: "file:///DelightingCustomersBDclean.json", mall: 2});</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -987,7 +1014,12 @@ Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.adoc - include::createConstraints.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CREATE INDEX on :Ticket(id);
+CREATE INDEX on :Client(id);
+CREATE INDEX on :Product(description);
+CREATE INDEX on :TicketItem(netAmount);
+CREATE INDEX on :TicketItem(units);
+CREATE INDEX on :TicketItem(product);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -995,7 +1027,29 @@ Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">Unresolved include directive in modules/ROOT/pages/multi-tenancy-worked-example.adoc - include::importTickets.cypher[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CALL apoc.periodic.iterate(
+  "CALL apoc.load.json($url)
+   YIELD value
+   WHERE value.mall = $mall
+   RETURN value
+   LIMIT 20000",
+  "CREATE (t:Ticket {id: value._id, datetime: datetime(value.date)})
+   MERGE (c:Client {id: value.client})
+   CREATE (c)-[:PURCHASED]-&gt;(t)
+   WITH value, t
+   UNWIND value.items as item
+   CREATE (t)-[:HAS_TICKETITEM]-&gt;(ti:TicketItem {
+     product: item.desc,
+     netAmount: item.net_am,
+     units: item.n_unit
+   })
+   MERGE (p:Product {description: item.desc})
+   CREATE (ti)-[:FOR_PRODUCT]-&gt;(p)",
+  { batchSize: 10000,
+    iterateList: true,
+    parallel: false,
+    params: $params }
+);</code></pre>
 </div>
 </div>
 <div class="paragraph">

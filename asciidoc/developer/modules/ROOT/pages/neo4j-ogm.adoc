@@ -6,7 +6,7 @@
 :category: drivers
 :tags: ogm, object-graph-map, app-development, applications
 
-[]
+
 
 .Goals
 [abstract]

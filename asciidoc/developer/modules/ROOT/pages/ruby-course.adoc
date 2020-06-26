@@ -174,7 +174,7 @@ There is a link:/developer/cypher[Cypher tutorial] if you would like to learn mo
 For this guide, we will be using the Neo4j.rb project.
 The project consists of the following gems:
 
-include::./ruby.adoc[tags=neo4jrb-lib]
+include::ruby.adoc[tags=neo4.rb-lib]
 
 Specifically in this guide, we will be using the `ActiveNode` and `ActiveRel` modules from the `neo4j` gem to model nodes and relationships from our database.
 

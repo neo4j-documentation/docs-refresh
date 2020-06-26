@@ -10,12 +10,13 @@
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:docs": "antora --fetch --stacktrace docs.yml",
     "watch:developer": "npm-watch build:developer",
-    "watch": "npm-watch",
+    "watch": "npm-watch --delay 500",
 
-    "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/includes/*",
+    "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/examples/*",
     "migrate:examples": "",
     "migrate:includesX": "cp /Users/adam/neo4j/developer-resources/language-guides/_includes/*.adoc asciidoc/developer/modules/ROOT/includes",
     "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
+    "migrate:cypher": "cp /Users/adam/neo4j/developer-resources/***/*.{cypher,txt,rb,sql} asciidoc/developer/modules/ROOT/examples",
     "migrate:menu": "node migrate/menu.js",
     "migrate:docs": "node migrate/docs.js"
   },

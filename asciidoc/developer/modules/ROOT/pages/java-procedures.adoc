@@ -6,7 +6,7 @@
 :category: drivers
 :tags: java, procedures, extensions, java-api
 
-[]
+
 
 [#custom-proc-func]
 == User-Defined Procedures and Functions

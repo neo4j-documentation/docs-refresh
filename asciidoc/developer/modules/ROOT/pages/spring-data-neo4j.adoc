@@ -6,7 +6,7 @@
 :category: drivers
 :tags: spring, spring-data, sdn, app-development, applications
 
-[]
+
 
 .Goals
 [abstract]

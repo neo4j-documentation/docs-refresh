@@ -6,7 +6,7 @@
 :category: drivers
 :tags: java, third-party, groovy-grails, scala, app-development, applications
 
-[]
+
 
 include::./_includes/community-driver-notice.adoc[]
 

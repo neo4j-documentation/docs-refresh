@@ -1,5 +1,3 @@
-include::versions.txt[]
-
 ++++
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.min.js"></script>
 ++++

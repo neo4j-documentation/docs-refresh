@@ -692,9 +692,6 @@ You will find the implementations for all drivers as <a href="https://github.com
 <div class="sect1">
 <h2 id="java-driver"><a class="anchor" href="#java-driver"></a>Neo4j Java Driver</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/_includes/java-driver.adoc - include::versions.txt[]</p>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/java/java.min.js"></script>
 <div class="paragraph">
 <p>The Neo4j Java driver is <strong>officially supported</strong> by Neo4j and connects to the database using the binary protocol.
@@ -724,9 +721,171 @@ We support Java 8 and 11 for the driver.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved include directive in modules/ROOT/pages/_includes/java-driver.adoc - include::https://github.com/neo4j/neo4j-java-driver/raw/4.0.1/examples/src/main/java/org/neo4j/docs/driver/HelloWorldExample.java[]
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/*
+ * Copyright (c) 2002-2020 "Neo4j,"
+ * Neo4j Sweden AB [http://neo4j.com]
+ *
+ * This file is part of Neo4j.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.neo4j.docs.driver;
 
-Unresolved include directive in modules/ROOT/pages/_includes/java-driver.adoc - include::https://github.com/neo4j/neo4j-java-driver/raw/4.0.1/examples/src/main/java/org/neo4j/docs/driver/HelloWorldExample.java[]</code></pre>
+// tag::hello-world-import[]
+
+import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+import org.neo4j.driver.Session;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Transaction;
+import org.neo4j.driver.TransactionWork;
+
+import static org.neo4j.driver.Values.parameters;
+// end::hello-world-import[]
+
+// tag::hello-world[]
+public class HelloWorldExample implements AutoCloseable
+{
+    private final Driver driver;
+
+    public HelloWorldExample( String uri, String user, String password )
+    {
+        driver = GraphDatabase.driver( uri, AuthTokens.basic( user, password ) );
+    }
+
+    @Override
+    public void close() throws Exception
+    {
+        driver.close();
+    }
+
+    public void printGreeting( final String message )
+    {
+        try ( Session session = driver.session() )
+        {
+            String greeting = session.writeTransaction( new TransactionWork&lt;String&gt;()
+            {
+                @Override
+                public String execute( Transaction tx )
+                {
+                    Result result = tx.run( "CREATE (a:Greeting) " +
+                                                     "SET a.message = $message " +
+                                                     "RETURN a.message + ', from node ' + id(a)",
+                            parameters( "message", message ) );
+                    return result.single().get( 0 ).asString();
+                }
+            } );
+            System.out.println( greeting );
+        }
+    }
+
+    public static void main( String... args ) throws Exception
+    {
+        try ( HelloWorldExample greeter = new HelloWorldExample( "bolt://localhost:7687", "neo4j", "password" ) )
+        {
+            greeter.printGreeting( "hello, world" );
+        }
+    }
+}
+// end::hello-world[]
+
+// tag::hello-world-output[]
+// hello, world, from node 1234
+// end::hello-world-output[]
+
+/*
+ * Copyright (c) 2002-2020 "Neo4j,"
+ * Neo4j Sweden AB [http://neo4j.com]
+ *
+ * This file is part of Neo4j.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.neo4j.docs.driver;
+
+// tag::hello-world-import[]
+
+import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+import org.neo4j.driver.Session;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Transaction;
+import org.neo4j.driver.TransactionWork;
+
+import static org.neo4j.driver.Values.parameters;
+// end::hello-world-import[]
+
+// tag::hello-world[]
+public class HelloWorldExample implements AutoCloseable
+{
+    private final Driver driver;
+
+    public HelloWorldExample( String uri, String user, String password )
+    {
+        driver = GraphDatabase.driver( uri, AuthTokens.basic( user, password ) );
+    }
+
+    @Override
+    public void close() throws Exception
+    {
+        driver.close();
+    }
+
+    public void printGreeting( final String message )
+    {
+        try ( Session session = driver.session() )
+        {
+            String greeting = session.writeTransaction( new TransactionWork&lt;String&gt;()
+            {
+                @Override
+                public String execute( Transaction tx )
+                {
+                    Result result = tx.run( "CREATE (a:Greeting) " +
+                                                     "SET a.message = $message " +
+                                                     "RETURN a.message + ', from node ' + id(a)",
+                            parameters( "message", message ) );
+                    return result.single().get( 0 ).asString();
+                }
+            } );
+            System.out.println( greeting );
+        }
+    }
+
+    public static void main( String... args ) throws Exception
+    {
+        try ( HelloWorldExample greeter = new HelloWorldExample( "bolt://localhost:7687", "neo4j", "password" ) )
+        {
+            greeter.printGreeting( "hello, world" );
+        }
+    }
+}
+// end::hello-world[]
+
+// tag::hello-world-output[]
+// hello, world, from node 1234
+// end::hello-world-output[]</code></pre>
 </div>
 </div>
 <div class="sect2">

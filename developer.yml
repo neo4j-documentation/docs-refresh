@@ -5,7 +5,9 @@ content:
   sources:
   - url: ./
     branches: master
-    start_path: asciidoc/developer
+    start_paths:
+    - asciidoc/developer
+    - '!**/_includes/*'
 ui:
   bundle:
     url: ui/build/ui-bundle.zip
@@ -13,5 +15,8 @@ ui:
 urls:
   html_extension_style: indexify
 asciidoc:
+  extensions:
+  - ./lib/remote-include-processor
+  # - ./lib/local-include-processor
   attributes:
     page-theme: developer

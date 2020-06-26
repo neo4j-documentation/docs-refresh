@@ -827,8 +827,8 @@ That is simply a shortest path query called the "Bacon Path".</p>
 <p><a href="https://neo4j.com/docs/cypher-manual/current/syntax/patterns/#cypher-pattern-varlength" target="_blank" rel="noopener">variable length relationships</a>
 <a href="https://neo4j.com/docs/cypher-manual/current/execution-plans/shortestpath-planning/" target="_blank" rel="noopener">shortestPath</a></p>
 </div>
-<div class="sect3">
-<h4 id="_movies_and_actors_up_to_three_hops_away_from_kevin_bacon"><a class="anchor" href="#_movies_and_actors_up_to_three_hops_away_from_kevin_bacon"></a>Movies and Actors up to Three Hops Away from Kevin Bacon</h4>
+<div class="sect2">
+<h3 id="_movies_and_actors_up_to_three_hops_away_from_kevin_bacon"><a class="anchor" href="#_movies_and_actors_up_to_three_hops_away_from_kevin_bacon"></a>Movies and Actors up to Three Hops Away from Kevin Bacon</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (bacon:Person {name:"Kevin Bacon"})-[*1..3]-(hollywood)

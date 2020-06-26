@@ -914,9 +914,6 @@ RETURN count(*);</code></pre>
 <p>Batch the import into sections with <code>PERIODIC COMMIT</code>.
 This clause can be added before the <code>LOAD CSV</code> clause to tell Cypher to only process so many rows of the file before clearing memory and transaction state.
 For more information, see the <a href="/docs/cypher-manual/current/query-tuning/using/#query-using-periodic-commit-hint" target="_blank" rel="noopener">manual page</a> on <code>PERIODIC COMMIT</code>.</p>
-</li>
-</ol>
-</div>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
@@ -928,18 +925,13 @@ MERGE (owner:Owner {ownerId: row.OwnerId})
 MERGE (pet)-[r:OWNED_BY]-&gt;(owner)</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
+</li>
 <li>
 <p>Avoid the EAGER operator.
 Some statements pull in more rows than what is necessary, adding extra processing up front.
 To avoid this, you can run <code>PROFILE</code> on your queries to see if they use EAGER loading and either modify queries or run multiple passes on the same file, so it does not do this.
 More information about EAGER loading and how to avoid can be found in <a href="https://markhneedham.com/blog/2014/10/23/neo4j-cypher-avoiding-the-eager/" target="_blank" rel="noopener">Mark&#8217;s blog post</a>.</p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
 <li>
 <p>Adjust configuration for the database on heap and memory to avoid page-faults.
 To help handle larger volumes of transactions, you can increase some configuration settings for the database and restart the instance for them to take effect. Usually, you can create or update 1M records in a single transaction per 2 GB of heap. In <code>neo4j.conf</code>:</p>
@@ -956,8 +948,8 @@ To help handle larger volumes of transactions, you can increase some configurati
 </li>
 </ol>
 </div>
-<div class="sect4">
-<h5 id="_load_csv_resources"><a class="anchor" href="#_load_csv_resources"></a><u>LOAD CSV Resources</u></h5>
+<div class="sect3">
+<h4 id="_load_csv_resources"><a class="anchor" href="#_load_csv_resources"></a>LOAD CSV Resources</h4>
 <div class="ulist">
 <ul>
 <li>

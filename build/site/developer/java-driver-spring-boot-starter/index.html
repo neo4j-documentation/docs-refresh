@@ -618,8 +618,435 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Neo4j Java Driver Spring Boot Starter</h1>
+<h1 id="manual-getting-started" class="sect0"><a class="anchor" href="#manual-getting-started"></a>Getting started</h1>
+<div class="openblock partintro">
+<div class="content">
 <div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/java-driver-spring-boot-starter.adoc - include::https://raw.githubusercontent.com/neo4j/neo4j-java-driver-spring-boot-starter/master/docs/manual/getting-started.adoc[]</p>
+<p>As with any other Spring Boot starter, the only thing you have to do is to include the starter module via your dependency management.
+If you don&#8217;t configure anything, than the starter assumes <code>bolt://localhost:7687</code> as Neo4j URI and a server that has disabled authentication.</p>
+</div>
+<div class="paragraph">
+<p>If only a single URI is provided, than the configuration tries to use that.
+Otherwise, it passes all URIs to the Java driver which in turn uses the first one that is a reachable <code>bolt+routing</code> instance.</p>
+</div>
+<div class="paragraph">
+<p>The automatic configuration will fail fast if the driver cannot connect to a single Neo4j database or to a routing server.</p>
+</div>
+<div class="paragraph">
+<p>The Neo4j driver supports three different programming models:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Blocking database access (much like standard JDBC)</p>
+</li>
+<li>
+<p>Asynchronous programming based on JDKs completable futures and related infrastructure</p>
+</li>
+<li>
+<p>Reactive programming based on <a href="http://www.reactive-streams.org">Reactive Streams</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Those are all included in the same binary.
+The reactive programming model however requires a 4.0 Neo4j server on the database side and reactive Spring on the other hand.
+To make the following intro as accessible as possible, we only display the blocking database access.
+Have a look at the <a href="https://github.com/neo4j/neo4j-java-driver-spring-boot-starter/tree/master/examples">examples directory</a> for a reactive web application example.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preparing_the_database"><a class="anchor" href="#_preparing_the_database"></a>Preparing the database</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For this example, we stay within the <a href="https://neo4j.com/developer/movie-database/">movie graph</a>,
+as it comes for free with every Neo4j instance.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t have a running database but Docker installed, please run:</p>
+</div>
+<div id="start-docker-neo4j" class="listingblock">
+<div class="title">Start a local Neo4j instance inside Docker.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run --publish=7474:7474 --publish=7687:7687 neo4j:{neo4j_version}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You know can access <a href="http://localhost:7474/browser/?cmd=play&amp;arg=movies">http://localhost:7474</a>.
+At first visit, you have to change your password. We chose <code>secret</code>  in the examples.
+Note the command ready to run in the prompt.
+Execute it to fill your database with some test data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_new_spring_boot_project"><a class="anchor" href="#_create_a_new_spring_boot_project"></a>Create a new Spring Boot project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The easiest way to setup a Spring Boot project is <a href="https://start.spring.io">start.spring.io</a>
+ (which is integrated in the major IDEs as well, in case you don&#8217;t want to use the website).</p>
+</div>
+<div class="paragraph">
+<p>Select the "Spring Web Starter" to get all the dependencies needed for creating a Spring based web application.
+The Spring Initializr will take care of creating a valid project structure for you,
+with all the files and settings in place for the selected build tool.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Don&#8217;t choose Spring Data Neo4j here, as it will get you the previous generation of Spring Data Neo4j including OGM and additional abstraction over the driver.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_maven"><a class="anchor" href="#_maven"></a>Maven</h3>
+<div class="paragraph">
+<p>You can issue a CURL request against the Spring Initializer to create a basic Maven project:</p>
+</div>
+<div id="generate-maven-project" class="listingblock">
+<div class="title">Create a basic Maven project with the Spring Initializr</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl https://start.spring.io/starter.tgz \
+  -d dependencies=web,actuator \
+  -d bootVersion={spring-boot_version} \
+  -d baseDir=Neo4jSpringBootExample \
+  -d name=Neo4j%20SpringBoot%20Example | tar -xzvf -</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will create a new folder <code>Neo4jSpringBootExample</code>.
+As this starter is not yet on the initializer, you&#8217;ll have to add the following dependency manually to your  <code>pom.xml</code>:</p>
+</div>
+<div id="dependencies-maven" class="listingblock">
+<div class="title">Inclusion of the neo4j-java-driver-spring-boot-starter in a Maven project</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;{groupId}&lt;/groupId&gt;
+	&lt;artifactId&gt;{artifactId}&lt;/artifactId&gt;
+	&lt;version&gt;{neo4j-java-driver-spring-boot-starter_version}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You would also add the dependency manually in case of an existing project.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gradle"><a class="anchor" href="#_gradle"></a>Gradle</h3>
+<div class="paragraph">
+<p>The idea is the same, just generate a Gradle project:</p>
+</div>
+<div id="generate-gradle-project" class="listingblock">
+<div class="title">Create a basic Gradle project with the Spring Initializr</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl https://start.spring.io/starter.tgz \
+  -d dependencies=web,actuator \
+  -d type=gradle-project \
+  -d bootVersion={spring-boot_version} \
+  -d baseDir=Neo4jSpringBootExampleGradle \
+  -d name=Neo4j%20SpringBoot%20Example | tar -xzvf -</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The dependency for Gradle looks like this and must be added to <code>build.gradle</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Inclusion of the neo4j-java-driver-spring-boot-starter in a Gradle project</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
+    compile '{groupId}:{artifactId}:{neo4j-java-driver-spring-boot-starter_version}'
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You would also add the dependency manually in case of an existing project.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>Now open any of those projects in your favorite IDE.
+Find <code>application.properties</code> and configure your Neo4j credentials:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">org.neo4j.driver.uri=bolt://localhost:7687
+org.neo4j.driver.authentication.username=neo4j
+org.neo4j.driver.authentication.password=secret</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The URI is required. Autoconfiguration will not be triggered without it.
+           This is to avoid clashes with the Spring Boot SDN/OGM starter.
+           The SDN/OGM starter defaults to localhost, but backs off when it detects a driver bean.
+           If this starter here would default to localhost as well, a driver bean would always be
+           provided and SDN/OGM would back off even when a user configured a different URI.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This is the bare minimum of what you need to connect to a Neo4j instance.</p>
+</div>
+<div class="paragraph">
+<p>Refer to <a href="#Configuration options">the list of configuration properties</a> for all options this driver supports.</p>
+</div>
+<div class="paragraph">
+<p>While the above configuration is presented in the easiest format (an <code>application.properties</code> file),
+you are of course free to use any other declarative way to define properties in Spring Boot.
+Please checkout the chapter <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config">Externalized Configuration</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is not necessary to add any programmatically configuration of the driver when you use this starter.
+      While it may work, we strongly discourage and don&#8217;t support additional, pragmatical configuration of the Neo4j driver when using this starter.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_crud_controller"><a class="anchor" href="#_example_crud_controller"></a>Example CRUD Controller</h3>
+<div class="paragraph">
+<p>Add the following <code>@RESTController</code> to your application:</p>
+</div>
+<div id="MovieController1" class="listingblock">
+<div class="title">MovieController.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.demo;
+
+import java.util.List;
+
+import org.neo4j.driver.AccessMode;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Session;
+import org.neo4j.driver.SessionConfig;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MoviesController {
+
+	private final Driver driver; <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public MoviesController(Driver driver) { <i class="conum" data-value="2"></i><b>(2)</b>
+		this.driver = driver;
+	}
+
+	@GetMapping(path = "/movies", produces = MediaType.APPLICATION_JSON_VALUE) <i class="conum" data-value="3"></i><b>(3)</b>
+	public List&lt;String&gt; getMovieTitles() {
+
+		try (Session session = driver.session()) { <i class="conum" data-value="4"></i><b>(4)</b>
+			return session.run("MATCH (m:Movie) RETURN m ORDER BY m.name ASC")
+				.list(r -&gt; r.get("m").asNode().get("title").asString());
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>An instance field to hold the driver</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The driver is injected via constructor injection</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>A mapping to the url <code>/movies</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Using the driver to get a short lived session and issue a query on it</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you generated your application via the commands given above, you can now run the class <code>Neo4jSpringBootExampleApplication</code>
+and after a short while, you can access <a href="http://localhost:8080/movies" class="bare">http://localhost:8080/movies</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_logging"><a class="anchor" href="#_logging"></a>Logging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Neo4j Spring Boot starter uses a small shim to integrate the driver with Springs JCL abstraction.
+Thus, all logging configuration can be done via Spring Boot&#8217;s <code>application.properties</code>.
+Important names used for logging are:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">logging.level.org.neo4j.driver.GraphDatabase = debug
+logging.level.org.neo4j.driver.Driver = debug</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you ever have the need to debug outgoing and incoming Bolt messages, use those two names:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">logging.level.org.neo4j.driver.OutboundMessageHandler = debug
+logging.level.org.neo4j.driver.InboundMessageDispatcher = debug</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The prefix <code>org.neo4j.driver</code> is specific to the Drivers integration with Spring Boot.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_production_ready_features"><a class="anchor" href="#_production_ready_features"></a>Production-ready features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Neo4j Spring Boot starter hooks into Spring Boot&#8217;s <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html">Production-ready features</a> (or the so called Spring Boot Actuator).
+This happens automatically when you add the Spring Boot Actuator Starter like this:</p>
+</div>
+<div id="actuator-maven" class="listingblock">
+<div class="title">Spring Boot Starter Actuator dependency with Maven</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or with Gradle:</p>
+</div>
+<div class="listingblock">
+<div class="title">Spring Boot Starter Actuator dependency with Gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We support both the <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-health">health-</a> and <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html">metrics-actuator</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_health_information"><a class="anchor" href="#_health_information"></a>Health information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Both reactive and imperative health checks are available,
+with the reactive health checks having precedence when Project Reactor is detected.</p>
+</div>
+<div class="paragraph">
+<p>When calling the health endpoint <code>/actuator/health</code> and the driver can reach a Neo4j instance, an unauthenticated user will see</p>
+</div>
+<div class="listingblock">
+<div class="title">Health information</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "status": "UP"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and an authenticated user will see</p>
+</div>
+<div class="listingblock">
+<div class="title">Health information</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "status": "UP",
+  "details": {
+    "neo4j": {
+      "status": "UP",
+      "details": {
+        "server": "Neo4j/4.0.0@localhost(127.0.0.1):7687",
+        "database": "neo4j"
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In case no instance is reachable, the status will be <code>DOWN</code> and the details carry the error message.</p>
+</div>
+<div class="paragraph">
+<p>To disable the Neo4j health indicator, use the standard Spring Boot property <code>management.health.neo4j.enabled</code> with a value of <code>false</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_driver_metrics"><a class="anchor" href="#_driver_metrics"></a>Driver metrics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>neo4j-java-driver-spring-boot-starter</code> comes with support for <a href="https://micrometer.io">Micrometer metrics</a> out of the box.
+It detects Micrometer on the classpath and binds the metrics of all instances of <code>org.neo4j.driver.Driver</code>, that have enabled their metrics, to a micrometer registry.</p>
+</div>
+<div class="paragraph">
+<p>To enable metrics for the driver instance provided by this starter, set <code>org.neo4j.driver.config.metrics-enabled</code> to true.</p>
+</div>
+<div class="paragraph">
+<p>The following metrics are exposes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>neo4j.driver.connections.inUse</code> (Gauge)</p>
+</li>
+<li>
+<p><code>neo4j.driver.connections.timedOutToAcquire</code> (Counter)</p>
+</li>
+<li>
+<p><code>neo4j.driver.connections.closed</code> (Counter)</p>
+</li>
+<li>
+<p><code>neo4j.driver.connections.failedToCreate</code> (Counter)</p>
+</li>
+<li>
+<p><code>neo4j.driver.connections.created</code> (Counter)</p>
+</li>
+<li>
+<p><code>neo4j.driver.connections.idle</code> (Gauge)</p>
+</li>
+<li>
+<p><code>neo4j.driver.connections.acquired</code> (Counter)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All metrics will have the tags <code>name</code> (the bean of the driver they belong to)
+and <code>poolId</code> (the id of the connection pool, that contributed to the corresponding counter or gauge).</p>
+</div>
+</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

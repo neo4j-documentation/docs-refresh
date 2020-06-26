@@ -851,9 +851,6 @@ You can later create your own custom guides for your material using these same s
 <ol class="arabic">
 <li>
 <p>Clone and open the guide repository.</p>
-</li>
-</ol>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">git clone https://github.com/neo4j-contrib/neo4j-guides
@@ -861,25 +858,17 @@ You can later create your own custom guides for your material using these same s
 cd neo4j-guides</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
+</li>
 <li>
 <p>Find the <code>adoc</code> directory and create a file called <code>test.adoc</code> inside it.</p>
-</li>
-</ol>
-</div>
 <div class="imageblock popup-link">
 <div class="content">
 <a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/custom_guide_test.jpg"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/custom_guide_test.jpg" alt="custom guide test"></a>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
+</li>
 <li>
 <p>Insert the contents below into the newly created <code>test.adoc</code> file and save the changes.</p>
-</li>
-</ol>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell"> = A Test Guide
@@ -932,13 +921,9 @@ cd neo4j-guides</code></pre>
  image::https://avatars3.githubusercontent.com/u/201120[width=100,link="https://example.com"]</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
+</li>
 <li>
 <p>Pass the <code>test.adoc</code> file to the <code>run.sh</code> script (as shown below) to convert to the HTML slides.</p>
-</li>
-</ol>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">./run.sh adoc/test.adoc html/test.html
@@ -950,38 +935,29 @@ cd neo4j-guides</code></pre>
 python http-server.py</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
+</li>
 <li>
 <p>Test the test guide in your local browser:
 <a href="https://localhost:7474/browser?cmd=play&amp;arg=https://localhost:8001/html/test.html" target="_blank" rel="noopener"><code>:play https://localhost:8001/html/test.html</code></a></p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
 <li>
 <p>Upload the file to your target server.</p>
-</li>
-</ol>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">#Example target server
 s3cmd put -P html/test.html s3://guides.example.com/test</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
+</li>
 <li>
 <p>And test the guide one last time: <code>:play <a href="https://guides.example.com/test" class="bare">https://guides.example.com/test</a></code></p>
-</li>
-</ol>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/browser-guide-demo.gif" alt="browser guide demo">
 </div>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>Congratulations!

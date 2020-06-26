@@ -862,8 +862,30 @@ There is a <a href="/developer/cypher">Cypher tutorial</a> if you would like to 
 <p>For this guide, we will be using the Neo4j.rb project.
 The project consists of the following gems:</p>
 </div>
+<div class="sect2">
+<h3 id="neo4jrb-lib"><a class="anchor" href="#neo4jrb-lib"></a>Neo4j.rb</h3>
+<div class="paragraph">
+<p>The <a href="http://neo4jrb.io/" target="_blank" rel="noopener">Neo4j.rb project</a> is made up of the following Ruby gems:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">neo4j</dt>
+<dd>
+<p>A Object-Graph-Mapper (OGM) for the Neo4j graph database. It tries to follow API conventions established by ActiveRecord but with a Neo4j flavor.</p>
+</dd>
+<dt class="hdlist1">neo4j-core</dt>
+<dd>
+<p>A low level driver for connecting to Neo4j. Used by the neo4j gem.</p>
+</dd>
+<dt class="hdlist1">neo4j-rake_tasks</dt>
+<dd>
+<p>A set of rake tasks for installing and managing a Neo4j database within your project. Used by the neo4j-core gem.</p>
+</dd>
+</dl>
+</div>
 <div class="paragraph">
 <p>Specifically in this guide, we will be using the <code>ActiveNode</code> and <code>ActiveRel</code> modules from the <code>neo4j</code> gem to model nodes and relationships from our database.</p>
+</div>
 </div>
 </div>
 </div>
