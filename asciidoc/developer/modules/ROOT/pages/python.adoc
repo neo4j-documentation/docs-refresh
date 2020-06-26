@@ -1,12 +1,10 @@
 = Using Neo4j from Python
-:slug: python
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: python
+:category: drivers
+:tags: python, official-driver, app-development, applications
 
 .Goals
 [abstract]
@@ -19,7 +17,7 @@ While it is not comprehensive, it aims to introduce the available drivers and li
 * You should have link:/download[installed Neo4j] and made yourself familiar with our link:/developer/cypher-query-language[Cypher query language].
 * We also recommend installing and becoming familiar with both https://pip.pypa.io/[pip^] and https://virtualenv.pypa.io/[virtualenv^] before working on a Python project.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-python]
@@ -34,11 +32,11 @@ You can use the official binary driver for Python (neo4j-python-driver) or conne
 [#python-driver]
 == Neo4j Python Driver
 
-include::../_includes/python-driver.adoc[]
+include::./_includes/python-driver.adoc[]
 
-include::../_includes/sample_project.adoc[]
+include::./_includes/sample_project.adoc[]
 
-include::../_includes/community-driver-notice.adoc[]
+include::./_includes/community-driver-notice.adoc[]
 
 For anyone working with https://www.python.org/[Python^], the Neo4j community have contributed a range of driver options.
 These range from lightweight to comprehensive driver packages as well as libraries designed for use with web frameworks such as https://www.djangoproject.com/[Django^].

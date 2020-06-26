@@ -151,20 +151,19 @@
           </div>
         </div>
         <div class="navbar-item">
-          <a class="navbar-link" href="/search" id="search_open">
-
-
-
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button" title="Search Website">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
-                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
-                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
               </g>
-            </g>
-          </svg>
-          <span class="navbar-mobile">Search</span>
-          </a>
+            </svg><span class="navbar-mobile">Search</span></a>
         </div>
       </div>
     </div>
@@ -177,7 +176,7 @@
             <input id="search_input" type="text" name="search"
                 placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
             <div class="search-icon">
-                <svg width="14px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
                     role="button" title="Search Website">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -222,7 +221,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../">Developer Guides</a></h3>
+    <h3 class="title"><a href="../get-started/">Developer Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -468,10 +467,10 @@
     <a class="nav-link" href="../aura-cloud-dbaas/">Aura DBaaS Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-neo4j-desktop/">Connect from Neo4j Desktop</a>
+    <a class="nav-link" href="#aura-connect-neo4j-desktop.adoc">Connect from Neo4j Desktop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-cypher-shell/">Connect from Cypher Shell</a>
+    <a class="nav-link" href="#aura-connect-cypher-shell.adoc">Connect from Cypher Shell</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aura-connect-driver/">Connect from your application</a>
@@ -508,7 +507,7 @@
     <a class="nav-link" href="../in-production/">Administration Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../manage-multiple-databases/">Tutorial: Managing Multiple Databases</a>
+    <a class="nav-link" href="#manage-multiple-databases.adoc">Tutorial: Managing Multiple Databases</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../multi-tenancy-worked-example/">Tutorial: Multi Tenancy Worked Example</a>
@@ -603,7 +602,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../">Developer Guides</a></li>
+    <li><a href="../get-started/">Developer Guides</a></li>
     <li>Cypher Query Language</li>
     <li><a href="./">Sub Queries</a></li>
   </ul>
@@ -613,15 +612,6 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Sub Queries</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Contents</div>
-<ul class="sectlevel1">
-<li><a href="#recap">Recap: Our Example Graph</a></li>
-<li><a href="#cypher-filtering">An introduction to Subqueries</a></li>
-<li><a href="#existential-subqueries">Existential Subqueries</a></li>
-<li><a href="#result-returning-subqueries">Result returning subqueries</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="quoteblock abstract">
@@ -640,7 +630,7 @@ This guide is a continuation of the concepts discussed in the previous Cypher se
 You should be familiar with <a href="/developer/cypher/cypher-query-language">MATCH</a>, <a href="/developer/cypher/cypher-basics-ii/">Create/Update/Delete</a>, and <a href="/developer/cypher/filtering-query-results/">Filtering</a> concepts before walking through this guide.
 </blockquote>
 </div>
-<div class="paragraph expertise">
+<div class="paragraph expertise Beginner">
 <p>Beginner</p>
 </div>
 </div>
@@ -1158,7 +1148,7 @@ In the next section, we will learn how to use aggregation in Cypher and how to d
     <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
       <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
     <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
-      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks<br>
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
       of Neo4j, Inc. All other marks are owned by their respective companies.</p>
   </div>
 

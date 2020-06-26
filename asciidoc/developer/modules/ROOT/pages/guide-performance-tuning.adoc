@@ -1,12 +1,9 @@
 = Neo4j Performance Tuning
-:slug: guide-performance-tuning
 :level: Intermediate
-:section: Neo4j in Production
-:section-link: in-production
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: performance
+:tags: administration, tuning, memory, page-cache, heap, transaction, log
 
 .Goals
 [abstract]
@@ -17,7 +14,7 @@ This guide gives an overview on memory configuration, logical log configuration 
 You should know how to link:/download[download] and install Neo4j on your system.
 If you are a developer you should be accustomed to the graph data model and have written your Neo4j application.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#memory-config]

@@ -43,3 +43,16 @@ Each directory will have a antora.yml file with configuration, then the `start_p
 /labs/neosemantics/docs/3.5
 /labs/neosemantics/docs/4.0
 ```
+
+
+== Migration
+
+```
+:level: Beginner
+[role=expertise]
+{level}
+
+becomes
+
+:page-level: Beginner
+```

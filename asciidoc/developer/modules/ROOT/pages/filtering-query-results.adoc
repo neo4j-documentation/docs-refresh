@@ -1,12 +1,9 @@
 = Filtering Query Results
-:slug: filtering-query-results
 :level: Beginner
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: cypher
+:tags: cypher, queries, graph-queries, filtering, where, value-ranges, existence, optional-patterns
 
 .Goals
 [abstract]
@@ -19,7 +16,7 @@ You should be familiar with link:/developer/get-started/graph-database[graph dat
 This guide is a continuation of the link:/developer/cypher/cypher-query-language[Cypher Basics I] and link:/developer/cypher/cypher-basics-ii/[Cypher Basics II] sections.
 You should be familiar with those concepts before walking through this guide.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#cypher-filtering]

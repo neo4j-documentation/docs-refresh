@@ -151,25 +151,77 @@
           </div>
         </div>
         <div class="navbar-item">
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
-                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
-                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
               </g>
-            </g>
-          </svg>
+            </svg><span class="navbar-mobile">Search</span></a>
         </div>
       </div>
     </div>
   </nav>
-</header><div class="body">
+</header><div class="search" id="search">
+    <div class="search-container">
+        <form class="search-form">
+            <label for="search_input">Search Neo4j.com</label>
+
+            <input id="search_input" type="text" name="search"
+                placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
+            <div class="search-icon">
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
+                    role="button" title="Search Website">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                            <circle id="Oval"
+                                transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                                cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                            <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="search-icon">
+                <svg width="14px" height="22px" viewBox="0 0 22 22" role="button" class="cancel" id="close_search">
+                    <line x1="19.5833333" y1="0.416666667" x2="0.416666667" y2="19.5833333"></line>
+                    <line x1="19.5833333" y1="19.5833333" x2="0.416666667" y2="0.416666667"></line>
+                </svg>
+            </div>
+        </form>
+        <div class="search-results"></div>
+
+        <div class="search-filters hidden">
+            <div class="search-filters-header">
+                <h2>Filter By Category</h2>
+                <div class="search-filters-icon">
+                    <svg width="14px" height="22px" viewBox="0 0 22 22" role="button" class="cancel" id="close_filters">
+                        <line x1="19.5833333" y1="0.416666667" x2="0.416666667" y2="19.5833333"></line>
+                        <line x1="19.5833333" y1="19.5833333" x2="0.416666667" y2="0.416666667"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="search-filters-content">
+            </div>
+        </div>
+
+    </div>
+</div><div class="body">
 <div class="nav-container" data-component="developer" data-version="master">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../">Developer Guides</a></h3>
+    <h3 class="title"><a href="../get-started/">Developer Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -415,10 +467,10 @@
     <a class="nav-link" href="../aura-cloud-dbaas/">Aura DBaaS Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-neo4j-desktop/">Connect from Neo4j Desktop</a>
+    <a class="nav-link" href="#aura-connect-neo4j-desktop.adoc">Connect from Neo4j Desktop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-cypher-shell/">Connect from Cypher Shell</a>
+    <a class="nav-link" href="#aura-connect-cypher-shell.adoc">Connect from Cypher Shell</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aura-connect-driver/">Connect from your application</a>
@@ -476,10 +528,10 @@
     <a class="nav-link" href="../docker-run-neo4j/">How-To: Run Neo4j in Docker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#startup-program.adoc">Startups: Free Neo4j Enterprise</a>
+    <a class="nav-link" href="/startup-program/">Startups: Free Neo4j Enterprise</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#graphacademyonline-trainingneo4j-administration.adoc">Online Course: Neo4j Administration</a>
+    <a class="nav-link" href="/graphacademy/online-training/neo4j-administration/">Online Course: Neo4j Administration</a>
   </li>
 </ul>
   </li>
@@ -498,7 +550,7 @@
     <span class="nav-text nav-item-toggle">Documentation &amp; Resources</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#resources.adoc">Resource Overview</a>
+    <a class="nav-link" href="../resources/">Resource Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../about-graphacademy/">Learn through GraphAcademy</a>
@@ -513,7 +565,7 @@
     <a class="nav-link" href="../browser-guide-list/">Available Neo4j Browser Guides</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#docs.adoc">Neo4j Documentation</a>
+    <a class="nav-link" href="/docs/">Neo4j Documentation</a>
   </li>
 </ul>
   </li>
@@ -530,10 +582,10 @@
     <a class="nav-link" href="../contributing-code/">Code Contributions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://community.neo4j.com.adoc">Help on Community Forums</a>
+    <a class="nav-link" href="https://community.neo4j.com">Help on Community Forums</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#speaker-program.adoc">Speaker Program: Share your Story</a>
+    <a class="nav-link" href="/speaker-program/">Speaker Program: Share your Story</a>
   </li>
 </ul>
   </li>
@@ -550,7 +602,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../">Developer Guides</a></li>
+    <li><a href="../get-started/">Developer Guides</a></li>
     <li><a href="./">Managing Multiple Databases in Neo4j</a></li>
   </ul>
 </nav>
@@ -559,19 +611,6 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Managing Multiple Databases in Neo4j</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Contents</div>
-<ul class="sectlevel1">
-<li><a href="#setup-db">System setup</a></li>
-<li><a href="#initial-db">Reviewing the initial databases</a></li>
-<li><a href="#create-new-db">Creating a new database</a></li>
-<li><a href="#operate-movie-db">Loading data and working with our movieGraph database</a></li>
-<li><a href="#operate-neo4j-db">Loading data and working with our neo4j database</a></li>
-<li><a href="#navigate-multidb">Navigating between datasets and databases</a></li>
-<li><a href="#multidb-cleanup">Cleaning out database within same instance</a></li>
-<li><a href="#resources">Resources</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="quoteblock abstract">
@@ -587,7 +626,7 @@ Please have <a href="/download" target="_blank" rel="noopener">Neo4j</a> (versio
 It helps to have read the section on <a href="/developer/get-started/graph-database/">graph databases</a>.
 </blockquote>
 </div>
-<div class="paragraph expertise">
+<div class="paragraph expertise Beginner">
 <p>Beginner</p>
 </div>
 <div id="multi-db" class="paragraph">
@@ -1043,9 +1082,31 @@ Instead, we can use the <code>CREATE OR REPLACE DATABASE</code> command and star
 </main>
 </div>
 <footer class="footer">
-  <p>We need a generic footer here...</p>
-</footer>
+  <div class="column">
+    <div class="logo-footer"></div>
+    <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
+      <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
+    <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
+      of Neo4j, Inc. All other marks are owned by their respective companies.</p>
+  </div>
+
+  <div class="column">
+    <a href="/contact-us?ref=footer">Contact Us →</a>
+    <p>US: 1-855-636-4532<br>
+      Sweden +46 171 480 113<br>
+      UK: +44 20 3868 3223<br>
+      France: +33 (0) 8 05 08 03 44<br>
+      <!--Germany: +49 (0)89 26204 6300</p>-->
+    </p>
+  </div>
+</footer><script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+<script src="https://d3js.org/d3-force.v2.min.js"></script>
+
 <script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/gram.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
-  </body>
+<script async src="../../_/js/vendor/search.js"></script>  </body>
 </html>

@@ -1,14 +1,12 @@
 = Procedures and Functions
-:slug: java-procedures
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: java
+:category: drivers
+:tags: java, procedures, extensions, java-api
 
-include::../_includes/versions.txt[]
+[]
 
 [#custom-proc-func]
 == User-Defined Procedures and Functions

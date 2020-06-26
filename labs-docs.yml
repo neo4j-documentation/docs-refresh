@@ -7,6 +7,12 @@ content:
     branches: ['4.0', '3.5']
   - url: https://gitlab.com/yuzutech/demo-antora/neo4j/apoc.git
     branches: ['4.0', '3.5']
+  - url: /Users/adam/neo4j/neo4j-manual-modeling-antora
+    branches: ['4.0', '4.1']
+    start_path: gettingStarted
+  - url: /Users/adam/neo4j/neo4j-manual-modeling-antora
+    branches: ['4.0', '4.1']
+    start_path: migrationGuide
 output:
   dir: ./build/site/labs/
 ui:
@@ -15,4 +21,4 @@ ui:
     snapshot: true
 asciidoc:
   attributes:
-    page-theme: labs
+    page-theme: docs

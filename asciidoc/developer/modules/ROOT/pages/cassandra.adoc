@@ -1,12 +1,9 @@
 = Neo4j and Cassandra
-:slug: cassandra
 :level: Intermediate
-:section: Neo4j Integrations
-:section-link: integration
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: integrations
+:tags: integrations, cassandra, tools
 
 .Goals
 [abstract]
@@ -22,7 +19,7 @@ It is currently a simple prototype meant to support a limited data model. We'd a
 You should have an understanding of Cassandra, Neo4j and be familiar with column-oriented and property graph data models.
 You will need to have Cassandra, Neo4j and Python 3.x installed.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-cassandra]

@@ -1,12 +1,10 @@
 = Using Neo4j from Java
-:slug: java
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: java
+:category: drivers
+:tags: java, project, official-driver, app-development, applications
 
 .Goals
 [abstract]
@@ -19,7 +17,7 @@ You should be familiar with the link:/developer/get-started/graph-database[graph
 Having link:/download[installed Neo4j] and tried out our link:/developer/cypher[Cypher Query language] helps too.
 When developing with Neo4j, please use Java 8 or 11 and your favorite IDE.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-java]
@@ -40,10 +38,10 @@ Neo4j Server 3.x - Java 8 +
 Neo4j Server 4.x - Java 11
 ****
 
-include::../_includes/sample_project.adoc[]
+include::./_includes/sample_project.adoc[]
 
 
 [#java-driver]
 == Neo4j Java Driver
 
-include::../_includes/java-driver.adoc[]
+include::./_includes/java-driver.adoc[]

@@ -1,12 +1,10 @@
 = Haskell: Neo4j Community Driver
-:slug: haskell
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: haskell
+:category: drivers
+:tags: haskell, app-development, applications
 
 .Goals
 [abstract]
@@ -17,10 +15,10 @@ If you are a Haskell developer, this guide provides an overview of options for c
 You should be familiar with link:/developer/get-started/graph-database[graph database concepts] and the property graph model.
 You should have link:/download[installed Neo4j] and made yourself familiar with our link:/developer/cypher[Cypher Query language].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
-include::../_includes/community-driver-notice.adoc[]
+include::./_includes/community-driver-notice.adoc[]
 
 [#neo4j-haskell]
 == Neo4j for Haskell Developers

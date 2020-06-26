@@ -1,12 +1,4 @@
 = Neo4j Life Sciences and Healthcare Network
-:section: Use Cases
-:section-link: use-cases
-:section-level: 2
-:slug: life-sciences-and-healthcare
-:toc:
-:toc-placement!:
-:toc-title: Overview
-:toclevels: 2
 
 image:{img}icon-guide-theory.png[float=left]
 

@@ -1,13 +1,10 @@
 = Tutorial: Import Relational Data Into Neo4j
-:slug: guide-importing-data-and-etl
 :level: Beginner
-:section: Data Import
-:section-link: data-import
-:northwind: ../../../data/northwind
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:northwind: ../../data/northwind
+:author: Jennifer Reif
+:category: import-export
+:tags: data-import, graph-import, northwind-graph, relational-graph, load-csv
 
 .Goals
 [abstract]
@@ -20,7 +17,7 @@ This example uses a specific data set, but the principles in this guide can be a
 You should have a basic understanding of the link:/developer/graph-database/#property-graph[property graph model] and know how to link:/developer/guide-data-modeling[model data as a graph].
 If you haven't already, link:/download[download^] and install link:/developer/neo4j-desktop/[Neo4j Desktop], so you can follow along with the examples.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#about-domain]

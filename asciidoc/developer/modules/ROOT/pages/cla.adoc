@@ -1,9 +1,7 @@
 = Contributor License Agreement
-:slug: cla
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:author: Neo4j
+:category: development
+:tags: community, contributions, cla
 
 [#cla-summary]
 == Summary

@@ -1,9 +1,7 @@
 = Contributing Code
-:slug: contributing-code
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:author: Neo4j
+:category: development
+:tags: community, contributions, code
 
 [#code-contrib]
 == Intro

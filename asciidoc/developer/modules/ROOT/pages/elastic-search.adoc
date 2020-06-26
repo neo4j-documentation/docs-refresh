@@ -1,12 +1,9 @@
 = Neo4j and ElasticSearch
-:slug: elastic-search
 :level: Intermediate
-:section: Neo4j Integrations
-:section-link: integration
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: integrations
+:tags: integrations, tools, elasticsearch, extensions, libraries
 
 .Goals
 [abstract]
@@ -16,7 +13,7 @@ There are various ways to integrate Neo4j with ElasticSearch, here we will list 
 [abstract]
 You should have a sound understanding of both ElasticSearch and Neo4j, each data model and APIs to leverage them effectively together.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-elastic]

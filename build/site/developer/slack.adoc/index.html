@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Neo4j-Users Slack :: Neo4j Developer Portal</title>
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article developer">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/developer">
+        <svg width="97px" height="36px" viewBox="0 0 97 36" class="logo">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
+              <g>
+                <path
+                  d="M28.7331787,15.4086598 C28.7331787,23.4004124 22.3016241,29.8779381 14.3665893,29.8779381 C6.43155452,29.8779381 0,23.4004124 0,15.4086598 C0,7.41690722 6.43155452,0.939375765 14.3665893,0.939375765 C22.3016241,0.932371134 28.7331787,7.41690722 28.7331787,15.4086598"
+                  fill="#008CC1"></path>
+                <path
+                  d="M6.36890951,10.6626804 C6.36890951,11.3006186 5.85382831,11.8193814 5.22041763,11.8193814 C4.58700696,11.8193814 4.07192575,11.3006186 4.07192575,10.6626804 C4.07192575,10.0247423 4.58700696,9.50597938 5.22041763,9.50597938 C5.86078886,9.50597938 6.36890951,10.0247423 6.36890951,10.6626804"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M6.5638051,13.8383505 C6.5638051,14.4762887 6.0487239,14.9950515 5.41531323,14.9950515 C4.78190255,14.9950515 4.26682135,14.4762887 4.26682135,13.8383505 C4.26682135,13.2004124 4.78190255,12.6816495 5.41531323,12.6816495 C6.0487239,12.6816495 6.5638051,13.1934021 6.5638051,13.8383505"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M7.26682135,17.203299 C7.26682135,17.8412371 6.75174014,18.36 6.11832947,18.36 C5.48491879,18.36 4.96983759,17.8412371 4.96983759,17.203299 C4.96983759,16.5653608 5.48491879,16.0465979 6.11832947,16.0465979 C6.75174014,16.0395876 7.26682135,16.5583505 7.26682135,17.203299"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M8.83990719,20.217732 C8.83990719,20.8556701 8.32482599,21.374433 7.69141531,21.374433 C7.05800464,21.374433 6.54292343,20.8556701 6.54292343,20.217732 C6.54292343,19.5797938 7.05800464,19.0610309 7.69141531,19.0610309 C8.32482599,19.0540206 8.83990719,19.5727835 8.83990719,20.217732"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M21.1392111,24.4309278 C21.1392111,25.068866 20.6241299,25.5876289 19.9907193,25.5876289 C19.3573086,25.5876289 18.8422274,25.068866 18.8422274,24.4309278 C18.8422274,23.7929897 19.3573086,23.2742268 19.9907193,23.2742268 C20.6241299,23.2742268 21.1392111,23.7929897 21.1392111,24.4309278"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M23.2273782,21.942268 C23.2273782,22.5802062 22.712297,23.0989691 22.0788863,23.0989691 C21.4454756,23.0989691 20.9303944,22.5802062 20.9303944,21.942268 C20.9303944,21.3043299 21.4454756,20.785567 22.0788863,20.785567 C22.712297,20.785567 23.2273782,21.3043299 23.2273782,21.942268"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M17.1716937,4.34639175 C17.1716937,4.9843299 16.6566125,5.50309278 16.0232019,5.50309278 C15.3897912,5.50309278 14.87471,4.9843299 14.87471,4.34639175 C14.87471,3.70845361 15.3897912,3.18969072 16.0232019,3.18969072 C16.6566125,3.18969072 17.1716937,3.70845361 17.1716937,4.34639175"
+                  fill="#FFFFFF"></path>
+                <path
+                  d="M14.1508121,3.28082474 C14.1508121,3.91876289 13.6357309,4.43752577 13.0023202,4.43752577 C12.3689095,4.43752577 11.8538283,3.91876289 11.8538283,3.28082474 C11.8538283,2.6428866 12.3689095,2.12412371 13.0023202,2.12412371 C13.6357309,2.12412371 14.1508121,2.6428866 14.1508121,3.28082474"
+                  fill="#FFFFFF"></path>
+                <ellipse id="Oval" stroke="#FFFFFF" fill="#66B245" cx="22.2946636" cy="11.9595876" rx="7.65661253"
+                  ry="7.71134021"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" fill="#66B245" cx="11.8051044" cy="27.6837113" rx="6.26450116"
+                  ry="6.30927835"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" fill="#66B245" cx="6.64733179" cy="4.20618557" rx="4.17633411"
+                  ry="4.20618557"></ellipse>
+              </g>
+              <g id="neo4j" transform="translate(33.000000, 1.000000)" fill="#000000">
+                <path
+                  d="M0,4.87252125 L1.39130435,4.87252125 L1.39130435,7.6203966 C2.05913043,5.9490085 3.45043478,4.64589235 6.28869565,4.64589235 C9.51652174,4.64589235 11.6869565,6.85552408 11.6869565,10.3399433 L11.6869565,19.1501416 L10.2956522,19.1501416 L10.2956522,10.6232295 C10.2956522,7.76203966 8.57043478,5.97733711 5.9826087,5.97733711 C3.17217391,5.97733711 1.39130435,8.18696884 1.39130435,11.4730878 L1.39130435,19.1501416 L0,19.1501416 L0,4.87252125 Z">
+                </path>
+                <path
+                  d="M14.1634783,12.0396601 C14.1634783,7.59206799 17.1408696,4.5325779 21.0086957,4.5325779 C24.8208696,4.5325779 27.52,7.73371105 27.52,11.6430595 C27.52,11.6430595 27.52,12.0679887 27.4921739,12.3512748 L15.5269565,12.3512748 C15.6104348,15.7790368 17.8643478,18.2152975 21.0643478,18.2152975 C23.68,18.2152975 25.4886957,17.082153 26.3234783,16.0056657 L26.3234783,17.6770538 C25.0156522,18.8668555 23.4295652,19.5467422 21.0643478,19.5467422 C17.0295652,19.5467422 14.1634783,16.5439093 14.1634783,12.1246459 L14.1634783,12.0396601 Z M26.0452174,11.0764873 C26.0173913,8.15864023 23.7913043,5.86402266 21.0086957,5.86402266 C18.0869565,5.86402266 15.693913,8.15864023 15.5826087,11.0764873 L26.0452174,11.0764873 Z">
+                </path>
+                <path
+                  d="M37.0643478,4.50424929 C41.1826087,4.50424929 44.4382609,7.70538244 44.4382609,12.0113314 C44.4382609,16.3172805 41.1826087,19.5184136 37.0643478,19.5184136 C32.946087,19.5184136 29.6904348,16.3172805 29.6904348,12.0113314 C29.6904348,7.70538244 32.946087,4.50424929 37.0643478,4.50424929 Z M37.0643478,18.1869688 C40.4869565,18.1869688 43.0469565,15.5240793 43.0469565,12.0113314 C43.0469565,8.49858357 40.4869565,5.83569405 37.0643478,5.83569405 C33.6417391,5.83569405 31.0817391,8.49858357 31.0817391,12.0113314 C31.0817391,15.5240793 33.6417391,18.1869688 37.0643478,18.1869688 Z">
+                </path>
+                <polygon
+                  points="51.7843478 4.87252125 53.3426087 4.87252125 47.3878261 17.7903683 56.0417391 17.7903683 56.0417391 13.1161473 57.4886957 13.1161473 57.4886957 24.6175637 56.0417391 24.6175637 56.0417391 19.1501416 45.1895652 19.1501416">
+                </polygon>
+                <path
+                  d="M62.2469565,4.87252125 L63.6382609,4.87252125 L63.6382609,21.1331445 C63.6382609,24.3342776 61.8295652,24.9858357 60.0765217,24.9858357 C59.7426087,24.9858357 59.3808696,24.9575071 59.1582609,24.9008499 L59.1582609,23.5694051 C59.4921739,23.6260623 59.8817391,23.6543909 60.2156522,23.6543909 C61.6347826,23.6543909 62.2469565,22.9461756 62.2469565,21.1331445 L62.2469565,4.87252125 Z M61.9408696,1.04815864 C61.9408696,0.45325779 62.413913,0.0283286119 62.9426087,0.0283286119 C63.4713043,0.0283286119 63.9443478,0.45325779 63.9443478,1.04815864 C63.9443478,1.61473088 63.4713043,2.03966006 62.9426087,2.03966006 C62.413913,2.03966006 61.9408696,1.61473088 61.9408696,1.04815864 Z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <svg width="131px" height="34px" viewBox="0 0 131 34">
+          <path
+            d="M11.112,20.364 C13.996,20.364 16.124,18.768 16.712,17.06 L16.712,20 L18.112,20 L18.112,0.484 L16.712,0.484 L16.712,8.828 C16.124,7.12 13.996,5.524 11.112,5.524 C7.164,5.524 4,8.688 4,12.944 C4,17.2 7.136,20.364 11.112,20.364 Z M11.112,19.048 C7.864,19.048 5.4,16.416 5.4,12.944 C5.4,9.5 7.864,6.84 11.112,6.84 C14.388,6.84 16.88,9.388 16.88,12.944 C16.88,16.5 14.388,19.048 11.112,19.048 Z M26.876,20.336 C28.864,20.336 30.824,19.692 32.42,17.872 L31.496,16.976 C30.292,18.236 28.92,19.02 26.876,19.02 C23.656,19.02 21.388,16.668 21.304,13.28 L33.344,13.28 C33.372,13 33.372,12.58 33.372,12.58 C33.372,8.688 30.656,5.524 26.82,5.524 C22.928,5.524 19.932,8.576 19.932,12.972 L19.932,13.056 C19.932,17.368 22.844,20.336 26.876,20.336 Z M31.916,12.02 L21.36,12.02 C21.472,9.108 23.852,6.84 26.82,6.84 C29.648,6.84 31.888,9.136 31.916,12.02 Z M40.624,20.728 L47.204,5.888 L45.692,5.888 L40.624,17.452 L35.612,5.888 L34.1,5.888 L40.624,20.728 Z M54.904,20.336 C56.892,20.336 58.852,19.692 60.448,17.872 L59.524,16.976 C58.32,18.236 56.948,19.02 54.904,19.02 C51.684,19.02 49.416,16.668 49.332,13.28 L61.372,13.28 C61.4,13 61.4,12.58 61.4,12.58 C61.4,8.688 58.684,5.524 54.848,5.524 C50.956,5.524 47.96,8.576 47.96,12.972 L47.96,13.056 C47.96,17.368 50.872,20.336 54.904,20.336 Z M59.944,12.02 L49.388,12.02 C49.5,9.108 51.88,6.84 54.848,6.84 C57.676,6.84 59.916,9.136 59.944,12.02 Z M67.672,20.364 C68.092,20.364 68.484,20.308 68.848,20.224 L68.848,18.936 C68.484,19.02 68.092,19.048 67.672,19.048 C66.188,19.048 65.572,18.208 65.572,16.36 L65.572,0.484 L64.172,0.484 L64.172,16.444 C64.172,19.692 65.964,20.364 67.672,20.364 Z M77.22,20.364 C81.364,20.364 84.64,17.2 84.64,12.944 C84.64,8.688 81.364,5.524 77.22,5.524 C73.076,5.524 69.8,8.688 69.8,12.944 C69.8,17.2 73.076,20.364 77.22,20.364 Z M77.22,19.048 C73.776,19.048 71.2,16.416 71.2,12.944 C71.2,9.472 73.776,6.84 77.22,6.84 C80.664,6.84 83.24,9.472 83.24,12.944 C83.24,16.416 80.664,19.048 77.22,19.048 Z M88.812,25.404 L88.812,17.06 C89.4,18.768 91.528,20.364 94.412,20.364 C98.36,20.364 101.524,17.2 101.524,12.944 C101.524,8.688 98.388,5.524 94.412,5.524 C91.528,5.524 89.4,7.12 88.812,8.828 L88.812,5.888 L87.412,5.888 L87.412,25.404 L88.812,25.404 Z M94.412,19.048 C91.136,19.048 88.644,16.5 88.644,12.944 C88.644,9.388 91.136,6.84 94.412,6.84 C97.66,6.84 100.124,9.472 100.124,12.944 C100.124,16.388 97.66,19.048 94.412,19.048 Z M110.652,20.336 C112.64,20.336 114.6,19.692 116.196,17.872 L115.272,16.976 C114.068,18.236 112.696,19.02 110.652,19.02 C107.432,19.02 105.164,16.668 105.08,13.28 L117.12,13.28 C117.148,13 117.148,12.58 117.148,12.58 C117.148,8.688 114.432,5.524 110.596,5.524 C106.704,5.524 103.708,8.576 103.708,12.972 L103.708,13.056 C103.708,17.368 106.62,20.336 110.652,20.336 Z M115.692,12.02 L105.136,12.02 C105.248,9.108 107.628,6.84 110.596,6.84 C113.424,6.84 115.664,9.136 115.692,12.02 Z M121.292,20 L121.292,12.272 C121.292,9.472 122.776,7.092 125.856,7.092 C126.192,7.092 126.584,7.12 126.752,7.148 L126.752,5.692 C126.556,5.664 126.276,5.664 126.08,5.664 C123.308,5.664 121.88,7.008 121.292,8.716 L121.292,5.888 L119.892,5.888 L119.892,20 L121.292,20 Z"
+            id="developer"></path>
+        </svg>
+              </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+
+        <div class="navbar-item is-hoverable developer">
+          <a class="navbar-link" href="/developer">Developer Guides</a>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable docs">
+          <a class="navbar-link" href="/docs">Docs</a>
+          <div class="navbar-dropdown">
+            <div class="navbar-item project" href="">
+              <a class="project-name" href="">Operations Manual</a>
+
+              <ul class="project-links">
+                <li><a href="" class="project-link">Migration Guide</a></li>
+                <li><a href="" class="project-link">Status Codes</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project" href="">
+              <a class="project-name" href="">Cypher Manual</a>
+
+              <ul class="project-links">
+                <li><a href="" class="project-link">Cyper Refcard</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project" href="">
+              <a class="project-name" href="">Driver Manual</a>
+
+              <ul class="project-links">
+                <li><a href="" class="project-link">Java</a></li>
+                <li><a href="" class="project-link">JavaScript</a></li>
+                <li><a href="" class="project-link">.NET</a></li>
+                <li><a href="" class="project-link">Python</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable labs">
+          <a class="navbar-link" href="/labs">Labs</a>
+          <div class="navbar-dropdown">
+            <div class="navbar-item project">
+              <a class="project-name" href="/labs/apoc">APOC</a>
+              <p class="project-description">A library of procedures and functions for interacting with Neo4j</p>
+
+              <ul class="project-links">
+                <li><a href="/labs/apoc/4.0" class="project-link">Documentation</a></li>
+                <li><a href="/labs/apoc/" class="project-link">Developer Guide</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project">
+              <a class="project-name" href="/labs/streams">Neo4j Streams</a>
+              <p class="project-description">Integration for Neo4j &amp; Kafka</p>
+
+              <ul class="project-links">
+                <li><a href="/labs/streams/4.0" class="project-link">Documentation</a></li>
+                <li><a href="/labs/streams" class="project-link">Developer Guide</a></li>
+              </ul>
+            </div>
+            <div class="navbar-item project">
+              <a class="project-name" href="/labs/neosemantics">neosemantics</a>
+              <p class="project-description">An RDF Toolkit for Neo4j</p>
+
+              <ul class="project-links">
+                <li><a href="/labs/neosemantics/4.0" class="project-link">Documentation</a></li>
+                <li><a href="/labs/neosemantics" class="project-link">Developer Guide</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
+              </g>
+            </svg><span class="navbar-mobile">Search</span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header><div class="search" id="search">
+    <div class="search-container">
+        <form class="search-form">
+            <label for="search_input">Search Neo4j.com</label>
+
+            <input id="search_input" type="text" name="search"
+                placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
+            <div class="search-icon">
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
+                    role="button" title="Search Website">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                            <circle id="Oval"
+                                transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                                cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                            <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="search-icon">
+                <svg width="14px" height="22px" viewBox="0 0 22 22" role="button" class="cancel" id="close_search">
+                    <line x1="19.5833333" y1="0.416666667" x2="0.416666667" y2="19.5833333"></line>
+                    <line x1="19.5833333" y1="19.5833333" x2="0.416666667" y2="0.416666667"></line>
+                </svg>
+            </div>
+        </form>
+        <div class="search-results"></div>
+
+        <div class="search-filters hidden">
+            <div class="search-filters-header">
+                <h2>Filter By Category</h2>
+                <div class="search-filters-icon">
+                    <svg width="14px" height="22px" viewBox="0 0 22 22" role="button" class="cancel" id="close_filters">
+                        <line x1="19.5833333" y1="0.416666667" x2="0.416666667" y2="19.5833333"></line>
+                        <line x1="19.5833333" y1="19.5833333" x2="0.416666667" y2="0.416666667"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="search-filters-content">
+            </div>
+        </div>
+
+    </div>
+</div><div class="body">
+<div class="nav-container" data-component="developer" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../">Developer Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#get-started.adoc">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-database.adoc">What is a Graph Database?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#intro-videos.adoc">Intro to Graph DBs Video Series</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-db-vs-rdbms.adoc">Concepts: RDBMS to Graph</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-db-vs-nosql.adoc">Concepts: NoSQL to Graph</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#getting-started-resources.adoc">Getting Started Resources</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Graph Platform</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-platform.adoc">Graph Platform Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-desktop.adoc">Neo4j Desktop Intro</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-browser.adoc">Neo4j Browser Intro</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-bloom.adoc">Neo4j Bloom Intro</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-etl.adoc">How-To: Neo4j ETL Tool</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-apoc.adoc">Neo4j APOC Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-algorithms.adoc">Neo4j Graph Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graphql.adoc">Neo4j &amp; GraphQL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-nlp.adoc">Neo4j Natural Language Processing (NLP)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Cypher Query Language</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cypher-query-language.adoc">Cypher Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cypher-basics-i.adoc">Cypher Basics I</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cypher-basics-ii.adoc">Cypher Basics II</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#filtering-query-results.adoc">Filtering Query Results</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#sub-queries.adoc">Sub Queries</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aggregation-returns-functions.adoc">Aggregation, Returns, &amp; Functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cypher-style-guide.adoc">Cypher Style Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-sql-to-cypher.adoc">From SQL to Cypher</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#procedures-functions.adoc">User Defined Procedures &amp; Functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#dates-datetimes-durations.adoc">Tutorial: Dates, Datetimes, and Durations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-build-a-recommendation-engine.adoc">Tutorial: Build a Recommendation Engine</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cypher-resources.adoc">Cypher Resources</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Graph Data Modeling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#data-modeling.adoc">Graph Modeling Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-data-modeling.adoc">Graph Modeling Guidelines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#relational-to-graph-modeling.adoc">Modeling: RDBMS to Graph</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#modeling-designs.adoc">Modeling Designs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#modeling-tips.adoc">Graph Modeling Tips</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-model-refactoring.adoc">Tutorial: Refactoring a graph model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graphgist.adoc">Interactive Graph Models</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Data Import</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#data-import.adoc">Import Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-import-csv.adoc">Importing CSV</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-import-json-rest-api.adoc">Importing API Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#relational-to-graph-import.adoc">Import: RDBMS to Graph</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-importing-data-and-etl.adoc">Example: Northwind Dataset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#desktop-csv-import.adoc">How-To: Desktop CSV Import</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#example-data.adoc">Example Datasets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Graph Visualization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-visualization.adoc">Visualization Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#tools-graph-visualization.adoc">Visualization Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#other-graph-visualizations.adoc">Other Visualizations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Drivers &amp; Language Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#language-guides.adoc">Drivers Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#java.adoc">Java</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#java-driver-spring-boot-starter.adoc">Java Driver Spring Boot Starter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-ogm.adoc">Neo4j Object Graph Mapper</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#spring-data-neo4j.adoc">Spring Data Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#spring-data-neo4j-rx.adoc">Spring Data Neo4j RX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#java-procedures.adoc">Procedures and Functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#java-third-party.adoc">Third-party libraries</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#dotnet.adoc">.NET</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#javascript.adoc">JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#python.adoc">Python</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#go.adoc">Go</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#ruby.adoc">Ruby</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#php.adoc">PHP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#erlang-elixir.adoc">Erlang &amp; Elixir</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#perl.adoc">Perl</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Tools &amp; Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#integration.adoc">Integrations Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#apache-spark.adoc">Apache Spark</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#elastic-search.adoc">Elastic-Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#mongodb.adoc">MongoDB</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cassandra.adoc">Cassandra</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Aura DBaaS</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-cloud-dbaas.adoc">Aura DBaaS Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-connect-neo4j-desktop.adoc">Connect from Neo4j Desktop</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-connect-cypher-shell.adoc">Connect from Cypher Shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-connect-driver.adoc">Connect from your application</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-data-import.adoc">Data Import with Neo4j Aura</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-grandstack.adoc">Deploying a GRANDstack application to Aura</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-bloom.adoc">Bloom Visualization with Aura</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#aura-monitoring.adoc">Monitoring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Graph Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-apps.adoc">Graph Apps Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#graph-app-development.adoc">Building Graph Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#in-production.adoc">Administration Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#manage-multiple-databases.adoc">Tutorial: Managing Multiple Databases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#multi-tenancy-worked-example.adoc">Tutorial: Multi Tenancy Worked Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#neo4j-fabric-sharding.adoc">Sharding Graphs with Fabric</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-clustering-neo4j.adoc">Clustering Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-performance-tuning.adoc">Performance Tuning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#docker.adoc">Docker &amp; Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#docker-run-neo4j.adoc">How-To: Run Neo4j in Docker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/startup-program/">Startups: Free Neo4j Enterprise</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/graphacademy/online-training/neo4j-administration/">Online Course: Neo4j Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j in the Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-cloud-deployment.adoc">Cloud Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-orchestration.adoc">Orchestration Tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Documentation &amp; Resources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#resources.adoc">Resource Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#about-graphacademy.adoc">Learn through GraphAcademy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide-create-neo4j-browser-guide.adoc">Tutorial: Create Custom Browser Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#ruby-course.adoc">How-To: Build with Ruby &amp; Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#browser-guide-list.adoc">Available Neo4j Browser Guides</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/docs/">Neo4j Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Contributing to Neo4j</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#contribute.adoc">Contributing Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#cla.adoc">Contributor License Agreement</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#contributing-code.adoc">Code Contributions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https://community.neo4j.com">Help on Community Forums</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/speaker-program/">Speaker Program: Share your Story</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../">Developer Guides</a></li>
+    <li><a href="./">Neo4j-Users Slack</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/slack.adoc.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Neo4j-Users Slack</h1>
+<div class="sect1">
+<h2 id="join-slack"><a class="anchor" href="#join-slack"></a>Join more than 8800 members in the Neo4j-Users Slack Group</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<a class="image" href="http://neo4j.com/slack" target="neo4j-users-slack"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/neo4j-users-slack-group.png" alt="neo4j users slack group" width="300"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>The Neo4j Slack group allows users to connect with users and creates a chat atmosphere, with more than 8800 people signed up.</p>
+</div>
+<div class="paragraph">
+<p>For dedicated assistance or content posting/announcements, please visit our <a href="https://community.neo4j.com" target="_blank" rel="noopener">Neo4j Online Community</a> instead!</p>
+</div>
+<style>
+.splash { margin : 10px; }
+.splash footer {display:none;}
+</style>
+<iframe src="http://neo4j-users-slack-invite.herokuapp.com/" scrolling="no" style="margin-top:-80px;scroll:none;overflow:hidden;border:none;width:340px;height:340px;"></iframe>
+<div class="paragraph">
+<p>With your account you can then find all the goodness of our community at <a href="http://neo4j-users.slack.com" class="bare">http://neo4j-users.slack.com</a> or in the Slack desktop app.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Unfortunately, with the free Slack plan, only 10.000 messages are kept.
+But you can access our an <a href="http://neo4j-users.slackarchive.io/"><strong>archive of our neo4j-users group here</strong></a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="getting-support"><a class="anchor" href="#getting-support"></a>Getting more Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are a customer, please raise a ticket at <a href="http://support.neo4j.com" target="_blank" rel="noopener">our support portal</a> or contact our <a href="http://neo4j.com/contact-us">professional services</a> directly.</p>
+</div>
+<div class="paragraph">
+<p>For more involved questions, please raise them in an appropriate category on the <a href="https://community.neo4j.com" target="_blank" rel="noopener">Neo4j Online Community</a>.
+The community site allows other users to search for questions and answers and shares the knowledge with others!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chat-guidelines"><a class="anchor" href="#chat-guidelines"></a>Chat Guidelines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please don&#8217;t cross post between channels if not asked so explicitely.</p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t use any @here, or @channel mentions as many of the channels have a large number of members.</p>
+</div>
+<div class="paragraph">
+<p>Please be respectful of varying users and beliefs and avoid content that could be perceived as offensive by others.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="channel-overview"><a class="anchor" href="#channel-overview"></a>Channel Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are <strong>many</strong> channels in our Neo4j-Users Slack group and Slack is not very good at organizing them.
+We tried to help a bit by prefixing the channels but it&#8217;s still not optimal.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_welcome_get_started"><a class="anchor" href="#_welcome_get_started"></a>Welcome &amp; Get Started</h3>
+<div class="paragraph">
+<p>Say hi and meet users in this channel!</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help" target="neo4j-users-slack">#help</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/get-started" target="neo4j-users-slack">#get-started</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-newbies" target="neo4j-users-slack">#help-newbies</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_general_channels"><a class="anchor" href="#_general_channels"></a>General Channels</h3>
+<div class="paragraph">
+<p>Channels you should use for broader topics that are not specific to a single area.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/announce" target="neo4j-users-slack">#announce</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/contributors" target="neo4j-users-slack">#contributors</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/opencypher" target="neo4j-users-slack">#opencypher</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/product-feedback" target="neo4j-users-slack">#product-feedback</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/jobs" target="neo4j-users-slack">#jobs</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/share-your-project" target="neo4j-users-slack">#share-your-project</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/rants" target="neo4j-users-slack">#rants</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_docs_questions_and_feedback"><a class="anchor" href="#_docs_questions_and_feedback"></a>Docs Questions and Feedback</h3>
+<div class="paragraph">
+<p>Docs are so important. Feel free to help us out and provide your feedback on them!</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/docs-feedback" target="neo4j-users-slack">#docs-feedback</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/website-feedback" target="neo4j-users-slack">#website-feedback</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/knowledge-base" target="neo4j-users-slack">#knowledge-base</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/datasets" target="neo4j-users-slack">#datasets</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_events_meetups_and_conferences"><a class="anchor" href="#_events_meetups_and_conferences"></a>Events, Meetups and Conferences</h3>
+<div class="paragraph">
+<p>Want to attend, organize or speak at an event? Here is your place.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/events" target="neo4j-users-slack">#events</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/graphconnect" target="neo4j-users-slack">#graphconnect</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/online-meetup" target="neo4j-users-slack">#online-meetup</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/graphgist-challenge" target="neo4j-users-slack">#graphgist-challenge</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/organize-meetups" target="neo4j-users-slack">#organize-meetups</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_specific_neo4j_topics_of_interests"><a class="anchor" href="#_specific_neo4j_topics_of_interests"></a>Specific Neo4j Topics of Interests</h3>
+<div class="paragraph">
+<p>Focus on dedicated topics of the Neo4j surface in these channels.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-modeling" target="neo4j-users-slack">#help-modeling</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-cypher" target="neo4j-users-slack">#help-cypher</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-procedures" target="neo4j-users-slack">#neo4j-procedures</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-apoc" target="neo4j-users-slack">#neo4j-apoc</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-viz" target="neo4j-users-slack">#help-viz</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-import" target="neo4j-users-slack">#help-import</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-enterprise" target="neo4j-users-slack">#help-enterprise</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-clustering" target="neo4j-users-slack">#neo4j-clustering</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-performance-" target="neo4j-users-slack">#neo4j-performance-</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_installation_and_operations"><a class="anchor" href="#_installation_and_operations"></a>Installation and Operations</h3>
+<div class="paragraph">
+<p>Need help getting Neo4j to set up and run? Ask here.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/help-install" target="neo4j-users-slack">#help-install</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-browser" target="neo4j-users-slack">#neo4j-browser</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-unix" target="neo4j-users-slack">#neo4j-unix</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-docker" target="neo4j-users-slack">#neo4j-docker</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_languages_stacks"><a class="anchor" href="#_languages_stacks"></a>Languages &amp; Stacks</h3>
+<div class="paragraph">
+<p>The experts for these languages and driver authors answer your questions directly.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/drivers" target="neo4j-users-slack">#drivers</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-dotnet" target="neo4j-users-slack">#neo4j-dotnet</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-php" target="neo4j-users-slack">#neo4j-php</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-golang" target="neo4j-users-slack">#neo4j-golang</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-java" target="neo4j-users-slack">#neo4j-java</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-javascript" target="neo4j-users-slack">#neo4j-javascript</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-python" target="neo4j-users-slack">#neo4j-python</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-rstats" target="neo4j-users-slack">#neo4j-rstats</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-ruby" target="neo4j-users-slack">#neo4j-ruby</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-sdn-ogm" target="neo4j-users-slack">#neo4j-sdn-ogm</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_integrations"><a class="anchor" href="#_integrations"></a>Integrations</h3>
+<div class="paragraph">
+<p>Integrating Neo4j with other tools, databases or systems?</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-jdbc" target="neo4j-users-slack">#neo4j-jdbc</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-relational" target="neo4j-users-slack">#neo4j-relational</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-cassandra" target="neo4j-users-slack">#neo4j-cassandra</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-elasticsearch" target="neo4j-users-slack">#neo4j-elasticsearch</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-mongodb" target="neo4j-users-slack">#neo4j-mongodb</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-spark" target="neo4j-users-slack">#neo4j-spark</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-spatial" target="neo4j-users-slack">#neo4j-spatial</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/neo4j-tableau" target="neo4j-users-slack">#neo4j-tableau</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_neo4j_partners"><a class="anchor" href="#_neo4j_partners"></a>Neo4j Partners</h3>
+<div class="paragraph">
+<p>In these channels you can get quick &amp; direct contact and feedback from technology-partners in the Neo4j ecosystem.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/using-graphaware" target="neo4j-users-slack">#using-graphaware</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/using-graphenedb" target="neo4j-users-slack">#using-graphenedb</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/using-graphstory" target="neo4j-users-slack">#using-graphstory</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/using-linkurious" target="neo4j-users-slack">#using-linkurious</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/using-liquigraph" target="neo4j-users-slack">#using-liquigraph</a></p>
+</li>
+<li>
+<p><a href="https://neo4j-users.slack.com/messages/using-structr" target="neo4j-users-slack">#using-structr</a></p>
+</li>
+</ul>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>We hope you enjoy meeting fellow users and chatting about Neo4j!</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<div class="feedback">
+    <div class="header question">
+        <p><strong>Was this page helpful?</strong></p>
+
+        <svg width="22px" height="22px" viewBox="0 0 22 22" role="button" class="no">
+            <path
+                d="M6.25,15.8333333 C6.25,13.7622655 7.92893219,12.0833333 10,12.0833333 C12.0710678,12.0833333 13.75,13.7622655 13.75,15.8333333"
+                id="Shape"></path>
+            <circle id="Oval" cx="10" cy="10" r="9.58333333"></circle>
+            <path
+                d="M12.5,4.58333333 C12.8934466,4.05873783 13.5109223,3.75 14.1666667,3.75 C14.822411,3.75 15.4398867,4.05873783 15.8333333,4.58333333"
+                id="Shape"></path>
+            <line x1="4.58333333" y1="7.91666667" x2="7.08333333" y2="7.91666667" id="Shape"></line>
+            <path
+                d="M7.08333333,8.54166667 C6.96827401,8.54166667 6.875,8.44839266 6.875,8.33333333 C6.875,8.21827401 6.96827401,8.125 7.08333333,8.125 C7.19839266,8.125 7.29166667,8.21827401 7.29166667,8.33333333 C7.29166667,8.44839266 7.19839266,8.54166667 7.08333333,8.54166667"
+                id="Shape"></path>
+            <line x1="12.9166667" y1="7.91666667" x2="15.4166667" y2="7.91666667" id="Shape"></line>
+            <path
+                d="M15.4166667,8.54166667 C15.3016073,8.54166667 15.2083333,8.44839266 15.2083333,8.33333333 C15.2083333,8.21827401 15.3016073,8.125 15.4166667,8.125 C15.531726,8.125 15.625,8.21827401 15.625,8.33333333 C15.625,8.44839266 15.531726,8.54166667 15.4166667,8.54166667"
+                id="Shape"></path>
+            <path
+                d="M4.16666667,4.58333333 C4.5601133,4.05873783 5.17758895,3.75 5.83333333,3.75 C6.48907772,3.75 7.10655337,4.05873783 7.5,4.58333333"
+                id="Shape"></path>
+        </svg>
+
+        <svg width="22px" height="22px" viewBox="0 0 22 22" role="button" class="yes">
+            <circle id="Oval" cx="10" cy="10" r="9.58333333"></circle>
+            <path
+                d="M5.41666667,8.125 C5.53172599,8.125 5.625,8.21827401 5.625,8.33333333 C5.625,8.44839266 5.53172599,8.54166667 5.41666667,8.54166667 C5.30160734,8.54166667 5.20833333,8.44839266 5.20833333,8.33333333 C5.20833333,8.21827401 5.30160734,8.125 5.41666667,8.125"
+                id="Shape"></path>
+            <path
+                d="M14.5833333,8.125 C14.468274,8.125 14.375,8.21827401 14.375,8.33333333 C14.375,8.44839266 14.468274,8.54166667 14.5833333,8.54166667 C14.6983927,8.54166667 14.7916667,8.44839266 14.7916667,8.33333333 C14.7916667,8.21827401 14.6983927,8.125 14.5833333,8.125"
+                id="Shape"></path>
+            <path
+                d="M13.2275,12.9166657 C13.4853075,12.9162808 13.7287776,13.035241 13.8869095,13.2388563 C14.0450415,13.4424715 14.1000278,13.7078123 14.0358333,13.9575 C13.562901,15.7999679 11.9021969,17.0882321 10,17.0882321 C8.09780311,17.0882321 6.43709903,15.7999679 5.96416667,13.9575 C5.89997223,13.7078123 5.95495852,13.4424715 6.11309045,13.2388563 C6.27122239,13.035241 6.51469246,12.9162808 6.7725,12.9166657 L13.2275,12.9166657 Z"
+                id="Shape"></path>
+        </svg>
+    </div>
+
+
+</div>  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="column">
+    <div class="logo-footer"></div>
+    <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
+      <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
+    <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
+      of Neo4j, Inc. All other marks are owned by their respective companies.</p>
+  </div>
+
+  <div class="column">
+    <a href="/contact-us?ref=footer">Contact Us →</a>
+    <p>US: 1-855-636-4532<br>
+      Sweden +46 171 480 113<br>
+      UK: +44 20 3868 3223<br>
+      France: +33 (0) 8 05 08 03 44<br>
+      <!--Germany: +49 (0)89 26204 6300</p>-->
+    </p>
+  </div>
+</footer><script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+<script src="https://d3js.org/d3-force.v2.min.js"></script>
+
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/gram.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/search.js"></script>  </body>
+</html>

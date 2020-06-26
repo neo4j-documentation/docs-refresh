@@ -1,12 +1,9 @@
 = Guide to Cypher Basics
-:slug: guide-cypher-basics
 :level: Beginner
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Neo4j
+:category: cypher
+:tags: cypher, queries, graph-queries, movie-graph, cypher-example
 
 .Goals
 [abstract]
@@ -17,7 +14,7 @@ You should be able to read and understand Cypher queries after finishing this gu
 [abstract]
 You should have familiarized yourself with link:/developer/get-started/graph-database[Graph Databases] and the link:/developer/get-started/graph-database#property-graph[Property Graph Model].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#cypher-basics]

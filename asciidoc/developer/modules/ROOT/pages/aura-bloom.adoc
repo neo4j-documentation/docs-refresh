@@ -1,12 +1,10 @@
 = Use Neo4j Bloom with Aura Database
-:slug: aura-bloom
 :level: Beginner
-:section: Neo4j Cloud DBaaS
-:section-link: aura-cloud-dbaas
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:neo4j-versions: 3.5
+:category: cloud
+:tags: aura, bloom, dbaas, visualization
 
 .Goals
 [abstract]
@@ -17,7 +15,7 @@ We will learn how to connect Neo4j Bloom with a Neo4j cloud Aura instance.
 We should have created and started a Neo4j Aura database instance.
 If we have not already, we can follow the instructions in the link:https://aura.support.neo4j.com/hc/en-us/articles/360037562253-Working-with-Neo4j-Aura[getting started guide^] to step through the process.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 ****

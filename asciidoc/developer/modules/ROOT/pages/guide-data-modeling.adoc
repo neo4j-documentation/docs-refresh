@@ -1,12 +1,9 @@
 = Graph Modeling Guidelines
-:slug: guide-data-modeling
 :level: Beginner
-:section: Graph Data Modeling
-:section-link: data-modeling
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: modeling
+:tags: graph-modeling, data-model, schema, model-process, model-domain
 
 .Goals
 [abstract]
@@ -17,7 +14,7 @@ You will be introduced to the basic process of designing a graph data model that
 [abstract]
 You should understand the basics of Neo4j's link:/developer/get-started/graph-database#property-graph[property graph data model].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#modeling-intro]
@@ -234,6 +231,7 @@ There are plenty of opportunities throughout the upcoming guides to practice mod
 Every data model is unique, depending on the use case and the types of questions that users need to answer with the data.
 Because of this, there is no "one-size-fits-all" approach to data modeling.
 Using best practices and careful modeling will provide the most valuable result in producing an accurate data model that benefits your processes and use case.
+A walkthrough of designs for different use cases is in our link:/developer/modeling-designs/[modeling designs] guide.
 
 [#modeling-resources]
 == Resources

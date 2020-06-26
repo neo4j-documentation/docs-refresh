@@ -1,12 +1,10 @@
 = Dates, datetimes, and durations
-:slug: dates-datetimes-durations
 :level: Intermediate
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Jennifer Reif
+:neo4j-versions: 3.4, 3.5, 4.0
+:category: cypher
+:tags: cypher, queries, graph-queries, dates, times, compare-dates, calculate-duration
 
 .Goals
 [abstract]
@@ -19,7 +17,7 @@ You should be familiar with link:/developer/get-started/graph-database[graph dat
 This guide is a continuation of the concepts discussed in the previous Cypher sections.
 You should be familiar with link:/developer/cypher/cypher-query-language[MATCH], link:/developer/cypher/cypher-basics-ii/[Create/Update/Delete], and link:/developer/cypher/filtering-query-results/[Filtering] concepts before walking through this guide.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#creating-updating-values]

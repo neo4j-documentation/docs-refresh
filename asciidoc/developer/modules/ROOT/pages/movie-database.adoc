@@ -1,12 +1,10 @@
 = Dataset: Movie Database
 //:slug: movie-database
 :level: Intermediate
-:toc:
-:toc-placement!:
-:toc-title: Overview
-:toclevels: 1
-:section: Data Import
-:section-link: example-data
+:page-level: Intermediate
+:author: Michael Hunger
+:category: import-export
+:tags: graph-data, data-sets, import-data, graph-examples, app-development
 
 .Goals
 [abstract]
@@ -17,7 +15,7 @@ This guide outlines some of them.
 [abstract]
 You should be comfortable installing and importing data into Neo4j.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 == The Dataset

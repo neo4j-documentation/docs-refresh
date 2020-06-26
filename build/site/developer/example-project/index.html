@@ -151,20 +151,19 @@
           </div>
         </div>
         <div class="navbar-item">
-          <a class="navbar-link" href="/search" id="search_open">
-
-
-
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button" title="Search Website">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
-                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
-                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
               </g>
-            </g>
-          </svg>
-          <span class="navbar-mobile">Search</span>
-          </a>
+            </svg><span class="navbar-mobile">Search</span></a>
         </div>
       </div>
     </div>
@@ -177,7 +176,7 @@
             <input id="search_input" type="text" name="search"
                 placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
             <div class="search-icon">
-                <svg width="14px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
                     role="button" title="Search Website">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -222,7 +221,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../">Developer Guides</a></h3>
+    <h3 class="title"><a href="../get-started/">Developer Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -256,6 +255,9 @@
     <a class="nav-link" href="../graph-platform/">Graph Platform Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-database/">Neo4j Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../neo4j-desktop/">Neo4j Desktop Intro</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -277,7 +279,7 @@
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../neo4j-nlp/">Neo4j Natural Language Processing (NLP)</a>
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -285,7 +287,7 @@
     <span class="nav-text nav-item-toggle">Cypher Query Language</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#cypher-query-language.adoc">Cypher Overview</a>
+    <a class="nav-link" href="../cypher-query-language/">Cypher Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cypher-basics-i/">Cypher Basics I</a>
@@ -297,7 +299,7 @@
     <a class="nav-link" href="../filtering-query-results/">Filtering Query Results</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../sub-queries/">Sub Queries</a>
+    <a class="nav-link" href="../subqueries/">Sub Queries</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aggregation-returns-functions/">Aggregation, Returns, &amp; Functions</a>
@@ -474,7 +476,7 @@
     <a class="nav-link" href="../aura-connect-cypher-shell/">Connect from Cypher Shell</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-driver/">Connect from your application</a>
+    <a class="nav-link" href="#aura-connect-driver.adoc">Connect from your application</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aura-data-import/">Data Import with Neo4j Aura</a>
@@ -508,6 +510,9 @@
     <a class="nav-link" href="../in-production/">Administration Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../memory-management/">How-To: Memory Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../manage-multiple-databases/">Tutorial: Managing Multiple Databases</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -529,10 +534,10 @@
     <a class="nav-link" href="../docker-run-neo4j/">How-To: Run Neo4j in Docker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/startup-program/">Startups: Free Neo4j Enterprise</a>
+    <span class="nav-text nav-item-toggle"><a href="/startup-program/" target="_blank" rel="noopener">Startups: Free Neo4j Enterprise</a></span>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/graphacademy/online-training/neo4j-administration/">Online Course: Neo4j Administration</a>
+    <span class="nav-text nav-item-toggle"><a href="/graphacademy/online-training/neo4j-administration/" target="_blank" rel="noopener">Online Course: Neo4j Administration</a></span>
   </li>
 </ul>
   </li>
@@ -566,7 +571,7 @@
     <a class="nav-link" href="../browser-guide-list/">Available Neo4j Browser Guides</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/docs/">Neo4j Documentation</a>
+    <span class="nav-text nav-item-toggle"><a href="/docs/" target="_blank" rel="noopener">Neo4j Documentation</a></span>
   </li>
 </ul>
   </li>
@@ -577,16 +582,16 @@
     <a class="nav-link" href="../contribute/">Contributing Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="https://community.neo4j.com/" target="_blank" rel="noopener">Help on Community Forums</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="/speaker-program/" target="_blank" rel="noopener">Speaker Program: Share your Story</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cla/">Contributor License Agreement</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../contributing-code/">Code Contributions</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://community.neo4j.com">Help on Community Forums</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/speaker-program/">Speaker Program: Share your Story</a>
   </li>
 </ul>
   </li>
@@ -603,7 +608,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../">Developer Guides</a></li>
+    <li><a href="../get-started/">Developer Guides</a></li>
     <li><a href="./">Example Project</a></li>
   </ul>
 </nav>
@@ -612,19 +617,6 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Example Project</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Contents</div>
-<ul class="sectlevel1">
-<li><a href="#intro-app-project">Example Project Description</a></li>
-<li><a href="#app-project-source">GitHub</a></li>
-<li><a href="#app-project-model">Domain Model</a></li>
-<li><a href="#app-project-webpage">Webpage</a></li>
-<li><a href="#app-project-vis">Graph Visualization</a></li>
-<li><a href="#app-project-data">Data Setup</a></li>
-<li><a href="#app-project-endpoints">Endpoints</a></li>
-<li><a href="#app-project-deploy">Deployment</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="quoteblock abstract">
@@ -639,7 +631,7 @@ This guide explains the example application we use to introduce the different Ne
 You should be familiar with <a href="/developer/get-started/graph-database">graph database concepts</a> and the property graph model. You should have <a href="/download" target="_blank" rel="noopener">installed Neo4j</a> and made yourself familiar with our <a href="/developer/cypher">Cypher query language</a>.
 </blockquote>
 </div>
-<div class="paragraph expertise">
+<div class="paragraph expertise Beginner">
 <p>Beginner</p>
 </div>
 </div>
@@ -739,7 +731,7 @@ We then apply the force-layout algorithm to render nodes as circles and relation
 </ul>
 </div>
 <div class="paragraph">
-<p>You can also choose to use our <a href="/sandbox/" target="_blank" rel="noopener">Neo4j Sandbox</a> or a <a href="/developer/in-production/guide-cloud-deployment">cloud-hosted Neo4j database</a>.
+<p>You can also choose to use our <a href="/sandbox/?ref=developer-example-proj" target="_blank" rel="noopener">Neo4j Sandbox</a> or a <a href="/developer/in-production/guide-cloud-deployment">cloud-hosted Neo4j database</a>.
 If you go this route, then you have to provide the URL to your Neo4j server in an environment variable <code>NEO4J_URL</code>.</p>
 </div>
 <div class="paragraph">
@@ -871,7 +863,7 @@ You can either use that or follow the manual process outlined below.</p>
 </div>
 <div class="paragraph">
 <p>We want to install our application to the cloud, for instance the <a href="http://heroku.com" target="_blank" rel="noopener">Heroku</a> PaaS.
-We will also use either the <a href="https://addons.heroku.com/graphenedb" target="_blank" rel="noopener">GrapheneDB</a> or <a href="https://addons.heroku.com/graphstory" target="_blank" rel="noopener">GraphStory</a> Neo4j Database Hosting Add-On or the free <a href="/sandbox/" target="_blank" rel="noopener">Neo4j Sandbox</a>.</p>
+We will also use either the <a href="https://addons.heroku.com/graphenedb" target="_blank" rel="noopener">GrapheneDB</a> or <a href="https://addons.heroku.com/graphstory" target="_blank" rel="noopener">GraphStory</a> Neo4j Database Hosting Add-On or the free <a href="/sandbox/?ref=developer-proj-deploy" target="_blank" rel="noopener">Neo4j Sandbox</a>.</p>
 </div>
 <div class="paragraph">
 <p>Install the <a href="https://toolbelt.heroku.com/" target="_blank" rel="noopener">Heroku Toolbelt</a> and git.</p>
@@ -922,9 +914,93 @@ In the Neo4j-Browser import the <code>:play movies</code> dataset as of the inst
 <div class="paragraph">
 <p>Then your app is ready to roll.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/example-project.adoc - include::../_includes/drivers_example_list.adoc[]</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_existing_language_driver_examples"><a class="anchor" href="#_existing_language_driver_examples"></a>Existing Language / Driver Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For our example application we&#8217;ve provided a implementation for the languages and drivers listed below.
+You can find them in the <a href="http://github.com/neo4j-examples?query=movie" target="_blank" rel="noopener">Neo4j Examples GitHub repository</a>.
+Most of them have thankfully been made available by the driver authors.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/neo4j-examples/spring-data-neo4j-intro-app" target="_blank" rel="noopener">Spring Data Neo4j</a></p>
+</li>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-java-jdbc" target="_blank" rel="noopener">JDBC</a></p>
+</li>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-java-server-extension" target="_blank" rel="noopener">Server Extension</a></p>
+</li>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-java-spring-boot-jdbc" target="_blank" rel="noopener">Spring Boot with JDBC</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Python</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-python-py2neo-2.0" target="_blank" rel="noopener">Py2Neo</a> by <a href="http://twitter.com/neonige" target="_blank" rel="noopener">Nigel Small</a></p>
+</li>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-python-neo4jrestclient" target="_blank" rel="noopener">Neo4j-Rest-Client</a> by <a href="http://twitter.com/versae" target="_blank" rel="noopener">Javier de la Rosa</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ruby</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-ruby-neo4j-core" target="_blank" rel="noopener">Neo4j-Core</a> by <a href="http://twitter.com/neo4jrb" target="_blank" rel="noopener">Neo4j.rb Team</a></p>
+</li>
+<li>
+<p><a href="https://github.com/neo4j-examples/movies-ruby-neo4jrb" target="_blank" rel="noopener">Neo4j.rb Rails</a> by <a href="http://twitter.com/neo4jrb" target="_blank" rel="noopener">Neo4j.rb Team</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>More</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>.Net <a href="https://github.com/neo4j-examples/movies-dotnet-neo4jclient" target="_blank" rel="noopener">neo4jclient</a> by <a href="http://twitter.com/pierrick22" target="_blank" rel="noopener">Pierrick Gannon</a></p>
+</li>
+<li>
+<p>Clojure: <a href="https://github.com/neo4j-examples/movies-clojure-neocons" target="_blank" rel="noopener">neocons</a> by <a href="https://twitter.com/ducky427" target="_blank" rel="noopener">Rohit Aggarwal &amp; ClojureWerkz</a></p>
+</li>
+<li>
+<p>Go: <a href="https://github.com/neo4j-examples/movies-go-cq" target="_blank" rel="noopener">CQ</a> by <a href="https://twitter.com/wefreema" target="_blank" rel="noopener">Wes Freeman</a></p>
+</li>
+<li>
+<p>Perl: <a href="https://github.com/neo4j-examples/movies-perl-neo4p" target="_blank" rel="noopener">Neo4p::REST</a> by <a href="https://twitter.com/thinkinator" target="_blank" rel="noopener">Mark Jensen</a></p>
+</li>
+<li>
+<p>PHP: <a href="https://github.com/neo4j-examples/movies-php-neoclient" target="_blank" rel="noopener">Neoclient</a> by <a href="http://twitter.com/ikwattro" target="_blank" rel="noopener">Chris Willemsen</a></p>
+</li>
+<li>
+<p>PHP: <a href="https://github.com/neo4j-examples/movies-php-neo4jphp" target="_blank" rel="noopener">Neo4jPHP</a> by <a href="http://twitter.com/josh_adell" target="_blank" rel="noopener">Josh Adell</a></p>
+</li>
+<li>
+<p>Elixir: <a href="https://github.com/neo4j-examples/movies-elixir-phoenix" target="_blank" rel="noopener">phoenix</a> by <a href="http://twitter.com/florin" target="_blank" rel="noopener">Florin Pătraşcu</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -981,7 +1057,7 @@ In the Neo4j-Browser import the <code>:play movies</code> dataset as of the inst
     <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
       <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
     <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
-      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks<br>
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
       of Neo4j, Inc. All other marks are owned by their respective companies.</p>
   </div>
 

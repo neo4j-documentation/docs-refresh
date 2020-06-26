@@ -1,12 +1,9 @@
 = Other Neo4j Cloud Hosting Providers
-:slug: neo4j-cloud-hosting-providers
 :level: Intermediate
-:section: Neo4j in the Cloud
-:section-link: guide-cloud-deployment
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: cloud
+:tags: cloud, hosting, deployment, partners
 
 .Goals
 [abstract]

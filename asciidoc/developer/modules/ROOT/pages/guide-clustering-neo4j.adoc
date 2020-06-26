@@ -1,12 +1,9 @@
 = How to set up a Neo4j Cluster
-:slug: guide-clustering-neo4j
 :level: Advanced
-:section: Neo4j in Production
-:section-link: in-production
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Advanced
+:author: Neo4j
+:category: cluster
+:tags: administration, causal-cluster, backup, ha, setup
 
 .Goals
 [abstract]
@@ -19,7 +16,7 @@ You should know how to link:/download[download] and install Neo4j on your system
 If you are a developer, you should be accustomed to the graph data model and have written your Neo4j application.
 A sound understanding of Neo4j's APIs, link:../guide-performance-tuning[tuning], security, and upgrade aspects will help you set up a stable cluster.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-cluster]

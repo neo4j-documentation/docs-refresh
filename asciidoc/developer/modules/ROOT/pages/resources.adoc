@@ -1,12 +1,9 @@
 = Neo4j Learning Resources
-:slug: resources
 :level: Intermediate
-:section: Documentation and Resources
-:section-link: resources
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: documentation
+:tags: resources, community, contribute, documentation, graphgists, training
 
 [#communities]
 == Neo4j Communities

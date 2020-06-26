@@ -1,14 +1,12 @@
 = Neo4j - OGM Object Graph Mapper
-:slug: neo4j-ogm
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: java
+:category: drivers
+:tags: ogm, object-graph-map, app-development, applications
 
-include::../_includes/versions.txt[]
+[]
 
 .Goals
 [abstract]
@@ -20,7 +18,7 @@ You should be familiar with the link:/developer/get-started/graph-database[graph
 Having link:/download[installed Neo4j] and tried out our link:/developer/cypher[Cypher Query language] helps too.
 When developing with Neo4j, please use JDK 8 and your favorite IDE.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-ogm]
@@ -90,7 +88,7 @@ public class Role {
 }
 ----
 
-include::../_includes/sample_project.adoc[]
+include::./_includes/sample_project.adoc[]
 
 [#ogm-faq]
 == FAQ

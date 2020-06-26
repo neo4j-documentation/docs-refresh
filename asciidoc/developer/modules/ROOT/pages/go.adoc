@@ -1,12 +1,10 @@
 = Using Neo4j from Go
-:slug: go
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: golang
+:category: drivers
+:tags: golang, go, app-development, applications
 
 .Goals
 [abstract]
@@ -18,7 +16,7 @@ While this guide is not comprehensive it will introduce the different drivers an
 You should be familiar with link:/developer/get-started/graph-database[graph database concepts] and the property graph model.
 You should have link:/download[installed Neo4j] and made yourself familiar with our link:/developer/cypher[Cypher Query language].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-go]
@@ -26,16 +24,16 @@ You should have link:/download[installed Neo4j] and made yourself familiar with 
 
 image::{img}GO.jpg[width=150,float=right]
 
-You can use the official driver for Go (neo4j-go-driver) or connect via Bolt or HTTP with any of our community drivers.
+You can use the official driver for Go (neo4j-go-driver) or connect via Bolt or HTTP with any of our community drivers. 
 
 [#go-driver]
 == Neo4j Go Driver
 
-include::../_includes/go-driver.adoc[]
+include::./_includes/go-driver.adoc[]
 
-include::../_includes/sample_project.adoc[]
+include::./_includes/sample_project.adoc[]
 
-include::../_includes/community-driver-notice.adoc[]
+include::./_includes/community-driver-notice.adoc[]
 
 [#golang-bolt]
 === Golang Neo4J Bolt Driver

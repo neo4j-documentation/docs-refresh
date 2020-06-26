@@ -1,12 +1,9 @@
 = Neo4j and Apache Hadoop
-:slug: apache-hadoop
 :level: Intermediate
-:section: Neo4j Integrations
-:section-link: integration
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: integrations
+:tags: integrations, tools, hadoop
 
 .Goals
 [abstract]
@@ -18,7 +15,7 @@ Here we want to demonstrate some approaches that used Hadoop jobs to prepare dat
 [abstract]
 You should have a sound understanding of both Hadoop and Neo4j, each data model, infrastructure requirements, data processing paradigm and APIs to leverage them effectively together.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-hadoop]

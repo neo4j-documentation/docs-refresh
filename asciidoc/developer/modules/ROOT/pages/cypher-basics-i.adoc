@@ -1,12 +1,9 @@
 = Cypher Basics I
-:slug: cypher-basics-i
 :level: Beginner
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: cypher
+:tags: cypher, queries, graph-queries, syntax, patterns, keywords, aliases
 
 .Goals
 [abstract]
@@ -17,7 +14,7 @@ You should be able to read and understand Cypher queries after finishing this gu
 [abstract]
 You should be familiar with link:/developer/get-started/graph-database[graph database] concepts and the link:/developer/get-started/graph-database#property-graph[property graph model].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#why-cypher]

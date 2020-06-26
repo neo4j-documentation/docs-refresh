@@ -1,12 +1,9 @@
 = Neo4j and MongoDB
-:slug: mongodb
 :level: Intermediate
-:section: Neo4j Integrations
-:section-link: integration
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: integrations
+:tags: integrations, mongodb, document, tools, libraries
 
 .Goals
 [abstract]
@@ -19,7 +16,7 @@ Being able to connect MongoDB to Neo4j and synchronize data automatically makes 
 [abstract]
 You should have an understanding of MongoDB, Neo4j, be famililar with both the document data model and property graph data model, and have MongoDB and Neo4j installed.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-mongodb]

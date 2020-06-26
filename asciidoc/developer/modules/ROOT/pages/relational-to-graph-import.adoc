@@ -1,17 +1,9 @@
 = Import: RDBMS to Graph
-:slug: relational-to-graph-import
 :level: Beginner
-:toc:
-:toc-placement!:
-:toc-title: Overview
-:toclevels: 2
-:section: Data Import
-:section-link: data-import
-:section-level: 1
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: import-export
+:tags: data-import, graph-import, relational-graph, load-csv, apoc, etl-tool, kettle, driver-import
 
 .Goals
 [abstract]
@@ -23,7 +15,7 @@ Completing this guide will give you the tools to choose how to import your relat
 You should be familiar with link:/developer/get-started/graph-database[graph database] concepts and the link:/developer/get-started/graph-database#property-graph[property graph model].
 It is also helpful to know the differences between link:/developer/graph-db-vs-rdbms/[relational and graph concepts] and their link:/developer/relational-to-graph-modeling/[data models].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#import-relational]

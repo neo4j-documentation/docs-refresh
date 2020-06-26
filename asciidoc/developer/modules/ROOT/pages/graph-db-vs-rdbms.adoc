@@ -1,13 +1,9 @@
 = Concepts: Relational to Graph
-:slug: graph-db-vs-rdbms
 :level: Beginner
-:section: Getting Started
-:section-link: get-started
-:sectanchors:
-:toc:
-:toc-placement!:
-:toc-title: Overview
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: documentation
+:tags: get-started, introduction, relational, graph, compare, concepts
 
 .Goals
 [abstract]
@@ -20,7 +16,7 @@ It also gives a high-level overview of how working with each database type is si
 You should be familiar with the relational database model and understand the basics of the link:/developer/get-started/graph-database#property-graph[property-graph model].
 It is also helpful to understand basic data modeling questions and concepts.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#relational-vs-graph]

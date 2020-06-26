@@ -1,16 +1,11 @@
 = Neo4j Online Meetup
-:slug: online-meetup
-:section: Documentation and Resources
-:section-link: resources
-:section-level: 1
 :video_playlist_key: PL9Hl4pk2FsvVnz4oi0F8UXiD3nMNqsRO2
 :youtube_api_key: AIzaSyB3jZLnBi-Cqggq8BCq9xTV8YMgu-x_kTc
 :youtube_channel_id: UCvze3hU6OZBkB1vkhH2lH9Q
 :num_videos: 6
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:author: Neo4j
+:category: documentation
+:tags: resources, online-meetup, community, developer, events, training
 
 [#webinar-meetup]
 == Join us for online sessions streamed on YouTube Live

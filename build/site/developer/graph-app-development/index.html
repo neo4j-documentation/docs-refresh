@@ -151,20 +151,19 @@
           </div>
         </div>
         <div class="navbar-item">
-          <a class="navbar-link" href="/search" id="search_open">
-
-
-
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button" title="Search Website">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
-                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
-                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
               </g>
-            </g>
-          </svg>
-          <span class="navbar-mobile">Search</span>
-          </a>
+            </svg><span class="navbar-mobile">Search</span></a>
         </div>
       </div>
     </div>
@@ -177,7 +176,7 @@
             <input id="search_input" type="text" name="search"
                 placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
             <div class="search-icon">
-                <svg width="14px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
                     role="button" title="Search Website">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -222,7 +221,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../">Developer Guides</a></h3>
+    <h3 class="title"><a href="../get-started/">Developer Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -256,6 +255,9 @@
     <a class="nav-link" href="../graph-platform/">Graph Platform Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-database/">Neo4j Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../neo4j-desktop/">Neo4j Desktop Intro</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -277,7 +279,7 @@
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../neo4j-nlp/">Neo4j Natural Language Processing (NLP)</a>
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -285,7 +287,7 @@
     <span class="nav-text nav-item-toggle">Cypher Query Language</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#cypher-query-language.adoc">Cypher Overview</a>
+    <a class="nav-link" href="../cypher-query-language/">Cypher Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cypher-basics-i/">Cypher Basics I</a>
@@ -297,7 +299,7 @@
     <a class="nav-link" href="../filtering-query-results/">Filtering Query Results</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../sub-queries/">Sub Queries</a>
+    <a class="nav-link" href="../subqueries/">Sub Queries</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aggregation-returns-functions/">Aggregation, Returns, &amp; Functions</a>
@@ -474,7 +476,7 @@
     <a class="nav-link" href="../aura-connect-cypher-shell/">Connect from Cypher Shell</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-driver/">Connect from your application</a>
+    <a class="nav-link" href="#aura-connect-driver.adoc">Connect from your application</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aura-data-import/">Data Import with Neo4j Aura</a>
@@ -508,6 +510,9 @@
     <a class="nav-link" href="../in-production/">Administration Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../memory-management/">How-To: Memory Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../manage-multiple-databases/">Tutorial: Managing Multiple Databases</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -529,10 +534,10 @@
     <a class="nav-link" href="../docker-run-neo4j/">How-To: Run Neo4j in Docker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/startup-program/">Startups: Free Neo4j Enterprise</a>
+    <span class="nav-text nav-item-toggle"><a href="/startup-program/" target="_blank" rel="noopener">Startups: Free Neo4j Enterprise</a></span>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/graphacademy/online-training/neo4j-administration/">Online Course: Neo4j Administration</a>
+    <span class="nav-text nav-item-toggle"><a href="/graphacademy/online-training/neo4j-administration/" target="_blank" rel="noopener">Online Course: Neo4j Administration</a></span>
   </li>
 </ul>
   </li>
@@ -566,7 +571,7 @@
     <a class="nav-link" href="../browser-guide-list/">Available Neo4j Browser Guides</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/docs/">Neo4j Documentation</a>
+    <span class="nav-text nav-item-toggle"><a href="/docs/" target="_blank" rel="noopener">Neo4j Documentation</a></span>
   </li>
 </ul>
   </li>
@@ -577,16 +582,16 @@
     <a class="nav-link" href="../contribute/">Contributing Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="https://community.neo4j.com/" target="_blank" rel="noopener">Help on Community Forums</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="/speaker-program/" target="_blank" rel="noopener">Speaker Program: Share your Story</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cla/">Contributor License Agreement</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../contributing-code/">Code Contributions</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://community.neo4j.com">Help on Community Forums</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/speaker-program/">Speaker Program: Share your Story</a>
   </li>
 </ul>
   </li>
@@ -603,7 +608,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../">Developer Guides</a></li>
+    <li><a href="../get-started/">Developer Guides</a></li>
     <li>Graph Apps</li>
     <li><a href="./">Building Graph Apps</a></li>
   </ul>
@@ -613,21 +618,6 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Graph App Development for Neo4j Desktop</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_introduction">Introduction</a></li>
-<li><a href="#_what_are_graph_apps">What are Graph Apps?</a></li>
-<li><a href="#_installing_driver_dependencies">Installing Driver Dependencies</a></li>
-<li><a href="#_enabling_developer_tools">Enabling Developer Tools</a></li>
-<li><a href="#_getting_the_context">Getting the Context</a></li>
-<li><a href="#_getting_ready_for_production">Getting ready for Production</a></li>
-<li><a href="#_deploying_your_graph_app">Deploying your Graph App</a></li>
-<li><a href="#_additional_topics">Additional Topics</a></li>
-<li><a href="#_framework_support">Framework Support</a></li>
-<li><a href="#_community_forum">Community Forum</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="quoteblock abstract">
@@ -649,54 +639,42 @@ It will also discuss some concepts of Single Page Applications.
 <p>Basic knowledge of HTML and JavaScript and an understanding of Single Page Applications (SPAs)</p>
 </li>
 <li>
-<p>Knowledge of the <a href="https://neo4j.com/developer/javascript">offical JavaScript Drivers</a></p>
+<p>Knowledge of the <a href="/developer/javascript">offical JavaScript Drivers</a></p>
 </li>
 <li>
-<p>If you haven&#8217;t already, <a href="http://neo4j.org/download" target="_blank" rel="noopener">download and install Neo4j Desktop</a>.</p>
+<p>If you haven&#8217;t already, <a href="http://neo4j.org/download" target="_blank" rel="noopener">download and install Neo4j Desktop</a></p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<h2 id="graphapp-dev-intro"><a class="anchor" href="#graphapp-dev-intro"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>So, you would like to build a Graph App?  You are in good company, many enterprises and community developers are building Graph Apps for a wide range of use cases.
-These range from utility tools like monitoring tool <a href="https://halin.graphapp.io/" target="_blank" rel="noopener">Halin</a> and educational Graph Apps like Neuler to visulisation apps including <a href="https://neo4j.com/blog/graphxr-graph-app-neo4j-desktop/" target="_blank" rel="noopener">GraphXR by Kineviz</a> and <a href="https://medium.com/neo4j/introducing-neomap-a-neo4j-desktop-application-for-spatial-data-3e14aad59db2" target="_blank" rel="noopener">NeoMap</a>.</p>
+These range from utility tools like monitoring tool <a href="https://halin.graphapp.io/" target="_blank" rel="noopener">Halin</a> and educational Graph Apps like Neuler to visulisation apps including <a href="/blog/graphxr-graph-app-neo4j-desktop/" target="_blank" rel="noopener">GraphXR by Kineviz</a> and <a href="https://medium.com/neo4j/introducing-neomap-a-neo4j-desktop-application-for-spatial-data-3e14aad59db2" target="_blank" rel="noopener">NeoMap</a>.</p>
 </div>
 <div class="paragraph">
-<p>Graph Apps are a convenient way of trying out ideas or building useful tools to help manage Neo4j databases.
-You could take an existing SPA and package it into a graph App or start from scratch with a new idea.</p>
+<p>Graph apps can be built with vanilla HTML and JavaScript, but most commonly we see these built with modern front end frameworks like <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> or <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue.js</a>.
+Whichever framework you choose to build your application, you will interact with the Graph the same way; by running a Cypher Query through the <a href="https://github.com/neo4j/neo4j-javascript-driver" target="_blank" rel="noopener">Official JavaScript drivers</a>.
+There is plenty of content over on the <a href="/developer/javascript/">JavaScript developer guides</a> so we will not cover this in too much detail, only the nuances around how the driver works with the Neo4j Desktop API.</p>
 </div>
 <div class="paragraph">
-<p>If you are looking for inspiration, <a href="https://install.graphapp.io/" target="_blank" rel="noopener">head over to the Graph App Gallery</a> to see what other developers have built.
+<p>If you are looking for inspiration, head over to the <a href="https://install.graphapp.io/" target="_blank" rel="noopener">Graph App Gallery</a> to see what other developers have built.
 Otherwise, let&#8217;s get started.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_are_graph_apps"><a class="anchor" href="#_what_are_graph_apps"></a>What are Graph Apps?</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A Graph App is a Single Page Application built with HTML and JavaScript which interact with Neo4j databases through <a href="https://neo4j.com/desktop/" target="_blank" rel="noopener">Neo4j Desktop</a>.
-These can be built with vanilla HTML and JavaScript, but most commonly we see these built with modern front end frameworks like <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> or <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue.js</a>.</p>
-</div>
-<div class="paragraph">
-<p>Whichever framework you choose to build your application, you will interact with the Graph the same way; by running a Cypher Query through the <a href="https://github.com/neo4j/neo4j-javascript-driver" target="_blank" rel="noopener">Official JavaScript drivers</a>.
-There is plenty of content over on the <a href="https://neo4j.com/developer/javascript/" target="_blank" rel="noopener">JavaScript Developer Pages</a> so we will not cover this in too much detail, only the nuances around how the driver works with the Neo4j Desktop API.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installing_driver_dependencies"><a class="anchor" href="#_installing_driver_dependencies"></a>Installing Driver Dependencies</h2>
+<h2 id="driver-dependencies"><a class="anchor" href="#driver-dependencies"></a>Installing Driver Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The official JavaScript driver is available via npm using the <code>npm install</code> or <code>yarn add</code> command.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">npm install --save neo4j-driver</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm install --save neo4j-driver</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -714,7 +692,7 @@ There is plenty of content over on the <a href="https://neo4j.com/developer/java
 </div>
 </div>
 <div class="sect1">
-<h2 id="_enabling_developer_tools"><a class="anchor" href="#_enabling_developer_tools"></a>Enabling Developer Tools</h2>
+<h2 id="enable-dev-tools"><a class="anchor" href="#enable-dev-tools"></a>Enabling Developer Tools</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Neo4j Desktop comes with a Development App that can be used while developing and debugging your Graph App.
@@ -744,7 +722,7 @@ If you are running Background Processes, this should be the location of the file
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_the_context"><a class="anchor" href="#_getting_the_context"></a>Getting the Context</h2>
+<h2 id="get-context"><a class="anchor" href="#get-context"></a>Getting the Context</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you require access to the the list of projects and databases that the user has configured in Neo4j Desktop, you can access this via the Context API.
@@ -754,8 +732,8 @@ There are two ways of accessing Neo4j Desktop&#8217;s context, either through th
 <p>Neo4j Desktop provides information about the current desktop environment via the <code>neo4jDesktopApi</code> object that is injected into the window.
 This will provide you with a list the Projects and Database that the user has created.</p>
 </div>
-<div class="sect3">
-<h4 id="_injected_api"><a class="anchor" href="#_injected_api"></a>Injected API</h4>
+<div class="sect2">
+<h3 id="_injected_api"><a class="anchor" href="#_injected_api"></a>Injected API</h3>
 <div class="paragraph">
 <p>The <em>Injected</em> API is provided through the <code>neo4jDesktopApi</code> object.
 The <code>getContext()</code> method returns a Promise which in turn resolves to an object containing a <code>projects</code> key.
@@ -763,7 +741,7 @@ Each Project contains a list of Neo4j Databases and a list of files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">if ( window.neo4jDesktopApi ) {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">if ( window.neo4jDesktopApi ) {
   neo4jDesktopApi.getContext()
     .then(context =&gt; {
       // Access to the list of projects will be through context.projects
@@ -777,7 +755,7 @@ You can listen for these changes using the <code>onContextUpdate</code> method o
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">let online = true
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let online = true
 let context = await neo4jDesktopApi.getContext()
 
 neo4jDesktopApi.onContextUpdate((event, newContext, oldContext) =&gt; {
@@ -933,8 +911,8 @@ For now, you are safe to use it.
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_graphql_api"><a class="anchor" href="#_graphql_api"></a>GraphQL API</h4>
+<div class="sect2">
+<h3 id="_graphql_api"><a class="anchor" href="#_graphql_api"></a>GraphQL API</h3>
 <div class="paragraph">
 <p>The GraphQL API contains the same information as the injected API, but instead is accessed via a GraphQL library.
 For this example we will use <a href="https://www.apollographql.com/docs/react/migrating/boost-migration/" target="_blank" rel="noopener">Apollo Boost</a>.
@@ -942,7 +920,7 @@ The Apollo Boost package is available via npm or yarn</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">npm install apollo-boost graphql # or yarn add apollo-boost</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm install apollo-boost graphql # or yarn add apollo-boost</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -960,7 +938,7 @@ The Apollo Boost package is available via npm or yarn</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const url = new URL(window.location.href)
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const url = new URL(window.location.href)
 const apiEndpoint = url.searchParams.get("neo4jDesktopApiUrl")
 const clientId = url.searchParams.get("neo4jDesktopGraphAppClientId")
 
@@ -980,7 +958,7 @@ For example, the following code will give you a list of all projects and their d
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import gql from 'graphql-tag'
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import gql from 'graphql-tag'
 
 const GET_DATABASES = gql`
 query {
@@ -1028,6 +1006,8 @@ Now that we have the credentials from the previous step, we can run a series of 
 There will be a maximum of one <strong>Active</strong> graph in Desktop (with the status <code>ACTIVE</code>), but you may also have remote graphs that could be displayed.
 To find any active graphs, you could run a reduce and filter on the current context.</p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1035,14 +1015,16 @@ To find any active graphs, you could run a reduce and filter on the current cont
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-It is recommended that you use the latest version of the Driver, which is currently <strong>4.0.2</strong>.  You can find full installation instructions on the <a href="https://neo4j.com/developer/javascript/">JavaScript language guide</a>.
+It is recommended that you use the latest version of the Driver, which is currently <strong>4.0.2</strong>.  You can find full installation instructions on the <a href="/developer/javascript/">JavaScript language guide</a>.
 </td>
 </tr>
 </table>
 </div>
+</div>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const graphs = context.projects
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const graphs = context.projects
   .map(project =&gt; ({
     graphs: project.graphs.filter(graph =&gt; graph.status === "ACTIVE" || graph.connection.type === "REMOTE")
   }))
@@ -1056,7 +1038,7 @@ const { url, username, password } = graphs[0].connection.configuration.protocols
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const driver = new neo4j.driver(url, neo4j.auth.basic(username, password))
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const driver = new neo4j.driver(url, neo4j.auth.basic(username, password))
 
 const session = driver.session()
 
@@ -1070,7 +1052,7 @@ session.run('MATCH (n) RETURN n LIMIT 20')
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_ready_for_production"><a class="anchor" href="#_getting_ready_for_production"></a>Getting ready for Production</h2>
+<h2 id="graphapp-prod-ready"><a class="anchor" href="#graphapp-prod-ready"></a>Getting ready for Production</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>There are a few steps to follow in order to get your Graph App ready for Production.</p>
@@ -1085,7 +1067,7 @@ The <code>name</code> and <code>version</code> of the project are read from pack
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">{
   "name": "my-graph-app",
   "version": "1.0.0",
   "description": "(desktop)-[:LOVES]-&gt;(apps)",
@@ -1116,8 +1098,9 @@ The current Neo4j Desktop API version is <code>1.4.0</code>.
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_manifest_json"><a class="anchor" href="#_manifest_json"></a>manifest.json</h4>
+</div>
+<div class="sect2">
+<h3 id="_manifest_json"><a class="anchor" href="#_manifest_json"></a>manifest.json</h3>
 <div class="paragraph">
 <p>The <code>manifest.json</code> file is read during the installation process to gather additional information to Neo4j Desktop about your Graph App.
 In a packaged install of a Graph App (either .tar file or via npm), this file should be added to the <code>/dist</code> folder before packaging.
@@ -1125,7 +1108,7 @@ For Graph Apps hosted on the internet, the manifest.json file should be served i
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">{
   "name": "my-graph-app",
   "description": "(desktop)-[:LOVES]-&gt;(apps)",
   "icons": [
@@ -1147,7 +1130,7 @@ For Graph Apps hosted on the internet, the manifest.json file should be served i
 </div>
 </div>
 <div class="paragraph">
-<p>The folliwing image demonstrates how the values from manifest.json are used by Neo4j Desktop.</p>
+<p>The following image demonstrates how the values from manifest.json are used by Neo4j Desktop.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/manifest.png" alt="Manifest Mapping" title="How items from manifest.json are used in Neo4j Desktop"></span></p>
@@ -1197,8 +1180,8 @@ This can either be a relative path to an image or an inline data URI.</p></td>
 <p>Any values provided in <code>manifest.json</code> will override a value provided in <code>package.json</code>.
 For example, if <code>package.json</code> lists version <code>1.0.0</code> but <code>manifest.json</code> specifies <code>1.2.3</code>, the value <code>1.2.3</code> will be used.</p>
 </div>
-<div class="sect4">
-<h5 id="_release_notes"><a class="anchor" href="#_release_notes"></a>Release Notes</h5>
+<div class="sect3">
+<h4 id="_release_notes"><a class="anchor" href="#_release_notes"></a>Release Notes</h4>
 <div class="paragraph">
 <p>If a <code>release-notes.md</code> file exists, the contents of the file will be displayed in Neo4j Desktop when the user is prompted to update the Graph App.
 This file should be in the same directory as the <code>package.json</code> file.</p>
@@ -1207,9 +1190,8 @@ This file should be in the same directory as the <code>package.json</code> file.
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="_deploying_your_graph_app"><a class="anchor" href="#_deploying_your_graph_app"></a>Deploying your Graph App</h2>
+<h2 id="deploy-graphapp"><a class="anchor" href="#deploy-graphapp"></a>Deploying your Graph App</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_file_structure"><a class="anchor" href="#_file_structure"></a>File Structure</h3>
@@ -1219,7 +1201,7 @@ The root directory should also include a <code>package.json</code> file and opti
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>dist/
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">dist/
   app.js
   index.html
   manifest.json
@@ -1243,14 +1225,12 @@ If not, you can create a build script in <code>package.json</code> to move the a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">npm pack</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm pack</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For any files or directories that you do not want to include in the <code>.tar</code> file can be listed in a <code>.npmignore</code> file.</p>
-</div>
-<div class="paragraph">
-<p>By default, the file will be named using the name and version properties from <code>package.json</code>.
+<p>Any files or directories that you do not want to include in the <code>.tar</code> file can be listed in a <code>.npmignore</code> file.
+By default, the file will be named using the name and version properties from <code>package.json</code>.
 The resulting <code>.tar</code> file can be installed either by pasting a URL or dragging the tar file into the Install form at the bottom of the Graph Apps pane in Desktop.</p>
 </div>
 </div>
@@ -1262,7 +1242,7 @@ For example, the <strong>Neo4j Cloud Tool</strong> Graph App can be installed vi
 Neo4j Desktop will periodically check for updates to npm packages and install them automatically.</p>
 </div>
 <div class="paragraph">
-<p>For more information on the <a href="https://docs.npmjs.com/cli/publish"><code>npm package</code> command is available on docs.npmjs.com</a>.</p>
+<p>More information on the <code>npm package</code> command is available on <a href="https://docs.npmjs.com/cli/publish">docs.npmjs.com</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1276,24 +1256,22 @@ The hosted version of Halin hosts a <a href="http://halin.graphapp.io/manifest.j
 </div>
 </div>
 <div class="sect1">
-<h2 id="_additional_topics"><a class="anchor" href="#_additional_topics"></a>Additional Topics</h2>
+<h2 id="graphapp-other"><a class="anchor" href="#graphapp-other"></a>Additional Topics</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_deep_links"><a class="anchor" href="#_deep_links"></a>Deep Links</h3>
-<div class="sect3">
-<h4 id="_deep_links_to_your_app"><a class="anchor" href="#_deep_links_to_your_app"></a>Deep Links to your app</h4>
+<h3 id="_deep_links_to_your_app"><a class="anchor" href="#_deep_links_to_your_app"></a>Deep Links to your app</h3>
 <div class="paragraph">
 <p>You can provide a deep link to your app using the <code>neo4j-desktop://</code> scheme and the name of your app from package.json.
 For example, if the name of the app is <code>my-graph-app</code> the link would be the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>neo4j-desktop://graphapps/my-graph-app?key=value</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">neo4j-desktop://graphapps/my-graph-app?key=value</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can pass parameters through to the Graph App to help set the initial state of the app.
-For example, in the URL above, the <code>?key=value</code> will append a <code>key</code> property with a value of <code>value</code> to the Graph App&#8217;s  url.</p>
+<p>You can pass parameters through to the graph app to help set the initial state of the app.
+For example, in the URL above, the <code>?key=value</code> will append a <code>key</code> property with a value of <code>value</code> to the graph app&#8217;s url.</p>
 </div>
 <div class="paragraph">
 <p>The <code>neo4jDesktopApi</code> has an <code>onArgumentsChange</code> function that allows you to listen to changes in the applications arguments, for example when a new deep link has been clicked.
@@ -1301,21 +1279,21 @@ On load, and for each subsequent change of parameters, the callback function is 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">neo4jDesktopApi.onArgumentsChange((queryString, object) =&gt; {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">neo4jDesktopApi.onArgumentsChange((queryString, object) =&gt; {
   console.log(object.key) // "value"
 })</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_deep_links_to_neo4j_browser"><a class="anchor" href="#_deep_links_to_neo4j_browser"></a>Deep links to Neo4j Browser</h4>
+<div class="sect2">
+<h3 id="_deep_links_to_neo4j_browser"><a class="anchor" href="#_deep_links_to_neo4j_browser"></a>Deep links to Neo4j Browser</h3>
 <div class="paragraph">
 <p>Your graph app can also link to Neo4j Browser using the  <code>neo4j-desktop://</code> scheme and the Graph App name <code>neo4j-browser</code>.
-Additionally, you can specify a command and argument to automatically run as it loads.  For example, if you wanted to run the <code>:play movies</code> command to open the Movies <a href="https://neo4j.com/developer/guide-create-neo4j-browser-guide/" target="_blank" rel="noopener">Browser Guide</a>, you could use the following link:</p>
+Additionally, you can specify a command and argument to automatically run as it loads.  For example, if you wanted to run the <code>:play movies</code> command to open the Movies <a href="/developer/guide-create-neo4j-browser-guide/">Browser Guide</a>, you could use the following link:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>neo4j-desktop://graphapps/neo4j-browser?cmd=play&amp;arg=movies</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">neo4j-desktop://graphapps/neo4j-browser?cmd=play&amp;arg=movies</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1323,19 +1301,18 @@ Additionally, you can specify a command and argument to automatically run as it 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>neo4j-desktop://graphapps/neo4j-browser?cmd=edit&amp;arg=MATCH%20%28n%29%20RETURN%20count%28n%29%20AS%20count</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">neo4j-desktop://graphapps/neo4j-browser?cmd=edit&amp;arg=MATCH%20%28n%29%20RETURN%20count%28n%29%20AS%20count</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_linking_to_bloom"><a class="anchor" href="#_linking_to_bloom"></a>Linking to Bloom</h4>
+<div class="sect2">
+<h3 id="_linking_to_bloom"><a class="anchor" href="#_linking_to_bloom"></a>Linking to Bloom</h3>
 <div class="paragraph">
 <p>You can link to Bloom by using the  <code>neo4j-desktop://</code> scheme, and the Graph App name <code>neo4j-bloom</code>.  You can also add a <code>search</code> parameter as a URL encoded string to auto-fill the search bar when bloom opens.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>neo4j-desktop://graphapps/neo4j-bloom?search=URL%20Encoded%20String</code></pre>
-</div>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">neo4j-desktop://graphapps/neo4j-bloom?search=URL%20Encoded%20String</code></pre>
 </div>
 </div>
 </div>
@@ -1346,11 +1323,11 @@ Additionally, you can specify a command and argument to automatically run as it 
 Any plugin with a valid coordinate from <a href="https://search.maven.org/" target="_blank" rel="noopener">Maven Central</a> will be will be automatically installed to all local databases within the current active project in Neo4j Desktop.</p>
 </div>
 <div class="paragraph">
-<p>For example, if your Graph App requires <a href="https://neo4j.com/developer/neo4j-apoc/" target="_blank" rel="noopener">APOC</a> then your <code>manifest.json</code> file may look something like this:</p>
+<p>For example, if your Graph App requires <a href="/developer/neo4j-apoc/">APOC</a> then your <code>manifest.json</code> file may look something like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">{
   "name": "my-graph-app",
   "pluginDependencies": [
     "org.neo4j.procedure/apoc"
@@ -1366,12 +1343,12 @@ Once published, the coordinates of the Maven Artifact can be added to the array.
 <div class="sect2">
 <h3 id="_permissions"><a class="anchor" href="#_permissions"></a>Permissions</h3>
 <div class="paragraph">
-<p>If a Graph App requires the use of a privileged API (for example executing Java or Node.js) these will need to be specified either in the <code>neo4jDesktop</code> section of package.json or in <code>manifest.json</code>.
+<p>If a Graph App requires the use of a privileged API (for example executing Java or Node.js), these will need to be specified either in the <code>neo4jDesktop</code> section of package.json or in <code>manifest.json</code>.
 Permissions can be defined as an array:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">{
   "name": "my-graph-app",
   "permissions": ["backgroundProcess", "allGraphs", "activeGraph"]
 }</code></pre>
@@ -1382,7 +1359,7 @@ Permissions can be defined as an array:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">{
   "name": "my-graph-app",
   "permissions": [
     "activeGraph",
@@ -1433,13 +1410,13 @@ This is a default permission granted on app install.</p></td>
 <div class="sect3">
 <h4 id="_checking_for_permission"><a class="anchor" href="#_checking_for_permission"></a>Checking for Permission</h4>
 <div class="paragraph">
-<p>When your Graph App is installed, the user will have the option to grant or deny a permission and these permissions can also be revoked at any time from the Graph Apps pane.
+<p>When your graph app is installed, the user will have the option to grant or deny a permission and these permissions can also be revoked at any time from the Graph Apps pane.
 Therefore, it is good practice to to check that the permission has been granted.
 To do so, you can call the <code>checkPermission</code> method on the injected API.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">window.neo4jDesktopApi.checkPermission("backgroundProcess")
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">window.neo4jDesktopApi.checkPermission("backgroundProcess")
   .then(granted =&gt; {
     if ( granted === true ) {
       // Permission has been granted
@@ -1451,15 +1428,15 @@ To do so, you can call the <code>checkPermission</code> method on the injected A
 <div class="sect3">
 <h4 id="_requesting_permission"><a class="anchor" href="#_requesting_permission"></a>Requesting Permission</h4>
 <div class="paragraph">
-<p>If your Graph App doesn&#8217;t already have the permission it needs, then it can be requested by calling the <code>requestPermission</code> method on the injected API.
-In order to request a permission, it must be listed in the Graph App&#8217;s <code>manifest.json</code> file.</p>
+<p>If your graph app doesn&#8217;t already have the permission it needs, then it can be requested by calling the <code>requestPermission</code> method on the injected API.
+In order to request a permission, it must be listed in the graph app&#8217;s <code>manifest.json</code> file.</p>
 </div>
 <div class="paragraph">
-<p>In the following example features the longform version of the permission declaration - describing how the <code>backgroundProcess</code> permission will be used within the app.</p>
+<p>The following example features the longform version of the permission declaration, describing how the <code>backgroundProcess</code> permission will be used within the app.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{
   "name": "my-graph-app",
   "permissions": {
     "backgroundProcess": "Allow this Graph App to create a CSV file on your hard drive"
@@ -1468,12 +1445,12 @@ In order to request a permission, it must be listed in the Graph App&#8217;s <co
 </div>
 </div>
 <div class="paragraph">
-<p>The Graph App can then request the permission.
+<p>The graph app can then request the permission.
 The user will be issued with a prompt which will allow them to Allow or Deny the permission to the Graph App.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">window.neo4jDesktopApi.requestPermission("backgroundProcess")
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">window.neo4jDesktopApi.requestPermission("backgroundProcess")
   .then(granted =&gt; {
     if (granted) {
       // Permission has been granted
@@ -1490,7 +1467,7 @@ The user will be issued with a prompt which will allow them to Allow or Deny the
 <div class="paragraph">
 <p>Activation Keys can be used to unlock functionality within your Graph App.
 An Activation Key is a JET token, similar to a <a href="https://www.jwt.io" target="_blank" rel="noopener">JWT</a> token but with specific fields that are used to grant access to protected resources and premium functionality.
-All users are required to enter an Activation Key when they first download desktop, and software like <a href="https://www.neo4j.com/bloom" target="_blank" rel="noopener">Neo4j Bloom</a> require an Activation Key before they are enabled in Neo4j Desktop.</p>
+All users are required to enter an Activation Key when they first download desktop.</p>
 </div>
 <div class="paragraph">
 <p>All keys are currently issued by Neo4j and are tied to the name from your <code>package.json</code> file.
@@ -1547,7 +1524,7 @@ If you have requested the <code>activationKeys</code> setting then it may be app
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const context = await neo4jDesktopApi.getContext()
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const context = await neo4jDesktopApi.getContext()
 const activationKeys = context.activationKeys
   .filter(key =&gt; key.featureName == "my-graph-app")</code></pre>
 </div>
@@ -1560,12 +1537,12 @@ const activationKeys = context.activationKeys
 <h3 id="_files"><a class="anchor" href="#_files"></a>Files</h3>
 <div class="paragraph">
 <p>Neo4j Desktop allows you to drag and drop files into a project for later use.
-For example, you could create a <a href="https://neo4j.com/developer/neo4j-browser/#browser-guides" target="_blank" rel="noopener">Browser Guide</a> to explain your project to your coworkers or create set of <a href="https://neo4j.com/developer/cypher-query-language/" target="_blank" rel="noopener">Cypher scripts</a> to seed a new database within the project or to hold commonly run queries.
+For example, you could create a <a href="/developer/neo4j-browser/#browser-guides">Browser Guide</a> to explain your project to your coworkers or create set of <a href="/developer/cypher-query-language/">Cypher scripts</a> to seed a new database within the project or to hold commonly run queries.
 The Neo4j Desktop UI displays a link to these files so they can be quickly opened in Neo4j Browser.</p>
 </div>
 <div class="paragraph">
 <p>You can also access these from your Graph App.
-For example, a visualisation app may take a set of cypher queries and display them in a <a href="https://neo4j.com/developer/tools-graph-visualization/" target="_blank" rel="noopener">Forced Graph Layout</a>.
+For example, a visualisation app may take a set of cypher queries and display them in a <a href="/developer/tools-graph-visualization/">forced graph layout</a>.
 Each file can be accessed via HTTP through Neo4j Desktop&#8217;s API and therefore can be loaded through node&#8217;s <code>http</code> module or a third party package like axios.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1613,7 +1590,7 @@ Each file can be accessed via HTTP through Neo4j Desktop&#8217;s API and therefo
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const axios = require('axios')
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const axios = require('axios')
 
 const context = await neo4jDesktopApi.getContext()
 const cypherFiles = context.projects.map(project =&gt;
@@ -1629,29 +1606,27 @@ axios.get(cypherFiles[0].url)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_framework_support"><a class="anchor" href="#_framework_support"></a>Framework Support</h2>
+<h2 id="framework-support"><a class="anchor" href="#framework-support"></a>Framework Support</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We do not recommend any specific Front-end frameworks for developing apps.
+<p>We do not recommend any specific front-end frameworks for developing apps.
 However, community members have built packages that will speed up your workflow.</p>
 </div>
 <div class="sect2">
 <h3 id="_vue_js"><a class="anchor" href="#_vue_js"></a>Vue.js</h3>
 <div class="paragraph">
 <p>The <code>vue-neo4j</code> plugin provides a wrapper for the JavaScript driver in all Vue.js components via <code>this.$neo4j</code> object.
-There is also a set of helper functions for developing Graph Apps.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/adam-cowley/vue-neo4j" class="bare">https://github.com/adam-cowley/vue-neo4j</a></p>
+There is also a set of helper functions for developing Graph Apps.
+For more information, check out the Github repository for using <a href="https://github.com/adam-cowley/vue-neo4j" target="_blank" rel="noopener">Vue.js with Neo4j</a>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_community_forum"><a class="anchor" href="#_community_forum"></a>Community Forum</h2>
+<h2 id="neo4j-community"><a class="anchor" href="#neo4j-community"></a>Community Forum</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you have any questions, comments, or would like to show off your own Graph App then there is a dedicated <a href="https://community.neo4j.com/c/neo4j-graph-platform/graph-apps/95" target="_blank" rel="noopener">Graph Apps</a> category on the <a href="https://community.neo4j.com/" target="_blank" rel="noopener">Neo4j Community site</a>.</p>
+<p>If you have any questions, comments, or would like to show off your own graph app, then there is a dedicated <a href="https://community.neo4j.com/c/neo4j-graph-platform/graph-apps/95" target="_blank" rel="noopener">Graph Apps</a> category on the <a href="https://community.neo4j.com/" target="_blank" rel="noopener">Neo4j Community site</a>.</p>
 </div>
 </div>
 </div>
@@ -1708,7 +1683,7 @@ There is also a set of helper functions for developing Graph Apps.</p>
     <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
       <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
     <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
-      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks<br>
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
       of Neo4j, Inc. All other marks are owned by their respective companies.</p>
   </div>
 

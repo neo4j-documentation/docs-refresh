@@ -1,14 +1,12 @@
 = Neo4j Java Driver Spring Boot Starter
-:slug: java-driver-spring-boot-starter
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
 :manualIncludeDir: https://raw.githubusercontent.com/neo4j/neo4j-java-driver-spring-boot-starter/master/
+:author: Neo4j
+:programming-language: java
+:category: drivers
+:tags: java, spring, spring-boot, app-development, applications
 
-include::../_includes/versions.txt[]
+[]
 
 include::{manualIncludeDir}docs/manual/getting-started.adoc[lines=3..-1]

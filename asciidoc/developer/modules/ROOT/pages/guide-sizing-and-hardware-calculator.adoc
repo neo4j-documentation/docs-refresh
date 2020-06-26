@@ -1,12 +1,9 @@
 = Neo4j's Hardware Requirements
-:slug: guide-sizing-and-hardware-calculator
 :level: Advanced
-:section: Neo4j in Production
-:section-link: in-production
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Advanced
+:author: Neo4j
+:category: performance
+:tags: administration, sizing, hardware, calculator
 
 .Goals
 [abstract]
@@ -19,7 +16,7 @@ You should know how to link:/download[download] and install Neo4j on your system
 You should be accustomed to the graph data model and have written your Neo4j application.
 You should know that Neo4j employs its own persistence and caching implementation, have seen the files on disk (`data/graph.db`), and have glanced at `messages.log`.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-architecture]

@@ -1,16 +1,13 @@
 = Other Types of Graph Visualization
-:slug: other-graph-visualizations
 :level: Beginner
-:section: Graph Visualization
-:section-link: graph-visualization
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: visualization
+:tags: visualization, tools, charts, maps, heatmaps, 3d
 
 image::{img}alternate_visualizations.jpg[link="{img}alternate_visualizations.jpg"]
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#alternate-vis]

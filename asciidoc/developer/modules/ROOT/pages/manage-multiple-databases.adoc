@@ -1,12 +1,10 @@
 = Managing Multiple Databases in Neo4j
-:slug: manage-multiple-databases
 :level: Beginner
-:section: Neo4j Administration
-:section-link: in-production
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:neo4j-version: 4.0
+:category: cluster
+:tags: administration, multi-database, commands, cypher, system-database, manage-databases
 
 .Goals
 [abstract]
@@ -17,7 +15,7 @@ In this guide, we will walk through how to manage multiple database within the N
 Please have link:/download[Neo4j^] (version 4.0 or later) downloaded and installed.
 It helps to have read the section on link:/developer/get-started/graph-database/[graph databases].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#multi-db]

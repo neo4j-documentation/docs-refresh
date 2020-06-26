@@ -1,14 +1,10 @@
 = How-To: Run Neo4j in Docker
-:slug: docker-run-neo4j
 :level: Beginner
-:section: Neo4j in Production
-:section-link: in-production
-:section-level: 1
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
 :docker-hub-link: https://hub.docker.com/_/neo4j/
+:author: Jennifer Reif
+:category: environment
+:tags: administration, docker, docker-image, documentation, container, configuration, cypher-shell
 
 image::{img}neo4j-docker-image-now-in-beta-235x300.jpg[float="right"]
 
@@ -27,7 +23,7 @@ To better understand and utilize Neo4j with Docker, it helps to know the followi
 
 You should also have downloaded https://www.docker.com/get-started[Docker^] for your appropriate operating system and be familiar with navigating it from the command line.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#neo4j-docker]

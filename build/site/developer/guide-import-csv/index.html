@@ -151,20 +151,19 @@
           </div>
         </div>
         <div class="navbar-item">
-          <a class="navbar-link" href="/search" id="search_open">
-
-
-
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button" title="Search Website">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
-                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
-                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
               </g>
-            </g>
-          </svg>
-          <span class="navbar-mobile">Search</span>
-          </a>
+            </svg><span class="navbar-mobile">Search</span></a>
         </div>
       </div>
     </div>
@@ -177,7 +176,7 @@
             <input id="search_input" type="text" name="search"
                 placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
             <div class="search-icon">
-                <svg width="14px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
                     role="button" title="Search Website">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -222,7 +221,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../">Developer Guides</a></h3>
+    <h3 class="title"><a href="../get-started/">Developer Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -256,6 +255,9 @@
     <a class="nav-link" href="../graph-platform/">Graph Platform Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-database/">Neo4j Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../neo4j-desktop/">Neo4j Desktop Intro</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -277,7 +279,7 @@
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../neo4j-nlp/">Neo4j Natural Language Processing (NLP)</a>
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -285,7 +287,7 @@
     <span class="nav-text nav-item-toggle">Cypher Query Language</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#cypher-query-language.adoc">Cypher Overview</a>
+    <a class="nav-link" href="../cypher-query-language/">Cypher Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cypher-basics-i/">Cypher Basics I</a>
@@ -297,7 +299,7 @@
     <a class="nav-link" href="../filtering-query-results/">Filtering Query Results</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../sub-queries/">Sub Queries</a>
+    <a class="nav-link" href="../subqueries/">Sub Queries</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aggregation-returns-functions/">Aggregation, Returns, &amp; Functions</a>
@@ -474,7 +476,7 @@
     <a class="nav-link" href="../aura-connect-cypher-shell/">Connect from Cypher Shell</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-driver/">Connect from your application</a>
+    <a class="nav-link" href="#aura-connect-driver.adoc">Connect from your application</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aura-data-import/">Data Import with Neo4j Aura</a>
@@ -508,6 +510,9 @@
     <a class="nav-link" href="../in-production/">Administration Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../memory-management/">How-To: Memory Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../manage-multiple-databases/">Tutorial: Managing Multiple Databases</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -529,10 +534,10 @@
     <a class="nav-link" href="../docker-run-neo4j/">How-To: Run Neo4j in Docker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/startup-program/">Startups: Free Neo4j Enterprise</a>
+    <span class="nav-text nav-item-toggle"><a href="/startup-program/" target="_blank" rel="noopener">Startups: Free Neo4j Enterprise</a></span>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/graphacademy/online-training/neo4j-administration/">Online Course: Neo4j Administration</a>
+    <span class="nav-text nav-item-toggle"><a href="/graphacademy/online-training/neo4j-administration/" target="_blank" rel="noopener">Online Course: Neo4j Administration</a></span>
   </li>
 </ul>
   </li>
@@ -566,7 +571,7 @@
     <a class="nav-link" href="../browser-guide-list/">Available Neo4j Browser Guides</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/docs/">Neo4j Documentation</a>
+    <span class="nav-text nav-item-toggle"><a href="/docs/" target="_blank" rel="noopener">Neo4j Documentation</a></span>
   </li>
 </ul>
   </li>
@@ -577,16 +582,16 @@
     <a class="nav-link" href="../contribute/">Contributing Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="https://community.neo4j.com/" target="_blank" rel="noopener">Help on Community Forums</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="/speaker-program/" target="_blank" rel="noopener">Speaker Program: Share your Story</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cla/">Contributor License Agreement</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../contributing-code/">Code Contributions</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://community.neo4j.com">Help on Community Forums</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/speaker-program/">Speaker Program: Share your Story</a>
   </li>
 </ul>
   </li>
@@ -603,7 +608,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../">Developer Guides</a></li>
+    <li><a href="../get-started/">Developer Guides</a></li>
     <li>Data Import</li>
     <li><a href="./">Importing CSV</a></li>
   </ul>
@@ -613,16 +618,6 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Importing CSV Data into Neo4j</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_ways_to_import_csv_files">Ways to Import CSV Files</a></li>
-<li><a href="#import-load-csv">LOAD CSV command with Cypher</a></li>
-<li><a href="#batch-importer">Bulk Importer For Large Datasets</a></li>
-<li><a href="#data-load-quality">CSV Data Quality</a></li>
-<li><a href="#import-csv-resources">CSV Import Resources</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="quoteblock abstract">
@@ -638,7 +633,7 @@ Before importing data, you should be familiar with what a <a href="/developer/gr
 All of these skills are a part of the data import process.
 </blockquote>
 </div>
-<div class="paragraph expertise">
+<div class="paragraph expertise Intermediate">
 <p>Intermediate</p>
 </div>
 <div class="paragraph">
@@ -694,7 +689,7 @@ It is simple to use and widely applicable.
 <div class="ulist">
 <ul>
 <li>
-<p>Supports loading / ingesting CSV data from an URI</p>
+<p>Supports loading / ingesting CSV data from a URI</p>
 </li>
 <li>
 <p>Directly maps input data into complex graph/domain structure</p>
@@ -736,9 +731,10 @@ This can be an easy thing to miss and end up with an access error, so we will tr
 <div class="paragraph">
 <p><strong>Local files</strong> are referenced with a <code><a href="file:///" class="bare">file:///</a></code> prefix before the file name.
 Neo4j security has a default setting that local files can only be read from the Neo4j import directory, which is different based on your operating system.
-File locations for each OS are listed in our {opsmanual}/configuration/file-locations[Neo4j Operations Manual^].
+File locations for each OS are listed in our <a href="http://neo4j.com/docs/operations-manual/current/configuration/file-locations" target="_blank" rel="noopener">Neo4j Operations Manual</a>.
 We recommend putting files in Neo4j&#8217;s <em>import</em> directory, as it keeps the environment secure.
-However, if you need to access files in other locations, you can find out which setting to alter in our <a href="/docs/cypher-manual/current/clauses/load-csv/#query-load-csv-introduction" target="_blank" rel="noopener">manual</a>.</p>
+However, if you need to access files in other locations, you can find out which setting to alter in our <a href="https://neo4j.com/docs/cypher-manual/current/clauses/load-csv/#query-load-csv-introduction" target="_blank" rel="noopener">manual</a>.
+Default import folder paths shown in <a href="/developer/kb/import-csv-locations/" target="_blank" rel="noopener">this article</a>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Examples</div>
@@ -1236,7 +1232,7 @@ There is specific markup on specific columns, which we will explain.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For more details on this header format and the tool, see the documentation in the {opsmanual}/tools/import/[Neo4j Manual^] and the accompanying {opsmanual}/tutorial/import-tool/[tutorial^].</p>
+<p>For more details on this header format and the tool, see the documentation in the <a href="http://neo4j.com/docs/operations-manual/current/tools/import/" target="_blank" rel="noopener">Neo4j Manual</a> and the accompanying <a href="http://neo4j.com/docs/operations-manual/current/tutorial/import-tool/" target="_blank" rel="noopener">tutorial</a>.</p>
 </div>
 </div>
 </div>
@@ -1333,16 +1329,22 @@ LIMIT 5;</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>{opsmanual}/tools/import/[Manual: Import Tool^]</p>
+<p><a href="http://neo4j.com/docs/operations-manual/current/tools/import/" target="_blank" rel="noopener">Manual: Import Tool</a></p>
 </li>
 <li>
-<p>{opsmanual}/tutorial/import-tool/[Manual: Import Tool Tutorial^]</p>
+<p><a href="http://neo4j.com/docs/operations-manual/current/tutorial/import-tool/" target="_blank" rel="noopener">Manual: Import Tool Tutorial</a></p>
 </li>
 <li>
 <p><a href="/developer/kb/?tag=load-csv" target="_blank" rel="noopener">Knowledgebase Articles: LOAD CSV</a></p>
 </li>
 <li>
 <p><a href="https://github.com/neo4j-contrib/northwind-neo4j" target="_blank" rel="noopener">GitHub project: Northwind CSV files</a></p>
+</li>
+<li>
+<p><a href="http://neo4j.com/docs/operations-manual/current/configuration/file-locations" target="_blank" rel="noopener">Manual: Neo4j File Locations</a></p>
+</li>
+<li>
+<p><a href="/developer/kb/import-csv-locations/" target="_blank" rel="noopener">Knowledgebase: Default Import Folder Path</a>.</p>
 </li>
 </ul>
 </div>
@@ -1401,7 +1403,7 @@ LIMIT 5;</code></pre>
     <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
       <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
     <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
-      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks<br>
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
       of Neo4j, Inc. All other marks are owned by their respective companies.</p>
   </div>
 

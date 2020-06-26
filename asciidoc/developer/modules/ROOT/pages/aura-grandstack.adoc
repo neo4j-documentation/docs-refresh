@@ -1,12 +1,10 @@
 = Deploying a GRANDstack application to Aura
-:slug: aura-grandstack
 :level: Intermediate
-:section: Neo4j Cloud DBaaS
-:section-link: aura-cloud-dbaas
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Mark Needham
+:neo4j-versions: 3.5
+:category: cloud
+:tags: aura, dbaas, grandstack, drivers, applications, labs
 
 .Goals
 [abstract]
@@ -18,7 +16,7 @@ We should have created and started a Neo4j Aura database instance.
 If we have not already, we can follow the instructions in the link:https://aura.support.neo4j.com/hc/en-us/articles/360037562253-Working-with-Neo4j-Aura[getting started guide] to step through the process.
 We should also be familiar with the https://grandstack.io/[GRANDstack^].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 Now that we've created our Neo4j Aura database, we're going to learn how to deploy a GRANDstack application that queries data stored in that database.

@@ -1,11 +1,7 @@
 = Cypher Resources
-:slug: cypher-resources
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:author: Jennifer Reif
+:category: cypher
+:tags: cypher, queries, graph-queries, resources, documentation, cypher-training, cypher-help
 
 == Cypher Resources
 

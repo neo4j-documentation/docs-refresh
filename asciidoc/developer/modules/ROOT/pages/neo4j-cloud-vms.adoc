@@ -1,12 +1,9 @@
 = Neo4j Cloud Virtual Machines
-:slug: neo4j-cloud-vms
 :level: Intermediate
-:section: Neo4j in the Cloud
-:section-link: guide-cloud-deployment
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: David Allen
+:category: cloud
+:tags: cloud, virtual-machine, configuration, deployment
 
 .Goals
 [abstract]

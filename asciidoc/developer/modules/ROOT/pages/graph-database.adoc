@@ -1,16 +1,11 @@
 = What is a Graph Database?
-:slug: graph-database
 :level: Beginner
-:section: Getting Started
-:section-link: get-started
-:sectanchors:
-:toc:
-:toc-placement!:
-:toc-title: Contents
-:toclevels: 1
-:icons: font
+:page-level: Beginner
+:author: Jennifer Reif
+:category: documentation
+:tags: get-started, introduction, graph, database, property-graph, use-cases, cypher
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#what-is-graphdb]

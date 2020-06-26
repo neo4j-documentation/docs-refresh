@@ -1,12 +1,7 @@
 = Introduction to Graph Databases Video Series
-:slug: intro-videos
-:section: Introduction to Graph Databases Video Series
-:section-link: intro-videos
-:section-level: 1
-:sectanchors:
-:toc:
-:toc-title: Episodes
-:toclevels: 1
+:author: Neo4j
+:category: documentation
+:tags: introduction, graph, videos, resources
 
 [#intro-videos]
 

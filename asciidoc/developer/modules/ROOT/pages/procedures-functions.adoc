@@ -1,12 +1,9 @@
 = User Defined Procedures and Functions
-:slug: procedures-functions
 :level: Intermediate
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:category: cypher
+:tags: cypher, queries, extend-cypher, procedures, functions, custom-development
 
 .Goals
 [abstract]
@@ -15,9 +12,9 @@ It also covers existing, widely used procedure libraries
 
 .Prerequisites
 [abstract]
-You should have learned to read and write statements in link:/developer/cypher/cypher-query-language[Cypher] and seen the need for additional capabilities.
+You should have learned to read and write statements in link:/developer/cypher/cypher-query-language/[Cypher] and seen the need for additional capabilities.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#cypher-extension]

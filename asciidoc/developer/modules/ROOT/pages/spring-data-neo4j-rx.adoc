@@ -1,15 +1,13 @@
 = Spring Data Neo4j RX
-:slug: spring-data-neo4j-rx
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
 :manualIncludeDir: https://raw.githubusercontent.com/neo4j/sdn-rx/master/
+:author: Jennifer Reif
+:programming-language: java
+:category: drivers
+:tags: spring, spring-data, sdn-rx, reactive, app-development, applications
 
-include::../_includes/versions.txt[]
+[]
 include::{manualIncludeDir}README.adoc[tags=properties]
 
 .Goals
@@ -25,7 +23,7 @@ The library provides all the capabilities of the Spring Data Neo4j library, but 
 Knowing https://projects.spring.io/spring-data/[Spring Data^] and https://projects.spring.io/spring-boot/[Spring Boot^] are both great additions to your toolbox, as well.
 * For this library, please use JDK 11 or later and your favorite IDE.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#reactive-development]
@@ -90,7 +88,7 @@ For imperative applications, check out the https://github.com/neo4j/sdn-rx/tree/
 
 For this example, we will use the Neo4j-standard link:/developer/movie-database/[movie graph] data set because it comes for free with every Neo4j instance and is a small size.
 
-If you haven't already, link:/download/[download Neo4j Desktop^] and link:/developer/neo4j-desktop/#desktop-create-db[create/start a database].
+If you haven't already, link:/download/[download Neo4j Desktop^] and link:/developer/neo4j-desktop/#desktop-create-graph[create/start a database].
 
 You can interact with the database and load the data in a web browser with the URL http://localhost:7474/browser/?cmd=play&arg=movies[http://localhost:7474^].
 Note the command ready to run in the prompt (`:play movies`).

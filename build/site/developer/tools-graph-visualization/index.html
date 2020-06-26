@@ -151,20 +151,19 @@
           </div>
         </div>
         <div class="navbar-item">
-          <a class="navbar-link" href="/search" id="search_open">
-
-
-
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button" title="Search Website">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
-                    <circle id="Oval" transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) " cx="11.3893642" cy="11.3885639" r="8.056"></circle>
-                    <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+          <a class="navbar-link" href="/search" id="search_open"><svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="search" role="button"
+              title="Search Website">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-2.000000, -2.000000)" stroke="#a0aec0" stroke-width="1.5">
+                  <circle id="Oval"
+                    transform="translate(11.389364, 11.388564) rotate(-23.025000) translate(-11.389364, -11.388564) "
+                    cx="11.3893642" cy="11.3885639" r="8.056"></circle>
+                  <path d="M17.0853333,17.0844444 L23.3333333,23.3333333" id="Shape"></path>
+                </g>
               </g>
-            </g>
-          </svg>
-          <span class="navbar-mobile">Search</span>
-          </a>
+            </svg><span class="navbar-mobile">Search</span></a>
         </div>
       </div>
     </div>
@@ -177,7 +176,7 @@
             <input id="search_input" type="text" name="search"
                 placeholder="Try &quot;MATCH clause&quot; or &quot;Monitoring Queries&quot;">
             <div class="search-icon">
-                <svg width="14px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg width="16px" height="22px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" class="fill-current float-right" id="submit_search"
                     role="button" title="Search Website">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -222,7 +221,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../">Developer Guides</a></h3>
+    <h3 class="title"><a href="../get-started/">Developer Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -256,6 +255,9 @@
     <a class="nav-link" href="../graph-platform/">Graph Platform Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-database/">Neo4j Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../neo4j-desktop/">Neo4j Desktop Intro</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -277,7 +279,7 @@
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../neo4j-nlp/">Neo4j Natural Language Processing (NLP)</a>
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -285,7 +287,7 @@
     <span class="nav-text nav-item-toggle">Cypher Query Language</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#cypher-query-language.adoc">Cypher Overview</a>
+    <a class="nav-link" href="../cypher-query-language/">Cypher Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cypher-basics-i/">Cypher Basics I</a>
@@ -297,7 +299,7 @@
     <a class="nav-link" href="../filtering-query-results/">Filtering Query Results</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../sub-queries/">Sub Queries</a>
+    <a class="nav-link" href="../subqueries/">Sub Queries</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aggregation-returns-functions/">Aggregation, Returns, &amp; Functions</a>
@@ -474,7 +476,7 @@
     <a class="nav-link" href="../aura-connect-cypher-shell/">Connect from Cypher Shell</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../aura-connect-driver/">Connect from your application</a>
+    <a class="nav-link" href="#aura-connect-driver.adoc">Connect from your application</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../aura-data-import/">Data Import with Neo4j Aura</a>
@@ -508,6 +510,9 @@
     <a class="nav-link" href="../in-production/">Administration Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../memory-management/">How-To: Memory Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../manage-multiple-databases/">Tutorial: Managing Multiple Databases</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -529,10 +534,10 @@
     <a class="nav-link" href="../docker-run-neo4j/">How-To: Run Neo4j in Docker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/startup-program/">Startups: Free Neo4j Enterprise</a>
+    <span class="nav-text nav-item-toggle"><a href="/startup-program/" target="_blank" rel="noopener">Startups: Free Neo4j Enterprise</a></span>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/graphacademy/online-training/neo4j-administration/">Online Course: Neo4j Administration</a>
+    <span class="nav-text nav-item-toggle"><a href="/graphacademy/online-training/neo4j-administration/" target="_blank" rel="noopener">Online Course: Neo4j Administration</a></span>
   </li>
 </ul>
   </li>
@@ -566,7 +571,7 @@
     <a class="nav-link" href="../browser-guide-list/">Available Neo4j Browser Guides</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/docs/">Neo4j Documentation</a>
+    <span class="nav-text nav-item-toggle"><a href="/docs/" target="_blank" rel="noopener">Neo4j Documentation</a></span>
   </li>
 </ul>
   </li>
@@ -577,16 +582,16 @@
     <a class="nav-link" href="../contribute/">Contributing Overview</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="https://community.neo4j.com/" target="_blank" rel="noopener">Help on Community Forums</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text nav-item-toggle"><a href="/speaker-program/" target="_blank" rel="noopener">Speaker Program: Share your Story</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cla/">Contributor License Agreement</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../contributing-code/">Code Contributions</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://community.neo4j.com">Help on Community Forums</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="/speaker-program/">Speaker Program: Share your Story</a>
   </li>
 </ul>
   </li>
@@ -603,7 +608,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../">Developer Guides</a></li>
+    <li><a href="../get-started/">Developer Guides</a></li>
     <li>Graph Visualization</li>
     <li><a href="./">Visualization Tools</a></li>
   </ul>
@@ -613,16 +618,6 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Graph Visualization Tools</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Contents</div>
-<ul class="sectlevel1">
-<li><a href="#graph-vis-types">Types of Graph Visualization</a></li>
-<li><a href="#embed-graph-vis"><strong>1. Embeddable tools with built-in Neo4j connections</strong></a></li>
-<li><a href="#embed-lib-vis"><strong>2. Embeddable libraries without direct Neo4j connection</strong></a></li>
-<li><a href="#neo4j-vis-vendors"><strong>3. Standalone product tools</strong></a></li>
-<li><a href="#_visualization_resources">Visualization Resources</a></li>
-</ul>
-</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="imageblock">
@@ -630,8 +625,22 @@
 <a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/graph_cluster_distant_wide.jpg"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/graph_cluster_distant_wide.jpg" alt="graph cluster distant wide"></a>
 </div>
 </div>
-<div class="paragraph expertise">
+<div class="paragraph expertise Beginner">
 <p>Beginner</p>
+</div>
+<div id="bloom" class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><em>Neo4j Bloom is now available for free and is readily available in <a href="https://neo4j.com/download/" target="_blank" rel="noopener">Neo4j Desktop</a>. <a href="https://neo4j.com/developer/neo4j-bloom/" target="_blank" rel="noopener">This guide</a> will provide more information on getting started.</em></p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -643,11 +652,8 @@
 We will discuss how each of these categories handles the exported data and provide some pros and cons of the different architectures.
 Depending on the visualization needs, one of these categories may define the set of tools you can choose to implement as a solution to your business needs.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="embed-graph-vis"><a class="anchor" href="#embed-graph-vis"></a><strong>1. Embeddable tools with built-in Neo4j connections</strong></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="embed-graph-vis"><a class="anchor" href="#embed-graph-vis"></a>1. Embeddable tools with built-in Neo4j connections</h3>
 <div class="paragraph">
 <p>These kinds of tools can be included as a dependency within an application and can easily be configured and styled for your application and Neo4j.
 Each is easily connected to an instance of the graph database using configuration properties and allows you to style the visualization based on nodes, relationships, or specific properties.</p>
@@ -664,8 +670,9 @@ Also, this typically means that our client application is connecting directly to
 <div class="paragraph">
 <p>Let us look at some of the tools in this category.</p>
 </div>
+<div class="sect3">
+<h4 id="_neovis_js"><a class="anchor" href="#_neovis_js"></a><span class="icon"><i class="fa fa-flask"></i></span> <strong>Neovis.js</strong></h4>
 <div class="paragraph">
-<div class="title"><span class="icon"><i class="fa fa-flask"></i></span> <strong>Neovis.js</strong></div>
 <p>This library was designed to combine JavaScript visualization and Neo4j in a seamless integration.
 Connection to Neo4j is simple and straightforward, and because it is built with Neo4j’s property graph model in mind, the data format Neovis expects aligns with the database.
 Customizing and coloring styles based on labels, properties, nodes, and relationships is defined in a single configuration object.
@@ -673,11 +680,11 @@ Neovis.js can be used without writing Cypher and with minimal JavaScript for int
 </div>
 <div class="exampleblock">
 <div class="content">
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <span class="icon"><i class="fa fa-flask fa-2x"></i></span> The Neovis library is one of our Neo4j Labs projects.
@@ -699,7 +706,7 @@ Below, we see a graph visualization of Game Of Thrones character interactions re
 <p>An advantage of enhancing graph visualization with these algorithms is that we can visually interpret the results of these algorithms.</p>
 </div>
 <div class="sect4">
-<h5 id="_neovis_js_resources"><a class="anchor" href="#_neovis_js_resources"></a><u>Neovis.js Resources</u></h5>
+<h5 id="_neovis_js_resources"><a class="anchor" href="#_neovis_js_resources"></a>Neovis.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -710,8 +717,11 @@ Below, we see a graph visualization of Game Of Thrones character interactions re
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_popoto_js"><a class="anchor" href="#_popoto_js"></a>Popoto.js</h4>
 <div class="paragraph">
-<div class="title"><strong>Popoto.js</strong></div>
 <p>Popoto.js is a JavaScript library that is built upon D3.js.
 Popoto.js will help users build queries in a visual way to execute against Neo4j.
 Users can also customize the results and the visual display.
@@ -721,9 +731,8 @@ Along with the visualization, you can include auto-complete searches for potenti
 <p>To use Popoto.js in your application, you simply need to include each component independently bound to a container id in an HTML page.
 The rest of the content will be generated from that.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_popoto_js_resources"><a class="anchor" href="#_popoto_js_resources"></a><u>Popoto.js Resources</u></h5>
+<h5 id="_popoto_js_resources"><a class="anchor" href="#_popoto_js_resources"></a>Popoto.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -737,9 +746,8 @@ The rest of the content will be generated from that.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="embed-lib-vis"><a class="anchor" href="#embed-lib-vis"></a><strong>2. Embeddable libraries without direct Neo4j connection</strong></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="embed-lib-vis"><a class="anchor" href="#embed-lib-vis"></a>2. Embeddable libraries without direct Neo4j connection</h3>
 <div class="paragraph">
 <p>These libraries offer the ability to embed graph visualization in an application, but without connecting directly to Neo4j.
 An advantage here is that we can populate our visualization with data sent from an API application that connects to the database, ensuring the client application is not querying the database directly.
@@ -748,8 +756,9 @@ The downside, however, is that we often must transform the results to export fro
 <div class="paragraph">
 <p>We can get a closer look at these tools in the next paragraphs.</p>
 </div>
+<div class="sect3">
+<h4 id="_d3_js"><a class="anchor" href="#_d3_js"></a>D3.js</h4>
 <div class="paragraph">
-<div class="title"><strong>D3.js</strong></div>
 <p>As the first line on D3’s website states "D3.js is a JavaScript library for manipulating documents based on data."
 You can bind different kinds of data to a DOM and then execute different kinds of functions on it.
 One of those functions includes generating an SVG, canvas, or HTML visualization from the data in the DOM.</p>
@@ -767,7 +776,7 @@ Each of these maps includes arrays of properties for each node and relationship 
 Version 4 and 5 of d3.js also support force-directed graphs, where the visualization adjusts to the user’s view pane.</p>
 </div>
 <div class="sect4">
-<h5 id="_d3_js_resources"><a class="anchor" href="#_d3_js_resources"></a><u>D3.js Resources</u></h5>
+<h5 id="_d3_js_resources"><a class="anchor" href="#_d3_js_resources"></a>D3.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -781,8 +790,11 @@ Version 4 and 5 of d3.js also support force-directed graphs, where the visualiza
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vis_js"><a class="anchor" href="#_vis_js"></a><strong>Vis.js</strong></h4>
 <div class="paragraph">
-<div class="title"><strong>Vis.js</strong></div>
 <p>This library offers a variety of visualizations designed to handle large, dynamic data sets.
 There are a variety of formats to style your data, including timeline, dataset, graph2d, graph3d, and network.
 The most common format seen with Neo4j is the network visualization.</p>
@@ -791,9 +803,8 @@ The most common format seen with Neo4j is the network visualization.</p>
 <p>Even with the network format, there are numerous customizations available for styling nodes, labels, animations, coloring, grouping, and others.
 For additional information and to see everything that is available, check out their docs and examples linked in the resources below.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_vis_js_resources"><a class="anchor" href="#_vis_js_resources"></a><u>Vis.js Resources</u></h5>
+<h5 id="_vis_js_resources"><a class="anchor" href="#_vis_js_resources"></a>Vis.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -807,8 +818,11 @@ For additional information and to see everything that is available, check out th
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sigma_js"><a class="anchor" href="#_sigma_js"></a>Sigma.js</h4>
 <div class="paragraph">
-<div class="title"><strong>Sigma.js</strong></div>
 <p>While some libraries are meant to include all the capabilities in one bundle, Sigma.js touts a highly-extensible environment where users can add extension libraries or plugins to provide additional capability.
 This library takes exported data in either <a href="https://github.com/jacomyal/sigma.js/tree/master/plugins/sigma.parsers.json" target="_blank" rel="noopener">JSON</a> or <a href="https://github.com/jacomyal/sigma.js/tree/master/plugins/sigma.parsers.gexf" target="_blank" rel="noopener">GEXF</a> formats.</p>
 </div>
@@ -822,9 +836,8 @@ This library takes exported data in either <a href="https://github.com/jacomyal/
 Once the requirements surpass what is possible there, users can write and use their own custom plugins for specific functionality.
 Be sure to check out the repository, though, for any existing extensions!</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_sigma_js_resources"><a class="anchor" href="#_sigma_js_resources"></a><u>Sigma.js Resources</u></h5>
+<h5 id="_sigma_js_resources"><a class="anchor" href="#_sigma_js_resources"></a>Sigma.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -838,16 +851,18 @@ Be sure to check out the repository, though, for any existing extensions!</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vivagraph_js"><a class="anchor" href="#_vivagraph_js"></a>Vivagraph.js</h4>
 <div class="paragraph">
-<div class="title"><strong>Vivagraph.js</strong></div>
 <p>Vivagraph.js was built to handle different types of layout algorithms for arranging nodes and edges.
 It manages data set sizes from very small to very large and also renders in WebGL, SVG, and CSS-based formats.
 Customizations and styling are available through CSS modifications and extension libraries.
 It also can track changes in the graph that update the visualization accordingly.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_vivagraph_js_resources"><a class="anchor" href="#_vivagraph_js_resources"></a><u>Vivagraph.js Resources</u></h5>
+<h5 id="_vivagraph_js_resources"><a class="anchor" href="#_vivagraph_js_resources"></a>Vivagraph.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -858,15 +873,17 @@ It also can track changes in the graph that update the visualization accordingly
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cytoscape_js"><a class="anchor" href="#_cytoscape_js"></a>Cytoscape.js</h4>
 <div class="paragraph">
-<div class="title"><strong>Cytoscape.js</strong></div>
 <p>This library is also meant to visualize and render network node graphs and offers customization and extensibility for additional features.
 Cytoscape.js responds to user interaction and works on touch screen interfaces, allowing users to zoom, tap, and explore in the method that is relevant to them.
 You can customize styling and web page view with a variety of style components.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_cytoscape_js_resources"><a class="anchor" href="#_cytoscape_js_resources"></a><u>Cytoscape.js Resources</u></h5>
+<h5 id="_cytoscape_js_resources"><a class="anchor" href="#_cytoscape_js_resources"></a>Cytoscape.js Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -880,9 +897,8 @@ You can customize styling and web page view with a variety of style components.<
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="neo4j-vis-vendors"><a class="anchor" href="#neo4j-vis-vendors"></a><strong>3. Standalone product tools</strong></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="neo4j-vis-vendors"><a class="anchor" href="#neo4j-vis-vendors"></a>3. Standalone product tools</h3>
 <div class="paragraph">
 <p>Certain tools and products are designed as standalone applications that can connect to Neo4j and interact with the stored data without involving any code.
 These applications are built with non-developers in mind - for business analysts, data scientists, managers, and other users to interact with Neo4j in a node-graph format.</p>
@@ -894,8 +910,64 @@ They also require little or no developer integration hours and setup.</p>
 <div class="paragraph">
 <p>The next paragraphs will help us get a feel for the types of products in this area.</p>
 </div>
+<div class="sect3">
+<h4 id="_bloom_by"><a class="anchor" href="#_bloom_by"></a><strong>Bloom</strong> by</h4>
 <div class="paragraph">
-<div class="title"><strong>GraphXR</strong> by</div>
+<p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/neo4j_logo.png"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/neo4j_logo.png" alt="neo4j logo" width="200"></a></span></p>
+</div>
+<div class="imageblock right popup-link">
+<div class="content">
+<a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/bloom_screen.jpg"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/bloom_screen.jpg" alt="bloom screen" width="350"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>Neo4j Bloom is a data exploration tool that visualizes data in the graph and allows users to navigate and query the data without any query language or programming.</p>
+</div>
+<div class="paragraph">
+<p>Users can write patterns similar to natural language questions to retrieve data and traverse layers of the graph. Bloom also allows appropriate users to edit, update, or correct the graph when missing information or bad data is found.</p>
+</div>
+<div class="paragraph">
+<p>Bloom is available in the following formats:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Neo4j Bloom local with users accessing Bloom via Neo4j Desktop (free for local database instances)</p>
+</li>
+<li>
+<p>Neo4j Bloom server with users accessing Bloom via a web browser</p>
+</li>
+<li>
+<p>Neo4j Bloom through the <a href="https://sandbox.neo4j.com/?usecase=bloom&amp;ref=developer-vis-tools" target="_blank" rel="noopener">sandbox</a></p>
+</li>
+<li>
+<p>Neo4j Bloom through Neo4j Database as a Service, <a href="/aura/" target="_blank" rel="noopener">Aura</a></p>
+</li>
+<li>
+<p>Included in <a href="/startup-program/" target="_blank" rel="noopener">Neo4j Startup Program</a></p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_bloom_resources"><a class="anchor" href="#_bloom_resources"></a>Bloom Resources</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Developer Guide: <a href="https://neo4j.com/blog/graphxr-graph-app-neo4j-desktop/" target="_blank" rel="noopener">Neo4j Bloom User Interface Guide</a></p>
+</li>
+<li>
+<p>Blog post: <a href="https://medium.com/neo4j/bloom-ing-marvellous-a2be0c3702bb" target="_blank" rel="noopener">Bloom-ing marvellous! Introducing Bloom 1.3</a></p>
+</li>
+<li>
+<p>Product information: <a href="https://neo4j.com/bloom/" target="_blank" rel="noopener">Neo4j Bloom landing page</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_graphxr_by"><a class="anchor" href="#_graphxr_by"></a><strong>GraphXR</strong> by</h4>
+<div class="paragraph">
 <p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/kineviz-logo.png"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/kineviz-logo.png" alt="kineviz logo" width="200"></a></span></p>
 </div>
 <div class="imageblock right popup-link">
@@ -932,7 +1004,7 @@ For business users, it&#8217;s an intuitive tool for code-free investigation and
 The blog post about the graph app is included in the resources below.</p>
 </div>
 <div class="sect4">
-<h5 id="_graphxr_resources"><a class="anchor" href="#_graphxr_resources"></a><u>GraphXR Resources</u></h5>
+<h5 id="_graphxr_resources"><a class="anchor" href="#_graphxr_resources"></a>GraphXR Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -946,8 +1018,11 @@ The blog post about the graph app is included in the resources below.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_yfiles_by"><a class="anchor" href="#_yfiles_by"></a><strong>yFiles</strong> by</h4>
 <div class="paragraph">
-<div class="title"><strong>yFiles</strong> by</div>
 <p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/yWorks.png"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/yWorks.png" alt="yWorks" width="200"></a></span></p>
 </div>
 <div class="imageblock right popup-link">
@@ -965,9 +1040,8 @@ With the wide-ranging extensibility and large feature set, all your visualizatio
 <p>yWorks also provides a free graph explorer app that is based on the yFiles technology.
 It can be installed in Neo4j Desktop.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_yfiles_resources"><a class="anchor" href="#_yfiles_resources"></a><u>yFiles Resources</u></h5>
+<h5 id="_yfiles_resources"><a class="anchor" href="#_yfiles_resources"></a>yFiles Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -984,8 +1058,11 @@ It can be installed in Neo4j Desktop.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_linkurious_enterprise_by"><a class="anchor" href="#_linkurious_enterprise_by"></a><strong>Linkurious Enterprise</strong> by</h4>
 <div class="paragraph">
-<div class="title"><strong>Linkurious Enterprise</strong> by</div>
 <p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/graph-visualization-linkurious-enterprise.png"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/Linkurious_logo_large.png" alt="Linkurious logo large" width="200"></a></span></p>
 </div>
 <div class="imageblock right popup-link">
@@ -998,9 +1075,8 @@ It can be installed in Neo4j Desktop.</p>
 It brings graph visualization and analysis capabilities to analysts tasked to detect and analyze threats in large volumes of connected data.
 Organizations such as the French Ministry of Economy and Finance, Zurich Insurance or Bank of Montreal use Linkurious Enterprise to fight financial crime, terror networks or cyber threats.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_linkurious_resources"><a class="anchor" href="#_linkurious_resources"></a><u>Linkurious Resources</u></h5>
+<h5 id="_linkurious_resources"><a class="anchor" href="#_linkurious_resources"></a>Linkurious Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1023,8 +1099,11 @@ Organizations such as the French Ministry of Economy and Finance, Zurich Insuran
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_graphistry_by"><a class="anchor" href="#_graphistry_by"></a><strong>Graphistry</strong> by</h4>
 <div class="paragraph">
-<div class="title"><strong>Graphistry</strong> by</div>
 <p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/graphistry-logo-rough.png"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/graphistry-logo-rough.png" alt="graphistry logo rough" width="200"></a></span></p>
 </div>
 <div class="imageblock right popup-link">
@@ -1041,9 +1120,8 @@ Harness all of your data without worrying about scale, and pivot on the fly to f
 <div class="paragraph">
 <p>Ideal for everything from security, fraud, and IT investigations to 3600 views of customers and supply chains, Graphistry turns the potential of your data into human insight and value.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_graphistry_resources"><a class="anchor" href="#_graphistry_resources"></a><u>Graphistry Resources</u></h5>
+<h5 id="_graphistry_resources"><a class="anchor" href="#_graphistry_resources"></a>Graphistry Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1054,8 +1132,11 @@ Harness all of your data without worrying about scale, and pivot on the fly to f
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_perspectives_by"><a class="anchor" href="#_perspectives_by"></a><strong>Perspectives</strong> by</h4>
 <div class="paragraph">
-<div class="title"><strong>Perspectives</strong> by</div>
 <p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/tom-sawyer-logo.png"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/tom-sawyer-logo.png" alt="tom sawyer logo" width="200"></a></span></p>
 </div>
 <div class="paragraph">
@@ -1064,9 +1145,8 @@ It is a complete graph visualization software development kit (SDK) with a graph
 The platform integrates enterprise data sources with the powerful graph visualization, layout, and analysis technology to solve big data problems.
 Enterprises, system integrators, technology companies, and government agencies use Tom Sawyer Perspectives to build a wide range of applications.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_perspectives_resources"><a class="anchor" href="#_perspectives_resources"></a><u>Perspectives Resources</u></h5>
+<h5 id="_perspectives_resources"><a class="anchor" href="#_perspectives_resources"></a>Perspectives Resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1074,8 +1154,11 @@ Enterprises, system integrators, technology companies, and government agencies u
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_keylines_by"><a class="anchor" href="#_keylines_by"></a><strong>Keylines</strong> by</h4>
 <div class="paragraph">
-<div class="title"><strong>Keylines</strong> by</div>
 <p><span class="image"><a class="image" href="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/Cambridge-Intelligence-logo.jpg"><img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/Cambridge-Intelligence-logo.jpg" alt="Cambridge Intelligence logo" width="200"></a></span></p>
 </div>
 <div class="paragraph">
@@ -1085,15 +1168,16 @@ KeyLines applications work on any device and in all common browsers, to reach ev
 It is also compatible with any IT environment, letting you deploy your network visualization application to an unlimited number of diverse users.
 You can build a custom application that is scalable and easy to use.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_keylines_resources"><a class="anchor" href="#_keylines_resources"></a><u>Keylines Resources</u></h5>
+<h5 id="_keylines_resources"><a class="anchor" href="#_keylines_resources"></a>Keylines Resources</h5>
 <div class="ulist">
 <ul>
 <li>
 <p>Product information: <a href="https://cambridge-intelligence.com/keylines/" target="_blank" rel="noopener">Keylines graph visualization</a></p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1169,7 +1253,7 @@ You can build a custom application that is scalable and easy to use.</p>
     <p>© <span id="footer-copyright-year">2020</span> Neo4j, Inc.<br>
       <a href="/terms/">Terms</a> | <a href="/privacy-policy/">Privacy </a> | <a href="/sitemap/">Sitemap</a></p>
     <p>Neo4j<sup>®</sup>, Neo Technology<sup>®</sup>, Cypher<sup>®</sup>, Neo4j<sup>®</sup> Bloom<sup>™</sup> and
-      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks<br>
+      Neo4j<sup>®</sup> Aura<sup>™</sup> are registered trademarks
       of Neo4j, Inc. All other marks are owned by their respective companies.</p>
   </div>
 

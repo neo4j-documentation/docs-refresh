@@ -1,16 +1,14 @@
 = Third-party libraries
-:slug: java-third-party
 :level: Intermediate
-:section: Develop with Neo4j
-:section-link: language-guides
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Neo4j
+:programming-language: java
+:category: drivers
+:tags: java, third-party, groovy-grails, scala, app-development, applications
 
-include::../_includes/versions.txt[]
+[]
 
-include::../_includes/community-driver-notice.adoc[]
+include::./_includes/community-driver-notice.adoc[]
 
 [#neo4j-jdbc]
 === Using Neo4j Server with JDBC

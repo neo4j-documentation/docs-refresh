@@ -10,7 +10,14 @@
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:docs": "antora --fetch --stacktrace docs.yml",
     "watch:developer": "npm-watch build:developer",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+
+    "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/includes/*",
+    "migrate:examples": "",
+    "migrate:includesX": "cp /Users/adam/neo4j/developer-resources/language-guides/_includes/*.adoc asciidoc/developer/modules/ROOT/includes",
+    "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
+    "migrate:menu": "node migrate/menu.js",
+    "migrate:docs": "node migrate/docs.js"
   },
   "author": "",
   "license": "ISC",
@@ -32,5 +39,10 @@
       ],
       "extensions": "adoc"
     }
+  },
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "jsdom": "^16.2.2",
+    "rxjs": "^6.5.5"
   }
 }

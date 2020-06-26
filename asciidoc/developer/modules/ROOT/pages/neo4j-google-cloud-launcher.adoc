@@ -1,12 +1,9 @@
 = Deploy a Neo4j Causal Cluster on GCP Marketplace
-:slug: neo4j-google-cloud-launcher
 :level: Intermediate
-:section: Neo4j in the Cloud
-:section-link: guide-cloud-deployment
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: David Allen
+:category: cloud
+:tags: cloud, gcp, setup, gcp-cluster, virtual-machine, deployment
 
 .Goals
 [abstract]

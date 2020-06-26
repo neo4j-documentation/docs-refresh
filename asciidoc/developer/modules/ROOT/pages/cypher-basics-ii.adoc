@@ -1,12 +1,9 @@
 = Cypher Basics II
-:slug: cypher-basics-ii
 :level: Beginner
-:section: Cypher Query Language
-:section-link: cypher
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: cypher
+:tags: cypher, queries, graph-queries, insert-create, update, delete, merge
 
 .Goals
 [abstract]
@@ -19,7 +16,7 @@ You should be familiar with link:/developer/get-started/graph-database[graph dat
 This guide is a continuation of the link:/developer/cypher/cypher-query-language[Cypher Basics I] section.
 You will need to read that guide before continuing with the current section.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#cypher-crud-operations]

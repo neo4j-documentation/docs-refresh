@@ -1,12 +1,9 @@
 = Modeling Designs
-:slug: modeling-designs
 :level: Beginner
-:section: Graph Data Modeling
-:section-link: data-modeling
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: modeling
+:tags: graph-modeling, data-model, schema, model-design, modeling-decisions
 
 .Goals
 [abstract]
@@ -18,7 +15,7 @@ Our goal is to show you how to evaluate your model and make appropriate changes,
 [abstract]
 You should understand link:/developer/get-started/graph-database[what a graph database is] and know the components of the link:/developer/get-started/guide-data-modeling[property graph data model].
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#model-impact]

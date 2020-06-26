@@ -1,12 +1,9 @@
 = Deploy to Amazon EC2: Host a Single Instance of Neo4j on AWS
-:slug: neo4j-cloud-aws-ec2-ami
 :level: Intermediate
-:section: Neo4j in the Cloud
-:section-link: guide-cloud-deployment
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: David Allen
+:category: cloud
+:tags: cloud, aws, setup, virtual-machine, deployment
 
 .Goals
 [abstract]

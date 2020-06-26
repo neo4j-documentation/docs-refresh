@@ -1,13 +1,9 @@
 = Concepts: NoSQL to Graph
-:slug: graph-db-vs-nosql
 :level: Beginner
-:section: Getting Started
-:section-link: get-started
-:sectanchors:
-:toc:
-:toc-placement!:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: documentation
+:tags: get-started, introduction, nosql, graph, key-value, document, compare, concepts
 
 .Goals
 [abstract]
@@ -17,7 +13,7 @@ This guide quickly explains how graph databases are related to other NoSQL datab
 [abstract]
 You need no prior knowledge of other NoSQL databases, although it is helpful to have read the guide on link:/developer/get-started/graph-database[graph databases] and understand basic data modeling questions and concepts.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#nosql-vs-graph]

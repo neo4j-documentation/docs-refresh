@@ -1,13 +1,9 @@
 = Model: Relational to Graph
-:slug: relational-to-graph-modeling
-:section-level: 1
 :level: Beginner
-:section: Graph Data Modeling
-:section-link: data-modeling
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Beginner
+:author: Jennifer Reif
+:category: modeling
+:tags: graph-modeling, data-model, schema, relational-to-graph, translating-model
 
 .Goals
 [abstract]
@@ -18,7 +14,7 @@ It will help to compare and contrast the steps of each process and help you iden
 [abstract]
 You should understand the basics of Neo4j's link:/developer/get-started/graph-database#property-graph[property graph data model] and be familiar with relational data modeling (including entity-relationship diagrams and other concepts).
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#rdbms-to-graph-model]

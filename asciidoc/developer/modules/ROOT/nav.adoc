@@ -8,25 +8,26 @@
 
 * Neo4j Graph Platform
 ** xref:graph-platform.adoc[Graph Platform Overview]
+** xref:neo4j-database.adoc[Neo4j Database]
 ** xref:neo4j-desktop.adoc[Neo4j Desktop Intro]
 ** xref:neo4j-browser.adoc[Neo4j Browser Intro]
 ** xref:neo4j-bloom.adoc[Neo4j Bloom Intro]
 ** xref:neo4j-etl.adoc[How-To: Neo4j ETL Tool]
 ** xref:neo4j-apoc.adoc[Neo4j APOC Library]
 ** xref:graph-algorithms.adoc[Neo4j Graph Algorithms]
-** xref:graphql.adoc[Neo4j & GraphQL]
-** xref:neo4j-nlp.adoc[Neo4j Natural Language Processing (NLP)]
+** xref:graphql.adoc[Neo4j &amp; GraphQL]
+** xref:nlp.adoc[Neo4j Natural Language Processing (NLP)]
 
 * Cypher Query Language
 ** xref:cypher-query-language.adoc[Cypher Overview]
 ** xref:cypher-basics-i.adoc[Cypher Basics I]
 ** xref:cypher-basics-ii.adoc[Cypher Basics II]
 ** xref:filtering-query-results.adoc[Filtering Query Results]
-** xref:sub-queries.adoc[Sub Queries]
-** xref:aggregation-returns-functions.adoc[Aggregation, Returns, & Functions]
+** xref:subqueries.adoc[Sub Queries]
+** xref:aggregation-returns-functions.adoc[Aggregation, Returns, &amp; Functions]
 ** xref:cypher-style-guide.adoc[Cypher Style Guide]
 ** xref:guide-sql-to-cypher.adoc[From SQL to Cypher]
-** xref:procedures-functions.adoc[User Defined Procedures & Functions]
+** xref:procedures-functions.adoc[User Defined Procedures &amp; Functions]
 ** xref:dates-datetimes-durations.adoc[Tutorial: Dates, Datetimes, and Durations]
 ** xref:guide-build-a-recommendation-engine.adoc[Tutorial: Build a Recommendation Engine]
 ** xref:cypher-resources.adoc[Cypher Resources]
@@ -54,7 +55,7 @@
 ** xref:tools-graph-visualization.adoc[Visualization Tools]
 ** xref:other-graph-visualizations.adoc[Other Visualizations]
 
-* Drivers & Language Guides
+* Drivers &amp; Language Guides
 ** xref:language-guides.adoc[Drivers Overview]
 ** xref:java.adoc[Java]
 ** xref:java-driver-spring-boot-starter.adoc[Java Driver Spring Boot Starter]
@@ -72,7 +73,7 @@
 ** xref:erlang-elixir.adoc[Erlang &amp; Elixir]
 ** xref:perl.adoc[Perl]
 
-* Neo4j Tools & Integrations
+* Neo4j Tools &amp; Integrations
 ** xref:integration.adoc[Integrations Overview]
 ** xref:apache-spark.adoc[Apache Spark]
 ** xref:elastic-search.adoc[Elastic-Search]
@@ -95,6 +96,7 @@
 
 * Neo4j Administration
 ** xref:in-production.adoc[Administration Overview]
+** xref:memory-management.adoc[How-To: Memory Management]
 ** xref:manage-multiple-databases.adoc[Tutorial: Managing Multiple Databases]
 ** xref:multi-tenancy-worked-example.adoc[Tutorial: Multi Tenancy Worked Example]
 ** xref:neo4j-fabric-sharding.adoc[Sharding Graphs with Fabric]
@@ -102,24 +104,25 @@
 ** xref:guide-performance-tuning.adoc[Performance Tuning]
 ** xref:docker.adoc[Docker &amp; Neo4j]
 ** xref:docker-run-neo4j.adoc[How-To: Run Neo4j in Docker]
-** link:/startup-program/[Startups: Free Neo4j Enterprise]
-** link:/graphacademy/online-training/neo4j-administration/[Online Course: Neo4j Administration]
+** link:/startup-program/[Startups: Free Neo4j Enterprise^]
+** link:/graphacademy/online-training/neo4j-administration/[Online Course: Neo4j Administration^]
 
 * Neo4j in the Cloud
 ** xref:guide-cloud-deployment.adoc[Cloud Overview]
 ** xref:guide-orchestration.adoc[Orchestration Tools]
 
-* Documentation & Resources
+* Documentation &amp; Resources
 ** xref:resources.adoc[Resource Overview]
 ** xref:about-graphacademy.adoc[Learn through GraphAcademy]
 ** xref:guide-create-neo4j-browser-guide.adoc[Tutorial: Create Custom Browser Guide]
 ** xref:ruby-course.adoc[How-To: Build with Ruby &amp; Neo4j]
 ** xref:browser-guide-list.adoc[Available Neo4j Browser Guides]
-** link:/docs/[Neo4j Documentation]
+** link:/docs/[Neo4j Documentation^]
 
 * Contributing to Neo4j
 ** xref:contribute.adoc[Contributing Overview]
+** link:https://community.neo4j.com/[Help on Community Forums^]
+** link:/speaker-program/[Speaker Program: Share your Story^]
 ** xref:cla.adoc[Contributor License Agreement]
 ** xref:contributing-code.adoc[Code Contributions]
-** link:https://community.neo4j.com[Help on Community Forums]
-** link:/speaker-program/[Speaker Program: Share your Story]
+

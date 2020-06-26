@@ -1,12 +1,9 @@
 = Importing JSON Data from a REST API into Neo4j
-:slug: guide-import-json-rest-api
 :level: Intermediate
-:section: Data Import
-:section-link: data-import
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:page-level: Intermediate
+:author: Mark Needham
+:category: import-export
+:tags: data-import, graph-import, import-json, pagination, api
 
 .Goals
 [abstract]
@@ -16,7 +13,7 @@ This article demonstrates some techniques for loading data from JSON-based REST 
 [abstract]
 Before importing data from a JSON-based REST API you should have installed the link:/developer/neo4j-apoc[APOC^] library.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#import-json]

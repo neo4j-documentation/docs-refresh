@@ -1,13 +1,9 @@
 = Neo4j and GraphQL
-:slug: graphql
 :level: Beginner
-:section: Neo4j Graph Platform
-:section-link: graph-platform
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
-:icons: font
+:page-level: Beginner
+:author: Will Lyon
+:category: integrations
+:tags: labs, graphql, queries, grandstack, react, apollo, javascript, java
 
 ====
 [NOTE]

@@ -1,13 +1,10 @@
 = Procedures & Functions Gallery
-:slug: procedures-gallery
 :level: Intermediate
-:section: Cypher Query Language
-:section-link: cypher
+:page-level: Intermediate
 :apoc: https://neo4j-contrib.github.io/neo4j-apoc-procedures/
-:sectanchors:
-:toc:
-:toc-title: Contents
-:toclevels: 1
+:author: Neo4j
+:category: cypher
+:tags: cypher, queries, apoc, spatial, rdf, custom-development
 
 .Goals
 [abstract]
@@ -17,7 +14,7 @@ Our community created already a lot of useful user defined procedures and functi
 [abstract]
 You should know what user defined procedures and functions are and how to use them within Cypher.
 
-[role=expertise]
+[role=expertise {level}]
 {level}
 
 [#apoc-library]
