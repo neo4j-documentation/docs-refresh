@@ -11,7 +11,6 @@
     "build:docs": "antora --fetch --stacktrace docs.yml",
     "watch:developer": "npm-watch build:developer",
     "watch": "npm-watch --delay 500",
-
     "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/examples/*",
     "migrate:examples": "",
     "migrate:includesX": "cp /Users/adam/neo4j/developer-resources/language-guides/_includes/*.adoc asciidoc/developer/modules/ROOT/includes",
@@ -42,6 +41,7 @@
     }
   },
   "devDependencies": {
+    "express": "^4.17.1",
     "glob": "^7.1.6",
     "jsdom": "^16.2.2",
     "rxjs": "^6.5.5"
