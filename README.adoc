@@ -5,7 +5,43 @@ This is an unversioned repo with folders to the different content that will be b
 Each directory will have a antora.yml file with configuration, then the `start_path` in antora-playbook.yml will define which subfolder is picked up.
 
 
-== Developer
+
+== Installation
+
+[source,sh]
+npm i
+
+=== Development Mode
+
+You can run a local server on port 8000 by running:
+
+[source,sh]
+npm start
+
+To listen for changes and automatically rebuild the source, run the following command:
+
+[source,sh]
+npm run watch
+
+
+If you are only working on a single section, you can run `watch:{name of playbook}`
+
+[source,sh]
+npm run watch:developer
+
+== Build
+
+[source,sh]
+npm run build
+
+
+
+
+
+
+== Content
+
+=== Developer
 ```
 /developer                           <- developer home page
 /developer/get-started               <- structured content
@@ -29,7 +65,7 @@ Each directory will have a antora.yml file with configuration, then the `start_p
 /developer/drivers/dotnet
 ```
 
-== Labs
+=== Labs
 ```
 /labs                                <- Labs homepage with list of all projects
 /labs/apoc                           <- About page for APOC
@@ -45,7 +81,7 @@ Each directory will have a antora.yml file with configuration, then the `start_p
 ```
 
 
-== Migration
+=== Migration
 
 ```
 :level: Beginner

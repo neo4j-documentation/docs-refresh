@@ -4,6 +4,7 @@
   "description": "Neo4j Docs builder",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "build": "npm run build:developer && npm run build:labs && npm run build:labs-docs && npm run build:docs",
     "build:developer": "antora --fetch --stacktrace developer.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
