@@ -658,7 +658,7 @@ While it is not comprehensive, it aims to introduce the available drivers and li
 <div class="sectionbody">
 <div class="imageblock right">
 <div class="content">
-<img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/python-logo.png" alt="python logo" width="300">
+<img src="https://dist.neo4j.com/wp-content/uploads/python-logo.png" alt="python logo" width="300">
 </div>
 </div>
 <div class="paragraph">
@@ -696,32 +696,8 @@ Support for Python 2 will be removed in the upcoming 2.0 release of the driver.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from neo4j import GraphDatabase
 
-# Copyright (c) 2002-2018 "Neo4j,"
-# Neo4j Sweden AB [http://neo4j.com]
-#
-# This file is part of Neo4j.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-# tag::hello-world-import[]
-from neo4j import GraphDatabase
-# end::hello-world-import[]
-
-
-# tag::hello-world[]
 class HelloWorldExample(object):
 
     def __init__(self, uri, user, password):
@@ -740,63 +716,7 @@ class HelloWorldExample(object):
         result = tx.run("CREATE (a:Greeting) "
                         "SET a.message = $message "
                         "RETURN a.message + ', from node ' + id(a)", message=message)
-        return result.single()[0]
-# end::hello-world[]
-
-# tag::hello-world-output[]
-# hello, world, from node 1234
-# end::hello-world-output[]
-
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
-
-# Copyright (c) 2002-2018 "Neo4j,"
-# Neo4j Sweden AB [http://neo4j.com]
-#
-# This file is part of Neo4j.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-# tag::hello-world-import[]
-from neo4j import GraphDatabase
-# end::hello-world-import[]
-
-
-# tag::hello-world[]
-class HelloWorldExample(object):
-
-    def __init__(self, uri, user, password):
-        self._driver = GraphDatabase.driver(uri, auth=(user, password))
-
-    def close(self):
-        self._driver.close()
-
-    def print_greeting(self, message):
-        with self._driver.session() as session:
-            greeting = session.write_transaction(self._create_and_return_greeting, message)
-            print(greeting)
-
-    @staticmethod
-    def _create_and_return_greeting(tx, message):
-        result = tx.run("CREATE (a:Greeting) "
-                        "SET a.message = $message "
-                        "RETURN a.message + ', from node ' + id(a)", message=message)
-        return result.single()[0]
-# end::hello-world[]
-
-# tag::hello-world-output[]
-# hello, world, from node 1234
-# end::hello-world-output[]</code></pre>
+        return result.single()[0]</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -881,7 +801,7 @@ These range from lightweight to comprehensive driver packages as well as librari
 <h3 id="py2neo-lib"><a class="anchor" href="#py2neo-lib"></a>Py2neo</h3>
 <div class="imageblock right">
 <div class="content">
-<img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/py2neo.200x200.png" alt="py2neo.200x200" width="100">
+<img src="https://dist.neo4j.com/wp-content/uploads/py2neo.200x200.png" alt="py2neo.200x200" width="100">
 </div>
 </div>
 <div class="paragraph">
@@ -947,7 +867,7 @@ alice, bob, carol = [result.one for result in tx.commit()]</code></pre>
 <h3 id="neomodel-lib"><a class="anchor" href="#neomodel-lib"></a>Neomodel</h3>
 <div class="imageblock right">
 <div class="content">
-<img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/neomodel.200x80.png" alt="neomodel.200x80" width="100">
+<img src="https://dist.neo4j.com/wp-content/uploads/neomodel.200x80.png" alt="neomodel.200x80" width="100">
 </div>
 </div>
 <div class="paragraph">

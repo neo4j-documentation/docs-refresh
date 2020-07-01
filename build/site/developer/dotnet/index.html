@@ -651,7 +651,7 @@ You should have <a href="/download" target="_blank" rel="noopener">installed Neo
 <div class="sectionbody">
 <div class="imageblock right">
 <div class="content">
-<img src="//s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/dotnet-logo.png" alt="dotnet logo" width="300">
+<img src="https://dist.neo4j.com/wp-content/uploads/dotnet-logo.png" alt="dotnet logo" width="300">
 </div>
 </div>
 <div class="paragraph">
@@ -668,19 +668,55 @@ You should have <a href="/download" target="_blank" rel="noopener">installed Neo
 <div class="sect1">
 <h2 id="dotnet-driver"><a class="anchor" href="#dotnet-driver"></a>Neo4jDotNetDriver</h2>
 <div class="sectionbody">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js"></script>
 <div class="paragraph">
 <p>The Neo4j .NET driver is <strong>officially supported</strong> by Neo4j and connects to the database using the binary protocol.
 It aims to be minimal, while being idiomatic to .NET.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>PM> Install-Package Neo4j.Driver-4</code></pre>
+<pre class="highlightjs highlight"><code>PM> Install-Package Neo4j.Driver-4.2</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-clike hljs" data-lang="clike">404: Not Found</code></pre>
+<pre class="highlightjs highlight"><code class="language-clike hljs" data-lang="clike">public class HelloWorldExample : IDisposable
+{
+    private readonly IDriver _driver;
+
+    public HelloWorldExample(string uri, string user, string password)
+    {
+        _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
+    }
+
+    public void PrintGreeting(string message)
+    {
+        using (var session = _driver.Session())
+        {
+            var greeting = session.WriteTransaction(tx =&gt;
+            {
+                var result = tx.Run("CREATE (a:Greeting) " +
+                                    "SET a.message = $message " +
+                                    "RETURN a.message + ', from node ' + id(a)",
+                    new {message});
+                return result.Single()[0].As&lt;string&gt;();
+            });
+            Console.WriteLine(greeting);
+        }
+    }
+
+    public void Dispose()
+    {
+        _driver?.Dispose();
+    }
+
+    public static void Main()
+    {
+        using (var greeter = new HelloWorldExample("bolt://localhost:7687", "neo4j", "password"))
+        {
+            greeter.PrintGreeting("hello, world");
+        }
+    }
+}</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -754,7 +790,7 @@ If necessary, you can also <a href="https://medium.com/neo4j/getting-certificate
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Neo4jDotNetDriver</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Neo4j Team, <a href="http://twitter.com/cskardon">Chris Skardon</a>, <a href="https://twitter.com/IngvarKofoed">Martin Jensen</a></p></td>
 </tr>
 <tr>

@@ -1,7 +1,5 @@
 
-++++
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js"></script>
-++++
+
 
 The Neo4j .NET driver is *officially supported* by Neo4j and connects to the database using the binary protocol.
 It aims to be minimal, while being idiomatic to .NET.
