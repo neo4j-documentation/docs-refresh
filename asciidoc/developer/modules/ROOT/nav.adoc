@@ -14,9 +14,7 @@
 ** xref:neo4j-bloom.adoc[Neo4j Bloom Intro]
 ** xref:neo4j-etl.adoc[How-To: Neo4j ETL Tool]
 ** xref:neo4j-apoc.adoc[Neo4j APOC Library]
-** xref:graph-algorithms.adoc[Neo4j Graph Algorithms]
 ** xref:graphql.adoc[Neo4j &amp; GraphQL]
-** xref:nlp.adoc[Neo4j Natural Language Processing (NLP)]
 
 * Cypher Query Language
 ** xref:cypher-query-language.adoc[Cypher Overview]
@@ -49,6 +47,11 @@
 ** xref:guide-importing-data-and-etl.adoc[Example: Northwind Dataset]
 ** xref:desktop-csv-import.adoc[How-To: Desktop CSV Import]
 ** xref:example-data.adoc[Example Datasets]
+
+* Neo4j Graph Data Science
+** xref:graph-data-science.adoc[Graph Data Science Overview]
+** xref:graph-algorithms.adoc[Neo4j Graph Algorithms]
+** xref:nlp.adoc[Neo4j Natural Language Processing (NLP)]
 
 * Graph Visualization
 ** xref:graph-visualization.adoc[Visualization Overview]
@@ -100,7 +103,6 @@
 ** xref:manage-multiple-databases.adoc[Tutorial: Managing Multiple Databases]
 ** xref:multi-tenancy-worked-example.adoc[Tutorial: Multi Tenancy Worked Example]
 ** xref:neo4j-fabric-sharding.adoc[Sharding Graphs with Fabric]
-** xref:guide-clustering-neo4j.adoc[Clustering Neo4j]
 ** xref:guide-performance-tuning.adoc[Performance Tuning]
 ** xref:docker.adoc[Docker &amp; Neo4j]
 ** xref:docker-run-neo4j.adoc[How-To: Run Neo4j in Docker]
@@ -110,6 +112,7 @@
 * Neo4j in the Cloud
 ** xref:guide-cloud-deployment.adoc[Cloud Overview]
 ** xref:guide-orchestration.adoc[Orchestration Tools]
+** xref:neo4j-google-cloud-launcher.adoc[Tutorial: Deploy Neo4j Cluster on GCP]
 
 * Documentation &amp; Resources
 ** xref:resources.adoc[Resource Overview]

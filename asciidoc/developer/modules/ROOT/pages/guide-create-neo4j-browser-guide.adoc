@@ -169,7 +169,9 @@ image::{img}custom_guide_test.jpg[link="{img}custom_guide_test.jpg",role="popup-
  But it comes with a picture and a video:
 
  ++++
+ <div class="responsive-embed">
  <iframe width="560" height="315" src="https://www.youtube.com/embed/V7f2tGsNSck?showinfo=0&controls=2&autohide=1" frameborder="0" allowfullscreen></iframe>
+ </div>
  ++++
 
  == Second Slide: Statements
