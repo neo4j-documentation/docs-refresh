@@ -110,6 +110,9 @@ const read$ = glob$(inputPath)
                 }
             })
 
+            // Remove Codemirror
+            content = content.replace(/\+\+\+\+\n<script src="https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/codemirror\/5.13.4\/mode\/(.*).js"><\/script>\n\+\+\+\+/, '')
+
             // Moved variables from versions.txt into antora.yml
             content = content.replace(/include::(.*)?versions.txt\[\]/g, '')
 
