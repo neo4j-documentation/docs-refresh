@@ -27,9 +27,3 @@ jobs:
         AWS_REGION: 'eu-west-1'
         SOURCE_DIR: 'build/site/developer'
         DEST_DIR: 'developer'
-
-  publish:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions
