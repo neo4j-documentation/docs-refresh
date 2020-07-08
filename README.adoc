@@ -1,4 +1,6 @@
-= Monorepo?
+= Neo4j Developer Guides & Static Content
+
+image:https://github.com/neo4j-documentation/docs-refresh/workflows/Trigger%20Publish/badge.svg[Trigger Publish]
 
 This is an unversioned repo with folders to the different content that will be built with Antora.
 

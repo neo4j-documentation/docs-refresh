@@ -1,10 +1,10 @@
-name: Build and Publish Developer content
+name: Build and Publish Labs content
 
 on:
   repository_dispatch
 
 jobs:
-  build_developer:
+  build_labs:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,8 @@ jobs:
       with:
         node-version: '14.1.0'
     - run: npm install
-    - run: npm run build:developer
+    - run: npm run build:labs
+    - run: npm run build:labs-docs
 
     - uses: jakejarvis/s3-sync-action@master
       with:
@@ -25,5 +26,5 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'build/site/developer'
-        DEST_DIR: 'developer'
+        SOURCE_DIR: 'build/site/labs'
+        DEST_DIR: 'labs'
