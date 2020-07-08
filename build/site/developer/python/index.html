@@ -280,13 +280,7 @@
     <a class="nav-link" href="../neo4j-apoc/">Neo4j APOC Library</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -380,6 +374,20 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../example-data/">Example Datasets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Graph Data Science</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-data-science/">Graph Data Science Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -529,9 +537,6 @@
     <a class="nav-link" href="../neo4j-fabric-sharding/">Sharding Graphs with Fabric</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../guide-clustering-neo4j/">Clustering Neo4j</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-performance-tuning/">Performance Tuning</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -556,6 +561,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-orchestration/">Orchestration Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-google-cloud-launcher/">Tutorial: Deploy Neo4j Cluster on GCP</a>
   </li>
 </ul>
   </li>
@@ -620,8 +628,8 @@
     <li><a href="./">Python</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/python.adoc">Edit this Page</a></div>
-</div>
+  <div class="edit-this-page"><a href="https://github.com/neo4j-documentation/developer-guides/edit/master/modules/ROOT/pages/python.adoc">Edit this Page</a></div>
+  </div>
   <div class="content">
 <article class="doc">
 <h1 class="page">Using Neo4j from Python</h1>
@@ -638,10 +646,10 @@ While it is not comprehensive, it aims to introduce the available drivers and li
 <div class="title">Prerequisites</div>
 <ul class="abstract">
 <li>
-<p>You should be familiar with <a href="/developer/graph-database">graph database concepts</a> and the property graph model.</p>
+<p>You should be familiar with <a href="/developer/graph-database/">graph database concepts</a> and the property graph model.</p>
 </li>
 <li>
-<p>You should have <a href="/download">installed Neo4j</a> and made yourself familiar with our <a href="/developer/cypher-query-language">Cypher query language</a>.</p>
+<p>You should have <a href="/download/">installed Neo4j</a> and made yourself familiar with our <a href="/developer/cypher-query-language/">Cypher query language</a>.</p>
 </li>
 <li>
 <p>We also recommend installing and becoming familiar with both <a href="https://pip.pypa.io/" target="_blank" rel="noopener">pip</a> and <a href="https://virtualenv.pypa.io/" target="_blank" rel="noopener">virtualenv</a> before working on a Python project.</p>
@@ -933,6 +941,21 @@ rowling =  Author(name='J. K. Rowling').save()
 harry_potter.author.connect(rowling)</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources"><a class="anchor" href="#_resources"></a>Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://neo4j.com/docs/driver-manual/current" target="_blank" rel="noopener">Docs: Driver Manual</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/neo4j/neo4j-python-4-0-driver-the-latest-driver-for-the-next-gen-database-a5be6ecd481f" target="_blank" rel="noopener">Blog post: Python 4.0 driver</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

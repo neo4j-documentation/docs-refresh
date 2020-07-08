@@ -280,13 +280,7 @@
     <a class="nav-link" href="../neo4j-apoc/">Neo4j APOC Library</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -380,6 +374,20 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../example-data/">Example Datasets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Graph Data Science</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-data-science/">Graph Data Science Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -529,9 +537,6 @@
     <a class="nav-link" href="../neo4j-fabric-sharding/">Sharding Graphs with Fabric</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../guide-clustering-neo4j/">Clustering Neo4j</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-performance-tuning/">Performance Tuning</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -556,6 +561,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-orchestration/">Orchestration Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-google-cloud-launcher/">Tutorial: Deploy Neo4j Cluster on GCP</a>
   </li>
 </ul>
   </li>
@@ -620,8 +628,8 @@
     <li><a href="./">Cloud Overview</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/guide-cloud-deployment.adoc">Edit this Page</a></div>
-</div>
+  <div class="edit-this-page"><a href="https://github.com/neo4j-documentation/developer-guides/edit/master/modules/ROOT/pages/guide-cloud-deployment.adoc">Edit this Page</a></div>
+  </div>
   <div class="content">
 <article class="doc">
 <h1 class="page">Hosting Neo4j in the Cloud</h1>
@@ -694,7 +702,8 @@ Alongside a set of management tools, it provides a series of modular cloud servi
 </li>
 <li>
 <p>Causal Cluster - the Enterprise edition of Neo4j is also <a href="https://console.cloud.google.com/launcher/details/neo4j-public/neo4j-enterprise-causal-cluster" target="_blank" rel="noopener">available on GCP Marketplace</a>, and users can launch a causal cluster from there.
-The launch and interaction steps to deploy Neo4j causal clusters on GCP are shown in the <a href="http://neo4j.com/docs/operations-manual/current/cloud-deployments/neo4j-gcp/causal-cluster-vm/" target="_blank" rel="noopener">Neo4j documentation</a>.</p>
+The launch and interaction steps to deploy Neo4j causal clusters on GCP are shown in the <a href="http://neo4j.com/docs/operations-manual/current/cloud-deployments/neo4j-gcp/causal-cluster-vm/" target="_blank" rel="noopener">Neo4j documentation</a>.
+We also have a <a href="/developer/neo4j-google-cloud-launcher/">step-by-step tutorial</a> for deploying a Neo4j cluster with GCP.</p>
 </li>
 <li>
 <p>Google Kubernetes Marketplace (Docker container-based) - Neo4j Enterprise is also <a href="https://console.cloud.google.com/marketplace/details/neo4j-public/causal-cluster-k8s" target="_blank" rel="noopener">available on Kubernetes Marketplace</a>, so users can launch Neo4j clusters into Google Kubernetes Engine (GKE) clusters.

@@ -279,14 +279,8 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../neo4j-apoc/">Neo4j APOC Library</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="./">Neo4j Graph Algorithms</a>
-  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -380,6 +374,20 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../example-data/">Example Datasets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Graph Data Science</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-data-science/">Graph Data Science Overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="./">Neo4j Graph Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -529,9 +537,6 @@
     <a class="nav-link" href="../neo4j-fabric-sharding/">Sharding Graphs with Fabric</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../guide-clustering-neo4j/">Clustering Neo4j</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-performance-tuning/">Performance Tuning</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -556,6 +561,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-orchestration/">Orchestration Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-google-cloud-launcher/">Tutorial: Deploy Neo4j Cluster on GCP</a>
   </li>
 </ul>
   </li>
@@ -616,41 +624,35 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../get-started/">Developer Guides</a></li>
-    <li>Neo4j Graph Platform</li>
+    <li>Neo4j Graph Data Science</li>
     <li><a href="./">Neo4j Graph Algorithms</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/graph-algorithms.adoc">Edit this Page</a></div>
-</div>
+  <div class="edit-this-page"><a href="https://github.com/neo4j-documentation/developer-guides/edit/master/modules/ROOT/pages/graph-algorithms.adoc">Edit this Page</a></div>
+  </div>
   <div class="content">
 <article class="doc">
 <h1 class="page">Neo4j Graph Algorithms</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div id="graph-algorithms" class="paragraph">
-<p><span class="image right popup-link"><a class="image" href="https://neo4j.com/graph-algorithms-book/"><img src="https://dist.neo4j.com/wp-content/uploads/OReilly-Graph-Algorithms_v2_ol1.jpg" alt="Download your free copy" width="210px"></a></span></p>
-</div>
-<div class="paragraph">
 <p>Graph algorithms provide one of the most potent approaches to analyzing connected data because their mathematical calculations are specifically built to operate on relationships.
 They describe steps to be taken to process a graph to discover its general qualities or specific quantities.</p>
-</div>
-<div class="paragraph">
-<p>In <a href="/graph-algorithms-book/" target="_blank" rel="noopener">O&#8217;Reilly&#8217;s Graph Algorithms Book</a>, Amy Hodler and Mark Needham take you on a guided tour of this topic with examples in Apache Spark and Neo4j.</p>
-</div>
-<div class="paragraph">
-<p><a href="/graph-algorithms-book/" class="medium button" target="_blank" rel="noopener">Download your free copy</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="neo4j-algorithms-library"><a class="anchor" href="#neo4j-algorithms-library"></a>Graph Data Science Library</h2>
 <div class="sectionbody">
-<div class="responsive-embed">
-<iframe width="680" height="425" src="https://www.youtube.com/embed/ziG_oPnxB20" frameborder="0" allowfullscreen></iframe>
-</div>
 <div class="paragraph">
 <p>Neo4j Graph Data Science is a library that provides efficiently implemented, parallel versions of common graph algorithms for Neo4j 3.x and Neo4j 4.x exposed as <a href="/developer/cypher/">Cypher</a> procedures.
-Amy Hodler and Alicia Frame explain more and show hands on examples in <a href="https://www.youtube.com/watch?v=ziG_oPnxB20" target="_blank" rel="noopener">this Neo4j Online Meetup presentation</a>.</p>
+It forms the core part of your <a href="/developer/graph-data-science" target="_blank" rel="noopener">Graph Data Science platform</a>.</p>
+</div>
+<div class="paragraph">
+<p>Amy Hodler and Alicia Frame explain more about the library and share hands on examples in <a href="https://www.youtube.com/watch?v=ziG_oPnxB20" target="_blank" rel="noopener">this talk</a> from the <a href="/connections/graph-data-science/" target="_blank" rel="noopener">Connections: Graph Data Science</a> event.</p>
+</div>
+<div class="responsive-embed">
+<iframe width="680" height="425" src="https://www.youtube.com/embed/ziG_oPnxB20" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="paragraph">
 <p>The library contains implementations for the following types of algorithms:</p>
@@ -804,7 +806,7 @@ Amy Hodler and Alicia Frame explain more and show hands on examples in <a href="
 <h2 id="graph-algorithms-resources"><a class="anchor" href="#graph-algorithms-resources"></a>Additional Resources</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following are useful resources once you&#8217;ve got a bit of experience with graph algorithms.</p>
+<p>The following are useful resources once you&#8217;ve got a bit of experience with Graph Data Science.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -815,7 +817,7 @@ Amy Hodler and Alicia Frame explain more and show hands on examples in <a href="
 <p><a href="https://medium.com/neo4j/tagged/data-science" target="_blank" rel="noopener">Neo4j Analytics Category on Medium</a></p>
 </li>
 <li>
-<p><a href="https://tbgraph.wordpress.com/" target="_blank" rel="noopener">Tomaz Bratanic&#8217;s Blog</a></p>
+<p><a href="https://towardsdatascience.com/@bratanic.tomaz" target="_blank" rel="noopener">Tomaz Bratanic&#8217;s Graph Data Science articles</a></p>
 </li>
 </ul>
 </div>

@@ -280,13 +280,7 @@
     <a class="nav-link" href="../neo4j-apoc/">Neo4j APOC Library</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -380,6 +374,20 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../example-data/">Example Datasets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Graph Data Science</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-data-science/">Graph Data Science Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -529,9 +537,6 @@
     <a class="nav-link" href="../neo4j-fabric-sharding/">Sharding Graphs with Fabric</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../guide-clustering-neo4j/">Clustering Neo4j</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-performance-tuning/">Performance Tuning</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -556,6 +561,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-orchestration/">Orchestration Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-google-cloud-launcher/">Tutorial: Deploy Neo4j Cluster on GCP</a>
   </li>
 </ul>
   </li>
@@ -620,13 +628,28 @@
     <li><a href="./">Spring Data Neo4j</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/spring-data-neo4j.adoc">Edit this Page</a></div>
-</div>
+  <div class="edit-this-page"><a href="https://github.com/neo4j-documentation/developer-guides/edit/master/modules/ROOT/pages/spring-data-neo4j.adoc">Edit this Page</a></div>
+  </div>
   <div class="content">
 <article class="doc">
 <h1 class="page">Spring Data Neo4j</h1>
 <div id="preamble">
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Spring Data Neo4j project is currently for existing support and maintenance only.
+All new and future projects should use the <a href="/developer/spring-data-neo4j-rx/">Spring Data Neo4j RX</a> project instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="quoteblock abstract">
 <div class="title">Goals</div>
 <blockquote>
@@ -986,7 +1009,7 @@ The custom query we defined using <a href="/developer/cypher-query-language/">Cy
 <div class="sectionbody">
 <div class="paragraph">
 <p>For a more thorough walkthrough of the code, see the resources linked below.
-We also provide reactive development through the <a href="/developer/spring-data-neo4j-rx/">Spring Data Neo4j RX</a> project.</p>
+We also provide both imperative and reactive development through the <a href="/developer/spring-data-neo4j-rx/">Spring Data Neo4j RX</a> project.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>

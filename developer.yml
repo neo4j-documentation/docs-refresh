@@ -3,11 +3,11 @@ site:
   url: /developer
 content:
   sources:
-  - url: ./
+  - url: https://github.com/neo4j-documentation/developer-guides.git
     branches: master
-    start_paths:
-    - asciidoc/developer
+    exclude:
     - '!**/_includes/*'
+    - '!**/readme.adoc'
 ui:
   bundle:
     url: ui/build/ui-bundle.zip

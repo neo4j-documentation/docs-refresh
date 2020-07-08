@@ -280,13 +280,7 @@
     <a class="nav-link" href="../neo4j-apoc/">Neo4j APOC Library</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../graphql/">Neo4j &amp; GraphQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -380,6 +374,20 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../example-data/">Example Datasets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text nav-item-toggle">Neo4j Graph Data Science</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-data-science/">Graph Data Science Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../graph-algorithms/">Neo4j Graph Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../nlp/">Neo4j Natural Language Processing (NLP)</a>
   </li>
 </ul>
   </li>
@@ -529,9 +537,6 @@
     <a class="nav-link" href="../neo4j-fabric-sharding/">Sharding Graphs with Fabric</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../guide-clustering-neo4j/">Clustering Neo4j</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-performance-tuning/">Performance Tuning</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -556,6 +561,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../guide-orchestration/">Orchestration Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../neo4j-google-cloud-launcher/">Tutorial: Deploy Neo4j Cluster on GCP</a>
   </li>
 </ul>
   </li>
@@ -620,8 +628,8 @@
     <li><a href="./">Procedures and Functions</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/java-procedures.adoc">Edit this Page</a></div>
-</div>
+  <div class="edit-this-page"><a href="https://github.com/neo4j-documentation/developer-guides/edit/master/modules/ROOT/pages/java-procedures.adoc">Edit this Page</a></div>
+  </div>
   <div class="content">
 <article class="doc">
 <h1 class="page">Procedures and Functions</h1>
@@ -629,7 +637,7 @@
 <h2 id="custom-proc-func"><a class="anchor" href="#custom-proc-func"></a>User-Defined Procedures and Functions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="/developer/cypher/procedures-functions" target="_blank" rel="noopener">User Defined <strong>Procedures</strong> and <strong>Functions</strong></a> are available within Cypher and encapsulate dedicated functionality.</p>
+<p><a href="/developer/procedures-functions" target="_blank" rel="noopener">User Defined <strong>Procedures</strong> and <strong>Functions</strong></a> are available within Cypher and encapsulate dedicated functionality.</p>
 </div>
 <div class="paragraph">
 <p>Just by annotating methods of a Java class and deploying the resulting jar file into your Neo4j installation, you can make new functionality easily available within the query language.</p>
@@ -645,7 +653,7 @@ Besides an object-oriented API to the graph database, working with <code>Node</c
 <p>Neo4j uses that functionality itself for built-in procedures for meta-data, cluster-, query- and user-management and more.</p>
 </div>
 <div class="paragraph">
-<p>Several libraries already provide new capabilities using procedures and functions, here is an example from the <a href="/developer/cypher/procedures-gallery#apoc">APOC</a> library.</p>
+<p>Several libraries already provide new capabilities using procedures and functions, here is an example from the <a href="/developer/neo4j-apoc/">APOC</a> library.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -659,7 +667,7 @@ ORDER BY weight ASC LIMIT 10</code></pre>
 <p>To get you started we provided a <a href="https://github.com/neo4j-examples/neo4j-procedure-template" target="_blank" rel="noopener">template project</a> and documentation in the <a href="/docs/java-reference/current/#procedures" target="_blank" rel="noopener">Java developer manual</a>.</p>
 </div>
 <div class="paragraph">
-<p>More useful examples for user defined procedures can be found in our <a href="/developer/procedures-gallery/">procedure &amp; function gallery</a>.</p>
+<p>More useful examples for user-defined procedures can be found in our <a href="/developer/procedures-functions/">procedure &amp; function guide</a>.</p>
 </div>
 </div>
 </div>
