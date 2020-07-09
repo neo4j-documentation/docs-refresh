@@ -1,6 +1,7 @@
 = Neo4j Developer Guides & Static Content
 
-image::https://github.com/neo4j-documentation/docs-refresh/workflows/Build%20and%20Publish%20content/badge.svg[Trigger Publish]
+image::https://github.com/neo4j-documentation/docs-refresh/workflows/Publish%20Developer/badge.svg[Publish Developer]
+image::https://github.com/neo4j-documentation/docs-refresh/workflows/Publish%20Labs/badge.svg[Publish Labs]
 
 This is an unversioned repo with folders to the different content that will be built with Antora.
 
