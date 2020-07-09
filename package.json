@@ -11,6 +11,7 @@
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:docs": "antora --fetch --stacktrace docs.yml",
     "watch:developer": "npm-watch build:developer",
+    "watch:labs": "npm-watch build:labs",
     "watch": "npm-watch --delay 500",
     "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/examples/*",
     "migrate:examples": "",
@@ -19,7 +20,7 @@
     "migrate:menu": "node migrate/menu.js",
     "migrate:docs": "node migrate/docs.js"
   },
-  "author": "",
+  "author": "Adam Cowley <adam+github@neo4j.com>",
   "license": "ISC",
   "dependencies": {
     "@antora/cli": "^2.3.3",

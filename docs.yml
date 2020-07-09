@@ -13,5 +13,7 @@ ui:
 urls:
   html_extension_style: indexify
 asciidoc:
+  extensions:
+  - ./lib/remote-include-processor
   attributes:
     page-theme: docs

@@ -20,5 +20,7 @@ ui:
     url: ui/build/ui-bundle.zip
     snapshot: true
 asciidoc:
+  extensions:
+  - ./lib/remote-include-processor
   attributes:
     page-theme: labs
