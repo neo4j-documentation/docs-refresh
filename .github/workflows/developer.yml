@@ -1,4 +1,4 @@
-name: Build and Publish Developer content
+name: Publish Developer
 
 on:
   repository_dispatch
@@ -16,8 +16,22 @@ jobs:
         node-version: '14.1.0'
     - run: npm install
     - run: npm run build:developer
+    - run: rm build/site/developer/index.html
 
-    - uses: jakejarvis/s3-sync-action@master
+    - name: Sync Assets
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'eu-west-1'
+        SOURCE_DIR: 'build/site/_'
+        DEST_DIR: 'assets'
+
+    - name: Developer Content
+      uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
       env:

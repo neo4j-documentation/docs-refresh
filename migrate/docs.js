@@ -10,7 +10,7 @@ const writeFile$ = bindNodeCallback(fs.writeFile)
 
 
 const inputPath = '/Users/adam/neo4j/developer-resources/**/*.adoc'
-const outputPath = '/Users/adam/projects/docs/asciidoc/developer/modules/ROOT/pages/'
+const outputPath = '/Users/adam/neo4j/docs/developer-guides/modules/ROOT/pages/'
 
 const attributesPattern = /^:([a-z0-9-]+)(!)?:(.*)?\n/gmi
 

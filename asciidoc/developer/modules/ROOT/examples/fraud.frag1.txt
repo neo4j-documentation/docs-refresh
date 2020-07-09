@@ -1,9 +1,0 @@
-MATCH
-  (n:Person)-[*]-(o)
-WITH 
-  n,
-  count(DISTINCT o) AS size
-WHERE
-  size > 2
-RETURN
-  n

@@ -8,6 +8,7 @@ content:
     exclude:
     - '!**/_includes/*'
     - '!**/readme.adoc'
+    - '!**/README.adoc'
 ui:
   bundle:
     url: ui/build/ui-bundle.zip

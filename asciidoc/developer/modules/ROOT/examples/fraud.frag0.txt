@@ -1,6 +1,0 @@
-MATCH
-  (n:Person)-[*]-(o)
-WHERE
-  n.name = "Hank"
-RETURN 
-  o
