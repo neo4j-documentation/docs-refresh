@@ -1,7 +1,7 @@
 name: Publish Developer
 
 on:
-  repository_dispatch
+  repository_dispatch:
 
   push:
     branches:
