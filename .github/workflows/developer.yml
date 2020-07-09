@@ -3,6 +3,10 @@ name: Publish Developer
 on:
   repository_dispatch
 
+  push:
+    branches:
+    - master
+
 jobs:
   build_developer:
     runs-on: ubuntu-latest

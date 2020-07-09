@@ -21,3 +21,4 @@ asciidoc:
   # - ./lib/local-include-processor
   attributes:
     page-theme: developer
+    page-cdn: /static/assets

@@ -3,6 +3,10 @@ name: Publish Labs
 on:
   repository_dispatch
 
+  push:
+    branches:
+    - master
+
 jobs:
   build_labs:
     runs-on: ubuntu-latest
