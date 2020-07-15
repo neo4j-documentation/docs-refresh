@@ -3,7 +3,7 @@
 
 
 You can either download a prebuilt `.jar` from the https://github.com/jbarrasa/neosemantics/releases[releases area] or <<Building from source, build it from the source>>.
-If you prefer to build, check the <<Building from source, note below>>.
+If you prefer to build, check the <<Building from Source, note below>>.
 
 
 == Standalone Instance
@@ -45,6 +45,25 @@ The plugin will only be available on each individual instance once it has been r
 3. Click the downwards arrow next to the **Open Folder** button and click **Plugins**
 4. Move the `.jar` file into the resulting window
 5. Click the **Restart** icon to restart the database, or click the **Play** button to start the database.
+
+== Docker
+
+Neosemantics can be installed on a link:/developer/docker-run-neo4j/[Neo4j Docker^] instance by providing adding `n10s` to the `NEO4JLABS_PLUGINS` environment variable:
+
+[source]
+docker run \
+    --name testneo4j \
+    -p7474:7474 -p7687:7687 \
+    -d \
+    -v $HOME/neo4j/data:/data \
+    -v $HOME/neo4j/logs:/logs \
+    -v $HOME/neo4j/import:/var/lib/neo4j/import \
+    -v $HOME/neo4j/plugins:/plugins \
+    --env NEO4JLABS_PLUGINS='["apoc", "n10s"]' \
+    --env NEO4J_AUTH=neo4j/test \
+    neo4j:latest
+
+link:/developer/docker-run-neo4j/[More information of running Neo4j with Docker^,role=more information]
 
 == Verifying the Installation
 
