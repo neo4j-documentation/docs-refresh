@@ -2,7 +2,7 @@
 :page-pagination:
 
 
-You can either download a prebuilt `.jar` from the https://github.com/jbarrasa/neosemantics/releases[releases area] or <<Building from source, build it from the source>>.
+You can either download a prebuilt `.jar` from the https://github.com/neo4j-labs/neosemantics/releases[releases area] or <<Building from source, build it from the source>>.
 If you prefer to build, check the <<Building from Source, note below>>.
 
 
@@ -88,7 +88,7 @@ The previous command assumes you're running neo4j on your local machine, replace
 
 == Building from Source
 
-To build the neosemantic plugin from source, link:https://github.com/jbarrasa/neosemantics[Clone the neosemantics repository^] and run the  `mvn clean package` command.  This will produce two `.jar` files:
+To build the neosemantic plugin from source, link:https://github.com/neo4j-labs/neosemantics[Clone the neosemantics repository^] and run the  `mvn clean package` command.  This will produce two `.jar` files:
 
 1. **`neosemantics-[...].jar`**: This jar bundles all the dependencies.
 2. **`original-neosemantics-[...].jar`**: This jar is just the neosemantics bit. So go this way if you want to keep the third party jars separate. In this case you will have to add all third party dependencies (look at the pom.xml).

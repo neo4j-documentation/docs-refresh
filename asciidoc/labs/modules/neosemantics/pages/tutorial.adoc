@@ -15,12 +15,12 @@ We're assuming that you have read the xref:installation.adoc[Installation Guide]
 If you haven't already done so, head back and xref:installation.adoc[read the Installation instructions] first.
 
 Now that you have installed the plugin, it's time to get started with importing data.
-In this tutorial, we will begin with a basic RDF query using an link:https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl[example RDF query in Turtle format^].
-This file is hosted on the link:https://raw.githubusercontent.com/jbarrasa/neosemantics/[Neosemantics Github Repository^].
+In this tutorial, we will begin with a basic RDF query using an link:https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl[example RDF query in Turtle format^].
+This file is hosted on the link:https://raw.githubusercontent.com/neo4j-labs/neosemantics/[Neosemantics Github Repository^].
 
 [source,turtle]
 ----
-include::https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl[]
+include::https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl[]
 ----
 
 The RDF query contains four elements including:
@@ -65,7 +65,7 @@ As our RDF query is hosted online, we can use `n10s.rdf.preview.fetch` to _fetch
 
 [source,cypher]
 CALL n10s.rdf.preview.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )
 
@@ -133,7 +133,7 @@ Running the following Cypher query should return a summary of the procedure incl
 [.query]
 [source,cypher]
 CALL n10s.rdf.import.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )
 
@@ -257,7 +257,7 @@ For example, to delete the data that we loaded in the Import step, we can run th
 
 [source,cypher]
 CALL n10s.rdf.import.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )
 
