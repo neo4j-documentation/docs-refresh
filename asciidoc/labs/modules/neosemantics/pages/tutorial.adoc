@@ -224,7 +224,7 @@ To enable this, you must add the following line to the `neo4j.conf` file in the 
 dbms.unmanaged_extension_classes=n10s.endpoint=/rdf
 
 After restarting the database, an endpoint will be mounted to the Neo4j Server.
-Provided your server is hosted on localhost, you should be able to send a `GET` request to `http://localhost:7474/rdf/{DATABASE}/describe/{URI}`, replacing `{DATABASE}` with the name of the database and `{URI}` with a URL encoded version of the full URI of the RDF resource.
+Provided your server is hosted on localhost, you should be able to send a `GET` request to `http://localhost:7474/rdf/[DATABASE]/describe/[URI]`, replacing `[DATABASE]` with the name of the database and `[URI]` with a URL encoded version of the full URI of the RDF resource.
 
 For example, to export an RDF representation of the `http://neo4j.org/ind#neo4j355` resource, we could run the following in Neo4j Browser
 

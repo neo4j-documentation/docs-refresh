@@ -25,7 +25,7 @@ Once the Action bar has opened, you can start to type _Neosemantics_ and select 
 video::neosemantics-first-start.mp4[]
 If Neosemantics hasn't already been installed on your current active Graph, you will be guided through the xref:installation.adoc[Installation] process.
 
-== Generating Cypher Statements
+=== Generating Cypher Statements
 
 video::neosemantics-generate-query.mp4[]
 The Graph App will then display a number of forms that are designed to get you familiar with the functionality offered by Neosemantics.

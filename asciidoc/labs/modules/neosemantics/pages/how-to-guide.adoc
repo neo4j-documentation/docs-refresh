@@ -29,14 +29,14 @@ CALL n10s.mapping.add('http://www.wikidata.org/prop/direct/P1448', 'officialName
 === Table Format
 [source,cypher]
 CALL n10s.rdf.stream.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )
 
 === Graph Format
 [source,cypher]
 CALL n10s.rdf.preview.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )
 
@@ -46,7 +46,7 @@ CALL n10s.rdf.preview.fetch(
 
 [source,cypher]
 CALL n10s.rdf.import.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )
 
@@ -62,6 +62,6 @@ CALL n10s.rdf.import.fetch(
 
 [source,cypher]
 CALL n10s.rdf.delete.fetch(
-  'https://raw.githubusercontent.com/jbarrasa/neosemantics/3.5/docs/rdf/nsmntx.ttl',
+  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
   'Turtle'
 )

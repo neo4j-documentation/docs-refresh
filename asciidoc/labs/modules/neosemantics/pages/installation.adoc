@@ -1,10 +1,10 @@
 = Installing neosemantics
 :page-pagination:
 
+To install Neosemantics you will need to download a prebuilt `.jar` from the https://github.com/neo4j-labs/neosemantics/releases[releases area^]  on the Github repository.
 
-You can either download a prebuilt `.jar` from the https://github.com/neo4j-labs/neosemantics/releases[releases area] or <<Building from source, build it from the source>>.
-If you prefer to build, check the <<Building from Source, note below>>.
-
+// You can either download a prebuilt `.jar` from the https://github.com/neo4j-labs/neosemantics/releases[releases area] or <<Building from source, build it from the source>>.
+// If you prefer to build, check the <<Building from Source, note below>>.
 
 == Standalone Instance
 
@@ -46,6 +46,8 @@ The plugin will only be available on each individual instance once it has been r
 4. Move the `.jar` file into the resulting window
 5. Click the **Restart** icon to restart the database, or click the **Play** button to start the database.
 
+The xref:graph-app.adoc[Neosemantics Graph App] will guide you through the process of installing the plugin.
+
 == Docker
 
 Neosemantics can be installed on a link:/developer/docker-run-neo4j/[Neo4j Docker^] instance by providing adding `n10s` to the `NEO4JLABS_PLUGINS` environment variable:
@@ -84,15 +86,12 @@ You can check that the HTTP endpoints have been mounted by running a GET request
 
 The previous command assumes you're running neo4j on your local machine, replace `localhost` with the host name if that is not the case.
 
+// == Building from Source
 
+// To build the neosemantic plugin from source, link:https://github.com/neo4j-labs/neosemantics[Clone the neosemantics repository^] and run the  `mvn clean package` command.  This will produce two `.jar` files:
 
-== Building from Source
-
-To build the neosemantic plugin from source, link:https://github.com/neo4j-labs/neosemantics[Clone the neosemantics repository^] and run the  `mvn clean package` command.  This will produce two `.jar` files:
-
-1. **`neosemantics-[...].jar`**: This jar bundles all the dependencies.
-2. **`original-neosemantics-[...].jar`**: This jar is just the neosemantics bit. So go this way if you want to keep the third party jars separate. In this case you will have to add all third party dependencies (look at the pom.xml).
-
+// 1. **`neosemantics-[...].jar`**: This jar bundles all the dependencies.
+// 2. **`original-neosemantics-[...].jar`**: This jar is just the neosemantics bit. So go this way if you want to keep the third party jars separate. In this case you will have to add all third party dependencies (look at the pom.xml).
 
 
 [discrete.glossary]
