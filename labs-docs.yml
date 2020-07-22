@@ -1,6 +1,9 @@
 site:
   title: Neo4j Labs Docs
   url: /labs/docs
+  ms-validate: B5163518CBE4A854B63801277FE5E35C
+  google-site-verification: ucqagxjVuq0lJZeLKs0F5AppzK111lNt3IoxU6mzlJE
+
 content:
   sources:
   - url: https://gitlab.com/yuzutech/demo-antora/neo4j/neosemantics.git

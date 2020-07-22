@@ -1,6 +1,7 @@
 site:
   title: Neo4j Labs
   url: /docs
+
 content:
   sources:
   - url: ./
