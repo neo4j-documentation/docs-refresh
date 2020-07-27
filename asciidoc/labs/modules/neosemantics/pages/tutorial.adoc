@@ -20,7 +20,7 @@ This file is hosted on the link:https://raw.githubusercontent.com/neo4j-labs/neo
 
 [source,turtle]
 ----
-include::https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl[]
+include::example$tutorial.ttl[]
 ----
 
 The RDF query contains four elements including:
@@ -30,6 +30,7 @@ The RDF query contains four elements including:
 
 In Neo4j's Property Graph Model, these Neo4j and NSMNTX will become Nodes in the database with properties to represent the versions.
 The `neo4voc:runsOn` #element# will become a Relationship.
+
 
 == Creating a Constraint
 When Neosemantics creates data in Neo4j, it will automatically add a `:Resource` label to each node.
@@ -58,16 +59,48 @@ By default the `handleVocabUri` is set to `SHORTEN` - meaning that the namespace
 
 By setting this value to `MAP`, we are able to map these namespaces to custom values, making the Property Graph more readable.
 
+== Choosing between Inline and Fetch
+
+Each of the functions in this tutorial have similar signatures.
+Depending on the source of your RDF query, you can run suffix each procedure with `.fetch` or `.inline`.
+If your RDF is hosted at a remote URL, you can call the `.fetch` procedure with the first argument as the URL and the format second parameter.
+
+.Fetch Example
+[source,cypher]
+----
+include::example$tutorial.cypher[tags=example.fetch]
+----
+
+You can copy and paste RDF into the query using the `.inline` procedures.
+This procedure expects an RDF query or fragment as the first parameter, and the format as the second parameter.
+
+.Inline Example
+[source,cypher]
+----
+include::example$tutorial.cypher[tags=example.inline]
+----
+
+You can view the difference between the two types of procedure by toggling the code examples below.
+
+
 == Previewing Data
 Now that the Graph Config has been created, we can start to manipulate the RDF into a suitable format for the property graph.
 To do this we can use the `n10s.rdf.preview.*` procedures.
 As our RDF query is hosted online, we can use `n10s.rdf.preview.fetch` to _fetch_ the RDF from a remote URL.
 
+[.tabs]
+
+.Fetch
 [source,cypher]
-CALL n10s.rdf.preview.fetch(
-  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
-  'Turtle'
-)
+----
+include::example$tutorial.cypher[tags=preview.fetch]
+----
+
+.Inline
+[source,cypher]
+----
+include::example$tutorial.cypher[tags=preview.inline]
+----
 
 #image here#
 
@@ -116,7 +149,14 @@ This procedure takes two parameters:
 As we would like to rename the `neo4voc:runsOn` element to `RUNS_ON`, we can run the following procedure:
 
 [source,cypher]
-CALL n10s.mapping.add('http://neo4j.org/vocab/sw#runsOn', 'RUNS_ON')
+CALL n10s.mapping.add(
+  'http://neo4j.org/vocab/sw#runsOn', // <1>
+  'RUNS_ON' // <2>
+)
+
+<1> The fully URI of the `runsOn` triple
+<2> The name of the the relationship that will be persisted in Neo4j
+
 
 Re-running the preview query above should now show that the Relationship Type has been renamed from `runsOn` to `RUNS_ON`.
 
@@ -130,12 +170,18 @@ If you already have an RDF query, you can extract the namespaces from an RDF que
 The signature of the import procedure is similar to the preview - all you need to do is swap `preview` for `import`.
 Running the following Cypher query should return a summary of the procedure including the status of the query (`terminationStatus`), number of triples that were loaded from the RDF query (`triplesLoaded`), the number of triples that were imported into Neo4j (`triplesParsed`).
 
-[.query]
+[.tabs]
+.Fetch
 [source,cypher]
-CALL n10s.rdf.import.fetch(
-  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
-  'Turtle'
-)
+----
+include::example$tutorial.cypher[tags=import.fetch]
+----
+
+.Inline
+[source,cypher]
+----
+include::example$tutorial.cypher[tags=import.inline]
+----
 
 [.result]
 [%header,cols=6*]
@@ -255,11 +301,18 @@ As with the preview and import procedures, this accepts two arguments: the URL o
 
 For example, to delete the data that we loaded in the Import step, we can run the following query:
 
+[.tabs]
+.Fetch
 [source,cypher]
-CALL n10s.rdf.import.fetch(
-  'https://raw.githubusercontent.com/neo4j-labs/neosemantics/3.5/docs/rdf/nsmntx.ttl',
-  'Turtle'
-)
+----
+include::example$tutorial.cypher[tags=delete.fetch]
+----
+
+.Inline
+[source,cypher]
+----
+include::example$tutorial.cypher[tags=delete.inline]
+----
 
 [.result]
 [%header,cols=4*]
@@ -282,3 +335,4 @@ In this tutorial we have learned how to:
 * Deleted RDF data from the graph using `n10s.rdf.delete.fetch`
 
 Now that you are familiar with the procedures available in Neosemantics, we can now move on to a more concrete example, xref:how-to-guide.adoc[Importing Wikidata into Neo4j,role=more information]
+

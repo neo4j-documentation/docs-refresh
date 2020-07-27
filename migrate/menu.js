@@ -9,7 +9,7 @@ const readFile$ = bindNodeCallback(fs.readFile)
 const writeFile$ = bindNodeCallback(fs.writeFile)
 
 const menuIn = '/Users/adam/neo4j/developer-resources/_templates/menu_partial.erb'
-const menuOut = '/Users/adam/projects/docs/asciidoc/developer/modules/ROOT/nav.adoc'
+const menuOut = '/Users/adam/neo4j/docs/developer-guides/modules/ROOT/nav.adoc'
 
 const menu$ = readFile$(menuIn)
     .pipe(
