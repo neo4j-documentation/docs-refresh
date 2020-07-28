@@ -20,7 +20,7 @@ jobs:
         node-version: '14.1.0'
     - run: npm install
     - run: npm run build:labs
-    - run: npm run build:labs-docs
+    # - run: npm run build:labs-docs
 
     - name: Sync Assets
       uses: jakejarvis/s3-sync-action@master

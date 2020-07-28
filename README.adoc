@@ -8,20 +8,26 @@ This is an unversioned repo with folders to the different content that will be b
 Each directory will have a antora.yml file with configuration, then the `start_path` in antora-playbook.yml will define which subfolder is picked up.
 
 
-
 == Installation
+
+In order to build the content,
 
 [source,sh]
 npm i
 
-=== Development Mode
+The npm install command will install link:https://docs.antora.org/antora/2.3/cli/[Antora CLI^], which is then used to build the content defined in the Antora Playbooks (`*.yml` files in the project root).
+
+
+== Development Mode
 
 You can run a local server on port 8000 by running:
 
 [source,sh]
 npm start
 
-To listen for changes and automatically rebuild the source, run the following command:
+=== Watch for Changes
+
+To watch for changes to asciidoc files and and automatically rebuild the content, run the following command:
 
 [source,sh]
 npm run watch
@@ -38,60 +44,219 @@ npm run watch:developer
 npm run build
 
 
+== Publishing
+
+Any changes to the `master` branch will trigger an automatic rebuild of _all content_ using Github Actions.  The action runs the `npm run build` command which builds the following playbooks using the Antora CLI:
+
+- `developer.yml` - Developer guides at `neo4j.com/developer/*`
+
+The HTML files built by the build command are uploaded to the `static-content.neo4j.com` S3 Bucket, where it is synced hourly with the link:neo4j.com[] server.  The cronjob runs on the hour, every hour so it may take up to an hour for the content to become live.
+
+
+=== Publishing Content
+
+To publish an individual section, merge and push your changes to the publish branch of the appropriate repository.
+
+[source,sh]
+git clone https://github.com/neo4j-documentation/developer-guides
+git add .
+git commit -m "My changes"
+git push origin HEAD:publish
+
+This will trigger a workflow to rebuild the content and sync the content to the S3 Bucket using link:https://github.com/neo4j-documentation/developer-guides/actions[Github Actions^].
+
+
+== Theme Specifics
+
+=== Page Level
+
+Setting the page level is slightly different to before:
+
+[source,asciidoc]
+----
+include::./ui/preview-src/labs.adoc[tag=level]
+----
+
+=== Themes
+
+You can set the _theme_ for the page by setting the `page-theme` attribute.
+This adds a css class to the `<body>`  tag when the page is rendered, which is then used by the CSS to change the colours of certain elements on the page.
+
+[source,asciidoc]
+----
+include::./ui/preview-src/labs.adoc[tag=theme]
+----
+
+The available themes are:
+
+* developer - Grey top menu with green accent
+* labs - White top menu with purple accent
+* docs - White top menu with blue accent
+
+
+=== Layouts
+
+In most cases, you won't need to do anything to set a layout.  If you do need to change the layout you can use the `page-layout`
+
+[source,asciidoc]
+----
+include::./ui/preview-src/labs.adoc[tag=layout]
+----
+
+The available themes are:
+* `default` - The default layout with header, sidebar, ToC etc.
+* `labs` - The layout used for the labs home page, this page features a large hero/banner and no sidebar.  This is intended ot be used on the labs homepage.
+* `tiles` - This page converts `.sect2` divs into cards with a white background and shadow.  This is intended to be used for the docs homepage.
+
+== Features
+
+=== Glossary Terms & Info Tooltips
+
+**Every page is page one**.
+Do not assume any previous knowledge of the user.
+
+For terms that the user may not be familiar with, you can add a Glossary to the page.
+The glossary itself is hidden, but each piece of text that references a glossary term will be highlighted.
+When the reader hovers over the term with their mouse, a
+
+
+The glossary should be added to the bottom of the page, adding `[discrete.glossary]` above the glossary will ensure that the glossary is hidden from the page.
+
+[source,adoc]
+----
+include::./ui/preview-src/index.adoc[tag=glossary]
+----
+
+Then, terms can be referenced throughout the document.
+
+[source,adoc]
+----
+include::./ui/preview-src/index.adoc[tag=glossary_term]
+----
+
+The result will look something like this:
+
+image::images/glossary.png[]
+
+[TIP]
+Glossary terms are highlighted by link:ui/src/js/06-code.js[]
+
+
+=== Source Blocks
+
+When the page is loaded, a header is added to each source block.
+Each block will have the language placed to the left and a **Copy to Clipboard** button to the right of the header.
+
+
+[source,adoc]
+----
+include::./ui/preview-src/index.adoc[tag=source]
+----
+
+If the language is set to cypher (`[source,cypher]`), a **Run in Browser** button is also added.
+This will use Neo4j Desktop's deeplinks to open up the Neo4j Browser Graph App with the query pre-filled.
+
+If you supply a title (eg, `.Title`), this will be prepended to the start of the code header.
+
+image::images/code-block.png[]
+
+[TIP]
+Source blocks are modified by link:ui/src/js/06-code.js[]
++
+The source is highlighted using highlight.js, the colours are defined in link:ui/src/css/highlight.css.
+
+
+==== Tabbed Source Blocks
+
+If you are writing a tutorial for multiple languages, you can use the `[.tabs]` directive to include tabs.
+The text on the tab will default to the title, or fallback to the language if no title is supplied.
+When clicking on a tab, all other tab sets with the same title will also be made active across the page.
+
+[source,adoc]
+----
+include::./ui/preview-src/index.adoc[tag=tabs]
+----
+
+The script will find all HTML `div`'s with a class of `tabs`, then iterate through the next sibling while the element contains a code block until it reaches one without.
+At this point, if the number of elements is more than one, it will create a set of tabs and add event listeners to switch the tabs on click.
+
+image::images/tabs.png[]
+
+Tabs are added to the page in link:ui/src/js/06-code.js[]
+
+=== Meta Tags
+
+To set/modify the page's meta tags, you can use the  `:description:` and  `:keyword:` attributes:
+
+[source,adoc]
+----
+include::./ui/preview-src/index.adoc[tag=meta]
+----
+
+==== Swiftype
+
+In order to improve swiftype algorithms, the following options can be included as page attributes:
+
+[source,adoc]
+----
+include::./ui/preview-src/index.adoc[tag=swiftype]
+----
 
 
 
 
-== Content
-
-=== Developer
-```
-/developer                           <- developer home page
-/developer/get-started               <- structured content
-/developer/get-started/rdbms-vs-graph
-/developer/get-started/nosql-vs-graph
-/developer/get-started/nosql-vs-graph
-/developer/platform
-/developer/platform/neo4j-browser
-/developer/platform/neo4j-bloom
-/developer/platform/neo4j-desktop
-/developer/platform/graph-apps      <- (or neo4j-desktop/graph-apps)
-/developer/cypher
-/developer/cypher/filtering
-/developer/cypher/subqueries
-/developer/cypher/user-defined-functions
-/developer/modeling
-/developer/modeling/worked-example
-/developer/drivers/
-/developer/drivers/java
-/developer/drivers/javascript
-/developer/drivers/dotnet
-```
-
-=== Labs
-```
-/labs                                <- Labs homepage with list of all projects
-/labs/apoc                           <- About page for APOC
-/labs/apoc/quick-start               <- Quick start "guide"
-/labs/apoc/docs                      <- Hard core Manuals/"reference"
-/labs/apoc/docs/3.5
-/labs/apoc/docs/4.0
-/labs/neosemantics                   <- About page for Neosemantics
-/labs/neosemantics/quick-start       <- Quick start "guide"
-/labs/neosemantics/docs              <- Hard core Manuals/"reference"
-/labs/neosemantics/docs/3.5
-/labs/neosemantics/docs/4.0
-```
 
 
-=== Migration
+// == Content
 
-```
-:level: Beginner
-[role=expertise]
-{level}
+// === Developer
+// ```
+// /developer                           <- developer home page
+// /developer/get-started               <- structured content
+// /developer/get-started/rdbms-vs-graph
+// /developer/get-started/nosql-vs-graph
+// /developer/get-started/nosql-vs-graph
+// /developer/platform
+// /developer/platform/neo4j-browser
+// /developer/platform/neo4j-bloom
+// /developer/platform/neo4j-desktop
+// /developer/platform/graph-apps      <- (or neo4j-desktop/graph-apps)
+// /developer/cypher
+// /developer/cypher/filtering
+// /developer/cypher/subqueries
+// /developer/cypher/user-defined-functions
+// /developer/modeling
+// /developer/modeling/worked-example
+// /developer/drivers/
+// /developer/drivers/java
+// /developer/drivers/javascript
+// /developer/drivers/dotnet
+// ```
 
-becomes
+// === Labs
+// ```
+// /labs                                <- Labs homepage with list of all projects
+// /labs/apoc                           <- About page for APOC
+// /labs/apoc/quick-start               <- Quick start "guide"
+// /labs/apoc/docs                      <- Hard core Manuals/"reference"
+// /labs/apoc/docs/3.5
+// /labs/apoc/docs/4.0
+// /labs/neosemantics                   <- About page for Neosemantics
+// /labs/neosemantics/quick-start       <- Quick start "guide"
+// /labs/neosemantics/docs              <- Hard core Manuals/"reference"
+// /labs/neosemantics/docs/3.5
+// /labs/neosemantics/docs/4.0
+// ```
 
-:page-level: Beginner
-```
+
+// === Migration
+
+// ```
+// :level: Beginner
+// [role=expertise]
+// {level}
+
+// becomes
+
+// :page-level: Beginner
+// ```
