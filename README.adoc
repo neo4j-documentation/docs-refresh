@@ -177,12 +177,18 @@ When clicking on a tab, all other tab sets with the same title will also be made
 include::./ui/preview-src/index.adoc[tag=tabs]
 ----
 
-The script will find all HTML `div`'s with a class of `tabs`, then iterate through the next sibling while the element contains a code block until it reaches one without.
+The script will find all HTML `div` elements with a class of `tabs`, then iterate through the next sibling while the element contains a code block until it reaches one without.
 At this point, if the number of elements is more than one, it will create a set of tabs and add event listeners to switch the tabs on click.
 
 image::images/tabs.png[]
 
 Tabs are added to the page in link:ui/src/js/06-code.js[]
+
+
+=== Videos
+
+[source,adoc]
+video::_D19h5s73Co[youtube]
 
 === Meta Tags
 
