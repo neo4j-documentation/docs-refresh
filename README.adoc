@@ -77,6 +77,9 @@ Setting the page level is slightly different to before:
 include::./ui/preview-src/labs.adoc[tag=level]
 ----
 
+This will generate a coloured button to represent the level.
+
+
 === Themes
 
 You can set the _theme_ for the page by setting the `page-theme` attribute.
@@ -136,7 +139,7 @@ include::./ui/preview-src/index.adoc[tag=glossary_term]
 
 The result will look something like this:
 
-image::images/glossary.png[]
+image::images/glossary.png[Glossary, 400]
 
 [TIP]
 Glossary terms are highlighted by link:ui/src/js/06-code.js[]
@@ -158,12 +161,10 @@ This will use Neo4j Desktop's deeplinks to open up the Neo4j Browser Graph App w
 
 If you supply a title (eg, `.Title`), this will be prepended to the start of the code header.
 
-image::images/code-block.png[]
+image::images/code-block.png[Code Block, 400]
 
 [TIP]
-Source blocks are modified by link:ui/src/js/06-code.js[]
-+
-The source is highlighted using highlight.js, the colours are defined in link:ui/src/css/highlight.css.
+Source blocks are modified by link:ui/src/js/06-code.js[].  The source is highlighted using highlight.js, the colours are defined in link:ui/src/css/highlight.css.
 
 
 ==== Tabbed Source Blocks
@@ -180,7 +181,7 @@ include::./ui/preview-src/index.adoc[tag=tabs]
 The script will find all HTML `div` elements with a class of `tabs`, then iterate through the next sibling while the element contains a code block until it reaches one without.
 At this point, if the number of elements is more than one, it will create a set of tabs and add event listeners to switch the tabs on click.
 
-image::images/tabs.png[]
+image::images/tabs.png[Tabbed Code Blocks, 400]
 
 Tabs are added to the page in link:ui/src/js/06-code.js[]
 
@@ -210,7 +211,73 @@ include::./ui/preview-src/index.adoc[tag=swiftype]
 
 
 
+== Migrating from the old Developer Guides
 
+=== Variables, Attributes, etc
+
+Instead of defining variables in a text file (think `versions.txt`), these are now defined under `asciidoc` and `attributes` in either the playbook (eg `developer.yml`) or inside `antora.yml` in the content repo.
+
+.developer.yml playbook
+[source,yaml]
+----
+asciidoc:
+  attributes:
+    page-theme: developer
+    page-cdn: /static/assets
+----
+
+.antora.yml in content repo
+[source,yaml]
+----
+asciidoc:
+  attributes:
+    img: https://dist.neo4j.com/wp-content/uploads/
+    theme: developer
+    neo4j-ogm-version: 3.1.6
+    spring-data-neo4j-version: 5.1.3.RELEASE
+    neo4j-stable-version: 4.0.3
+    bolt-driver-version: 1.7.0
+    java-driver-version: 4.0.1
+----
+
+=== Page Level
+
+[source,adoc]
+----
+:level: Beginner
+[role=expertise]
+{level}
+----
+
+Becomes:
+
+[source,adoc]
+----
+:level: Beginner
+[role=expertise {level}]
+{level}
+----
+
+
+=== Renamed Attributes
+
+[%header,cols=2*]
+|===
+| Old Name | New Name
+
+| slug | _Not required_
+| icons | _Not required_
+| section | _Not required_
+| section-link | _Not required_
+| setanchors | _Not required_
+| toc | _Not required_
+| toc-title | _Not required_
+| setanchors | _Not required_
+| toclevels | _Not required_
+| toc-placement | _Not required_
+| northwind | _Not required_
+| level | Create an additional attribute called `:page-level:`
+|===
 
 
 // == Content
