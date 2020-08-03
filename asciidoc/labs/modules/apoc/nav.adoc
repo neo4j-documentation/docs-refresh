@@ -1,6 +1,0 @@
-** xref:index.adoc[APOC]
-*** xref:index.adoc[Introduction]
-*** xref:installation.adoc[Installation]
-*** xref:tutorial.adoc[Getting Started]
-*** xref:how-to-guide.adoc[How To Guide]
-*** link:./docs/current[Documentation]

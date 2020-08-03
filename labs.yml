@@ -4,9 +4,8 @@ site:
 
 content:
   sources:
-  - url: ./
+  - url: https://github.com/neo4j-documentation/labs-pages.git
     branches: master
-    start_path: asciidoc/labs
 ui:
   bundle:
     url: ui/build/ui-bundle.zip

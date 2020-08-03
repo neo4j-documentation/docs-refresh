@@ -1,9 +1,0 @@
-* xref:index.adoc[Neo4j Labs]
-
-.Goals
-[abstract]
-This guide explains what a Graph Application is for Neo4j.
-
-.Prerequisites
-[abstract]
-It helps if you have read the section on link:/developer/get-started/graph-database/[graph databases], as well as have downloaded and are familiar with link:/developer/neo4j-desktop/[Neo4j Desktop].

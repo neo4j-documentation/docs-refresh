@@ -1,8 +1,0 @@
-= Explanation
-
-- explanations that clarify and illuminate a topic
-
-oriented to: understanding
-must: explain
-form: discursive explaination
-analogy: an article on culinary social history

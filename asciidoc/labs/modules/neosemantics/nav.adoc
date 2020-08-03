@@ -1,8 +1,0 @@
-** xref:index.adoc[Neosemantics]
-*** xref:index.adoc[Introduction]
-*** xref:installation.adoc[Installation]
-*** xref:tutorial.adoc[Getting Started]
-*** xref:how-to-guide.adoc[How To Guide]
-*** xref:graph-app.adoc[Graph App]
-*** xref:acknowledgements.adoc[Acknowledgements]
-*** link:/labs/neosemantics/docs/current[Documentation]
