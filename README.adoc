@@ -209,6 +209,20 @@ In order to improve swiftype algorithms, the following options can be included a
 include::./ui/preview-src/index.adoc[tag=swiftype]
 ----
 
+=== Comments!
+
+By setting the `page-comments` attribute to ~true~ _anything_, a script tag will be added to load in a comments box.
+The script will also create a new topic by default, or if a topic already exists or you would like to use another topic, you can use the `:page-topicid:` attribute.
+
+[source,adoc]
+----
+:page-comments:
+:page-topicid: 1234
+----
+
+Settings:
+* link:https://community.neo4j.com/admin/customize/embedding[Embedding Settings^]
+* link:https://community.neo4j.com/admin/customize/themes/9/common/embedded_scss/edit[CSS Styling of Box^]
 
 
 == Migrating from the old Developer Guides
