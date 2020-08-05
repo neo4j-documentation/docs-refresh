@@ -1,0 +1,26 @@
+site:
+  title: APOC Docs
+  url: /labs/docs
+
+content:
+  sources:
+  - url: /home/markhneedham/projects/neo4j-apoc-procedures-4.1
+    branches: ['HEAD']
+    start_path: docs/asciidoc
+output:
+  dir: ./build/site/labs/apoc
+urls:
+  html_extension_style: indexify
+ui:
+  bundle:
+    url: ui/build/ui-bundle.zip
+    snapshot: true
+asciidoc:
+  extensions:
+  - ./lib/remote-include-processor
+  attributes:
+    page-theme: labs
+    docs-version: "4.1"
+    branch: "4.1"
+    apoc-release-absolute: "4.1"
+    apoc-release: "4.1.0.1"
