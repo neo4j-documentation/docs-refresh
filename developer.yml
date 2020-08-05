@@ -4,8 +4,8 @@ site:
 
 content:
   sources:
-  - url: https://github.com/neo4j-documentation/developer-guides.git
-  # - url: /Users/adam/neo4j/docs/developer-guides
+  # - url: https://github.com/neo4j-documentation/developer-guides.git
+  - url: /Users/adam/neo4j/docs/developer-guides
     branches: master
     exclude:
     - '!**/_includes/*'
@@ -19,7 +19,8 @@ urls:
   html_extension_style: indexify
 asciidoc:
   extensions:
-  - ./lib/remote-include-processor
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
   attributes:
     page-theme: developer
     page-cdn: /static/assets

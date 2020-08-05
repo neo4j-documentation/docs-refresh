@@ -24,6 +24,7 @@ ui:
     snapshot: true
 asciidoc:
   extensions:
-  - ./lib/remote-include-processor
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
   attributes:
     page-theme: labs
