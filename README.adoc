@@ -68,6 +68,25 @@ This will trigger a workflow to rebuild the content and sync the content to the 
 
 == Theme Specifics
 
+=== Pagination
+
+To add previous/next links to the page, add `:page-pagination:` to the page attributes.
+
+==== Disabling the Previous Link
+
+Sometimes the previous link will point to a page in another section, to disable this you can set the  `:page-pagination:` attribute to:
+
+[source]
+:page-pagination: next
+
+==== Disabling the Next Link
+
+If you want to hide the Next link you can set the  `:page-pagination:` attribute to:
+
+[source]
+:page-pagination: previous
+
+
 === Page Level
 
 Setting the page level is slightly different to before:
