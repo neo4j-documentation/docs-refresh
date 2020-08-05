@@ -4,7 +4,7 @@ site:
 
 content:
   sources:
-  - url: /home/markhneedham/projects/neo4j-apoc-procedures-4.1
+  - url: git@github.com:neo4j-contrib/neo4j-apoc-procedures.git
     branches: ['HEAD']
     start_path: docs/asciidoc
 output:
