@@ -5,6 +5,7 @@ site:
 content:
   sources:
   - url: git@github.com:neo4j-contrib/neo4j-apoc-procedures.git
+  # - url: /home/markhneedham/projects/neo4j-apoc-procedures-4.1
     branches: ['4.1']
     start_path: docs/asciidoc
 output:
@@ -18,6 +19,7 @@ ui:
 asciidoc:
   extensions:
   - ./extensions/remote-include/remote-include-processor
-  - ./extensions/macros/macros
+  - "@neo4j-documentation/remote-include"
+  - "@neo4j-documentation/macros"
   attributes:
     page-theme: labs
