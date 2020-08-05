@@ -20,7 +20,3 @@ asciidoc:
   - ./lib/remote-include-processor
   attributes:
     page-theme: labs
-    docs-version: "4.1"
-    branch: "4.1"
-    apoc-release-absolute: "4.1"
-    apoc-release: "4.1.0.1"
