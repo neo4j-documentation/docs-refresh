@@ -9,7 +9,7 @@ content:
   # - url: https://gitlab.com/yuzutech/demo-antora/neo4j/apoc.git
   #   branches: ['4.0', '3.5']
   - url: https://github.com/neo4j-contrib/neo4j-helm.git
-    branches: ['antora']
+    branches: ['master']
     start_path: doc/docs
   - url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
     branches: ['4.1']
