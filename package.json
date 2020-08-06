@@ -12,7 +12,6 @@
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:apoc-docs": "antora --fetch --stacktrace apoc-docs.yml",
     "build:docs": "antora --fetch --stacktrace docs.yml",
-
     "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/examples/*",
     "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
     "migrate:cypher": "cp /Users/adam/neo4j/developer-resources/***/*.{cypher,txt,rb,sql} asciidoc/developer/modules/ROOT/examples",
