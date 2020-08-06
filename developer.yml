@@ -4,8 +4,8 @@ site:
 
 content:
   sources:
-  # - url: https://github.com/neo4j-documentation/developer-guides.git
-  - url: /Users/adam/neo4j/docs/developer-guides
+  - url: https://github.com/neo4j-documentation/developer-guides.git
+  # - url: /Users/adam/neo4j/docs/developer-guides
     branches: master
     exclude:
     - '!**/_includes/*'

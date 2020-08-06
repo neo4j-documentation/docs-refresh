@@ -1,15 +1,20 @@
 site:
   title: Neo4j Labs Docs
   url: /labs/docs
-  ms-validate: B5163518CBE4A854B63801277FE5E35C
-  google-site-verification: ucqagxjVuq0lJZeLKs0F5AppzK111lNt3IoxU6mzlJE
 
 content:
   sources:
-  - url: https://gitlab.com/yuzutech/demo-antora/neo4j/neosemantics.git
-    branches: ['4.0', '3.5']
-  - url: https://gitlab.com/yuzutech/demo-antora/neo4j/apoc.git
-    branches: ['4.0', '3.5']
+  # - url: https://gitlab.com/yuzutech/demo-antora/neo4j/neosemantics.git
+  #   branches: ['4.0', '3.5']
+  # - url: https://gitlab.com/yuzutech/demo-antora/neo4j/apoc.git
+  #   branches: ['4.0', '3.5']
+  - url: https://github.com/neo4j-contrib/neo4j-helm.git
+    branches: ['antora']
+    start_path: doc/docs
+  - url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
+    branches: ['4.1']
+    start_path: docs/asciidoc
+
   # - url: /Users/adam/neo4j/neo4j-manual-modeling-antora
   #   branches: ['4.0', '4.1']
   #   start_path: gettingStarted
