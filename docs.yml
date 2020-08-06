@@ -3,10 +3,10 @@ site:
   url: /docs
 
 content:
-  sources:
-  - url: ./
-    branches: master
-    start_path: asciidoc/docs
+  # sources:
+  # - url: ./
+  #   branches: master
+  #   start_path: asciidoc/docs
 ui:
   bundle:
     url: ui/build/ui-bundle.zip
