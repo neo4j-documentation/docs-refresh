@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm run build:developer && npm run build:labs && npm run build:labs-docs",
-    "build:developer": "antora --fetch --stacktrace developer.yml",
+    "build": "npm run build:unversioned && npm run build:labs-docs",
+    "build:unversioned": "antora --fetch --stacktrace unversioned.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml",
@@ -21,7 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "@antora/cli": "^2.3.3",
-    "@antora/site-generator-default": "^2.3.3"
+    "@antora/site-generator-default": "^2.3.3",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "express": "^4.17.1",

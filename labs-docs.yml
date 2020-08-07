@@ -8,14 +8,19 @@ content:
     branches: ['master']
     start_path: doc/docs
   - url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
-    branches: ['4.1']
+    branches: ['4.1', '4.0']
     start_path: docs/asciidoc
   - url: https://github.com/neo4j-labs/neosemantics
     branches: ['4.0']
     start_path: docs
-  # - url: https://github.com/neo-technology/neo4j-etl
-  #   branches: ['4.0']
-  #   start_path: neo4j-etl-docs
+  - url: https://github.com/neo4j-contrib/neo4j-streams
+    branches: ['4.0']
+    start_path: doc/docs
+  # - url: https://github.com/mroiter-larus/neo4j-etl-1.git
+    # branches: ['4.0']
+  - url: https://github.com/adam-cowley/neo4j-etl-1.git
+    branches: ['patch-1']
+    start_path: docs
 
 output:
   dir: ./build/site/labs/
