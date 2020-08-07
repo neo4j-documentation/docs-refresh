@@ -8,7 +8,6 @@
     "start": "node server.js",
     "build": "npm run build:developer && npm run build:labs && npm run build:labs-docs",
     "build:developer": "antora --fetch --stacktrace developer.yml",
-    "build:docs": "antora --fetch --stacktrace docs.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml",
