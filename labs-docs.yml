@@ -10,7 +10,7 @@ content:
   - url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
     branches: ['4.1']
     start_path: docs/asciidoc
-  - url: https://github.com/adam-cowley/neosemantics
+  - url: https://github.com/neo4j-labs/neosemantics
     branches: ['4.0']
     start_path: docs
 
@@ -26,4 +26,4 @@ asciidoc:
   - ./extensions/macros/macros
   attributes:
     page-theme: labs
-    page-cdn: /static/assets
+    page-cdn: /static/assetsg

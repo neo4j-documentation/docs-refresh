@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm run build:developer && npm run build:labs && npm run build:labs-docs && npm run build:apoc-docs && npm run build:docs",
+    "build": "npm run build:developer && npm run build:labs && npm run build:labs-docs && npm run build:apoc-docs",
     "build:developer": "antora --fetch --stacktrace developer.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
