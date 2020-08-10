@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: '14.1.0'
     - run: npm install --only=prod
-    - run: npm run build:developer
+    - run: npm run build:unversioned
     - run: rm -f build/site/developer/index.html
 
     - name: Sync Assets
