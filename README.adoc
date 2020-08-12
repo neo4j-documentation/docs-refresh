@@ -1,8 +1,6 @@
 = Neo4j Developer Guides & Static Content
 
-image::https://github.com/neo4j-documentation/docs-refresh/workflows/Publish%20Developer/badge.svg[Publish Developer]
-image::https://github.com/neo4j-documentation/docs-refresh/workflows/Publish%20Labs/badge.svg[Publish Labs]
-image::https://api.netlify.com/api/v1/badges/e217b188-6e70-447e-895a-9d8a290b59d2/deploy-status[Netlify Status]
+image::https://github.com/neo4j-documentation/docs-refresh/workflows/Publish%20Developer/badge.svg[Publish Developer] image::https://api.netlify.com/api/v1/badges/e217b188-6e70-447e-895a-9d8a290b59d2/deploy-status[Netlify Status]
 
 
 This is an unversioned repo with folders to the different content that will be built with Antora.

@@ -16,8 +16,8 @@ content:
   - url: https://github.com/neo4j-contrib/neo4j-streams
     branches: ['4.0']
     start_path: doc/docs
-  - url: https://github.com/mroiter-larus/neo4j-etl-1.git
-    branches: ['4.0']
+  - url: https://github.com/neo4j-contrib/neo4j-etl.git
+    branches: ['master']
     start_path: docs
 
 output:
