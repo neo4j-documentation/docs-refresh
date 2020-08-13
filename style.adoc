@@ -1,0 +1,74 @@
+= Style Guide
+
+== Example Structure
+
+The perfect content structure will guide the reader from a complete beginner to an expert in easy-to-understand steps.
+
+
+=== Overview
+
+If the reader has no prior knowledge, the Overview (`index.adoc`) should provide them with an overview of the library, explaining:
+
+* What it is
+* Why they should use it
+* When it is appropriate to use it
+
+
+=== Installation Instructions
+
+Once they know _what_ the thing is, they should be instructed how to install it.
+
+* Where can the user download any dependencies?
+* Are any steps needed to build any dependencies from source?
+* What steps are needed to install the library?
+** Single instance?
+** Installing on a cluster
+** Docker? Cloud? K8s? etc
+
+
+=== Tutorial
+
+Once the _thing_ has been installed, the reader will need to know how to use it.
+By the end of the tutorial, the reader should have the confidence to use the library without any assistance.
+
+THe tutorial should provide concrete examples on how to use tje
+
+Given a concrete example, the tutorial should explain
+
+ The analogy is teaching a child how to cook.
+
+
+* `tutorial.adoc`: Allow a newcomer to get started with the library
+** Assume that the reader has no prior knowledge of the library
+** At the end of the article they should have the confidence to use the library on their own
+** The user should learn by doing,
+* `how-to-guide.adoc`
+**
+* `graph-app.adoc`
+**
+* Manual/Reference:
+
+
+
+
+=== Home Page - index.adoc
+
+An introduction to the Library for beginners, or anyone
+
+=== in
+
+
+
+
+
+== Resources
+
+The style of the content is heavily influenced by the following:
+
+- link:https://www.amazon.co.uk/Every-Page-One-Mark-Baker-ebook/dp/B07PPXSN8W/[Every Page is Page One^]
+- link:https://devrel.net/developer-experience/the-value-of-being-told-you-suck[The value of being told you suck^]
+- https://documentation.divio.com/introduction/
+- https://twitter.com/mdavidallen/status/1232390749079187461
+- https://speakerdeck.com/cbetta/devrelcon-london-2019-developer-experience-workshop-9ff48815-63bf-40da-a4de-f89159ee2476?slide=96
+-
+

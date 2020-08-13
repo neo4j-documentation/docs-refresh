@@ -2,23 +2,18 @@
   "name": "@neo4j/docs",
   "version": "1.0.0",
   "description": "Neo4j Docs builder",
+  "repository": "https://github.com/neo4j-documentation/docs-refresh/",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm run build:developer && npm run build:labs && npm run build:labs-docs && npm run build:apoc-docs && npm run build:docs",
-    "build:developer": "antora --fetch --stacktrace developer.yml",
+    "build": "npm run build:unversioned && npm run build:labs-docs",
+    "build:unversioned": "antora --fetch --stacktrace unversioned.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
-    "build:apoc-docs": "antora --fetch --stacktrace apoc-docs.yml",
-    "build:docs": "antora --fetch --stacktrace docs.yml",
-    "watch:developer": "npm-watch build:developer",
-    "watch:labs": "npm-watch build:labs",
-    "watch:labs-docs": "npm-watch build:labs-docs",
-    "watch": "npm-watch --delay 500",
+    "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml",
     "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/examples/*",
-    "migrate:examples": "",
-    "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
     "migrate:cypher": "cp /Users/adam/neo4j/developer-resources/***/*.{cypher,txt,rb,sql} asciidoc/developer/modules/ROOT/examples",
+    "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
     "migrate:menu": "node migrate/menu.js",
     "migrate:docs": "node migrate/docs.js"
   },
@@ -27,21 +22,7 @@
   "dependencies": {
     "@antora/cli": "^2.3.3",
     "@antora/site-generator-default": "^2.3.3",
-    "npm-watch": "^0.6.0"
-  },
-  "watch": {
-    "build:developer": {
-      "patterns": [
-        "asciidoc/developer"
-      ],
-      "extensions": "adoc"
-    },
-    "build:labs": {
-      "patterns": [
-        "asciidoc/labs"
-      ],
-      "extensions": "adoc"
-    }
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "express": "^4.17.1",

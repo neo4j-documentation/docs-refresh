@@ -19,8 +19,9 @@ jobs:
       with:
         node-version: '14.1.0'
     - run: npm install
-    - run: npm run build:developer
+    - run: npm run build:unversioned
     - run: rm -f build/site/developer/index.html
+    - run: npm run build:labs-docs
 
     - name: Sync Assets
       uses: jakejarvis/s3-sync-action@master
@@ -34,7 +35,20 @@ jobs:
         SOURCE_DIR: 'build/site/_'
         DEST_DIR: 'assets'
 
-    - name: Developer Content
+    - name: Sync Labs Content
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete --include '*.html'
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'eu-west-1'
+        SOURCE_DIR: 'build/site/labs'
+        DEST_DIR: 'labs'
+
+
+    - name: Sync Developer Content
       uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
