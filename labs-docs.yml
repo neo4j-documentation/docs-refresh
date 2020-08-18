@@ -35,6 +35,7 @@ asciidoc:
   attributes:
     page-theme: labs
     page-cdn: /static/assets
+    page-canonical-root: /labs
     page-breadcrumbs:
       - name: Neo4j Labs
         url: https://neo4j.com/labs/
