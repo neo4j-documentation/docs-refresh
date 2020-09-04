@@ -22,3 +22,5 @@ asciidoc:
   extensions:
   - ./extensions/remote-include/remote-include-processor
   - ./extensions/macros/macros
+  attributes:
+    page-disabletracking: true
