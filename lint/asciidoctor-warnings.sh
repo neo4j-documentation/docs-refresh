@@ -1,7 +1,7 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-missing_attributes=$(cat "$DIR/../build-stderr.log" | grep "skipping reference to missing attribute" | cut -d' ' -f8)
+missing_attributes=$(cat "$DIR/../build-stderr.log" | grep "asciidoctor: WARNING: skipping reference to missing attribute:" | cut -d' ' -f8)
 missing_attributes_list=$(echo $missing_attributes | tr '\n' ' ')
 read -a missing_attributes_array <<< $missing_attributes_list
 
