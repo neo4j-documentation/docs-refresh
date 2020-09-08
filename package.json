@@ -8,6 +8,7 @@
     "start": "node server.js",
     "build": "npm run build:unversioned && npm run build:labs-docs",
     "build:unversioned": "antora --fetch --stacktrace unversioned.yml",
+    "build:kb": "antora --fetch --stacktrace kb.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@antora/xref-validator": "gitlab:antora/xref-validator",
+    "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "jsdom": "^16.2.2",
