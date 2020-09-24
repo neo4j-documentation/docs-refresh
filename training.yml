@@ -1,0 +1,51 @@
+site:
+  title: Neo4j Training
+  url: /graphacademy/online-training
+
+content:
+  sources:
+  # should we move this module to neo4j-contrib/training-v3?
+  # alternatively, we could generate the page in the Neo4j pipeline
+  # because this module contains only a single index page.
+  - url: https://github.com/Mogztter/neo4j-training-docs.git
+    branches: 'master'
+    start_paths:
+    - 'home'
+  - url: https://github.com/neo4j-contrib/training-v3.git
+    branches: 'master'
+    start_paths:
+    - 'modules/4.0-intro-neo4j'
+    - 'modules/graph-data-modeling'
+    - 'modules/4.0-implementing-graph-data-models'
+    - 'modules/4.0-neo4j-admin'
+    - 'modules/4.0-cypher-query-tuning'
+    - 'modules/4.0-intro-graph-algos'
+    - 'modules/online-training-v2'
+    - 'modules/neo4j-administration'
+    - 'modules/gds-applied-algos'
+     # not yet migrated
+     #- 'modules/data-science'
+     #- 'modules/applied-algos'
+
+ui:
+  bundle:
+    url: ui/build/ui-bundle.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-component: training
+    page-theme: training
+    page-cdn: /static/assets
+    page-canonical-root: /training-welcome
+    page-breadcrumbs:
+      - name: Neo4j Training
+        url: /training-welcome
+

@@ -9,6 +9,7 @@
     "build": "npm run build:unversioned && npm run build:labs-docs",
     "build:unversioned": "antora --fetch --stacktrace unversioned.yml",
     "build:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator kb.yml",
+    "build:training": "antora --fetch --stacktrace training.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml && antora --fetch --stacktrace --generator @neo4j/developer-site-generator netlify-kb.yml && antora --fetch --stacktrace netlify-developer-subfolders.yml",
