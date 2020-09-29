@@ -15,7 +15,11 @@
     "migrate:cypher": "cp /Users/adam/neo4j/developer-resources/***/*.{cypher,txt,rb,sql} asciidoc/developer/modules/ROOT/examples",
     "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
     "migrate:menu": "node migrate/menu.js",
-    "migrate:docs": "node migrate/docs.js"
+    "migrate:docs": "node migrate/docs.js",
+    "lint": "npm run lint-xref",
+    "lint-xref": "npm run lint-xref:unversioned && npm run lint-xref:labs-docs",
+    "lint-xref:unversioned": "antora --generator @antora/xref-validator unversioned.yml",
+    "lint-xref:labs-docs": "antora --generator @antora/xref-validator labs-docs.yml"
   },
   "author": "Adam Cowley <adam+github@neo4j.com>",
   "license": "ISC",
@@ -25,6 +29,7 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "@antora/xref-validator": "gitlab:antora/xref-validator",
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "jsdom": "^16.2.2",

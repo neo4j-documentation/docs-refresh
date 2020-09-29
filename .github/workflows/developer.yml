@@ -19,6 +19,7 @@ jobs:
       with:
         node-version: '14.1.0'
     - run: npm install
+    - run: npm run lint
     - run: npm run build:unversioned
     - run: rm -f build/site/developer/index.html
     - run: npm run build:labs-docs
