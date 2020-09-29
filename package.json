@@ -19,10 +19,11 @@
     "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
     "migrate:menu": "node migrate/menu.js",
     "migrate:docs": "node migrate/docs.js",
-    "lint": "npm run lint-xref",
+    "lint": "npm run lint-xref && npm run lint-asciidoc",
     "lint-xref": "npm run lint-xref:unversioned && npm run lint-xref:labs-docs",
     "lint-xref:unversioned": "antora --generator @antora/xref-validator unversioned.yml",
-    "lint-xref:labs-docs": "antora --generator @antora/xref-validator labs-docs.yml"
+    "lint-xref:labs-docs": "antora --generator @antora/xref-validator labs-docs.yml",
+    "lint-asciidoc": "./build.sh && ./lint/asciidoctor-errors.sh && ./lint/asciidoctor-warnings.sh"
   },
   "author": "Adam Cowley <adam+github@neo4j.com>",
   "license": "ISC",
