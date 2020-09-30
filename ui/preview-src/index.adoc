@@ -1,3 +1,4 @@
+[role=enterprise-edition]
 = icon:graduation-cap[] Hardware and Software Requirements
 Author Name
 :idprefix:
@@ -47,6 +48,108 @@ Author Name
 </p>
 </div>
 +++
+
+== real version from drivers manual
+
+
+[.tabbed-example]
+.The driver lifecycle
+====
+[.include-with-dotnet]
+======
+[source, csharp]
+----
+include::{dotnet-examples}/Examples.cs[tags=driver-lifecycle]
+----
+
+// .Import driver lifecycle
+// [source, csharp]
+// ----
+// include::{dotnet-examples}/Examples.cs[tags=driver-lifecycle-import]
+// ----
+======
+
+
+[.include-with-java]
+======
+.Import driver lifecycle
+[source, java]
+----
+include::{java-examples}/DriverLifecycleExample.java[tags=driver-lifecycle-import]
+----
+
+[source, java]
+----
+include::{java-examples}/DriverLifecycleExample.java[tags=driver-lifecycle]
+----
+======
+
+[.include-with-javascript]
+======
+[source, javascript]
+----
+include::{javascript-examples}/examples.test.js[tags=driver-lifecycle]
+----
+
+// .Import driver lifecycle
+// [source, javascript]
+// ----
+// include::{javascript-examples}/examples.test.js[tags=driver-lifecycle-import]
+// ----
+======
+
+[.include-with-python]
+======
+[source, python]
+----
+include::{python-examples}/test_driver_lifecycle_example.py[tags=driver-lifecycle-import]
+----
+
+[source, python]
+----
+include::{python-examples}/test_driver_lifecycle_example.py[tags=driver-lifecycle]
+----
+======
+====
+
+
+
+
+== Tabs example
+
+[.tabbed-example]
+.Session construction and closure
+====
+[.include-with-dotnet]
+======
+[source, csharp , indent=0]
+----
+using (var session = driver.Session(...)) {
+    // transactions go here
+  }
+----
+======
+
+[.include-with-java]
+======
+[source, java, indent=0]
+----
+try (Session session = driver.session(...)) {
+    // transactions go here
+}
+----
+======
+
+[.include-with-python]
+======
+[source, python, indent=0]
+----
+with driver.session(...) as session:
+    // transactions go here
+----
+======
+
+====
 
 .Goals
 [abstract]

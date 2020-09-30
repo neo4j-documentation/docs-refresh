@@ -231,6 +231,12 @@ spacing: {
   --tip-on-color: var(--colour-white);
   --warning-color: var(--colour-red-600);
   --warning-on-color: var(--colour-white);
+  --deprecation-color: var(--colour-pink-600);
+  --deprecation-on-color: var(--colour-white);
+  --enterprise-edition-color: var(--colour-green-600);
+  --enterprise-edition-on-color: var(--colour-white);
+  --fabric-color: var(--colour-blue-500);
+  --fabric-on-color: var(--colour-white);
 
   --mark-background: var(--colour-yellow-200);
 

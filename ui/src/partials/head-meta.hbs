@@ -1,5 +1,7 @@
     {{!-- Add additional meta tags here --}}
+    {{#if (eq "labs" page.attributes.theme)}}
     <meta name="type" content="{{{ or page.attributes.type 'Developer Guide' }}}">
+    {{/if}}
     {{#with page.attributes.product}}
     <meta name="product" content="{{{this}}}">
     {{/with}}
@@ -11,9 +13,14 @@
     <meta name="feedback" content="{{{this}}}">
     {{/with}}
 
+    {{#if (eq "docs" page.attributes.theme)}}
+    <meta class="swiftype" name="neo4j-site" data-type="enum" content="Reference Docs">
+    <meta class="swiftype" name="post-type" data-type="enum" content="Docs">
+    {{else}}
     {{!-- Swiftype - TODO: to remove --}}
     <meta class="swiftype" name="post-type" data-type="enum" content="{{{ or page.attributes.postttype 'Developer Guide' }}}">
     <meta class="swiftype" name="neo4j-site" data-type="enum" content="Developer Site">
+    {{/if}}
     <meta class="swiftype" name="main-search-priority" data-type="integer" content="3">
     {{#with page.attributes.environment}}
     <meta class="swiftype" name="environment" data-type="string" content="{{{this}}}">
@@ -34,8 +41,8 @@
     <meta name="twitter:site" content="@neo4j" />
     <meta property="og:type" content="{{{ or page.attributes.postttype 'article' }}}" />
     {{#with (or page.attributes.ogtitle page.title) }}
-    <meta property="og:title" content="{{{detag this}}} - Neo4j Graph Database Platform" />
-    {{/with}}
+    <meta property="og:title" content="{{{detag this}}}{{/with}} - {{#with page.component.title}}{{{detag this}}}{{/with}}" />
+    
     <meta property="og:locale" content="{{{ or page.attributes.locale 'en_US' }}}">
     {{#with (or page.attributes.ogimage 'https://dist.neo4j.com/wp-content/uploads/20190822071359/neo4j-database-meta-image.png' )}}
     <meta property="og:image" content="{{{this}}}" />

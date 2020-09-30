@@ -1068,9 +1068,14 @@ body {
   border-radius: .5rem;
   cursor: pointer;
 }
+
 .doc .tabbed-tabs .tabbed-tab--active {
   background: var(--colour-white);
   border-color: var(--colour-grey-300);
+}
+
+.doc .tabbed-tabs .tabbed-tab--dupe {
+  display: none;
 }
 
 .doc .tabbed-container {

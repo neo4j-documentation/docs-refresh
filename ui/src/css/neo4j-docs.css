@@ -1,0 +1,138 @@
+.doc.deprecated::before,
+.doc.enterprise-edition::before,
+.doc.fabric::before {
+  margin-top: 1rem;
+  display: block;
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+.doc.deprecated::before {
+  content: 'DEPRECATED';
+  text-align: center;
+  background-color: var(--colour-pink-600);
+  color: var(--colour-white);
+}
+
+/* .doc.enterprise-edition::before {
+  content: 'Enterprise Edition';
+  background-color: var(--colour-green-600);
+  color: var(--colour-white);
+}
+
+.doc.fabric::before {
+  content: 'Fabric';
+  background-color: var(--colour-blue-600);
+  color: var(--colour-white);
+} */
+
+.doc.deprecated h1 {
+  /* position: relative; */
+}
+
+.doc .listingblock.dot {
+  height: 400px;
+  overflow: scroll;
+  border: 2px solid var(--note-color);
+}
+
+section.deprecated .title::after {
+  bottom: 4px;
+  margin-left: 10px;
+}
+
+.deprecated h2:after,
+.deprecated h3:after,
+.deprecated h4:after,
+p.deprecated::before,
+section.deprecated .title::after,
+table span.deprecated::after,
+.doc.enterprise-edition h1::after,
+p.enterprise-edition::before,
+table span.enterprise-edition::after,
+.doc.fabric h1::after,
+p.fabric::before,
+table span.fabric::after {
+  text-align: center;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 0.6em;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  bottom: 2px;
+  margin-left: 8px;
+}
+
+.deprecated h2:after,
+.deprecated h3:after,
+.deprecated h4:after,
+p.deprecated::before,
+section.deprecated .title::after,
+table span.deprecated::after {
+  content: "deprecated";
+  color: var(--deprecation-color);
+  border-color: var(--deprecation-color);
+}
+
+section.enterprise-edition .title::after,
+.doc.enterprise-edition h1::after,
+div.enterprise-edition h2::after,
+div.enterprise-edition h3::after,
+div.enterprise-edition h4::after,
+p.enterprise-edition::before,
+table span.enterprise-edition::after {
+  content: "Enterprise Edition";
+  color: var(--enterprise-edition-color);
+  border-color: var(--enterprise-edition-color);
+}
+
+section.fabric .title::after,
+.doc.fabric h1::after,
+div.fabric h2::after,
+div.fabric h3::after,
+div.fabric h4::after,
+p.fabric::before,
+table span.fabric::after {
+  content: "Fabric";
+  color: var(--fabric-color);
+  border-color: var(--fabric-color);
+}
+
+.admonitionblock td.icon .icon-::before {
+  content: "\f088";
+  color: #f58220;
+}
+
+.doc .admonitionblock.deprecated .icon {
+  background-color: var(--deprecation-color);
+  color: var(--deprecation-on-color);
+}
+
+.doc .admonitionblock.deprecated .icon i::after {
+  content: 'DEPRECATED';
+}
+
+.doc .admonitionblock.deprecated {
+  background-color: var(--colour-pink-200);
+  color: var(--colour-pink-900);
+  border-left-color: var(--colour-pink-600);
+}
+
+.doc .admonitionblock.deprecated pre {
+  background-color: var(--colour-red-100);
+  color: var(--colour-red-700);
+}
+.doc .admonitionblock.deprecated a {
+  color: var(--colour-red-600);
+}
+.doc .admonitionblock.deprecated a {
+  color: var(--colour-red-600);
+}
+
+.doc pre {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+}
