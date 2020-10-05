@@ -17,4 +17,6 @@ jobs:
       with:
         node-version: '14.1.0'
     - run: npm install
+    - run: npm install --prefix ui
     - run: npm run lint
+    - run: npm run lint --prefix ui
