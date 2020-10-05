@@ -1,6 +1,5 @@
 site:
   title: Neo4j KB
-  url: /developer/kb
 
 content:
   sources:
