@@ -26,4 +26,5 @@ asciidoc:
   - ./extensions/remote-include/remote-include-processor
   - ./extensions/macros/macros
   attributes:
+    experimental: ''
     page-cdn: /static/assets
