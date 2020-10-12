@@ -11,7 +11,7 @@
     "build:kb": "antora --fetch --stacktrace kb.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
-    "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml && antora --fetch --stacktrace kb.yml",
+    "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml && antora --fetch --stacktrace netlify-kb.yml",
     "migrate:clean": "rm -rf asciidoc/developer/modules/ROOT/pages/* && rm -rf asciidoc/developer/modules/ROOT/examples/*",
     "migrate:cypher": "cp /Users/adam/neo4j/developer-resources/***/*.{cypher,txt,rb,sql} asciidoc/developer/modules/ROOT/examples",
     "migrate:includes": "cp -R /Users/adam/neo4j/developer-resources/language-guides/_includes/ asciidoc/developer/modules/ROOT/pages/_includes",
