@@ -8,7 +8,7 @@
     "start": "node server.js",
     "build": "npm run build:unversioned && npm run build:labs-docs",
     "build:unversioned": "antora --fetch --stacktrace unversioned.yml",
-    "build:kb": "antora --fetch --stacktrace kb.yml",
+    "build:kb": "antora --fetch --stacktrace --generator neo4j-antora-site-generator kb.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml && antora --fetch --stacktrace netlify-kb.yml",
@@ -27,6 +27,7 @@
   "dependencies": {
     "@antora/cli": "^2.3.3",
     "@antora/site-generator-default": "^2.3.3",
+    "neo4j-antora-site-generator": "git+https://github.com/Mogztter/neo4j-antora-site-generator.git",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
