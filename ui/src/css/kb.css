@@ -212,8 +212,5 @@ body.kb-article .breadcrumbs ul {
 .kb .kb-metadata .edit-this-page a {
   font-weight: normal;
 }
-.kb .kb-metadata .edit-this-page a::after { display: none; }
 
-.kb-article.is-hidden {
-  display: none;
-}
+.kb .kb-metadata .edit-this-page a::after { display: none; }
