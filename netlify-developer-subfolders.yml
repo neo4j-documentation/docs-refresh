@@ -21,9 +21,5 @@ asciidoc:
   - ./extensions/macros/macros
   attributes:
     experimental: ''
-    page-component: kb
-    page-theme: kb
+    page-theme: developer
     page-canonical-root: /developer/spark
-    # page-breadcrumbs:
-    #   - name: Neo4j KB
-    #     url: https://neo4j.com/developer/kb/
