@@ -5,7 +5,7 @@ site:
 content:
   sources:
   - url: https://github.com/neo4j-documentation/developer-guides.git
-    branches: layout/developer-home
+    branches: publish
     exclude:
     - '!**/_includes/*'
     - '!**/readme.adoc'
