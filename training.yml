@@ -23,9 +23,8 @@ content:
     - 'modules/online-training-v2'
     - 'modules/neo4j-administration'
     - 'modules/gds-applied-algos'
-     # not yet migrated
-     #- 'modules/data-science'
-     #- 'modules/applied-algos'
+    - 'modules/datascience'
+    - 'modules/applied-algos'
 
 ui:
   bundle:
