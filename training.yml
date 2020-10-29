@@ -4,16 +4,10 @@ site:
 
 content:
   sources:
-  # should we move this module to neo4j-contrib/training-v3?
-  # alternatively, we could generate the page in the Neo4j pipeline
-  # because this module contains only a single index page.
-  - url: https://github.com/Mogztter/neo4j-training-docs.git
-    branches: 'master'
-    start_paths:
-    - 'home'
   - url: https://github.com/neo4j-contrib/training-v3.git
     branches: 'master'
     start_paths:
+    - 'modules/home'
     - 'modules/4.0-intro-neo4j'
     - 'modules/graph-data-modeling'
     - 'modules/4.0-implementing-graph-data-models'
