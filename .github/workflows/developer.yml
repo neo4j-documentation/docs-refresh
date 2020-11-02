@@ -21,6 +21,7 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run build:unversioned
+    - run: npm run build:developer-subfolders
     - run: rm -f build/site/developer/index.html
     - run: npm run build:labs-docs
 
