@@ -1,7 +1,7 @@
 {{#if navigation.length}}
 <ul class="nav-list">
   {{#each navigation}}
-  <li class="nav-item{{#if (eq this.url @root.page.url)}} is-current-page{{/if}}" data-depth="{{or ../level 0}}">
+  <li class="nav-item{{#if (eq this.url @root.page.url)}} is-current-page{{/if}}" data-depth="{{or ../level 0}}"{{#with (page-by-url this.url)}} data-slug="{{this.asciidoc.attributes.page-slug}}"{{/with}}>
     {{#if this.content}}
     {{#if this.items.length}}
     {{!-- <button class="nav-item-toggle"></button> --}}
@@ -14,7 +14,7 @@
     <span class="nav-text nav-item-toggle">{{{this.content}}}</span>
     {{/if}}
     {{/if}}
-{{> nav-tree navigation=this.items level=(increment ../level)}}
+{{> training-nav-tree navigation=this.items level=(increment ../level)}}
   </li>
   {{/each}}
 </ul>

@@ -4,7 +4,11 @@
     {{#with @root.page.componentVersion}}
     <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
     {{/with}}
+{{#if (eq page.layout 'training')}}
+{{> training-nav-tree navigation=this}}
+{{else}}
 {{> nav-tree navigation=this}}
+{{/if}}
   </nav>
 </div>
 {{/with}}
