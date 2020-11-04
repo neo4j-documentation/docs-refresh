@@ -22,4 +22,5 @@ asciidoc:
   attributes:
     experimental: ''
     page-theme: developer
+    page-cdn: /static/assets
 
