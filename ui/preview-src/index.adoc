@@ -26,6 +26,10 @@ Author Name
 // end:discourse[]
 // :page-disabletracking: true
 
+[source,cypher,role=noplay]
+----
+MATCH (n) RETURN count(n)
+----
 
 +++
 <div class="paragraph">

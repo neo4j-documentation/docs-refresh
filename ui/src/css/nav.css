@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 1024px) {
   .nav-container {
-    font-size: calc(15.5 / var(--rem-base) * 1rem);
+    font-size: .90rem;
     flex: none;
     position: static;
     top: 0;
@@ -110,7 +110,7 @@ html.is-clipped--nav {
   flex-grow: 1;
   min-height: 0;
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 2.25rem;
   line-height: var(--nav-line-height);
   position: relative;
 }
@@ -128,12 +128,19 @@ html.is-clipped--nav {
 .nav-text {
   color: inherit;
   font-weight: var(--nav-font-weight);
-  display: block;
+  display: inline-block;
   padding: 0.2rem 0;
 }
 
-.nav-menu .nav-item .nav-item a {
-  padding: 0.1rem 0;
+.nav-menu .nav-item .nav-item a.nav-link,
+.nav-menu .nav-item .nav-item span.nav-text {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+a.nav-link:hover {
+  background: #EEF1F8;
+  border-radius: 50px;
 }
 
 .nav-list {
@@ -147,9 +154,8 @@ html.is-clipped--nav {
 
 .nav-item {
   list-style: none;
-  /* margin-top: 0.5em; */
   position: relative;
-}
+} 
 
 .nav-list strong {
   display: block;
@@ -157,7 +163,7 @@ html.is-clipped--nav {
 }
 
 .nav-list:first-child strong {
-  margin-top: 0 !important;
+  margin-top: 1.5rem !important;
 }
 
 /* adds some breathing room below a nested list */
@@ -170,6 +176,12 @@ html.is-clipped--nav {
   display: block;
   margin: 0;
 }
+
+.nav-item[data-depth="0"] > a.nav-link{
+  font-weight: 600;
+  
+}
+
 
 .nav-item:not(.is-active) > .nav-list {
   display: none;
@@ -195,37 +207,44 @@ html.is-clipped--nav {
   font-weight: var(--body-font-weight-bold);
 } */
 
-.nav-list .nav-list {
-  border-left: 1px solid var(--colour-grey-400);
-  margin-left: 0.5rem;
-  padding-left: 0.8rem;
+li.nav-item[data-depth="5"] > a.nav-link,
+li.nav-item[data-depth="5"] > span.nav-text {
+  padding-left: 5rem;
+  padding-right: 1rem;
+}
+
+li.nav-item[data-depth="4"] > a.nav-link,
+li.nav-item[data-depth="4"] > span.nav-text {
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+
+li.nav-item[data-depth="3"] > a.nav-link,
+li.nav-item[data-depth="3"] > span.nav-text {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+li.nav-item[data-depth="2"] > a.nav-link,
+li.nav-item[data-depth="2"] > span.nav-text {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+li.nav-item[data-depth="1"] > a.nav-link,
+li.nav-item[data-depth="1"] > span.nav-text {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* .nav-item.is-active > .nav-item-toggle {
   transform: rotate(90deg);
 } */
 
-.is-current-page > .nav-link,
-.is-current-page > .nav-text {
-  font-weight: var(--nav_active-font-weight);
-}
-
-.nav-item .nav-item::before,
-.toc-menu li a::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-top: 0.35rem;
-  display: block;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 9999px;
-  margin-left: -1.1rem;
-  transition: all 0.2s linear;
-  content: "";
-  opacity: 0;
-  background-color: var(--nav-bullet-color);
-  z-index: 1000;
+li.nav-item.is-current-page > a {
+    background: #5CA6D970;
+    border-radius: 50px;
+    color: #3182ce;
 }
 
 .nav-item.is-current-page::before,

@@ -1,10 +1,9 @@
-;(function () {
+; (function () {
   'use strict'
-
   var sidebar = document.querySelector('aside.toc.sidebar')
   if (!sidebar) return
   if (document.querySelector('body.-toc')) return sidebar.parentNode.removeChild(sidebar)
-  var levels = parseInt(sidebar.dataset.levels || 2)
+  var levels = 1;
   if (levels < 0) return
 
   var article = document.querySelector('article.doc')
@@ -47,7 +46,7 @@
     window.addEventListener('scroll', onScroll)
   })
 
-  function onScroll () {
+  function onScroll() {
     var scrolledBy = window.pageYOffset
     var buffer = getNumericStyleVal(document.documentElement, 'fontSize') * 1.15
     var ceil = article.offsetTop
@@ -94,11 +93,11 @@
     }
   }
 
-  function find (selector, from) {
+  function find(selector, from) {
     return [].slice.call((from || document).querySelectorAll(selector))
   }
 
-  function getNumericStyleVal (el, prop) {
+  function getNumericStyleVal(el, prop) {
     return parseFloat(window.getComputedStyle(el)[prop])
   }
 })()

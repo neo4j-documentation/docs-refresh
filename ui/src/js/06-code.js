@@ -58,16 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var children = [languageDiv]
 
     if (addCopyButton) {
-      var copyButton = createElement('button', 'btn btn-copy', [document.createTextNode('Copy to Clipboard')])
+      var copyButton = createElement('button', 'btn btn-copy', [document.createTextNode('Copy')])
       copyButton.addEventListener('click', function (e) {
         e.preventDefault()
         copyToClipboard(code)
 
         var button = e.target
         var text = button.innerHTML
-        var width = button.clientWidth
+        // var width = button.clientWidth
 
-        button.style.width = width + 'px'
+        // button.style.width = width + 'px'
         button.classList.add('btn-success')
         button.innerHTML = copiedText
 
