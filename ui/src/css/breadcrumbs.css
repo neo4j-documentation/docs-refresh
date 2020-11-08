@@ -1,7 +1,14 @@
 .breadcrumbs {
   display: none;
   flex: 1 1;
-  padding: 0 0.5rem 0 0.75rem;
+  padding: 2rem 0;
+  line-height: var(--nav-line-height);
+  font-size: 0.75rem;
+}
+
+.breadcrumbs a{
+  color: var(--color-charcoal);
+  font-size: 0.75rem;
   line-height: var(--nav-line-height);
 }
 

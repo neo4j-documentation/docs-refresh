@@ -25,12 +25,15 @@
   justify-content: flex-end;
 }
 
-.toc .toc-menu ul {
-  font-size: calc(15 / var(--rem-base) * 1rem);
-  line-height: var(--toc-line-height);
+.toc .toc-menu ul{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.toc .toc-menu ul a{
+  font-size: .875rem;
+  line-height: var(--toc-line-height);
 }
 
 .toc.sidebar .toc-menu ul {
@@ -82,7 +85,7 @@
 }
 
 .toc .toc-menu a {
-  color: inherit;
+  color: var(--color-charcoal);
   border-left: 1px solid var(--toc-border-color);
   display: inline-block;
   padding: 0.25rem 0 0.25rem 0.5rem;

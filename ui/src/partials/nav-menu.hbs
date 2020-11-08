@@ -1,9 +1,12 @@
 {{#with page.navigation}}
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    {{#with @root.page.componentVersion}}
-    <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
-    {{/with}}
+    <div>
+      {{#with @root.page.componentVersion}}
+        <h3 class="title"><a href="{{{relativize ./url}}}">{{or ./title 'Title'}}</a></h3>
+        {{> page-versions}}
+      {{/with}}
+    </div>
 {{> nav-tree navigation=this}}
   </nav>
 </div>

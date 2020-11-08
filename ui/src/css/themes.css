@@ -82,7 +82,6 @@ body.docs .tooltip.tooltip--bottom::after {
 
 body.docs #preamble .abstract .title,
 body.docs #preamble .abstract blockquote {
-  border-left-color: var(--colour-docs);
   color: var(--colour-blue-800);
 }
 
@@ -270,11 +269,6 @@ body.developer .doc .button:hover {
 body.developer .doc .button:active {
   background: var(--colour-grey-600);
   color: var(--colour-white);
-}
-
-body.developer #preamble .abstract .title,
-body.developer #preamble .abstract blockquote {
-  border-left-color: var(--colour-green-600);
 }
 
 body.developer .tableblock .icon i {

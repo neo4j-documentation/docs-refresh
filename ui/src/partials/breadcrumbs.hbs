@@ -1,6 +1,14 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   {{#if page.breadcrumbs}}
   <ul>
+    {{#with @root.site.homeUrl}}
+    <li>
+      <a href="{{{relativize this}}}" aria-label="Go to home page">
+        {{!-- <img src="/_/img/home.svg" /> --}}
+        Home
+      </a>
+    </li>
+    {{/with}}
     {{#each (or asciidoc.attributes.breadcrumbs page.attributes.breadcrumbs)}}
     <li>
       {{#if this.url}}

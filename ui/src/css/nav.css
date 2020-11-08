@@ -3,9 +3,12 @@
   top: var(--navbar-height);
   left: 0;
   width: 100%;
-  font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
+}
+
+.nav-container a, .nav-container span {
+  font-size: 0.875rem;
 }
 
 @media screen and (min-width: 769px) {
@@ -116,20 +119,22 @@ html.is-clipped--nav {
 }
 
 .nav-menu .title {
-  color: var(--nav-heading-font-color);
-  font-weight: var(--body-font-weight-bold);
   margin: 0;
   padding: 0.25em 0 0.125em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.nav-menu .title a{
+  font-weight: var(--body-font-weight-bold);
+  font-size: 1.2rem;
 }
 
 .nav-menu a,
 .nav-text {
-  color: inherit;
+  color: var(--color-charcoal);
   font-weight: var(--nav-font-weight);
   display: inline-block;
-  padding: 0.2rem 0;
+  padding: 6px 0;
 }
 
 .nav-menu .nav-item .nav-item a.nav-link,
@@ -160,10 +165,6 @@ a.nav-link:hover {
 .nav-list strong {
   display: block;
   margin-top: 1em;
-}
-
-.nav-list:first-child strong {
-  margin-top: 1.5rem !important;
 }
 
 /* adds some breathing room below a nested list */

@@ -1,8 +1,11 @@
 .page-versions {
   display: none;
-  margin-right: 0.7rem;
   position: relative;
   line-height: 1;
+  float: right;
+  border-radius: 5px;
+  padding: 0 .5rem;
+  border: 1px solid;
 }
 
 @media screen and (min-width: 1024px) {
@@ -28,11 +31,13 @@
   background-color: var(--page-version-menu-background);
   border: 1px solid var(--page-version-menu-border);
   border-radius: 3px;
-  padding: 1.25rem 0.5rem 0.5rem;
+  padding: 0.25rem 0.5rem 0.5rem;
   position: absolute;
-  top: 0;
+  top: 35px;
   left: 0;
   width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 18px 0px rgba(0,0,0,.17);
 }
 
 .page-versions:not(.is-active) .version-menu {

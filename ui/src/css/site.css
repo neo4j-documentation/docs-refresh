@@ -6,10 +6,10 @@
 @import "nav.css";
 @import "main.css";
 @import "toolbar.css";
-@import "breadcrumbs.css";
 @import "page-versions.css";
 @import "toc.css";
 @import "doc.css";
+@import "breadcrumbs.css";
 @import "pagination.css";
 @import "header.css";
 @import "footer.css";

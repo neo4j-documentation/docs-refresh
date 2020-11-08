@@ -97,14 +97,18 @@
   --colour-kb: var(--colour-purple-600);
   --colour-training: var(--colour-pink-600);
 
+  --color-oil: #30333a;
+  --color-charcoal: #525865;
+  --color-white-smoke: #EEF1F8;
+
   /* fonts */
-  --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
+  --rem-base: 16; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-weight: 400;
-  --body-font-size: 1.0625em; /* 17px */
-  --body-font-size--desktop: 1em; /* 18px */
+  --body-font-size: 1rem; /* 17px */
+  --body-font-size--desktop: 1rem; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
-  --body-line-height: 1.5;
-  --body-font-color: var(--colour-grey-700);
+  --body-line-height: 1.8;
+  --body-font-color: var(--color-oil);
   --body-font-family: "Open Sans", sans-serif;
   --body-font-weight-bold: 600;
   --monospace-font-family: "Roboto Mono", monospace;
@@ -189,13 +193,13 @@
   --doc-line-height: 1.8;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --heading-font-color: var(--colour-grey-700);
-  --heading-font-weight: normal;
+  --heading-font-color: var(--color-oil);
+  --heading-font-weight: 700;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--colour-grey-300);
-  --link-font-color: var(--colour-blue-600);
-  --link_hover-font-color: var(--colour-purple-600);
-  --link_visited-font-color: var(--colour-blue-800);
+  --link-font-color: var(--colour-blue-500);
+  --link_hover-font-color: var(--colour-blue-700);
+  --link_visited-font-color: var(--colour-blue-700);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--colour-white);
   --abstract-font-color: var(--colour-grey-700);
