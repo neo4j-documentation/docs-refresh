@@ -1,6 +1,7 @@
 site:
   title: Neo4j Developer Portal
   url: /developer
+  start_page: developer:ROOT:index.adoc
 
 content:
   sources:
