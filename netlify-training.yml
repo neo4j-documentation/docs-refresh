@@ -1,5 +1,6 @@
 site:
   title: Neo4j Training
+  start_page: training-welcome:ROOT:index.adoc
 
 content:
   sources:
@@ -38,7 +39,6 @@ asciidoc:
     experimental: ''
     page-component: training
     page-theme: training
-    page-cdn: /static/assets
     page-canonical-root: /graphacademy
     page-breadcrumbs:
       - name: Neo4j Training
