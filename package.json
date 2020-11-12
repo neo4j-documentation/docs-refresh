@@ -10,7 +10,7 @@
     "build:developer-subfolders": "antora --fetch --stacktrace developer-subfolders.yml",
     "build:unversioned": "antora --fetch --stacktrace unversioned.yml",
     "build:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator kb.yml",
-    "build:training": "antora --fetch --stacktrace training.yml",
+    "build:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator training.yml",
     "build:labs": "antora --fetch --stacktrace labs.yml",
     "build:labs-docs": "antora --fetch --stacktrace labs-docs.yml",
     "build:preview": "antora --fetch --stacktrace netlify-preview.yml && antora --fetch --stacktrace netlify-labs-docs.yml && antora --fetch --stacktrace --generator @neo4j/developer-site-generator netlify-kb.yml && antora --fetch --stacktrace netlify-developer-subfolders.yml",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "^2.3.4",
-    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator.git#v0.1.0",
+    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator#issue-1-add-slug-attribute",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
