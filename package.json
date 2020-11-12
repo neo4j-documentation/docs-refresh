@@ -27,7 +27,7 @@
   "dependencies": {
     "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "^2.3.4",
-    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator#issue-1-add-slug-attribute",
+    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator#v0.3.0",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
