@@ -19,9 +19,9 @@ jobs:
       - run: npm install --prefix ui
       - run: npm run lint --prefix ui
       - run: npm run build --prefix ui
-      - run: mv ui/build/ui-bundle.zip ui/build/ui-bundle-${UI_BUNDLE_VERSION}.zip
+      - run: mv ui/build/ui-bundle.zip ui/build/ui-bundle-${GITHUB_REF##*/}.zip
         env:
-          UI_BUNDLE_VERSION: ${{ github.ref }}
+          GITHUB_REF: ${{ github.ref }}
 
       - name: Sync UI Bundle to S3
         uses: jakejarvis/s3-sync-action@master
