@@ -1,6 +1,6 @@
 site:
   title: Neo4j Training
-  url: /graphacademy/online-training
+  url: /graphacademy
 
 content:
   sources:
@@ -22,7 +22,7 @@ content:
 
 ui:
   bundle:
-    url: ui/build/ui-bundle.zip
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.2.0.zip
     snapshot: true
 
 urls:

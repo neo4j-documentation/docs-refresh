@@ -11,20 +11,17 @@ content:
     - '!**/readme.adoc'
     - '!**/README.adoc'
   - url: https://github.com/neo4j-documentation/labs-pages.git
-    branches: publish
-  - url: https://github.com/neo4j-documentation/documentation-starter.git
     branches: master
 ui:
   bundle:
-    url: ui/build/ui-bundle.zip
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.2.0.zip
     snapshot: true
 urls:
   html_extension_style: indexify
-
 asciidoc:
   extensions:
   - ./extensions/remote-include/remote-include-processor
   - ./extensions/macros/macros
   attributes:
     experimental: ''
-    page-cdn: /static/assets
+    page-disabletracking: true
