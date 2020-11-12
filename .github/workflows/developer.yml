@@ -25,6 +25,8 @@ jobs:
 
     # Build Content
     - run: npm install
+    - run: npm install --prefix ui
+    - run: npm run build --prefix ui
     - run: npm run lint
     - run: npm run build:unversioned
     - run: npm run build:developer-subfolders
@@ -53,7 +55,6 @@ jobs:
         AWS_REGION: 'eu-west-1'
         SOURCE_DIR: 'build/site/labs'
         DEST_DIR: 'labs'
-
 
     - name: Sync Developer Content
       uses: jakejarvis/s3-sync-action@master
