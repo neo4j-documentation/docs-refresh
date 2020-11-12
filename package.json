@@ -14,7 +14,7 @@
     "build:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator netlify-training.yml",
     "build:developer-subfolders": "antora --fetch --stacktrace netlify-developer-subfolders.yml",
     "lint": "npm run lint-xref && npm run lint-asciidoc",
-    "lint-xref": "npm run lint-xref:developer-subfolders && npm runlint-xref:developer && npm runlint-xref:labs-docs",
+    "lint-xref": "npm run lint-xref:developer-subfolders && npm run lint-xref:developer && npm run lint-xref:labs-docs",
     "lint-xref:developer-subfolders": "antora --generator @antora/xref-validator netlify-developer-subfolders.yml",
     "lint-xref:developer": "antora --generator @antora/xref-validator netlify-developer.yml",
     "lint-xref:labs-docs": "antora --generator @antora/xref-validator netlify-labs-docs.yml",
