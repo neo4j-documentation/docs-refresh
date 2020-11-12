@@ -106,4 +106,5 @@ dist
 .DS_Store
 
 build/
-!ui/build
+ui/build
+
