@@ -18,6 +18,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '14'
+
+    # Build UI Bundle
+    - run: npm install --prefix ui
+    - run: npm run build --prefix ui
+
+    # Build Content
     - run: npm install
     - run: npm run lint
     - run: npm run build:unversioned
