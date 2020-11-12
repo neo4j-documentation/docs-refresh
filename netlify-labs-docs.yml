@@ -21,7 +21,7 @@ output:
   dir: ./build/site/labs/
 ui:
   bundle:
-    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.2.0.zip
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.3.0.zip
     snapshot: true
 urls:
   html_extension_style: indexify
