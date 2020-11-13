@@ -9,12 +9,14 @@ content:
 
 output:
   dir: ./build/site/developer/
+
 ui:
   bundle:
-    url: ui/build/ui-bundle.zip
-    snapshot: true
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.4.1.zip
+
 urls:
   html_extension_style: indexify
+
 asciidoc:
   extensions:
   - ./extensions/remote-include/remote-include-processor

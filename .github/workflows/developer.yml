@@ -19,18 +19,10 @@ jobs:
       with:
         node-version: '14'
 
-    # Build UI Bundle
-    - run: npm install --prefix ui
-    - run: npm run build --prefix ui
-
     # Build Content
     - run: npm install
-    - run: npm install --prefix ui
-    - run: npm run build --prefix ui
     - run: npm run lint
-    - run: npm run build:unversioned
-    - run: npm run build:developer-subfolders
-    - run: npm run build:labs-docs
+    - run: npm run build
 
     - name: Sync Assets
       uses: jakejarvis/s3-sync-action@master
