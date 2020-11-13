@@ -13,12 +13,15 @@ content:
     - '!**/README.adoc'
   - url: https://github.com/neo4j-documentation/labs-pages.git
     branches: publish
+
 ui:
   bundle:
-    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.3.0.zip
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.4.0.zip
     snapshot: true
+
 urls:
   html_extension_style: indexify
+
 asciidoc:
   extensions:
   - ./extensions/remote-include/remote-include-processor
