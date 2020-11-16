@@ -1,0 +1,27 @@
+site:
+  title: Neo4j Developer
+
+content:
+  sources:
+  - url: https://github.com/neo4j-contrib/neo4j-spark-connector
+    branches: ['4.0']
+    start_path: 'doc/docs'
+
+output:
+  dir: ./build/site/developer
+
+ui:
+  bundle:
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.4.2.zip
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - ../extensions/remote-include/remote-include-processor
+  - ../extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-theme: developer
+    page-canonical-root: /developer/spark

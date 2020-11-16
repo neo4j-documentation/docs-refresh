@@ -19,9 +19,10 @@ urls:
 
 asciidoc:
   extensions:
-  - ./extensions/remote-include/remote-include-processor
-  - ./extensions/macros/macros
+  - ../extensions/remote-include/remote-include-processor
+  - ../extensions/macros/macros
   attributes:
     experimental: ''
+    page-cdn: /static/assets
     page-theme: developer
     page-canonical-root: /developer/spark

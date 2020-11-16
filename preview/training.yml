@@ -1,0 +1,47 @@
+site:
+  title: Neo4j Training
+  start_page: training-welcome:ROOT:index.adoc
+
+content:
+  sources:
+  - url: https://github.com/neo4j-contrib/training-v3.git
+    branches: 'master'
+    start_paths:
+    - 'modules/home'
+    - 'modules/4.0-intro-neo4j'
+    - 'modules/graph-data-modeling'
+    - 'modules/4.0-implementing-graph-data-models'
+    - 'modules/4.0-neo4j-admin'
+    - 'modules/4.0-cypher-query-tuning'
+    - 'modules/4.0-intro-graph-algos'
+    - 'modules/gds-data-science'
+    - 'modules/online-training-v2'
+    - 'modules/neo4j-administration'
+    # not yet ready
+    #- 'modules/gds-applied-algos'
+    - 'modules/datascience'
+    - 'modules/applied-algos'
+
+output:
+  dir: ./build/site/graphacademy
+
+ui:
+  bundle:
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.4.2.zip
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - ../extensions/remote-include/remote-include-processor
+  - ../extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-component: training
+    page-theme: training
+    page-canonical-root: /graphacademy
+    page-breadcrumbs:
+      - name: Neo4j Training
+        url: /graphacademy/training-welcome
+

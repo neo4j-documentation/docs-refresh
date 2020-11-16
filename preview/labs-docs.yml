@@ -29,8 +29,8 @@ urls:
 
 asciidoc:
   extensions:
-  - ./extensions/remote-include/remote-include-processor
-  - ./extensions/macros/macros
+  - ../extensions/remote-include/remote-include-processor
+  - ../extensions/macros/macros
   attributes:
     experimental: ''
     page-theme: labs

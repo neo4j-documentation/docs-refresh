@@ -14,6 +14,9 @@ content:
   - url: https://github.com/neo4j-documentation/labs-pages.git
     branches: publish
 
+output:
+  dir: ./build/site/
+
 ui:
   bundle:
     url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.4.2.zip
@@ -23,8 +26,8 @@ urls:
 
 asciidoc:
   extensions:
-  - ./extensions/remote-include/remote-include-processor
-  - ./extensions/macros/macros
+  - ../extensions/remote-include/remote-include-processor
+  - ../extensions/macros/macros
   attributes:
     experimental: ''
     page-disabletracking: true
