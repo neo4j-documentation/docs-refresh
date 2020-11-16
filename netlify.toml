@@ -1,3 +1,7 @@
+[build]
+publish = "build/site"
+command = "npm run build:preview"
+
 [[redirects]]
-  from = "/static/assets/*"
-  to = "/_/:splat"
+from = "/static/assets/*"
+to = "/_/:splat"
