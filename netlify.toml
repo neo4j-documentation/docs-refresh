@@ -1,0 +1,3 @@
+[[redirects]]
+  from = "/static/assets/*"
+  to = "/_/:splat"
