@@ -17,7 +17,7 @@
 
     "build:production": "npm run production:developer && npm run production:labs && npm run production:kb && npm run production:training && npm run production:developer-subfolders",
     "production:developer": "antora --fetch --stacktrace developer.yml",
-    "production:labs": "antora --fetch --stacktracelabs-docs.yml",
+    "production:labs": "antora --fetch --stacktrace labs-docs.yml",
     "production:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator kb.yml",
     "production:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator training.yml",
     "production:developer-subfolders": "antora --fetch --stacktrace developer-subfolders.yml",
