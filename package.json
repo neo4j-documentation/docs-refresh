@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-
     "build": "npm run build:preview",
     "build:preview": "npm run preview:developer && npm run preview:labs && npm run preview:kb && npm run preview:training && npm run preview:developer-subfolders",
     "preview:developer": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip developer.yml",
@@ -14,37 +13,29 @@
     "preview:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip kb.yml",
     "preview:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip training.yml",
     "preview:developer-subfolders": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip developer-subfolders.yml",
-
     "build:production": "npm run production:developer && npm run production:labs && npm run production:kb && npm run production:training && npm run production:developer-subfolders",
     "production:developer": "antora --fetch --stacktrace developer.yml",
     "production:labs": "antora --fetch --stacktrace labs-docs.yml",
     "production:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator kb.yml",
     "production:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator training.yml",
     "production:developer-subfolders": "antora --fetch --stacktrace developer-subfolders.yml",
-
     "lint": "npm run lint-xref",
     "lint-xref": "npm run lint-xref:developer-subfolders && npm run lint-xref:developer && npm run lint-xref:labs-docs",
     "lint-xref:developer-subfolders": "antora --generator @antora/xref-validator developer-subfolders.yml",
     "lint-xref:developer": "antora --generator @antora/xref-validator developer.yml",
     "lint-xref:labs-docs": "antora --generator @antora/xref-validator labs-docs.yml",
-    "lint-asciidoc": "./build.sh && ./lint/asciidoctor-errors.sh && ./lint/asciidoctor-warnings.sh",
-    "migrate:menu": "node migrate/menu.js",
-    "migrate:docs": "node migrate/docs.js"
+    "lint-asciidoc": "./build.sh && ./lint/asciidoctor-errors.sh && ./lint/asciidoctor-warnings.sh"
   },
   "author": "Adam Cowley <adam+github@neo4j.com>",
   "license": "ISC",
   "dependencies": {
     "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "^2.3.4",
-    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator#v0.3.0",
+    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator#v0.4.2",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@antora/xref-validator": "gitlab:antora/xref-validator",
-    "cheerio": "^1.0.0-rc.3",
-    "express": "^4.17.1",
-    "glob": "^7.1.6",
-    "jsdom": "^16.2.2",
-    "rxjs": "^6.5.5"
+    "express": "^4.17.1"
   }
 }
