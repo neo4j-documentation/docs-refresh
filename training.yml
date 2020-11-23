@@ -1,6 +1,5 @@
 site:
   title: Neo4j Training
-  start_page: training-welcome:ROOT:index.adoc
 
 content:
   sources:

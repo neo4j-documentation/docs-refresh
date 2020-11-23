@@ -13,6 +13,8 @@ content:
     - '!**/README.adoc'
   - url: https://github.com/neo4j-documentation/labs-pages.git
     branches: publish
+  - url: https://github.com/neo4j-documentation/graphacademy.git
+    branches: publish
 
 output:
   dir: ./build/site/
