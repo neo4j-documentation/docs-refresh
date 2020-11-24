@@ -1,6 +1,5 @@
 site:
   title: Neo4j Training
-  start_page: training-welcome:ROOT:index.adoc
 
 content:
   sources:
@@ -45,5 +44,5 @@ asciidoc:
     page-canonical-root: /graphacademy
     page-breadcrumbs:
       - name: Neo4j Training
-        url: /graphacademy/training-welcome
+        url: /graphacademy/online-training
 
