@@ -44,5 +44,5 @@ asciidoc:
     page-canonical-root: /graphacademy
     page-breadcrumbs:
       - name: Neo4j Training
-        url: /graphacademy/training-welcome
+        url: /graphacademy/online-training
 
