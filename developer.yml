@@ -34,4 +34,3 @@ asciidoc:
   attributes:
     experimental: ''
     page-cdn: /static/assets
-    page-disabletracking: true
