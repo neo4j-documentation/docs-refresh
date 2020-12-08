@@ -14,10 +14,11 @@ content:
     - 'modules/4.0-cypher-query-tuning'
     - 'modules/4.0-intro-graph-algos'
     - 'modules/gds-data-science'
+    - 'modules/gds-applied-algos'
     - 'modules/online-training-v2'
     - 'modules/neo4j-administration'
     # not yet ready
-    #- 'modules/gds-applied-algos'
+    #- 'modules/4.0-importing-data'
     - 'modules/datascience'
     - 'modules/applied-algos'
 
