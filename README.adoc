@@ -1,6 +1,6 @@
 = Neo4j Developer Guides & Static Content
 
-image:https://github.com/neo4j-documentation/docs-refresh/workflows/Publish%20Developer/badge.svg[Publish Developer] image:https://api.netlify.com/api/v1/badges/da8383ae-5291-433a-a7c8-354b69f1b06b/deploy-status[Netlify Status,link=https://app.netlify.com/sites/docs-neo4j/deploys]
+image:https://github.com/neo4j-documentation/docs-refresh/workflows/Publish/badge.svg[Publish] image:https://api.netlify.com/api/v1/badges/da8383ae-5291-433a-a7c8-354b69f1b06b/deploy-status[Netlify Status,link=https://app.netlify.com/sites/docs-neo4j/deploys]
 
 
 
