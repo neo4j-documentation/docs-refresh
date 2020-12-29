@@ -10,6 +10,7 @@ content:
     - 'modules/4.0-intro-neo4j'
     - 'modules/graph-data-modeling'
     - 'modules/4.0-overview'
+    - 'modules/4.0-querying'
     - 'modules/4.0-importing-data'
     - 'modules/4.0-implementing-graph-data-models'
     - 'modules/4.0-neo4j-admin'
