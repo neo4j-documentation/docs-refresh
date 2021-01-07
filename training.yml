@@ -7,6 +7,7 @@ content:
     branches: 'master'
     start_paths:
     - 'modules/home'
+    - 'modules/4.0-intro-neo4j'
     - 'modules/4.0-overview'
     - 'modules/4.0-querying'
     - 'modules/4.0-updating'
@@ -19,7 +20,6 @@ content:
     - 'modules/4.0-intro-graph-algos'
     - 'modules/gds-data-science'
     - 'modules/gds-applied-algos'
-    - 'modules/4.0-intro-neo4j'
     - 'modules/online-training-v2'
     - 'modules/neo4j-administration'
     # not yet ready - next in queue...
