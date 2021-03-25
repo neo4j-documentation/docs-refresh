@@ -28,6 +28,7 @@ asciidoc:
     page-component: kb
     page-theme: kb
     page-canonical-root: /developer
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
     # page-breadcrumbs:
     #   - name: Neo4j KB
     #     url: https://neo4j.com/developer/kb/

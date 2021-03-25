@@ -27,3 +27,4 @@ asciidoc:
     page-cdn: /static/assets
     page-theme: developer
     page-canonical-root: /developer/spark
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575

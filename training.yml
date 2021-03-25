@@ -51,4 +51,5 @@ asciidoc:
     page-breadcrumbs:
       - name: Neo4j Training
         url: /graphacademy/online-training
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
 
