@@ -1,0 +1,34 @@
+site:
+  title: Neo4j KB
+
+content:
+  sources:
+  - url: https://github.com/neo4j-documentation/knowledge-base
+    branches: ['master']
+    start_path: 'articles'
+
+output:
+  dir: ./build/site/developer/
+
+ui:
+  bundle:
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.10.7.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-cdn: /static/assets
+    page-component: kb
+    page-theme: kb
+    page-canonical-root: /developer
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
+    # page-breadcrumbs:
+    #   - name: Neo4j KB
+    #     url: https://neo4j.com/developer/kb/

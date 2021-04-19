@@ -1,0 +1,37 @@
+site:
+  title: Neo4j Developer Portal
+  url: /developer
+  start_page: developer:ROOT:index.adoc
+
+content:
+  sources:
+  - url: https://github.com/neo4j-documentation/developer-guides.git
+    branches: publish
+    exclude:
+    - '!**/_includes/*'
+    - '!**/readme.adoc'
+    - '!**/README.adoc'
+  - url: https://github.com/neo4j-documentation/labs-pages.git
+    branches: publish
+  - url: https://github.com/neo4j-documentation/graphacademy.git
+    branches: publish
+
+output:
+  dir: ./build/site/
+
+ui:
+  bundle:
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.10.7.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-cdn: /static/assets
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
