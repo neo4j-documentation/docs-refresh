@@ -11,7 +11,7 @@ content:
     branches: ['4.2', '4.1', '4.0']
     start_path: docs/asciidoc
   - url: https://github.com/neo4j-labs/neosemantics
-    branches: ['4.0', '4.1']
+    branches: ['4.0', '4.1', '4.2']
     start_path: docs
   - url: https://github.com/neo4j-contrib/neo4j-etl
     branches: ['master']
@@ -25,7 +25,7 @@ output:
 
 ui:
   bundle:
-    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.10.7.zip
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.10.9.zip
     snapshot: true
 
 urls:
