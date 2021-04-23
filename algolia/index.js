@@ -5,7 +5,6 @@ const path = require('path')
 const cheerio = require('cheerio')
 
 const indexFiles = async () => {
-    const root = process.env.ROOT_URL || 'https://neo4j.com/'
     const applicationId = process.env.ALGOLIA_APPLICATION_ID || 'S38C6B80D2'
     const apiKey = process.env.ALGOLIA_API_KEY || '8dc90bc3f864d03a564d958d3d0abddd'
     const indexName = process.env.ALGOLIA_INDEX_NAME || 'dev_GUIDES'
@@ -19,7 +18,7 @@ const indexFiles = async () => {
 
     console.log('Starting indexing...');
 
-    glob(`${baseDir}/**/neosemantics/**/*.html`, (err, matches) => {
+    glob(`${baseDir}/**/*.html`, (err, matches) => {
         const objects = matches
             .filter(path => !path.includes('404') && fs.lstatSync(path).isFile())
             .map(path => {
@@ -50,6 +49,7 @@ const indexFiles = async () => {
 
                 const toc = $('.doc h2')
                     .get()
+                    .filter(el => $('a', el).attr('href') !== undefined)
                     .map(el => ({
                         url: url + $('a', el).attr('href'),
                         title: $(el).text(),
