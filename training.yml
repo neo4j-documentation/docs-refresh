@@ -24,8 +24,6 @@ content:
     - 'modules/neo4j-administration'
     # not yet ready - next in queue...
     #- 'modules/???'
-    - 'modules/datascience'
-    - 'modules/applied-algos'
 
 output:
   dir: ./build/site/graphacademy
