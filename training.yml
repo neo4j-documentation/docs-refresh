@@ -15,6 +15,7 @@ content:
     - 'modules/4.0-importing-data'
     - 'modules/graph-data-modeling'
     - 'modules/4.0-implementing-graph-data-models'
+    - 'modules/graphql-apis'
     - 'modules/4.0-neo4j-admin'
     - 'modules/4.0-cypher-query-tuning'
     - 'modules/4.0-intro-graph-algos'
