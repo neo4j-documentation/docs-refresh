@@ -1,14 +1,14 @@
 = Neo4j Developer Guides & Static Content
 
-image:https://github.com/neo4j-documentation/docs-refresh/workflows/Publish/badge.svg[Publish] image:https://api.netlify.com/api/v1/badges/da8383ae-5291-433a-a7c8-354b69f1b06b/deploy-status[Netlify Status,link=https://app.netlify.com/sites/docs-neo4j/deploys]
+image:https://github.com/neo4j-documentation/docs-refresh/workflows/Publish/badge.svg[Publish]
+image:https://api.netlify.com/api/v1/badges/da8383ae-5291-433a-a7c8-354b69f1b06b/deploy-status[Netlify Status,link=https://app.netlify.com/sites/docs-neo4j/deploys]
 
+This repository contains several Antora playbooks for building developer resources at:
 
-
-
-This is an unversioned repo with folders to the different content that will be built with Antora.
-
-Each directory will have a antora.yml file with configuration, then the `start_path` in antora-playbook.yml will define which subfolder is picked up.
-
+- https://neo4j.com/developer/
+- https://neo4j.com/labs/
+- https://neo4j.com/graphacademy/
+- https://neo4j.com/graphgists/
 
 == Installation
 
@@ -18,8 +18,6 @@ In order to build the content,
 npm i
 
 The npm install command will install link:https://docs.antora.org/antora/2.3/cli/[Antora CLI^], which is then used to build the content defined in the Antora Playbooks (`*.yml` files in the project root).
-
-
 
 == Build
 
@@ -37,10 +35,10 @@ npm start
 
 This will launch a server at http://localhost:8000/
 
-
 == Publishing
 
-Any changes to the `master` branch will trigger an automatic rebuild of _all content_ using Github Actions.  The action runs the `npm run build` command which builds the following playbooks using the Antora CLI:
+Any changes to the `master` branch will trigger an automatic rebuild of _all content_ using Github Actions.
+The action runs the `npm run build` command which builds the following playbooks using the Antora CLI:
 
 - `unversioned.yml` - Developer guides at `neo4j.com/developer/*` and Labs pages at `neo4j.com/labs/*`
 - `labs-docs.yml` - Builds the documentation from remote sources into `neo4j.com/labs/{project}/{version}`
@@ -51,22 +49,9 @@ Any changes to the `master` branch will trigger an automatic rebuild of _all con
   - link:https://neo4j.com/labs/neo4j-helm/1.0.0/[Helm^]
   - link:https://neo4j.com/labs/etl-tool/1.5.0/[ETL Tool^]
 
-
 The HTML files built by the build command are uploaded to the `static-content.neo4j.com` S3 Bucket, where it is synced hourly with the link:neo4j.com[] server.  The cronjob runs on the hour, every hour so it may take up to an hour for the content to become live.
 
-
-// === Publishing Content
-
-// To publish an individual section, merge and push your changes to the publish branch of the appropriate repository.
-
-// [source,sh]
-// git clone https://github.com/neo4j-documentation/developer-guides
-// git add .
-// git commit -m "My changes"
-// git push origin HEAD:publish
-
-// This will trigger a workflow to rebuild the content and sync the content to the S3 Bucket using link:https://github.com/neo4j-documentation/developer-guides/actions[Github Actions^].
-
+NOTE: In addition, we are using Netlify to deploy a preview of the site at: https://docs-neo4j.netlify.app/
 
 == Theme Specifics
 
@@ -141,57 +126,3 @@ Becomes:
 | level | Create an additional attribute called `:page-level:`
 |===
 
-
-// == Content
-
-// === Developer
-// ```
-// /developer                           <- developer home page
-// /developer/get-started               <- structured content
-// /developer/get-started/rdbms-vs-graph
-// /developer/get-started/nosql-vs-graph
-// /developer/get-started/nosql-vs-graph
-// /developer/platform
-// /developer/platform/neo4j-browser
-// /developer/platform/neo4j-bloom
-// /developer/platform/neo4j-desktop
-// /developer/platform/graph-apps      <- (or neo4j-desktop/graph-apps)
-// /developer/cypher
-// /developer/cypher/filtering
-// /developer/cypher/subqueries
-// /developer/cypher/user-defined-functions
-// /developer/modeling
-// /developer/modeling/worked-example
-// /developer/drivers/
-// /developer/drivers/java
-// /developer/drivers/javascript
-// /developer/drivers/dotnet
-// ```
-
-// === Labs
-// ```
-// /labs                                <- Labs homepage with list of all projects
-// /labs/apoc                           <- About page for APOC
-// /labs/apoc/quick-start               <- Quick start "guide"
-// /labs/apoc/docs                      <- Hard core Manuals/"reference"
-// /labs/apoc/docs/3.5
-// /labs/apoc/docs/4.0
-// /labs/neosemantics                   <- About page for Neosemantics
-// /labs/neosemantics/quick-start       <- Quick start "guide"
-// /labs/neosemantics/docs              <- Hard core Manuals/"reference"
-// /labs/neosemantics/docs/3.5
-// /labs/neosemantics/docs/4.0
-// ```
-
-
-// === Migration
-
-// ```
-// :level: Beginner
-// [role=expertise]
-// {level}
-
-// becomes
-
-// :page-level: Beginner
-// ```
