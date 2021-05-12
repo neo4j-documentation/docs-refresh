@@ -1,86 +1,120 @@
-const algoliasearch = require('algoliasearch')
-const glob = require('glob')
-const fs = require('fs')
-const path = require('path')
-const cheerio = require('cheerio')
+const algoliasearch = require("algoliasearch");
+const glob = require("glob");
+const fs = require("fs");
+const path = require("path");
+const cheerio = require("cheerio");
+const constants = require("./constants");
 
-const indexFiles = async () => {
-    const applicationId = process.env.ALGOLIA_APPLICATION_ID || 'S38C6B80D2'
-    const apiKey = process.env.ALGOLIA_API_KEY || '8dc90bc3f864d03a564d958d3d0abddd'
-    const indexName = process.env.ALGOLIA_INDEX_NAME || 'dev_GUIDES'
+const applicationId = process.env.ALGOLIA_APPLICATION_ID || "S38C6B80D2";
+const apiKey =
+  process.env.ALGOLIA_API_KEY || "8dc90bc3f864d03a564d958d3d0abddd";
+const indexName = process.env.ALGOLIA_INDEX_NAME || "dev_GUIDES";
 
-    const client = algoliasearch(applicationId, apiKey);
-    const index = client.initIndex(indexName);
+const client = algoliasearch(applicationId, apiKey);
+const index = client.initIndex(indexName);
 
-    const baseUrl = 'https://neo4j.com'
-    const baseDir = path.join(__dirname, '..', 'build', 'site')
-    const titleSuffix = '- Neo4j Graph Database Platform'
+const baseUrl = "https://neo4j.com";
+const baseDir = path.join(__dirname, "..", "build", "site");
+const titleSuffix = "- Neo4j Graph Database Platform";
 
-    console.log('Starting indexing...');
+function transformItem(html, version, path) {
+  const $ = cheerio.load(html);
 
-    glob(`${baseDir}/**/*.html`, (err, matches) => {
-        const objects = matches
-            .filter(path => !path.includes('404') && fs.lstatSync(path).isFile())
-            .map(path => {
-                const html = fs.readFileSync(path)
-                const $ = cheerio.load(html)
+  const url = new URL(
+    path.replace(baseDir, "").replace("index.html", ""),
+    baseUrl
+  ).toString();
 
-                const url = new URL( path.replace(baseDir, '').replace('index.html', ''), baseUrl ) .toString()
+  let urlParts = url.replace(baseUrl, "").toLowerCase().split("/");
 
-                const objectID = url
-                    .replace(baseUrl, '')
-                    .toLowerCase()
-                    .replace(/[^a-z0-9]+/gi, ' ')
-                    .trim()
-                    .replace(/\s+/g, '-')
+  // Remove version no. (if exists) from the object ID.
+  const objectID = urlParts
+    .map((part) => (isNaN(parseInt(part)) ? part : null))
+    .filter((part) => part)
+    .join("-")
+    .trim()
+    .replace(/\s+/g, "-");
 
-                const title = $('title').text().replace(titleSuffix, '').replace(/\s+/g, ' ').trim()
-                const description = $('meta[name="description"]').attr('content')
-                const keywords = $('meta[name="keywords"]').attr('content')
+  const title = $("title")
+    .text()
+    .replace(titleSuffix, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const description = $('meta[name="description"]').attr("content");
+  const keywords = $('meta[name="keywords"]').attr("content");
 
-                const type = $('meta[property="neo:type"]').attr('content')
+  const docsType = $('meta[property="neo:manual-type"]').attr("content");
+  const docsProduct = $('meta[name="product"]').attr("content");
 
-                const environment = $('meta[property="neo:environment"]').attr('content')
-                const programmingLanguage = $('meta[name="neo:programming-language"]').attr('content')
-                const manualType = $('meta[property="neo:manual-type"]').attr('content')
-                const manualVersion = $('meta[property="neo:version"]').attr('content')
-                const product = $('meta[name="product"]').attr('content')
+  const toc = $(".doc h2")
+    .get()
+    .filter((el) => $("a", el).attr("href") !== undefined)
+    .map((el) => ({
+      url: url + $("a", el).attr("href"),
+      title: $(el).text(),
+    }));
 
+  const item = {
+    type: "docs",
+    objectID,
+    url,
+    title,
+    // TODO? Use content instead>
+    content: description,
+    description,
+    keywords,
+    docsType,
+    docsProduct,
+    toc,
+    priorityIndex: 1,
 
-                const toc = $('.doc h2')
-                    .get()
-                    .filter(el => $('a', el).attr('href') !== undefined)
-                    .map(el => ({
-                        url: url + $('a', el).attr('href'),
-                        title: $(el).text(),
-                    }))
+    // Just a parameter to help filtering when we might want to delete all objects at once
+    isDeveloperGuide: true,
+  };
 
-                return {
-                    post_type: 'Docs',
-                    objectID,
-                    url,
-                    title,
-                    // TODO? Use content instead>
-                    content: description,
-                    description,
-                    keywords,
-                    type,
-                    product,
-                    manualType,
-                    manualVersion,
-                    environment,
-                    programmingLanguage,
-                    toc,
-                }
-            })
-            .filter(r => !!r)
-            .filter(r => !r.title.includes('Redirect'))
+  if (version) {
+    item["docsVersions"] = {
+      _operation: "AddUnique",
+      value: version,
+    };
+  }
 
-        index.saveObjects(objects)
-            .then(res => console.log(`${res.objectIDs.length} objects indexed in algolia (tasks: ${res.taskIDs.join(',')})`))
-            .catch(e => console.error(e))
-
-    })
+  return item;
 }
 
-indexFiles()
+function indexGroupItems(paths, version) {
+  const objects = paths
+    .filter((path) => !path.includes("404") && fs.lstatSync(path).isFile())
+    .map((path) => transformItem(fs.readFileSync(path), version, path))
+    .filter((r) => !!r)
+    .filter((r) => !r.title.includes("Redirect"));
+
+  console.log(paths);
+  index
+    .partialUpdateObjects(objects, {
+      createIfNotExists: true,
+    })
+    .then((res) =>
+      console.log(
+        `${
+          res.objectIDs.length
+        } objects indexed in algolia (tasks: ${res.taskIDs.join(",")})`
+      )
+    )
+    .catch((e) => console.error(e));
+}
+
+const indexFiles = async () => {
+  console.log("Starting indexing...");
+
+  constants.data.map((indexGroup) => {
+    glob(`${baseDir}/${indexGroup.match}`, (err, matches) => {
+      console.log(
+        `indexing group ${indexGroup.match}. Found ${matches.length} items. For version ${indexGroup.version}`
+      );
+      indexGroupItems(matches, indexGroup.version);
+    });
+  });
+};
+
+indexFiles();
