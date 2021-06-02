@@ -1,0 +1,25 @@
+site:
+  title: Neo4j GraphGists
+  url: /graphgists
+
+output:
+  dir: ./build/site/
+
+ui:
+  bundle:
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-v0.12.2.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+    - ./extensions/remote-include/remote-include-processor
+    - ./extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-cdn: /static/assets
+    site-component: graphgists
+    page-theme: graphgists
+
