@@ -26,7 +26,8 @@
     "lint-xref:developer-subfolders": "antora --generator @antora/xref-validator developer-subfolders.yml",
     "lint-xref:developer": "antora --generator @antora/xref-validator developer.yml",
     "lint-xref:labs-docs": "antora --generator @antora/xref-validator labs-docs.yml",
-    "lint-asciidoc": "./build.sh && ./lint/asciidoctor-errors.sh && ./lint/asciidoctor-warnings.sh"
+    "lint-asciidoc": "./build.sh && ./lint/asciidoctor-errors.sh && ./lint/asciidoctor-warnings.sh",
+    "index": "node algolia"
   },
   "author": "Adam Cowley <adam+github@neo4j.com>",
   "license": "ISC",

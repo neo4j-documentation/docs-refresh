@@ -83,3 +83,6 @@ jobs:
         AWS_REGION: 'eu-west-1'
         SOURCE_DIR: 'build/site/graphgists'
         DEST_DIR: 'graphgists'
+
+    # Index into Algolia
+    - run: npm run index
