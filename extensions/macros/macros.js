@@ -2,6 +2,10 @@
 const renameLabels = {
     'apoc-core': 'APOC Core',
     'apoc-full': 'APOC Full',
+    'na': 'N / A',
+    'warning': 'Warning!',
+    'danger': 'Danger!',
+    'mac-os': 'Mac OS',
 }
 
 module.exports.register = function(registry, context) {
