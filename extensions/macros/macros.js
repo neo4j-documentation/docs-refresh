@@ -6,6 +6,9 @@ const renameLabels = {
     'warning': 'Warning!',
     'danger': 'Danger!',
     'mac-os': 'Mac OS',
+    'cluster-member-core': 'CORE',
+    'cluster-member-read-replica': 'READ_REPLICA',
+    'cluster-member-single': 'SINGLE',
 }
 
 module.exports.register = function(registry, context) {
