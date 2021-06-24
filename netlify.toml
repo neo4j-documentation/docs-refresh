@@ -5,3 +5,15 @@ command = "npm run build:preview"
 [[redirects]]
 from = "/static/assets/*"
 to = "/_/:splat"
+
+[[plugins]]
+package = "netlify-plugin-checklinks"
+
+[plugins.inputs]
+entryPoints = ["**/*.html"]
+recursive = true
+pretty = true
+skipPatterns = []
+todoPatterns = []
+checkExternal = false
+followSourceMaps = false
