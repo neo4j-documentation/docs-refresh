@@ -51,6 +51,8 @@ const indexFile = path => {
             title: $(el).text(),
         }))
 
+    const priorityIndex = path.includes('apoc') ? 2 : 1;
+
     const output = {
         post_type: 'docs',
         objectID,
@@ -64,7 +66,7 @@ const indexFile = path => {
         docsProduct,
         toc,
 
-        priorityIndex: 1,
+        priorityIndex,
         // Just a parameter to help filtering when we might want to delete all objects at once
         isDeveloperGuide: true,
     }
