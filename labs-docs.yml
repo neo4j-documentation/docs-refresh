@@ -17,7 +17,7 @@ content:
     branches: ['master']
     start_path: docs
   - url: https://github.com/neo4j-contrib/neo4j-streams
-    branches: ['4.0']
+    branches: ['4.0', '4.1']
     start_path: doc/docs
 
 output:
