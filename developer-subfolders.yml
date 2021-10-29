@@ -4,7 +4,7 @@ site:
 content:
   sources:
   - url: https://github.com/neo4j-contrib/neo4j-spark-connector
-    branches: ['4.0']
+    branches: ['4.0', '4.1']
     start_path: 'doc/docs'
 
 output:
