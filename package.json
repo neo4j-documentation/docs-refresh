@@ -22,7 +22,7 @@
     "lint": "npm run lint-xref",
     "lint-xref": "npm run lint-xref:developer && npm run lint-xref:labs-docs",
     "lint-xref:developer": "antora --generator @antora/xref-validator developer.yml",
-    "lint-xref:labs-docs": "antora --generator @antora/xref-validator labs-docs.yml",
+    "lint-xref:labs-docs": "cat labs-docs.yml | sed '/neo4j-apoc-procedures/,+2 d' > labs-docs-no-lint-apoc.yml && antora --generator @antora/xref-validator labs-docs-no-lint-apoc.yml",
     "lint-asciidoc": "./build.sh && ./lint/asciidoctor-errors.sh && ./lint/asciidoctor-warnings.sh",
     "index": "node algolia"
   },
