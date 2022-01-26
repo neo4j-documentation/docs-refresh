@@ -24,8 +24,7 @@ Macro behavior
   The list items are seperated by comma `,`.
   The first item in the list will be used as the text if it is specified, e.g. label:deprecated[Deprecated 4.3].
   Keep the text minimal length.
-  The text will be HTML escaped.
-    " is replaced with &quot;
+  The text will be HTML escaped for some characters.
     & is replaced with &amp;
     < is replaced with &lt;
     > is replaced with &gt;
