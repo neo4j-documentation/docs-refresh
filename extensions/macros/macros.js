@@ -24,6 +24,11 @@ Macro behavior
   The list items are seperated by comma `,`.
   The first item in the list will be used as the text if it is specified, e.g. label:deprecated[Deprecated 4.3].
   Keep the text minimal length.
+  The text will be HTML escaped.
+    " is replaced with &quot;
+    & is replaced with &amp;
+    < is replaced with &lt;
+    > is replaced with &gt;
   If comma is needed in the text use `"` enclosure, e.g. label:warning["Unsuported 4.1, 4.2, and 4.3"].
   The `]` character inside attribute lists must be escaped with a backslash.
 
