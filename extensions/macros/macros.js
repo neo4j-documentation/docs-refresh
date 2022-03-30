@@ -78,7 +78,8 @@ module.exports.register = function(registry, context) {
                 .join(' ')
             }
 
-            return `<span class="label label--${target}">${text}</span>`
+            const label = `<span class="label label--${target}">${text}</span>`
+            return self.createInline(parent, 'quoted', label)
         })
     })
 }
