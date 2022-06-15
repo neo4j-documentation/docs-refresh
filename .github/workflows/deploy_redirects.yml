@@ -36,6 +36,6 @@ jobs:
           bucket-region: ${{ secrets[env.N_AWS_REGION] }}
           dist-id: ${{ secrets[env.N_AWS_CDN_ID] }}
           invalidation: "/developer/* /graphacademy* /labs* /graphgists*"
-          delete-removed: true
+          delete-removed: false
           no-cache: false
           private: true
