@@ -20,7 +20,7 @@ content:
     branches: ['4.0', '4.1']
     start_path: doc/docs
   - url: https://github.com/neo4j-labs/neodash
-    branches: ['feature/new-docs']
+    branches: ['develop']
     start_path: docs
 
 output:
