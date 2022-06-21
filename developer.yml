@@ -11,7 +11,7 @@ content:
     - '!**/_includes/*'
     - '!**/readme.adoc'
     - '!**/README.adoc'
-  - url: https://github.com/nielsdejong/labs-pages.git
+  - url: https://github.com/neo4j-documentation/labs-pages.git
     branches: publish
   - url: https://github.com/neo4j-documentation/graphacademy.git
     branches: publish
