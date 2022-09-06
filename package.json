@@ -34,7 +34,7 @@
     "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator.git#v0.6.1",
     "algoliasearch": "^4.9.0",
     "cheerio": "^1.0.0-rc.3",
-    "node-fetch": "^3.1.1"
+    "node-fetch": "^3.2.10"
   },
   "devDependencies": {
     "@antora/xref-validator": "gitlab:antora/xref-validator",
