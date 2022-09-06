@@ -42,8 +42,8 @@ jobs:
         SOURCE_DIR: 'build/site/'
 
     # Index into Algolia
-    - run: npm run index
-      env:
-        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-        ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-        ALGOLIA_INDEXES: ${{ secrets.ALGOLIA_INDEXES }}
+    # - run: npm run index
+    #   env:
+    #     ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+    #     ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+    #     ALGOLIA_INDEXES: ${{ secrets.ALGOLIA_INDEXES }}
