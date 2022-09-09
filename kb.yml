@@ -39,3 +39,6 @@ asciidoc:
     page-ad-link: https://neo4j.com/nodes-2022
     page-ad-underline-role: button
     page-ad-underline: Save your space
+antora:
+  extensions:
+  - '@neo4j-documentation/antora-knowledge-base-extension'

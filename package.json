@@ -4,21 +4,25 @@
   "description": "Neo4j Docs builder",
   "repository": "https://github.com/neo4j-documentation/docs-refresh/",
   "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "node server.js",
     "build": "npm run build:preview",
     "build:preview": "npm run preview:developer && npm run preview:labs && npm run preview:kb && npm run preview:graphgist",
     "preview:developer": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip developer.yml",
     "preview:labs": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip labs-docs.yml",
-    "preview:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip kb.yml",
-    "preview:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip training.yml",
-    "preview:graphgist": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip graphgist.yml",
+    "preview:kb": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip kb.yml",
+    "preview:training": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip training.yml",
+    "preview:graphgist": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip graphgist.yml",
     "build:production": "npm run production:developer && npm run production:labs && npm run production:kb && npm run production:graphgist",
     "production:developer": "antora --fetch --stacktrace developer.yml",
     "production:labs": "antora --fetch --stacktrace labs-docs.yml",
-    "production:kb": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator kb.yml",
-    "production:training": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator training.yml",
-    "production:graphgist": "antora --fetch --stacktrace --generator @neo4j/developer-site-generator graphgist.yml",
+    "production:kb": "antora --fetch --stacktrace kb.yml",
+    "production:training": "antora --fetch --stacktrace training.yml",
+    "production:graphgist": "antora --fetch --stacktrace graphgist.yml",
     "lint": "npm run lint-xref",
     "lint-xref": "npm run lint-xref:developer && npm run lint-xref:labs-docs",
     "lint-xref:developer": "antora --generator @antora/xref-validator developer.yml",
@@ -28,16 +32,15 @@
   },
   "author": "Adam Cowley <adam+github@neo4j.com>",
   "license": "ISC",
-  "dependencies": {
-    "@antora/cli": "^2.3.4",
-    "@antora/site-generator-default": "^2.3.4",
-    "@neo4j/developer-site-generator": "git+https://github.com/neo4j-documentation/developer-site-generator.git#v0.6.1",
+  "devDependencies": {
+    "@antora/cli": "~3.1",
+    "@antora/site-generator-default": "~3.1",
+    "@antora/xref-validator": "gitlab:antora/xref-validator",
+    "@neo4j-documentation/antora-graphgist-extension": "github:neo4j-documentation/antora-graphgist-extension",
+    "@neo4j-documentation/antora-knowledge-base-extension": "github:neo4j-documentation/antora-knowledge-base-extension",
+    "@neo4j-documentation/antora-training-extension": "github:neo4j-documentation/antora-training-extension",
     "algoliasearch": "^4.9.0",
     "cheerio": "^1.0.0-rc.3",
-    "node-fetch": "^3.1.1"
-  },
-  "devDependencies": {
-    "@antora/xref-validator": "gitlab:antora/xref-validator",
-    "express": "^4.17.1"
+    "express": "~4.18"
   }
 }
