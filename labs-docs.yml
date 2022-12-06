@@ -22,6 +22,9 @@ content:
   - url: https://github.com/neo4j-labs/neodash
     branches: ['develop']
     start_path: docs
+  - url: https://github.com/michael-simons/neo4j-migrations
+    branches: ['main']
+    start_path: docs
 
 output:
   dir: ./build/site/labs/
@@ -43,10 +46,10 @@ asciidoc:
     page-cdn: /static/assets
     page-theme: labs
     page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
-    page-ad-overline-link: https://neo4j.com/nodes-2022
-    page-ad-overline: 16-17 November 2022
-    page-ad-title: NODES 2022
-    page-ad-description: Join us for a free two-day virtual conference of technical presentations by developers and data scientists solving problems with graphs.
-    page-ad-link: https://neo4j.com/nodes-2022
-    page-ad-underline-role: button
-    page-ad-underline: Save your space
+    # page-ad-overline-link: https://neo4j.com/nodes-2022
+    # page-ad-overline: 16-17 November 2022
+    # page-ad-title: NODES 2022
+    # page-ad-description: Join us for a free two-day virtual conference of technical presentations by developers and data scientists solving problems with graphs.
+    # page-ad-link: https://neo4j.com/nodes-2022
+    # page-ad-underline-role: button
+    # page-ad-underline: Save your space

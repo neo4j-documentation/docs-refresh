@@ -22,10 +22,14 @@ asciidoc:
     page-cdn: /static/assets
     site-component: graphgists
     page-theme: graphgists
-    page-ad-overline-link: https://neo4j.com/nodes-2022
-    page-ad-overline: 16-17 November 2022
-    page-ad-title: NODES 2022
-    page-ad-description: Join us for a free two-day virtual conference of technical presentations by developers and data scientists solving problems with graphs.
-    page-ad-link: https://neo4j.com/nodes-2022
-    page-ad-underline-role: button
-    page-ad-underline: Save your space
+    # page-ad-overline-link: https://neo4j.com/nodes-2022
+    # page-ad-overline: 16-17 November 2022
+    # page-ad-title: NODES 2022
+    # page-ad-description: Join us for a free two-day virtual conference of technical presentations by developers and data scientists solving problems with graphs.
+    # page-ad-link: https://neo4j.com/nodes-2022
+    # page-ad-underline-role: button
+    # page-ad-underline: Save your space
+antora:
+  extensions:
+  - '@neo4j-documentation/antora-graphgist-extension'
+
