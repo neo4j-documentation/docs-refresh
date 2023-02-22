@@ -52,6 +52,8 @@ const renameLabels = {
     'cluster-member-core': 'CORE',
     'cluster-member-read-replica': 'READ_REPLICA',
     'cluster-member-single': 'SINGLE',
+    'not-on-aura': 'Not Available on Aura',
+    'aura-db-enterprise': 'AuraDB Enterprise',
 }
 
 module.exports.register = function(registry, context) {
