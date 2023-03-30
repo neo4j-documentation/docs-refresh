@@ -43,7 +43,7 @@ The action runs the `npm run build` command which builds the following playbooks
 - `unversioned.yml` - Developer guides at `neo4j.com/developer/*` and Labs pages at `neo4j.com/labs/*`
 - `labs-docs.yml` - Builds the documentation from remote sources into `neo4j.com/labs/{project}/{version}`
   - link:https://neo4j.com/labs/neo4j-helm/1.0.0/[Helm^]
-  - link:https://neo4j.com/labs/apoc/4.1/[APOC^]
+  - link:https://neo4j.com/labs/apoc/5/[APOC^]
   - link:https://neo4j.com/labs/neosemantics/4.0/[Neosemantics^]
   - link:https://neo4j.com/labs/kafka/4.0/[Neo4j Streams/Kafka^]
   - link:https://neo4j.com/labs/neo4j-helm/1.0.0/[Helm^]
