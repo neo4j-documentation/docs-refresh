@@ -46,10 +46,10 @@ asciidoc:
     page-cdn: /static/assets
     page-theme: labs
     page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
-    # page-ad-overline-link: https://neo4j.com/nodes-2022
-    # page-ad-overline: 16-17 November 2022
-    # page-ad-title: NODES 2022
-    # page-ad-description: Join us for a free two-day virtual conference of technical presentations by developers and data scientists solving problems with graphs.
-    # page-ad-link: https://neo4j.com/nodes-2022
-    # page-ad-underline-role: button
-    # page-ad-underline: Save your space
+    page-ad-overline-link: https://r.neo4j.com/nodes-2023
+    page-ad-overline: 26 October 2023
+    page-ad-title: NODES 23
+    page-ad-description: Join us for the biggest graph community conference dedicated to learning how to integrate graph technologies into ML and dev projects.
+    page-ad-link: https://neo4j.registration.goldcast.io/events/6fb85147-ca27-4310-9dec-cb345c53bd6f
+    page-ad-underline-role: button
+    page-ad-underline: Save your space
