@@ -28,7 +28,7 @@ asciidoc:
     page-ad-description: Join us for the biggest graph community conference dedicated to learning how to integrate graph technologies into ML and dev projects.
     page-ad-link: https://neo4j.registration.goldcast.io/events/6fb85147-ca27-4310-9dec-cb345c53bd6f
     page-ad-underline-role: button
-    page-ad-underline: Save your space
+    page-ad-underline: Save your spot
 antora:
   extensions:
   - '@neo4j-documentation/antora-graphgist-extension'
