@@ -1,0 +1,34 @@
+site:
+  title: Neo4j KB
+
+content:
+  sources:
+  - url: https://github.com/neo4j-documentation/field-industry-use-cases
+    branches: ['main']
+
+output:
+  dir: ./build/site/developer/
+
+ui:
+  bundle:
+    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-latest.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-cdn: /static/assets
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
+    page-ad-overline-link: https://r.neo4j.com/nodes-2023
+    page-ad-overline: 26 October 2023
+    page-ad-title: NODES 23
+    page-ad-description: Join us for the biggest graph community conference dedicated to learning how to integrate graph technologies into ML and dev projects.
+    page-ad-link: https://neo4j.registration.goldcast.io/events/6fb85147-ca27-4310-9dec-cb345c53bd6f
+    page-ad-underline-role: button
+    page-ad-underline: Save your spot
