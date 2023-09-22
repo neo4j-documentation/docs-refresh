@@ -25,6 +25,9 @@ content:
   - url: https://github.com/michael-simons/neo4j-migrations
     branches: ['main']
     start_path: docs
+  - url: https://github.com/neo4j-labs/rdflib-neo4j
+    branches: ['1.0']
+    start_path: docs
 
 output:
   dir: ./build/site/labs/
