@@ -49,6 +49,7 @@ The action runs the `npm run build` command which builds the following playbooks
   - link:https://neo4j.com/labs/neo4j-helm/1.0.0/[Helm^]
   - link:https://neo4j.com/labs/etl-tool/1.5.0/[ETL Tool^]
   - link:https://neo4j.com/labs/neodash/2.1/[NeoDash^]
+  - link:https://neo4j.com/labs/rdflib-neo4j/1.0/[RDFlib-Neo4j^]
 
 The HTML files built by the build command are uploaded to the `static-content.neo4j.com` S3 Bucket, where it is synced hourly with the link:neo4j.com[] server.  The cronjob runs on the hour, every hour so it may take up to an hour for the content to become live.
 
