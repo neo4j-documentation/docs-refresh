@@ -20,7 +20,7 @@ content:
 #    branches: ['4.0', '4.1']
 #    start_path: doc/docs
   - url: https://github.com/neo4j-labs/neodash
-    branches: ['2.3', '2.2', '2.1']
+    branches: ['2.4', '2.3', '2.2', '2.1']
     start_path: docs
   - url: https://github.com/michael-simons/neo4j-migrations
     branches: ['main']
