@@ -8,7 +8,7 @@ content:
     branches: ['master']
     start_path: doc/docs
   - url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
-    branches: ['5.11', '4.4', '4.3', '4.2', '4.1', '4.0']
+    branches: ['5.13', '4.4', '4.3', '4.2', '4.1', '4.0']
     start_path: docs/asciidoc
   - url: https://github.com/neo4j-labs/neosemantics
     branches: ['4.3', '4.2', '4.1', '4.0']
@@ -20,12 +20,15 @@ content:
 #    branches: ['4.0', '4.1']
 #    start_path: doc/docs
   - url: https://github.com/neo4j-labs/neodash
-    branches: ['2.3', '2.2', '2.1']
+    branches: ['2.4', '2.3', '2.2', '2.1']
     start_path: docs
   - url: https://github.com/michael-simons/neo4j-migrations
     branches: ['main']
     start_path: docs
   - url: https://github.com/neo4j-labs/rdflib-neo4j
+    branches: ['1.0']
+    start_path: docs
+  - url: https://github.com/neo4j-labs/aura-cli
     branches: ['1.0']
     start_path: docs
 
@@ -49,10 +52,10 @@ asciidoc:
     page-cdn: /static/assets
     page-theme: labs
     page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
-    page-ad-overline-link: https://r.neo4j.com/nodes-2023
-    page-ad-overline: 26 October 2023
-    page-ad-title: NODES 23
-    page-ad-description: Join us for the biggest graph community conference dedicated to learning how to integrate graph technologies into ML and dev projects.
-    page-ad-link: https://neo4j.registration.goldcast.io/events/6fb85147-ca27-4310-9dec-cb345c53bd6f
-    page-ad-underline-role: button
-    page-ad-underline: Save your spot
+    # page-ad-overline-link: https://r.neo4j.com/nodes-2023
+    # page-ad-overline: 26 October 2023
+    # page-ad-title: NODES 23
+    # page-ad-description: Join us for the biggest graph community conference dedicated to learning how to integrate graph technologies into ML and dev projects.
+    # page-ad-link: https://neo4j.registration.goldcast.io/events/6fb85147-ca27-4310-9dec-cb345c53bd6f
+    # page-ad-underline-role: button
+    # page-ad-underline: Save your spot
