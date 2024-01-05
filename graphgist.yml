@@ -7,7 +7,7 @@ output:
 
 ui:
   bundle:
-    url: https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle-latest.zip
+    url: https://d12wh7zj8x3amw.cloudfront.net/build/ui-bundle-latest.zip
     snapshot: true
 
 urls:
@@ -22,4 +22,13 @@ asciidoc:
     page-cdn: /static/assets
     site-component: graphgists
     page-theme: graphgists
-
+    # page-ad-overline-link: https://r.neo4j.com/nodes-2023
+    # page-ad-overline: 26 October 2023
+    # page-ad-title: NODES 23
+    # page-ad-description: Join us for the biggest graph community conference dedicated to learning how to integrate graph technologies into ML and dev projects.
+    # page-ad-link: https://neo4j.registration.goldcast.io/events/6fb85147-ca27-4310-9dec-cb345c53bd6f
+    # page-ad-underline-role: button
+    # page-ad-underline: Save your spot
+antora:
+  extensions:
+  - '@neo4j-documentation/antora-graphgist-extension'
