@@ -1,0 +1,41 @@
+name: Deploy redirects.conf
+
+on:
+  push:
+    paths:
+      - 'neo4jComRedirects/redirects-labs.conf'
+
+jobs:
+  push_to_s3:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set SIMPLE_REF
+        run: |
+          SIMPLE_REF=$(echo ${GITHUB_REF#refs/heads/} | tr / -)
+          [ $SIMPLE_REF = "master" ] && echo "SIMPLE_REF=master" >> $GITHUB_ENV || echo "SIMPLE_REF=development" >> $GITHUB_ENV
+
+      - name: Set env variables for secrets
+        run: |
+          echo "N_AWS_REGION=${SIMPLE_REF}_AWS_REDIRECTS_REGION" >> $GITHUB_ENV
+          echo "N_AWS_CONFIG_BUCKET=${SIMPLE_REF}_AWS_REDIRECTS_BUCKET" >> $GITHUB_ENV
+          echo "N_AWS_ACCESS_KEY_ID=${SIMPLE_REF}_AWS_REDIRECTS_ACCESS_KEY_ID" >> $GITHUB_ENV
+          echo "N_AWS_SECRET_ACCESS_KEY=${SIMPLE_REF}_AWS_REDIRECTS_SECRET_ACCESS_KEY" >> $GITHUB_ENV
+          echo "N_AWS_CDN_ID=${SIMPLE_REF}_AWS_REDIRECTS_CDN_ID" >> $GITHUB_ENV
+
+      - uses: actions/checkout@master
+
+      - name: Push redirects.conf to S3
+        uses: reggionick/s3-deploy@v3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets[env.N_AWS_ACCESS_KEY_ID] }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets[env.N_AWS_SECRET_ACCESS_KEY] }}
+        with:
+          folder: neo4jComRedirects
+          bucket: ${{ secrets[env.N_AWS_CONFIG_BUCKET] }}
+          bucket-region: ${{ secrets[env.N_AWS_REGION] }}
+          dist-id: ${{ secrets[env.N_AWS_CDN_ID] }}
+          invalidation: "/developer/* /graphacademy* /labs* /graphgists*"
+          delete-removed: false
+          no-cache: false
+          private: true
