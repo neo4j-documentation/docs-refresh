@@ -31,6 +31,9 @@ content:
   - url: https://github.com/neo4j-labs/aura-cli
     branches: ['1.0']
     start_path: docs
+  - url: https://github.com/neo4j-labs/neo4j-needle-starterkit
+    branches: ['1.0']
+    start_path: docs
 
 output:
   dir: ./build/site/labs/

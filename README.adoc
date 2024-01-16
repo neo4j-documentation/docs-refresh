@@ -48,7 +48,8 @@ The action runs the `npm run build` command which builds the following playbooks
   - link:https://neo4j.com/labs/kafka/4.0/[Neo4j Streams/Kafka^]
   - link:https://neo4j.com/labs/neo4j-helm/1.0.0/[Helm^]
   - link:https://neo4j.com/labs/etl-tool/1.5.0/[ETL Tool^]
-  - link:https://neo4j.com/labs/neodash/2.1/[NeoDash^]
+  - link:https://neo4j.com/labs/neodash/2.4/[NeoDash^]
+  - link:https://neo4j.com/labs/neo4j-needle-starterkit/1.0/[Needle Starter Kit^]
   - link:https://neo4j.com/labs/rdflib-neo4j/1.0/[RDFlib-Neo4j^]
   - link:https://neo4j.com/labs/aura-cli/1.0/[Aura CLI^]
 
