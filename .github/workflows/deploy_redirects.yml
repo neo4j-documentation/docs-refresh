@@ -2,6 +2,8 @@ name: Deploy redirects.conf
 
 on:
   push:
+    branches:
+      - master
     paths:
       - 'neo4jComRedirects/redirects-labs.conf'
 
