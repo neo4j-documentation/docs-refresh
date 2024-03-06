@@ -18,7 +18,7 @@
     "preview:usecases": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip use-cases.yml",
     "preview:training": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip training.yml",
     "preview:graphgist": "antora --fetch --stacktrace --ui-bundle-url https://s3-eu-west-1.amazonaws.com/static-content.neo4j.com/build/ui-bundle.zip graphgist.yml",
-    "build:production": "npm run production:labs && npm run production:labs-landing && npm run production:kb && npm run production:graphgist && npm run production:usecases",
+    "build:production": "npm run production:developer && npm run production:labs && npm run production:labs-landing && npm run production:kb && npm run production:graphgist && npm run production:usecases",
     "production:developer": "antora --fetch --stacktrace developer.yml",
     "production:labs": "antora --fetch --stacktrace labs-docs.yml",
     "production:labs-landing": "antora --fetch --stacktrace labs.yml ",
