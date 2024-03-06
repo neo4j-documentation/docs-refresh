@@ -1,0 +1,34 @@
+site:
+  title: Neo4j Labs Docs
+  url: /labs/docs
+
+content:
+  sources:
+  - url: https://github.com/neo4j-contrib/neo4j-apoc-procedures
+    branches: ['5.16', '4.4', '4.3', '4.2', '4.1', '4.0']
+    start_path: docs/asciidoc
+
+output:
+  dir: ./build/site/labs/
+
+ui:
+  bundle:
+    url: https://d12wh7zj8x3amw.cloudfront.net/build/ui-bundle-latest.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  extensions:
+  - "@neo4j-antora/antora-add-notes"
+  - ./extensions/remote-include/remote-include-processor
+  - ./extensions/macros/macros
+  attributes:
+    experimental: ''
+    page-cdn: /static/assets
+    page-theme: labs
+    page-mixpanel: 4bfb2414ab973c741b6f067bf06d5575
+    page-add-notes-module: notes@
+    page-add-notes-tags: core-warning@
+    page-add-notes-versions: ['5']
