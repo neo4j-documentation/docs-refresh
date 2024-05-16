@@ -11,6 +11,8 @@ content:
     - '!**/_includes/*'
     - '!**/readme.adoc'
     - '!**/README.adoc'
+    edit_url: ~
+
   - url: https://github.com/neo4j-documentation/labs-pages.git
     branches: publish
 
