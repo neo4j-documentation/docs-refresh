@@ -34,6 +34,9 @@ content:
   - url: https://github.com/neo4j-labs/neo4j-needle-starterkit
     branches: ['2.0']
     start_path: docs
+  - url: https://github.com/neo4j-contrib/spatial.git
+    branches: ['master']
+    start_path: docs/docs
 
 output:
   dir: ./build/site/labs/
