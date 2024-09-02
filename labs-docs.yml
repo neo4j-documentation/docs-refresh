@@ -26,7 +26,7 @@ content:
     branches: ['main']
     start_path: docs
   - url: https://github.com/neo4j-labs/rdflib-neo4j
-    branches: ['1.0','1.1']
+    branches: ['master']
     start_path: docs
   - url: https://github.com/neo4j-labs/aura-cli
     branches: ['1.0']
