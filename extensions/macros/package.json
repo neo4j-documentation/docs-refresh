@@ -1,6 +1,6 @@
 {
   "name": "@neo4j-documentation/macros",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Macros for building Neo4j Documentation",
   "main": "macros.js",
   "scripts": {
