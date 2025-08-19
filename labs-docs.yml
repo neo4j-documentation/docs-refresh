@@ -32,7 +32,7 @@ content:
     branches: ['1.0']
     start_path: docs
   - url: https://github.com/neo4j-labs/neo4j-needle-starterkit
-    branches: ['2.0']
+    branches: ['2.1']
     start_path: docs
 
 output:
