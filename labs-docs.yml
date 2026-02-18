@@ -34,6 +34,10 @@ content:
   - url: https://github.com/neo4j-contrib/spatial.git
     branches: ['master']
     start_path: docs/docs
+  # Neo4j Agent Memory - external content source
+  - url: https://github.com/neo4j-labs/agent-memory.git
+    branches: main
+    start_path: docs
 
 output:
   dir: ./build/site/labs/
