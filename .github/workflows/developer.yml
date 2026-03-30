@@ -29,6 +29,37 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Checkout labs-pages
+      uses: actions/checkout@v3
+      with:
+        repository: neo4j-documentation/labs-pages
+        ref: publish
+        path: labs-pages-local
+
+    - name: Checkout neo4j-agent-integrations
+      uses: actions/checkout@v3
+      with:
+        repository: neo4j-labs/neo4j-agent-integrations
+        ref: main
+        path: agent-integrations
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Generate agent integration pages
+      run: |
+        pip install pyyaml
+        python3 agent-integrations/scripts/publish-to-labs.py \
+          --convert \
+          --labs-pages-dir labs-pages-local
+
+    - name: Patch labs.yml to use local labs-pages checkout
+      run: |
+        sed -i 's|url: https://github.com/neo4j-documentation/labs-pages.git|url: ./labs-pages-local|g' labs.yml
+        sed -i 's|branches: publish|branches: HEAD|g' labs.yml
+
     - name: Use Node.js 16
       uses: actions/setup-node@v3
       with:
