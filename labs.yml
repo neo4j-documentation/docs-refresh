@@ -14,6 +14,18 @@ ui:
   bundle:
     url: https://d12wh7zj8x3amw.cloudfront.net/build/ui-bundle-latest.zip
     snapshot: true
+  supplemental_files:
+    - path: partials/edit-this-page-link.hbs
+      contents: |
+        {{#unless page.attributes.origin-private}}
+          {{#if (and page.fileUri (not env.CI))}}
+            <div class="edit-this-page"><a href="{{page.fileUri}}">Edit this Page</a></div>
+          {{else if page.attributes.page-edit-url}}
+            <div class="edit-this-page"><a href="{{page.attributes.page-edit-url}}">Edit this Page</a></div>
+          {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
+            <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
+          {{/if}}
+        {{/unless}}
 
 urls:
   html_extension_style: indexify
